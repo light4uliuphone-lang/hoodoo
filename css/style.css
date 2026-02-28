@@ -1,0 +1,787 @@
+/* ============================================
+   四月老師魔法教室 - 全局樣式
+   深青色 (#1a5f5f) 和琥珀色 (#ff9800) 風格
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ============================================
+   導航欄
+   ============================================ */
+.navbar {
+    background: linear-gradient(135deg, #1a5f5f 0%, #2a7f7f 100%);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-brand:hover {
+    opacity: 0.8;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar-nav a:hover {
+    opacity: 0.8;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   英雄區域
+   ============================================ */
+.hero {
+    background: linear-gradient(rgba(26, 95, 95, 0.7), rgba(26, 95, 95, 0.7)), 
+                linear-gradient(135deg, #1a5f5f 0%, #2a7f7f 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* ============================================
+   按鈕
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #ff9800;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #e68900;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #1a5f5f;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #0d3d3d;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   容器
+   ============================================ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   章節標題
+   ============================================ */
+.section-title {
+    font-size: 2.5rem;
+    color: #1a5f5f;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #ff9800;
+    border-radius: 2px;
+}
+
+/* ============================================
+   課程卡片網格
+   ============================================ */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.course-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.course-card-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #4a9f9f 0%, #6abfbf 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.course-card-content {
+    padding: 1.5rem;
+}
+
+.course-level {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: white;
+}
+
+.course-level.beginner {
+    background-color: #4CAF50;
+}
+
+.course-level.intermediate {
+    background-color: #2196F3;
+}
+
+.course-level.advanced {
+    background-color: #9C27B0;
+}
+
+.course-card h3 {
+    color: #1a5f5f;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.course-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.course-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.course-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.course-btn {
+    background-color: #1a5f5f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.course-btn:hover {
+    background-color: #0d3d3d;
+}
+
+/* ============================================
+   新手推薦區域
+   ============================================ */
+.beginner-section {
+    background: linear-gradient(135deg, #f0f8f8 0%, #e8f4f4 100%);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    border-left: 5px solid #ff9800;
+}
+
+.beginner-intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   主題區域
+   ============================================ */
+.topic-section {
+    margin-bottom: 4rem;
+}
+
+/* ============================================
+   服務區域
+   ============================================ */
+.services-section {
+    margin-bottom: 4rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #ff9800;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    color: #1a5f5f;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.service-card p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   服務分類
+   ============================================ */
+.service-category {
+    margin-bottom: 4rem;
+}
+
+.category-title {
+    font-size: 2rem;
+    color: #1a5f5f;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #ff9800;
+}
+
+.service-details {
+    text-align: left;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.service-details p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   服務流程
+   ============================================ */
+.process-section {
+    margin-bottom: 4rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.step-number {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.step h3 {
+    color: #1a5f5f;
+    margin-bottom: 0.8rem;
+}
+
+.step p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   常見問題
+   ============================================ */
+.faq-section {
+    margin-bottom: 4rem;
+}
+
+.faq-items {
+    display: grid;
+    gap: 2rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid #ff9800;
+}
+
+.faq-item h3 {
+    color: #1a5f5f;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ============================================
+   關於我們頁面
+   ============================================ */
+.about-intro {
+    margin-bottom: 4rem;
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.stat {
+    background: linear-gradient(135deg, #f0f8f8 0%, #e8f4f4 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 4px solid #ff9800;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    color: #1a5f5f;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   教學理念
+   ============================================ */
+.philosophy-section {
+    margin-bottom: 4rem;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.philosophy-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 4px solid #1a5f5f;
+}
+
+.philosophy-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.philosophy-card h3 {
+    color: #1a5f5f;
+    margin-bottom: 0.8rem;
+}
+
+.philosophy-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   經驗區域
+   ============================================ */
+.experience-section {
+    margin-bottom: 4rem;
+}
+
+.experience-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.experience-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid #ff9800;
+}
+
+.experience-item h3 {
+    color: #1a5f5f;
+    margin-bottom: 1rem;
+}
+
+.experience-item p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ============================================
+   見證區域
+   ============================================ */
+.testimonials-section {
+    margin-bottom: 4rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid #1a5f5f;
+    font-style: italic;
+}
+
+.testimonial p:first-child {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.testimonial p:last-child {
+    color: #1a5f5f;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* ============================================
+   聯絡區域
+   ============================================ */
+.contact-section {
+    margin-bottom: 4rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.contact-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 4px solid #ff9800;
+}
+
+.contact-item h3 {
+    color: #1a5f5f;
+    margin-bottom: 1rem;
+}
+
+.contact-item p {
+    color: #666;
+}
+
+.contact-item a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   關於預覽
+   ============================================ */
+.about-preview {
+    margin-bottom: 4rem;
+    background: linear-gradient(135deg, #f0f8f8 0%, #e8f4f4 100%);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    border-left: 5px solid #ff9800;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* ============================================
+   特色區域
+   ============================================ */
+.featured-section {
+    margin-bottom: 4rem;
+}
+
+/* ============================================
+   頁腳
+   ============================================ */
+.footer {
+    background-color: #1a5f5f;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+/* ============================================
+   響應式設計
+   ============================================ */
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #1a5f5f;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+}
