@@ -498,3 +498,24 @@ body {
         font-size: 1rem;
     }
 }
+/* --- 手機版：橫向滑動選單 (解決垂直堆疊遮擋問題) --- */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: flex;
+        flex-wrap: nowrap !important; /* 強制不換行 */
+        overflow-x: auto; /* 內容超出螢幕時，允許橫向滑動 */
+        -webkit-overflow-scrolling: touch; /* 讓 iOS 滑動更順暢 */
+        justify-content: flex-start; /* 從左邊開始排 */
+        padding-bottom: 5px; /* 稍微留一點底部空間 */
+        gap: 15px; /* 縮小一點項目之間的距離 */
+    }
+    
+    .nav-menu li {
+        white-space: nowrap; /* 確保選單文字(例如"訂閱電子報")絕對不斷行 */
+    }
+
+    /* 隱藏醜醜的底部捲軸，讓畫面更乾淨 (選用) */
+    .nav-menu::-webkit-scrollbar {
+        display: none; 
+    }
+}
