@@ -6,263 +6,100 @@
 }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-a {
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-ul {
-    list-style: none;
 }
 
 /* --- 導覽列 (Navbar) --- */
 .navbar {
-    background-color: #1a5f5f; /* 品牌深綠色 */
-    color: white;
+    background-color: #1a5f5f;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* 手機版：Logo 在上，選單在下 */
+    align-items: center;
+    padding: 10px 0;
 }
 
 .logo {
-    font-size: 1.5rem;
+    color: white;
+    font-size: 1.2rem;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
+/* --- 橫向滾動選單關鍵設定 --- */
 .nav-menu {
     display: flex;
+    width: 100%;
+    overflow-x: auto;  /* 寬度超出螢幕時允許橫向滑動 */
+    white-space: nowrap; /* 強制選項不換行 */
+    -webkit-overflow-scrolling: touch; /* 優化手機滑動順暢度 */
+    padding: 5px 10px;
+    justify-content: flex-start;
+}
+
+/* 隱藏捲軸，保持畫面美觀 */
+.nav-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-menu li {
+    flex: 0 0 auto; /* 防止選項被壓縮 */
 }
 
 .nav-menu li a {
     color: white;
-    padding: 10px 15px;
-    font-size: 1rem;
-}
-
-.nav-menu li a:hover, .nav-menu li a.active {
-    color: #ff9800; /* 品牌橘色 */
-}
-
-/* 隱藏選單勾選框 */
-.menu-toggle {
-    display: none;
-}
-
-/* --- 英雄區域 (Hero Section) --- */
-.hero {
-    background: linear-gradient(rgba(26, 95, 95, 0.8), rgba(26, 95, 95, 0.8)), url('/images/hero-bg.jpg'); /* 需確保有背景圖 */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #ff9800;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-/* --- 課程網格與卡片 --- */
-.courses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自動適應寬度 */
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.course-card {
-    background: #f9f9f9;
-    border-radius: 12px;
-    padding: 25px;
-    position: relative;
-    border-top: 5px solid #1a5f5f;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-}
-
-.course-tag {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    color: white;
-    margin-bottom: 15px;
-    align-self: flex-start;
-}
-
-/* 課程等級顏色 */
-.tag-beginner { background-color: #4caf50; } /* 初級 [cite: 921] */
-.tag-intermediate { background-color: #2196f3; } /* 中級 [cite: 933] */
-.tag-advanced { background-color: #9c27b0; } /* 高級 [cite: 944] */
-
-.course-card h3 {
-    color: #1a5f5f;
-    margin-bottom: 10px;
-}
-
-.course-info {
-    margin-top: auto;
-    padding-top: 15px;
-    border-top: 1px solid #ddd;
-    font-size: 0.9rem;
-}
-
-.price {
     display: block;
-    color: #e67e22;
-    font-weight: bold;
-    margin-bottom: 10px;
+    padding: 8px 15px;
+    font-size: 0.95rem;
+    text-decoration: none;
 }
 
-.learn-more {
-    display: block;
-    text-align: center;
-    background-color: #1a5f5f;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-.learn-more:hover {
-    background-color: #ff9800;
-}
-
-/* --- 課程詳情頁面 --- */
-.course-detail-header {
-    margin-bottom: 40px;
-}
-
-.back-link {
-    display: inline-block;
-    margin-bottom: 20px;
-    color: #1a5f5f;
-}
-
-.course-info-box {
-    background-color: #f0f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-/* --- 頁腳 (Footer) --- */
-.footer {
-    background-color: #1a5f5f;
-    color: white;
-    padding: 50px 0 20px;
-    margin-top: 60px;
-    text-align: center;
-}
-
-.footer a {
+.nav-menu li a:hover {
     color: #ff9800;
 }
 
-/* --- 回應式設計 (Mobile Responsive) --- */
-
-/* 手機與平板版 (小於 768px) */
-@media (max-width: 768px) {
-    /* 漢堡選單圖示 */
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        padding: 10px;
-    }
-
-    .hamburger span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background: white;
-        margin: 5px 0;
-        transition: 0.3s;
-    }
-
-    /* 手機版選單隱藏 */
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #1a5f5f;
-        position: absolute;
-        top: 70px; /* Navbar 的高度 */
-        left: 0;
-        z-index: 1000;
-    }
-
-    .nav-menu li {
-        text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .nav-menu li a {
-        display: block;
-        padding: 15px;
-    }
-
-    /* 當勾選框被觸發時顯示選單 */
-    .menu-toggle:checked ~ .nav-menu {
-        display: flex;
-    }
-
-    /* 漢堡選單變換效果 (選用) */
-    .menu-toggle:checked + .hamburger span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    .menu-toggle:checked + .hamburger span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle:checked + .hamburger span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
+/* --- 推薦課程區域 --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 20px;
 }
 
-/* 電腦版 (大於 769px) */
+h2 {
+    text-align: center;
+    color: #1a5f5f;
+    margin-bottom: 20px;
+}
+
+/* --- 電腦版樣式回歸 (螢幕大於 768px) --- */
 @media (min-width: 769px) {
-    .hamburger {
-        display: none;
+    .nav-container {
+        flex-direction: row; /* Logo 與選單左右排列 */
+        justify-content: space-between;
+        height: 70px;
+        padding: 0 20px;
     }
+    
+    .logo {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+    
     .nav-menu {
-        display: flex;
+        width: auto;
+        overflow-x: visible;
+        justify-content: flex-end;
+    }
+    
+    .nav-menu li a {
+        font-size: 1rem;
     }
 }
