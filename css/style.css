@@ -439,26 +439,30 @@ body {
 
 /* --- 響應式設計 (RWD) --- */
 @media (max-width: 768px) {
-    /* 修正手機版選單：Logo與選單分開，並讓選單可橫向滑動 */
+    /* 修正手機版選單：Logo與選單分開，並讓選單自動折行置中 */
     .nav-container {
         flex-direction: column; /* 讓 Logo 和選單上下排列 */
         gap: 10px;
-        align-items: flex-start;
+        align-items: center;    /* Logo 居中 */
+        padding: 15px 10px !important;
     }
 
     .nav-menu {
         width: 100%;
-        justify-content: flex-start; /* 從左邊開始排 */
-        flex-wrap: nowrap !important; /* 絕對不准換行 */
-        overflow-x: auto; /* 超出螢幕可左右滑動 */
-        -webkit-overflow-scrolling: touch; /* iOS 滑動順暢 */
-        padding-bottom: 10px; /* 留一點底部空間給可能的捲軸 */
-        gap: 15px; /* 選項間距 */
+        display: flex;
+        flex-wrap: wrap !important; /* 允許選單超出螢幕時自動往下折行 */
+        justify-content: center;    /* 讓折行後的選單項目置中對齊 */
+        gap: 10px 15px;             /* 上下間距10px，左右間距15px */
+        padding-bottom: 5px;
     }
 
-    /* 隱藏手機版橫向捲軸，讓畫面更乾淨 */
-    .nav-menu::-webkit-scrollbar {
-        display: none;
+    .nav-menu li {
+        white-space: normal; /* 讓每個 li 成為獨立區塊參與折行 */
+    }
+
+    .nav-menu a {
+        padding: 5px 10px;  /* 稍微縮小點擊範圍，讓一行能塞下更多選項 */
+        font-size: 0.95rem; /* 稍微加大字體，方便手機點擊 */
     }
 
     .hero-content h1 {
@@ -491,8 +495,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    /* 注意：這裡已經刪除了原本強制把 nav-menu 變成直的 (column) 的程式碼 */
-    
     .hero {
         padding: 3rem 1rem;
     }
