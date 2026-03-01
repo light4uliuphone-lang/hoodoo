@@ -8,14 +8,16 @@
 body {
     font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
     line-height: 1.6;
+    background-color: #fff;
 }
 
-/* --- 導覽列 (Navbar) --- */
+/* --- 導覽列容器 --- */
 .navbar {
-    background-color: #1a5f5f;
+    background-color: #1a5f5f; /* 品牌深綠色 */
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .nav-container {
@@ -29,60 +31,56 @@ body {
 
 .logo {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-/* --- 橫向滾動選單關鍵設定 --- */
+/* --- 橫向選單核心設定 (手機版) --- */
 .nav-menu {
-    display: flex;
-    width: 100%;
-    overflow-x: auto;  /* 寬度超出螢幕時允許橫向滑動 */
-    white-space: nowrap; /* 強制選項不換行 */
-    -webkit-overflow-scrolling: touch; /* 優化手機滑動順暢度 */
-    padding: 5px 10px;
-    justify-content: flex-start;
+    display: flex !important; /* 強制顯示，防止被之前的隱藏指令影響 */
+    width: 100vw; /* 佔滿螢幕寬度 */
+    overflow-x: auto; /* 開啟左右滑動 */
+    white-space: nowrap; /* 選項不換行 */
+    -webkit-overflow-scrolling: touch; /* 讓手機滑動更順暢 */
+    padding: 10px 5px;
+    justify-content: flex-start; /* 從左側開始排 */
 }
 
-/* 隱藏捲軸，保持畫面美觀 */
+/* 隱藏捲軸，保持畫面整潔 */
 .nav-menu::-webkit-scrollbar {
     display: none;
 }
 
 .nav-menu li {
-    flex: 0 0 auto; /* 防止選項被壓縮 */
+    display: inline-block;
+    flex: 0 0 auto; /* 防止標籤被壓縮變形 */
 }
 
 .nav-menu li a {
     color: white;
-    display: block;
     padding: 8px 15px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-decoration: none;
+    display: block;
 }
 
 .nav-menu li a:hover {
     color: #ff9800;
 }
 
-/* --- 推薦課程區域 --- */
+/* --- 內容區域 --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 20px;
 }
 
-h2 {
-    text-align: center;
-    color: #1a5f5f;
-    margin-bottom: 20px;
-}
-
-/* --- 電腦版樣式回歸 (螢幕大於 768px) --- */
+/* --- 電腦版樣式回歸 (螢幕寬度大於 769px) --- */
 @media (min-width: 769px) {
     .nav-container {
-        flex-direction: row; /* Logo 與選單左右排列 */
+        flex-direction: row; /* Logo 與選單恢復左右排列 */
         justify-content: space-between;
         height: 70px;
         padding: 0 20px;
@@ -95,11 +93,7 @@ h2 {
     
     .nav-menu {
         width: auto;
-        overflow-x: visible;
-        justify-content: flex-end;
-    }
-    
-    .nav-menu li a {
-        font-size: 1rem;
+        overflow-x: visible; /* 電腦版不滑動 */
+        padding: 0;
     }
 }
