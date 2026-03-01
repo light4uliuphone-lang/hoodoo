@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">四月老師 - 魔法課程中心</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">首頁</a></li>
+                <li><a href="/courses.html">課程中心</a></li>
+                <li><a href="/rituals.html">儀式與服務</a></li>
+                <li><a href="/blog.html">部落格</a></li>
+                <li><a href="/about.html">關於我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>© 2024 四月老師 - 魔法課程中心。版權所有。</p>
+        <p>報名方式：<a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    </footer>
+
+</body>
+</html>
