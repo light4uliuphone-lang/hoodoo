@@ -1,90 +1,66 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>現代魔法－金錢魔法符印實作(實體) - 四月老師</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <!-- 導航菜單 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">🔮 四月老師</div>
-            <ul class="nav-menu">
-                <li><a href="../index.html">首頁</a></li>
-                <li><a href="../courses.html">課程中心</a></li>
-                <li><a href="../rituals.html">儀式與服務</a></li>
-                <li><a href="#blog">部落格</a></li>
-                <li><a href="../about.html">關於我們</a></li>
-                <li><a href="#newsletter">訂閱電子報</a></li>
-            </ul>
-        </div>
-    </nav>
+---
+layout: default
+title: "現代魔法－金錢魔法符印實作(實體) - 歐比路老師"
+---
 
-    <!-- 課程詳情 -->
-    <div class="container" style="padding: 3rem 0;">
-        <a href="../courses.html" class="back-link">← 返回課程中心</a>
+<div class="container" style="padding: 3rem 0;">
+    <a href="/courses/" class="back-link">← 返回課程中心</a>
 
-        <div class="course-detail-header">
-            <h1>現代魔法－金錢魔法符印實作(實體)</h1>
-            <div class="meta">
-                <span>📚 現代與符印魔法</span>
-                <span>📊 初級</span>
-                <span>👨‍🏫 歐比路老師</span>
-            </div>
-        </div>
-
-        <div class="course-detail-content">
-            <h2>課程概述</h2>
-            <p>在魔法的發展歷史當中有許多不同的魔法系統，好比說：有歷史淵源的胡督魔法。</p>
-
-            <h2>課程詳情</h2>
-            <p>在魔法的發展歷史當中有許多不同的魔法系統，好比說：有歷史淵源的胡督魔法。事實上在近代中也有幾支新生代的魔法系統，其中一個便是較為人所知的渾沌魔法系統。在混沌魔法系統中「符印」是時常使用的魔法形式，而符印是種將我們的願望轉化成符號的一種符咒形式。
-
-有句台語俗諺：「有錢烏龜坐大廳，無錢秀才人人驚」，金錢是我們走跳這個社會的不可或缺的一員，即便自身再怎麼有才華，終究還需用到金錢。為此，在這門現代魔法－金錢魔法符印實作中，將會提供四張已設計好的魔法符印，藉由課程中講解符印的脈絡與使用方式，讓大家可以從日常生活實踐起魔法，感受魔法對於生活的協助。</p>
-
-            <h2>課程大綱</h2>
-            <ol>
-                <li>符印魔法簡介</li>
-                <li>符印的啟動與使用方式</li>
-                <li>魔法符印I：賺錢順利的符印</li>
-                <li>魔法符印II：成交順利的符印</li>
-                <li>魔法符印III：擺脫貧窮的符印</li>
-                <li>魔法符印IV：消除破財的符印</li>
-            </ol>
-
-            <h2>課程信息</h2>
-            <div class="course-info-box">
-                <p><strong>上課時間：</strong>7/06(日) 17:00-18:30</p>
-                <p><strong>課程價格：</strong>原價:3800元  特價:2800元</p>
-                <p><strong>講師：</strong>歐比路老師</p>
-            </div>
-
-            <h2>老師介紹</h2>
-            <div class="teacher-info">
-                <h3>歐比路老師</h3>
-                <p>研究兒童青少年精神醫學領域時，接觸靈性領域。並在與祖靈相遇的過程中，獲得靈性啟發，開始學習魔法咒術。早上是位熱愛統計學的工程師，晚上則變成鑽研咒術的魔法工作者。喜愛以心理動力觀點詮釋魔法，擅長策略性整合有限資源，獲得最佳化魔法效益。認為現實策略與魔法策略，皆是構成魔法的重要因素。</p>
-                <p><strong>粉絲專頁：</strong>歐比路藥草魔法實驗室</p>
-            </div>
-
-            <h2>報名方式</h2>
-            <div class="registration-info">
-                <p><strong>方式一：</strong>請填寫以下表單，留下 E-mail 和聯絡電話。完成報名後，將於三日內回信給您。</p>
-                <p><strong>方式二：</strong>請來信至 <a href="mailto:herbmagic@hotmail.com.tw">herbmagic@hotmail.com.tw</a>，標題為「現代魔法－金錢魔法符印實作(實體)」，告知您的姓名、聯絡電話、收件地址即可。</p>
-            </div>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="#" class="btn-primary">立即報名</a>
-            </div>
+    <div class="course-detail-header">
+        <h1>{{ page.title | split: " - " | first }}</h1>
+        <div class="meta">
+            <span>📚 現代與符印魔法</span>
+            <span>🌀 混沌魔法</span>
+            <span>📊 初級</span>
+            <span>👨‍🏫 歐比路老師</span>
         </div>
     </div>
 
-    <!-- 頁腳 -->
-    <footer style="background-color: #1a5f5f; color: white; text-align: center; padding: 2rem; margin-top: 4rem;">
-        <p>&copy; 2024 四月老師 - 魔法課程中心。版權所有。</p>
-    </footer>
+    <div class="course-detail-content">
+        <h2>課程概述</h2>
+        <p>在魔法的發展歷史當中有許多不同的魔法系統。除了傳統的胡督魔法外，近代最受矚目的便是<strong>「混沌魔法」</strong>。本課程將聚焦於混沌魔法中最實用的技術——<strong>符印（Sigils）</strong>，教您如何將純粹的意念轉化為顯化的能量符號。</p>
 
-    <script src="../js/main.js"></script>
-</body>
-</html>
+        <h2>課程詳情</h2>
+        <p>台語俗諺說：「有錢烏龜坐大廳，無錢秀才人人驚」。無論自身多麼有才華，在現實社會中，金錢始終是不可或缺的推動力。在混沌魔法系統中，符印是一種高度個人化且強大的符咒形式。</p>
+
+        <p>這門課程不只談理論，歐比路老師更設計了<strong>四張針對現代生活需求的魔法符印</strong>。藉由深入淺出的脈絡講解與現場啟動實作，讓魔法不再只是書本上的符號，而是能直接協助您日常生活實踐的工具，感受能量對於物質生活的實質協助。</p>
+
+        <h2>課程大綱</h2>
+        <div class="syllabus-grid">
+            <ol>
+                <li><strong>符印魔法簡介：</strong> 混沌魔法的核心觀點與符印原理。</li>
+                <li><strong>啟動與使用技術：</strong> 學習如何正確喚醒符印能量並部署在生活中。</li>
+                <li><strong>魔法符印 I：</strong> 賺錢順利——開啟正財運勢的能量入口。</li>
+                <li><strong>魔法符印 II：</strong> 成交順利——強化商業談判與業務顯化力。</li>
+                <li><strong>魔法符印 III：</strong> 擺脫貧窮——清理停滯的匱乏磁場。</li>
+                <li><strong>魔法符印 IV：</strong> 消除破財——架設財務漏洞的防禦牆。</li>
+            </ol>
+        </div>
+
+        <h2>課程信息</h2>
+        <div class="course-info-box">
+            <p><strong>上課時間：</strong>7/06(日) 17:00-18:30</p>
+            <p><strong>講師：</strong>歐比路老師</p>
+            <p><strong>課程價格：</strong>原價：3800元 | <span style="color: #e67e22; font-weight: bold;">特價：2800元</span></p>
+            <p style="font-size: 0.9rem; color: #666;">※ 本課程含四張已設計完成之魔法符印紙卡及啟動引導。</p>
+        </div>
+
+        <h2>老師介紹</h2>
+        <div class="teacher-info">
+            <h3>歐比路老師</h3>
+            <p>歐比路老師擁有精神醫學背景，這使他能以獨特的「心理動力觀點」來解析魔法運作。他白天是熱愛統計學的工程師，晚上則是鑽研咒術的魔法工作者。他擅長整合有限資源，以「策略魔法」的邏輯協助學員獲得最佳化的現實效益。</p>
+            <p><strong>粉絲專頁：</strong>歐比路藥草魔法實驗室</p>
+        </div>
+
+        <h2>報名方式</h2>
+        <div class="registration-info">
+            <p><strong>方式一：</strong>請填寫官方報名表單，完成後將於三日內回信給您。</p>
+            <p><strong>方式二：</strong>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
+            <p>郵件標題請註明：<strong>「報名 {{ page.title | split: " - " | first }}」</strong>，並告知您的姓名、聯絡電話及收件地址。</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-{{ page.title | split: ' - ' | first }}" class="btn-primary">立即報名</a>
+        </div>
+    </div>
+</div>
