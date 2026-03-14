@@ -1,1 +1,157 @@
 
+---
+layout: default
+title: "靈性札記：魔法與生活的交界處 - 四月老師"
+---
+
+<style>
+    /* 部落格專屬樣式 */
+    .blog-hero {
+        background: linear-gradient(rgba(26, 95, 95, 0.8), rgba(26, 95, 95, 0.8)), url('/assets/images/blog-bg.jpg'); /* 建議放一張有質感的工作檯照片 */
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 4rem 1rem;
+        margin-bottom: 3rem;
+        border-radius: 12px;
+    }
+
+    .category-nav {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .category-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid #eee;
+        text-decoration: none;
+        color: #333;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .category-card:hover {
+        transform: translateY(-5px);
+        border-color: #ff9800;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .category-card i {
+        font-size: 2.5rem;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        border-left: 5px solid #ff9800;
+    }
+
+    .post-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .post-card {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 1.5rem;
+    }
+
+    .post-card h3 {
+        margin-top: 0.5rem;
+        font-size: 1.25rem;
+    }
+
+    .post-card .meta {
+        font-size: 0.85rem;
+        color: #888;
+    }
+</style>
+
+<div class="container">
+    <header class="blog-hero">
+        <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">靈性札記</h1>
+        <p style="font-size: 1.1rem; opacity: 0.9;">在這裡，我們用魔法探討現實，用理智解析神祕。</p>
+    </header>
+
+    <nav class="category-nav">
+        <a href="#magic-knowledge" class="category-card">
+            <i>🕯️</i>
+            <h3>神祕學與魔法知識</h3>
+            <p>硬核的儀式考據與魔法原理</p>
+        </a>
+        <a href="#psychology" class="category-card">
+            <i>🧠</i>
+            <h3>心理與生活探索</h3>
+            <p>靈魂的療癒與自我的對話</p>
+        </a>
+        <a href="#urban-legend" class="category-card">
+            <i>👻</i>
+            <h3>奇聞與都市傳說</h3>
+            <p>暗影處的驚奇與都市軼事</p>
+        </a>
+        <a href="#announcements" class="category-card">
+            <i>📢</i>
+            <h3>商店公告與活動</h3>
+            <p>最新課程、儀式與限定情報</p>
+        </a>
+    </nav>
+
+    <section id="magic-knowledge">
+        <div class="section-title">
+            <h2>🕯️ 神祕學與魔法知識</h2>
+            <a href="/blog/magic-knowledge/" style="color: #1a5f5f; font-weight: bold;">查看全部 →</a>
+        </div>
+        <div class="post-list">
+            <article class="post-card">
+                <div class="meta">2026/03/10 · 胡督魔法</div>
+                <h3><a href="#" style="color: #333; text-decoration: none;">如何正確解讀胡督藥草的「魔性」？</a></h3>
+                <p>了解藥草屬性是魔法的第一步，本篇將深入探討如何透過觀察與歷史文獻區辨...</p>
+            </article>
+            <article class="post-card">
+                <div class="meta">2026/02/28 · 古典封印</div>
+                <h3><a href="#" style="color: #333; text-decoration: none;">所羅門大鑰：封印啟動的關鍵細節</a></h3>
+                <p>很多人畫了封印卻無效，往往是因為忽略了能量連結的媒介...</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="psychology">
+        <div class="section-title">
+            <h2>🧠 心理與生活探索</h2>
+            <a href="/blog/psychology/" style="color: #1a5f5f; font-weight: bold;">查看全部 →</a>
+        </div>
+        <div class="post-list">
+            <article class="post-card">
+                <div class="meta">2026/03/05 · 深層心理</div>
+                <h3><a href="#" style="color: #333; text-decoration: none;">吸引力法則無效？談意志力背後的負向抵抗</a></h3>
+                <p>為什麼拼命宣告卻換來反效果？心理學與魔法共同指出的阻礙...</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="announcements" style="background: #fdf6ec; padding: 2rem; border-radius: 12px;">
+        <div class="section-title">
+            <h2>📢 商店公告與活動情報</h2>
+        </div>
+        <div class="post-list">
+            <article class="post-card" style="border-bottom-color: #ff9800;">
+                <div class="meta"><span style="background: #ff9800; color: white; padding: 2px 6px; border-radius: 4px;">最新</span> 2026/04/19</div>
+                <h3><a href="/rituals/michael-2026.html" style="color: #333; font-weight: bold;">【聖米迦勒一日儀式】正式開放報名！</a></h3>
+                <p>天軍首領聖日降臨，限時結緣代禱儀式，報名即贈守護小卡...</p>
+            </article>
+        </div>
+    </section>
+
+</div>
