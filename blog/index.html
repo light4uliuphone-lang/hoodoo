@@ -4,47 +4,13 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
 ---
 
 <style>
-    /* 延用之前的樣式並優化 */
-    .blog-hero {
-        background: linear-gradient(rgba(26, 95, 95, 0.85), rgba(26, 95, 95, 0.85));
-        color: white;
-        text-align: center;
-        padding: 4rem 1rem;
-        margin-bottom: 3rem;
-        border-radius: 12px;
-    }
-    .category-nav {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
-        margin-bottom: 4rem;
-    }
-    .category-card {
-        background: #fff;
-        padding: 1.5rem;
-        border-radius: 12px;
-        text-align: center;
-        border: 1px solid #eee;
-        text-decoration: none;
-        color: #333;
-        transition: 0.3s;
-    }
+    /* ... 保持你原本的 CSS 樣式不變 ... */
+    .blog-hero { background: linear-gradient(rgba(26, 95, 95, 0.85), rgba(26, 95, 95, 0.85)); color: white; text-align: center; padding: 4rem 1rem; margin-bottom: 3rem; border-radius: 12px; }
+    .category-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+    .category-card { background: #fff; padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid #eee; text-decoration: none; color: #333; transition: 0.3s; }
     .category-card:hover { transform: translateY(-5px); border-color: #ff9800; }
-    
-    .section-title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 1.5rem;
-        border-left: 5px solid #ff9800;
-        padding-left: 1rem;
-    }
-    .post-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-bottom: 4rem;
-    }
+    .section-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; border-left: 5px solid #ff9800; padding-left: 1rem; }
+    .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
     .post-item { border-bottom: 1px solid #eee; padding-bottom: 1.5rem; }
     .post-item h3 a { color: #333; text-decoration: none; }
     .post-item h3 a:hover { color: #1a5f5f; }
@@ -64,29 +30,29 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         <a href="#news" class="category-card"><h3>📢 商店公告</h3></a>
     </nav>
 
-    {% assign categories = "magic,life,legend,news" | split: "," %}
-    {% assign titles = "神祕學與魔法知識,心理與生活探索,奇聞與都市傳說,商店公告與活動情報" | split: "," %}
-    {% assign icons = "🕯️,🧠,👻,📢" | split: "," %}
+    {% assign category_list = "magic,life,legend,news" | split: "," %}
+    {% assign title_list = "神祕學與魔法知識,心理與生活探索,奇聞與都市傳說,商店公告與活動情報" | split: "," %}
+    {% assign icon_list = "🕯️,🧠,👻,📢" | split: "," %}
 
-    {% for category in categories %}
-    <section id="{{ category }}">
+    {% for cat_name in category_list %}
+    <section id="{{ cat_name }}">
         <div class="section-title">
-            <h2>{{ icons[forloop.index0] }} {{ titles[forloop.index0] }}</h2>
-            <a href="/blog/category/{{ category }}.html" style="font-size: 0.9rem; color: #1a5f5f;">查看全部 →</a>
+            <h2>{{ icon_list[forloop.index0] }} {{ title_list[forloop.index0] }}</h2>
+            <a href="{{ '/blog/category/' | append: cat_name | append: '.html' | relative_url }}" style="font-size: 0.9rem; color: #1a5f5f;">查看全部 →</a>
         </div>
         
         <div class="post-grid">
-            {% assign posts = site.categories[category] | limit: 3 %}
+            {% assign posts = site.categories[cat_name] | limit: 3 %}
             {% if posts.size > 0 %}
                 {% for post in posts %}
                 <article class="post-item">
                     <div class="post-meta">{{ post.date | date: "%Y/%m/%d" }}</div>
-                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                     <p>{{ post.excerpt | strip_html | truncate: 80 }}</p>
                 </article>
                 {% endfor %}
             {% else %}
-                <p style="color: #bbb;">目前尚無文章...</p>
+                <p style="color: #bbb;">目前「{{ cat_name }}」分類尚無文章...</p>
             {% endif %}
         </div>
     </section>
