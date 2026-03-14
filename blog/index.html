@@ -171,4 +171,31 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
     {% for slug in category_slugs %}
     <section id="{{ slug }}">
         <div class="section-title">
-            <h2>{{ category_icons[forloop.index0] }} {{ category_titles[forloop.index0
+            <h2>{{ category_icons[forloop.index0] }} {{ category_titles[forloop.index0] }}</h2>
+            <a href="{{ '/blog/category/' | append: slug | append: '.html' | relative_url }}" style="font-size: 0.9rem; color: #1a5f5f; text-decoration: none; font-weight: bold;">查看全部 →</a>
+        </div>
+        
+        <div class="post-grid">
+            {% assign found_post = false %}
+            {% for post in site.posts %}
+                {% if post.categories contains slug %}
+                    {% assign found_post = true %}
+                    <article class="post-item">
+                        <div class="post-meta">📅 {{ post.date | date: "%Y/%m/%d" }}</div>
+                        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                        <div class="post-excerpt">
+                            {{ post.excerpt | strip_html | truncate: 80 }}
+                        </div>
+                    </article>
+                {% endif %}
+            {% endfor %}
+
+            {% if found_post == false %}
+                <p style="color: #bbb; grid-column: 1 / -1; padding: 2rem; background: #fafafa; border-radius: 8px; text-align: center;">
+                    目前「{{ slug }}」分類下尚無文章，敬請期待...
+                </p>
+            {% endif %}
+        </div>
+    </section>
+    {% endfor %}
+</div>
