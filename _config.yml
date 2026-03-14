@@ -2,7 +2,7 @@ title: 靈火巫境
 description: 策略魔法、藥草魔法與胡督傳統課程中心
 email: herbmagic@hotmail.com.tw
 url: "https://hoodoo.pro"
-baseurl: "" # 這是最重要的修正：告訴系統你的專案資料夾名稱
+baseurl: "/hoodoo" # 這是最重要的修正：告訴系統你的專案資料夾名稱
 
 # 額外建議加入的設定，確保抓取更穩定
 markdown: kramdown
