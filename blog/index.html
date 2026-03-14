@@ -4,62 +4,171 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
 ---
 
 <style>
-    /* 保持你原本喜歡的 CSS 樣式 */
-    .blog-hero { background: linear-gradient(rgba(26, 95, 95, 0.85), rgba(26, 95, 95, 0.85)); color: white; text-align: center; padding: 4rem 1rem; margin-bottom: 3rem; border-radius: 12px; }
-    .category-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
-    .category-card { background: #fff; padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid #eee; text-decoration: none; color: #333; transition: 0.3s; }
-    .category-card:hover { transform: translateY(-5px); border-color: #ff9800; }
-    .section-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; border-left: 5px solid #ff9800; padding-left: 1rem; }
-    .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
-    .post-item { border-bottom: 1px solid #eee; padding-bottom: 1.5rem; }
-    .post-item h3 a { color: #333; text-decoration: none; }
-    .post-item h3 a:hover { color: #1a5f5f; }
-    .post-meta { font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; }
+    /* 1. Hero 區塊優化 */
+    .blog-hero {
+        background: #1a5f5f; /* 穩定的底色 */
+        background: linear-gradient(rgba(26, 95, 95, 0.9), rgba(26, 95, 95, 0.9));
+        color: white;
+        text-align: center;
+        padding: 4rem 1.5rem;
+        margin-bottom: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* 2. 分類導覽卡片 - 強制橫向網格 */
+    .category-nav {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+        padding: 0;
+    }
+
+    .category-card {
+        background: #ffffff;
+        padding: 2rem 1.5rem;
+        border-radius: 12px;
+        text-align: center;
+        border: 1px solid #eaeaea;
+        text-decoration: none;
+        color: #333 !important; /* 強制文字顏色 */
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .category-card:hover {
+        transform: translateY(-5px);
+        border-color: #ff9800;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .category-card span.icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .category-card h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    /* 3. 文章區塊標題 */
+    .section-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 4rem 0 1.5rem 0;
+        border-left: 6px solid #ff9800;
+        padding-left: 1.2rem;
+    }
+
+    .section-title h2 {
+        margin: 0;
+        font-size: 1.6rem;
+        color: #1a5f5f;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* 4. 文章列表網格 */
+    .post-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .post-item {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-bottom: 3px solid #eee;
+        transition: border-color 0.3s;
+    }
+
+    .post-item:hover {
+        border-bottom-color: #1a5f5f;
+    }
+
+    .post-meta {
+        font-size: 0.85rem;
+        color: #888;
+        margin-bottom: 0.8rem;
+    }
+
+    .post-item h3 {
+        margin: 0 0 1rem 0;
+        line-height: 1.4;
+    }
+
+    .post-item h3 a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .post-item h3 a:hover {
+        color: #ff9800;
+    }
+
+    .post-excerpt {
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    /* 手機版微調 */
+    @media (max-width: 600px) {
+        .category-nav {
+            grid-template-columns: 1fr 1fr; /* 手機版兩列 */
+        }
+        .category-card {
+            padding: 1.5rem 1rem;
+        }
+        .category-card span.icon { font-size: 2rem; }
+        .category-card h3 { font-size: 1rem; }
+    }
 </style>
 
-<div class="container">
-    <header class="blog-hero">
-        <h1 style="margin-bottom: 0.5rem;">靈性札記</h1>
-        <p>在這裡，我們用魔法探討現實，用理智解析神祕。</p>
-    </header>
+<div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 1rem;">
+    <header class="blog-hero">
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">靈性札記</h1>
+        <p style="font-size: 1.1rem; opacity: 0.9;">在這裡，我們用魔法探討現實，用理智解析神祕。</p>
+    </header>
 
-        <nav class="category-nav">
-        <a href="#magic" class="category-card"><h3>🕯️ 魔法知識</h3></a>
-        <a href="#life" class="category-card"><h3>🧠 心理探索</h3></a>
-        <a href="#legend" class="category-card"><h3>👻 奇聞傳說</h3></a>
-        <a href="#news" class="category-card"><h3>📢 商店公告</h3></a>
-    </nav>
+    <nav class="category-nav">
+        <a href="#magic" class="category-card">
+            <span class="icon">🕯️</span>
+            <h3>魔法知識</h3>
+        </a>
+        <a href="#life" class="category-card">
+            <span class="icon">🧠</span>
+            <h3>心理探索</h3>
+        </a>
+        <a href="#legend" class="category-card">
+            <span class="icon">👻</span>
+            <h3>奇聞傳說</h3>
+        </a>
+        <a href="#news" class="category-card">
+            <span class="icon">📢</span>
+            <h3>商店公告</h3>
+        </a>
+    </nav>
 
-    {% assign all_posts = site.posts %}
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 4rem 0;">
 
-    {% assign category_list = "magic,life,legend,news" | split: "," %}
-    {% assign title_list = "神祕學與魔法知識,心理與生活探索,奇聞與都市傳說,商店公告與活動情報" | split: "," %}
-    {% assign icon_list = "🕯️,🧠,👻,📢" | split: "," %}
+    {% assign category_slugs = "magic,life,legend,news" | split: "," %}
+    {% assign category_titles = "神祕學與魔法知識,心理與生活探索,奇聞與都市傳說,商店公告與活動情報" | split: "," %}
+    {% assign category_icons = "🕯️,🧠,👻,📢" | split: "," %}
 
-    {% for cat_name in category_list %}
-    <section id="{{ cat_name }}">
+    {% for slug in category_slugs %}
+    <section id="{{ slug }}">
         <div class="section-title">
-            <h2>{{ icon_list[forloop.index0] }} {{ title_list[forloop.index0] }}</h2>
-            <a href="{{ '/blog/category/' | append: cat_name | append: '.html' | relative_url }}" style="font-size: 0.9rem; color: #1a5f5f;">查看全部 →</a>
-        </div>
-        
-        <div class="post-grid">
-            {% assign found_post = false %}
-            {% for post in all_posts %}
-                {% if post.categories contains cat_name %}
-                    {% assign found_post = true %}
-                    <article class="post-item">
-                        <div class="post-meta">{{ post.date | date: "%Y/%m/%d" }}</div>
-                        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                        <p>{{ post.excerpt | strip_html | truncate: 80 }}</p>
-                    </article>
-                {% endif %}
-            {% endfor %}
-
-            {% if found_post == false %}
-                <p style="color: #bbb;">目前「{{ cat_name }}」分類尚無文章...</p>
-            {% endif %}
-        </div>
-    </section>
-    {% endfor %}
-</div>
+            <h2>{{ category_icons[forloop.index0] }} {{ category_titles[forloop.index0
