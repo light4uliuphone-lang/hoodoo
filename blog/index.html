@@ -1,63 +1,33 @@
 ---
 layout: default
-title: "靈性札記：魔法與生活的交界處 - 四月老師"
+title: "靈性札記 - 四月老師"
 ---
 
-<style>
-    /* ... 保持你原本的 CSS 樣式 ... */
-    .blog-hero { background: linear-gradient(rgba(26, 95, 95, 0.85), rgba(26, 95, 95, 0.85)); color: white; text-align: center; padding: 4rem 1rem; margin-bottom: 3rem; border-radius: 12px; }
-    .category-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
-    .category-card { background: #fff; padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid #eee; text-decoration: none; color: #333; transition: 0.3s; }
-    .category-card:hover { transform: translateY(-5px); border-color: #ff9800; }
-    .section-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; border-left: 5px solid #ff9800; padding-left: 1rem; }
-    .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
-    .post-item { border-bottom: 1px solid #eee; padding-bottom: 1.5rem; }
-    .post-item h3 a { color: #333; text-decoration: none; }
-    .post-item h3 a:hover { color: #1a5f5f; }
-    .post-meta { font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; }
-</style>
+<div class="container" style="padding: 3rem 0;">
+    <h1 style="text-align: center; color: #1a5f5f;">靈性札記</h1>
+    <p style="text-align: center; color: #888;">探索神祕學與現實生活的連結</p>
 
-<div class="container">
-    <header class="blog-hero">
-        <h1>靈性札記</h1>
-        <p>在這裡，我們用魔法探討現實，用理智解析神祕。</p>
-    </header>
+    <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #eee;">
 
-    <nav class="category-nav">
-        <a href="#magic" class="category-card"><h3>🕯️ 魔法知識</h3></a>
-        <a href="#life" class="category-card"><h3>🧠 心理探索</h3></a>
-        <a href="#legend" class="category-card"><h3>👻 奇聞傳說</h3></a>
-        <a href="#news" class="category-card"><h3>📢 商店公告</h3></a>
-    </nav>
+    <div style="background: #f0f0f0; padding: 1rem; border-radius: 5px; margin-bottom: 2rem; font-size: 0.9rem;">
+        🔍 系統診斷報告：目前偵測到文章總數為：<strong>{{ site.posts | size }}</strong> 篇
+    </div>
 
-    {% assign category_slugs = "magic|life|legend|news" | split: "|" %}
-    {% assign category_titles = "神祕學與魔法知識|心理與生活探索|奇聞與都市傳說|商店公告與活動情報" | split: "|" %}
-    {% assign category_icons = "🕯️|🧠|👻|📢" | split: "|" %}
-
-    {% for slug in category_slugs %}
-    <section id="{{ slug }}">
-        <div class="section-title">
-            <h2>{{ category_icons[forloop.index0] }} {{ category_titles[forloop.index0] }}</h2>
-            <a href="{{ '/blog/category/' | append: slug | append: '.html' | relative_url }}" style="font-size: 0.9rem; color: #1a5f5f;">查看全部 →</a>
-        </div>
-        
-        <div class="post-grid">
-            {% assign found_post = false %}
-            {% for post in site.posts %}
-                {% if post.categories contains slug %}
-                    {% assign found_post = true %}
-                    <article class="post-item">
-                        <div class="post-meta">{{ post.date | date: "%Y/%m/%d" }}</div>
-                        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                        <p>{{ post.excerpt | strip_html | truncate: 80 }}</p>
-                    </article>
-                {% endif %}
-            {% endfor %}
-
-            {% if found_post == false %}
-                <p style="color: #bbb;">目前「{{ slug }}」分類下尚無文章...</p>
-            {% endif %}
-        </div>
-    </section>
-    {% endfor %}
+    <div class="post-list">
+        {% for post in site.posts %}
+            <article style="margin-bottom: 3rem; border-bottom: 1px solid #eee; padding-bottom: 2rem;">
+                <span style="color: #888; font-size: 0.9rem;">{{ post.date | date: "%Y/%m/%d" }}</span>
+                <h2 style="margin: 0.5rem 0;">
+                    <a href="{{ post.url | relative_url }}" style="color: #1a5f5f; text-decoration: none;">{{ post.title }}</a>
+                </h2>
+                <p style="color: #666; line-height: 1.6;">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                <a href="{{ post.url | relative_url }}" style="color: #ff9800; font-weight: bold; text-decoration: none;">閱讀更多 →</a>
+            </article>
+        {% else %}
+            <div style="text-align: center; padding: 5rem 0;">
+                <p style="font-size: 1.2rem; color: #bbb;">目前還沒有任何文章出現在這裡...</p>
+                <p style="color: #ccc; font-size: 0.9rem;">(請檢查 _posts 資料夾與檔案格式)</p>
+            </div>
+        {% endfor %}
+    </div>
 </div>
