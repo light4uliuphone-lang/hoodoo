@@ -1,1 +1,38 @@
 
+
+---
+layout: default
+---
+
+<div class="container" style="padding: 3rem 0;">
+    <nav style="margin-bottom: 2rem;">
+        <a href="/blog/index.html" class="back-link">← 返回部落格首頁</a>
+    </nav>
+
+    <article class="post-container">
+        <header class="post-header" style="margin-bottom: 3rem; border-bottom: 1px solid #eee; padding-bottom: 2rem;">
+            <div class="post-meta" style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">
+                <span>📅 {{ page.date | date: "%Y/%m/%d" }}</span> 
+                <span style="margin: 0 10px;">|</span>
+                <span>🏷️ {{ page.categories | join: ", " }}</span>
+            </div>
+            <h1 style="font-size: 2.5rem; color: #1a5f5f; line-height: 1.3;">{{ page.title }}</h1>
+        </header>
+
+        <div class="post-content" style="line-height: 1.8; font-size: 1.1rem; color: #333;">
+            {{ content }}
+        </div>
+
+        <footer style="margin-top: 5rem; padding-top: 2rem; border-top: 2px dashed #eee;">
+            <div class="author-box" style="background: #f9f9f9; padding: 1.5rem; border-radius: 8px;">
+                <h3 style="margin-top: 0;">✍️ 關於作者</h3>
+                <p>探索神祕學與現實生活的連結，致力於將古老智慧轉化為現代可行的策略。歡迎追蹤我們的最新消息。</p>
+            </div>
+        </header>
+    </article>
+
+    <div style="text-align: center; margin-top: 4rem;">
+        <p style="font-weight: bold; color: #1a5f5f;">對神祕學有興趣嗎？</p>
+        <a href="/courses.html" class="btn-primary">查看近期魔法課程</a>
+    </div>
+</div>
