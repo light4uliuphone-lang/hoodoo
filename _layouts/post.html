@@ -1,12 +1,12 @@
 ---
 layout: default
 ---
+
 <article class="post-container" style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
     <header class="post-header" style="margin-bottom: 2rem;">
-        <h1 class="post-title">{{ page.title }}</h1>
+        <h1 class="post-title" style="font-size: 2rem; color: #1a5f5f; margin-bottom: 0.5rem;">{{ page.title }}</h1>
         <div class="post-meta" style="color: #666; font-size: 0.9rem;">
             <span>📅 {{ page.date | date: "%Y-%m-%d" }}</span>
-            {% if page.author %} <span> | ✍️ {{ page.author }}</span> {% endif %}
         </div>
     </header>
 
@@ -18,14 +18,14 @@ layout: default
 
     {% include google-ad-bottom.html %}
 
-    <nav class="post-navigation" style="margin-top: 3rem; display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 1rem;">
+    <nav class="post-navigation" style="margin-top: 3rem; display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 1.5rem;">
         {% if page.previous %}
-            <a href="{{ page.previous.url }}" style="color: #1a5f5f;">← {{ page.previous.title }}</a>
+            <a href="{{ page.previous.url }}" style="color: #1a5f5f; text-decoration: none;">← {{ page.previous.title }}</a>
         {% else %}
             <span></span>
         {% endif %}
         {% if page.next %}
-            <a href="{{ page.next.url }}" style="color: #1a5f5f;">{{ page.next.title }} →</a>
+            <a href="{{ page.next.url }}" style="color: #1a5f5f; text-decoration: none;">{{ page.next.title }} →</a>
         {% endif %}
     </nav>
 </article>
