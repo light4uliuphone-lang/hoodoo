@@ -1,72 +1,31 @@
 ---
 layout: default
 ---
-
-<style>
-    .article-container {
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 0 20px;
-        line-height: 1.8;
-        color: #333;
-        font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
-    }
-    .article-header {
-        text-align: center;
-        margin-bottom: 50px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid #eee;
-    }
-    .article-title {
-        font-size: 2.2rem;
-        color: #1a5f5f;
-        margin-bottom: 15px;
-    }
-    .article-meta {
-        color: #888;
-        font-size: 0.9rem;
-    }
-    .article-content h2 {
-        color: #1a5f5f;
-        margin: 40px 0 20px;
-        border-left: 5px solid #ff9800;
-        padding-left: 15px;
-    }
-    .article-content blockquote {
-        background: #fdf6ed;
-        border-left: 5px solid #ff9800;
-        margin: 30px 0;
-        padding: 20px;
-        font-style: italic;
-    }
-    .back-btn {
-        display: inline-block;
-        margin-bottom: 20px;
-        color: #1a5f5f;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    .back-btn:hover { color: #ff9800; }
-</style>
-
-<div class="article-container">
-    <a href="{{ '/blog/' | relative_url }}" class="back-btn">← 返回靈性札記</a>
-    
-    <article>
-        <header class="article-header">
-            <div class="article-meta">📅 {{ page.date | date: "%Y/%m/%d" }}</div>
-            <h1 class="article-title">{{ page.title }}</h1>
-        </header>
-
-        <div class="article-content">
-            {{ content }}
+<article class="post-container" style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
+    <header class="post-header" style="margin-bottom: 2rem;">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-meta" style="color: #666; font-size: 0.9rem;">
+            <span>📅 {{ page.date | date: "%Y-%m-%d" }}</span>
+            {% if page.author %} <span> | ✍️ {{ page.author }}</span> {% endif %}
         </div>
+    </header>
 
-        <footer style="margin-top: 60px; padding: 30px; background: #fafafa; border-radius: 10px;">
-            <p style="margin: 0; font-weight: bold; color: #1a5f5f;">✍️ 關於四月老師</p>
-            <p style="margin: 10px 0 0; font-size: 0.95rem; color: #666;">
-                在這裡分享魔法與生活的結合，幫助你在現代社會中找回內在的力量。
-            </p>
-        </footer>
-    </article>
-</div>
+    {% include my-self-ad.html %}
+
+    <div class="post-content" style="line-height: 1.8; font-size: 1.1rem; color: #333;">
+        {{ content }}
+    </div>
+
+    {% include google-ad-bottom.html %}
+
+    <nav class="post-navigation" style="margin-top: 3rem; display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 1rem;">
+        {% if page.previous %}
+            <a href="{{ page.previous.url }}" style="color: #1a5f5f;">← {{ page.previous.title }}</a>
+        {% else %}
+            <span></span>
+        {% endif %}
+        {% if page.next %}
+            <a href="{{ page.next.url }}" style="color: #1a5f5f;">{{ page.next.title }} →</a>
+        {% endif %}
+    </nav>
+</article>
