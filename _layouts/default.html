@@ -5,29 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+    
     <style>
+        /* 搜尋引擎專用樣式 */
         .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 10px 20px; }
         .nav-menu { display: flex; list-style: none; margin: 0; padding: 0; gap: 15px; }
-        /* 搜尋框設計 */
-        .search-area { position: relative; }
-        #search-input { padding: 6px 12px; border: 1px solid #ddd; border-radius: 20px; outline: none; width: 160px; transition: 0.3s; }
-        #search-input:focus { width: 220px; border-color: #1a5f5f; }
-        /* 下拉結果視窗 */
-        #results-container { 
-            position: absolute; top: 40px; right: 0; width: 300px; background: #fff; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px; 
-            padding: 0; list-style: none; z-index: 999; max-height: 400px; overflow-y: auto;
+        .nav-menu a { text-decoration: none; color: #fff; font-weight: bold; }
+        
+        .search-wrapper { position: relative; }
+        #search-input { 
+            padding: 8px 15px; border-radius: 20px; border: 1px solid #ddd; 
+            width: 160px; outline: none; transition: 0.3s;
+        }
+        #search-input:focus { width: 220px; border-color: #ff9800; }
+
+        /* 搜尋結果彈出視窗 */
+        #results-container {
+            position: absolute; top: 45px; right: 0; width: 300px; 
+            background: white; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            list-style: none; padding: 0; margin: 0; z-index: 9999;
+            max-height: 400px; overflow-y: auto; display: none; /* 預設隱藏 */
         }
         #results-container li { border-bottom: 1px solid #eee; }
-        #results-container li a { display: block; padding: 12px; color: #333; text-decoration: none; font-size: 0.95rem; }
+        #results-container li a { 
+            display: block; padding: 12px 15px; color: #333; 
+            text-decoration: none; font-size: 0.95rem; line-height: 1.4;
+        }
         #results-container li a:hover { background: #f4f8f8; color: #1a5f5f; }
     </style>
 </head>
 <body>
 
-<nav class="navbar">
+<nav class="navbar" style="background: #1a5f5f; color: white;">
     <div class="nav-container">
-        <div class="logo" style="font-weight: bold; font-size: 1.3rem; color: #1a5f5f;">四月老師</div>
+        <div class="logo" style="font-size: 1.4rem;">四月老師</div>
         
         <ul class="nav-menu">
             <li><a href="{{ '/' | relative_url }}">首頁</a></li>
@@ -37,8 +48,8 @@
             <li><a href="{{ '/about/' | relative_url }}">關於我們</a></li>
         </ul>
 
-        <div class="search-area">
-            <input type="text" id="search-input" placeholder="搜尋...">
+        <div class="search-wrapper">
+            <input type="text" id="search-input" placeholder="搜尋文章..." autocomplete="off">
             <ul id="results-container"></ul>
         </div>
     </div>
@@ -46,21 +57,39 @@
 
 <main>{{ content }}</main>
 
-<footer class="footer" style="text-align: center; padding: 30px 0; border-top: 1px solid #eee; margin-top: 50px;">
+<footer class="footer" style="text-align: center; padding: 40px 0; background: #f9f9f9; margin-top: 50px; border-top: 1px solid #eee;">
     <p>&copy; 2026 四月老師 - 魔法課程中心</p>
 </footer>
 
 <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 
 <script>
-    // 初始化搜尋
-    SimpleJekyllSearch({
+    // 1. 初始化搜尋功能
+    var sjs = SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '{{ "/search.json" | relative_url }}',
         searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-        noResultsText: '<li style="padding:10px; color:#999;">找不到相關文章</li>',
-        fuzzy: false
+        noResultsText: '<li style="padding:15px;">找不到相關結果</li>'
+    });
+
+    // 2. 控制結果視窗顯示/隱藏
+    var inputField = document.getElementById('search-input');
+    var resultsList = document.getElementById('results-container');
+
+    inputField.addEventListener('input', function() {
+        if (this.value.length > 0) {
+            resultsList.style.display = 'block';
+        } else {
+            resultsList.style.display = 'none';
+        }
+    });
+
+    // 3. 點擊空白處關閉搜尋結果
+    document.addEventListener('click', function(e) {
+        if (e.target !== inputField) {
+            resultsList.style.display = 'none';
+        }
     });
 </script>
 
