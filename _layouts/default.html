@@ -5,30 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+    <style>
+        /* 導覽列整體佈局優化 */
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
+        }
+
+        /* 搜尋框容器限制寬度，避免擠壓選單 */
+        .search-box-wrapper {
+            width: 280px;
+            min-width: 200px;
+        }
+
+        /* 手機版適應：當螢幕太小時改為垂直排列 */
+        @media (max-width: 850px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .search-box-wrapper {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
+
 <nav class="navbar">
     <div class="nav-container">
-        <div class="logo">四月老師</div>
+        <div class="logo" style="font-weight: bold; font-size: 1.5rem; color: #1a5f5f;">
+            四月老師
+        </div>
+        
         <ul class="nav-menu">
             <li><a href="{{ '/' | relative_url }}">首頁</a></li>
             <li><a href="{{ '/course/' | relative_url }}">課程中心</a></li>
             <li><a href="{{ '/rituals/' | relative_url }}">儀式與服務</a></li>
             <li><a href="{{ '/blog/index.html' | relative_url }}">部落格</a></li>
             <li><a href="{{ '/about/' | relative_url }}">關於我們</a></li>
-            <script async src="https://cse.google.com/cse.js?cx=d5e10dd1ad7434e2a">
-</script>
-<div class="gcse-search"></div>
         </ul>
+
+        <div class="search-box-wrapper">
+            <script async src="https://cse.google.com/cse.js?cx=d5e10dd1ad7434e2a"></script>
+            <div class="gcse-search"></div>
+        </div>
     </div>
 </nav>
 
-{{ content }}
+<main>
+    {{ content }}
+</main>
 
 <footer class="footer">
-    <div class="container">
+    <div class="container" style="text-align: center; padding: 40px 0; border-top: 1px solid #eee; margin-top: 50px;">
         <p>&copy; 2024 四月老師 - 魔法課程中心。版權所有。</p>
-        <p>報名方式：<a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
+        <p>報名方式：<a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}" style="color: #1a5f5f;">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
     </div>
 </footer>
 
