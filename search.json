@@ -2,11 +2,20 @@
 layout: null
 ---
 [
-  {% for post in site.posts %}
-  {
-    "title"    : {{ post.title | jsonify }},
-    "url"      : {{ post.url | relative_url | jsonify }},
-    "date"     : {{ post.date | date: '%Y/%m/%d' | jsonify }}
-  }{% unless forloop.last %},{% endunless %}
+  {% comment %} 合併文章與頁面 {% endcomment %}
+  {% assign all_content = site.posts | concat: site.pages %}
+  {% assign first_item = true %}
+
+  {% for item in all_content %}
+    {% comment %} 排除掉沒有標題的頁面、CSS 檔案或 search.json 本身 {% endcomment %}
+    {% if item.title and item.url != "/search.json" and item.url != "/404.html" %}
+      {% unless first_item %},{% endunless %}
+      {
+        "title" : {{ item.title | jsonify }},
+        "url"   : {{ item.url | relative_url | jsonify }},
+        "date"  : {{ item.date | date: '%Y/%m/%d' | default: "課程/資訊" | jsonify }}
+      }
+      {% assign first_item = false %}
+    {% endif %}
   {% endfor %}
 ]
