@@ -5,39 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
-
     <style>
-        .nav-search-box { position: relative; margin-left: 20px; display: flex; align-items: center; }
-        #search-input { padding: 8px 15px; border: 1px solid #ccc; border-radius: 20px; width: 140px; outline: none; transition: 0.3s; }
-        #search-input:focus { width: 200px; border-color: #1a5f5f; }
-        #results-container { position: absolute; top: 45px; right: 0; width: 300px; background: white; list-style: none; padding: 0; margin: 0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 9999; }
-        #results-container li { border-bottom: 1px solid #eee; }
-        #results-container a { display: block; padding: 10px 15px; color: #333; text-decoration: none; font-size: 0.9rem; }
-        #results-container a:hover { background: #f4f8f8; color: #1a5f5f; }
-        @media (max-width: 768px) { .nav-search-box { width: 100%; margin: 10px 0; } #search-input { width: 100% !important; } }
+        /* 基礎導覽樣式 */
+        .navbar { background: #fff; border-bottom: 1px solid #ddd; padding: 10px 0; }
+        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
+        .nav-menu { list-style: none; display: flex; margin: 0; padding: 0; gap: 15px; }
+        .nav-menu a { text-decoration: none; color: #333; font-weight: bold; }
+        /* 搜尋框樣式 */
+        .search-box { position: relative; }
+        #search-input { padding: 5px 10px; border-radius: 15px; border: 1px solid #ccc; outline: none; }
+        #results-container { position: absolute; top: 35px; right: 0; width: 250px; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; list-style: none; z-index: 999; }
+        #results-container li a { display: block; padding: 8px; border-bottom: 1px solid #eee; font-size: 0.9rem; text-decoration: none; color: #333; }
     </style>
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 10px 20px;">
-        <div class="logo" style="font-size: 1.5rem; font-weight: bold; color: #1a5f5f;">四月老師</div>
-        <ul class="nav-menu" style="list-style: none; display: flex; margin: 0; padding: 0;">
-            <li style="margin: 0 10px;"><a href="{{ '/' | relative_url }}">首頁</a></li>
-            <li style="margin: 0 10px;"><a href="{{ '/course/' | relative_url }}">課程中心</a></li>
-            <li style="margin: 0 10px;"><a href="{{ '/blog/index.html' | relative_url }}">部落格</a></li>
+    <div class="nav-container">
+        <div style="color: #1a5f5f; font-weight: bold; font-size: 1.2rem;">四月老師</div>
+        
+        <ul class="nav-menu">
+            <li><a href="{{ '/' | relative_url }}">首頁</a></li>
+            <li><a href="{{ '/course/' | relative_url }}">課程中心</a></li>
+            <li><a href="{{ '/rituals/' | relative_url }}">儀式與服務</a></li>
+            <li><a href="{{ '/blog/index.html' | relative_url }}">部落格</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">關於我們</a></li>
         </ul>
-        <div class="nav-search-box">
+
+        <div class="search-box">
             <input type="text" id="search-input" placeholder="搜尋...">
             <ul id="results-container"></ul>
         </div>
     </div>
 </nav>
 
-{{ content }}
+<main>
+    {{ content }}
+</main>
 
 <footer style="text-align: center; padding: 40px 0; border-top: 1px solid #eee; margin-top: 50px;">
-    <p>&copy; 2026 四月老師</p>
+    <p>&copy; 2026 四月老師 - 魔法課程中心</p>
 </footer>
 
 <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
@@ -46,9 +53,7 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '{{ "/search.json" | relative_url }}',
-        searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-        noResultsText: '<li style="padding:10px;">找不到相關文章</li>',
-        fuzzy: false
+        searchResultTemplate: '<li><a href="{url}">{title}</a></li>'
     });
 </script>
 </body>
