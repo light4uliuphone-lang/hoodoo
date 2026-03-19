@@ -2,7 +2,7 @@
 layout: post
 title: "我變柔軟了：神的話語如擊碎岩石的鐵錘"
 date: 2026-03-19
-author: 歐比路老師
+author: 老師
 ---
 
 ### 詩名：我變柔軟了
