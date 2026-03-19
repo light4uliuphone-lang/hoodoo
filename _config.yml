@@ -9,6 +9,6 @@ markdown: kramdown
 highlighter: rouge
 future: true # 確保即使伺服器時間有一點誤差，今天的文章也能顯示出來
 encoding: utf-8
-
+timezone: Asia/Taipei
 # 設定文章網址格式（推薦）
 permalink: /blog/:year/:month/:day/:title/
