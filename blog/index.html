@@ -6,7 +6,7 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
 <style>
     /* 1. Hero 區塊優化 */
     .blog-hero {
-        background: #1a5f5f; /* 穩定的底色 */
+        background: #1a5f5f; 
         background: linear-gradient(rgba(26, 95, 95, 0.9), rgba(26, 95, 95, 0.9));
         color: white;
         text-align: center;
@@ -14,9 +14,74 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         margin-bottom: 3rem;
         border-radius: 15px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        position: relative; /* 為了搜尋結果定位 */
+        overflow: visible !important; /* 確保搜尋結果不被切掉 */
     }
 
-    /* 2. 分類導覽卡片 - 強制橫向網格 */
+    /* 🔍 搜尋框樣式 */
+    .blog-search-container {
+        margin-top: 2rem;
+        position: relative;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .blog-search-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    #blog-search-input {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        color: #333;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* 搜尋結果下拉選單 */
+    #blog-results-container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border-radius: 10px;
+        margin-top: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        list-style: none;
+        padding: 0;
+        z-index: 999;
+        max-height: 300px;
+        overflow-y: auto;
+        display: none;
+        text-align: left;
+    }
+
+    #blog-results-container li {
+        border-bottom: 1px solid #eee;
+    }
+
+    #blog-results-container li a {
+        display: block;
+        padding: 12px 20px;
+        color: #333;
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    #blog-results-container li a:hover {
+        background: #f0f7f7;
+        color: #1a5f5f;
+    }
+
+    /* 2. 分類導覽卡片 */
     .category-nav {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -32,7 +97,7 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         text-align: center;
         border: 1px solid #eaeaea;
         text-decoration: none;
-        color: #333 !important; /* 強制文字顏色 */
+        color: #333 !important;
         transition: all 0.3s ease;
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         display: flex;
@@ -47,17 +112,8 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
-    .category-card span.icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        display: block;
-    }
-
-    .category-card h3 {
-        margin: 0;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
+    .category-card span.icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+    .category-card h3 { margin: 0; font-size: 1.2rem; font-weight: bold; }
 
     /* 3. 文章區塊標題 */
     .section-title {
@@ -69,14 +125,7 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         padding-left: 1.2rem;
     }
 
-    .section-title h2 {
-        margin: 0;
-        font-size: 1.6rem;
-        color: #1a5f5f;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
+    .section-title h2 { margin: 0; font-size: 1.6rem; color: #1a5f5f; display: flex; align-items: center; gap: 0.5rem; }
 
     /* 4. 文章列表網格 */
     .post-grid {
@@ -93,47 +142,15 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         transition: border-color 0.3s;
     }
 
-    .post-item:hover {
-        border-bottom-color: #1a5f5f;
-    }
+    .post-item:hover { border-bottom-color: #1a5f5f; }
+    .post-meta { font-size: 0.85rem; color: #888; margin-bottom: 0.8rem; }
+    .post-item h3 { margin: 0 0 1rem 0; line-height: 1.4; }
+    .post-item h3 a { color: #333; text-decoration: none; font-weight: bold; }
+    .post-item h3 a:hover { color: #ff9800; }
+    .post-excerpt { font-size: 0.95rem; color: #666; line-height: 1.6; }
 
-    .post-meta {
-        font-size: 0.85rem;
-        color: #888;
-        margin-bottom: 0.8rem;
-    }
-
-    .post-item h3 {
-        margin: 0 0 1rem 0;
-        line-height: 1.4;
-    }
-
-    .post-item h3 a {
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .post-item h3 a:hover {
-        color: #ff9800;
-    }
-
-    .post-excerpt {
-        font-size: 0.95rem;
-        color: #666;
-        line-height: 1.6;
-    }
-
-    /* 手機版微調 */
     @media (max-width: 600px) {
-        .category-nav {
-            grid-template-columns: 1fr 1fr; /* 手機版兩列 */
-        }
-        .category-card {
-            padding: 1.5rem 1rem;
-        }
-        .category-card span.icon { font-size: 2rem; }
-        .category-card h3 { font-size: 1rem; }
+        .category-nav { grid-template-columns: 1fr 1fr; }
     }
 </style>
 
@@ -141,6 +158,12 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
     <header class="blog-hero">
         <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">靈性札記</h1>
         <p style="font-size: 1.1rem; opacity: 0.9;">在這裡，我們用魔法探討現實，用理智解析神祕。</p>
+        
+        <div class="blog-search-container">
+            <label for="blog-search-input" class="blog-search-label">搜尋部落格文章</label>
+            <input type="text" id="blog-search-input" placeholder="輸入關鍵字（如：占卜、藥草）..." autocomplete="off">
+            <ul id="blog-results-container"></ul>
+        </div>
     </header>
 
     <nav class="category-nav">
@@ -178,7 +201,7 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         <div class="post-grid">
             {% assign found_post = false %}
             {% for post in site.posts %}
-                {% if post.categories contains slug %}
+                {% if post.categories contains slug or post.category == slug %}
                     {% assign found_post = true %}
                     <article class="post-item">
                         <div class="post-meta">📅 {{ post.date | date: "%Y/%m/%d" }}</div>
@@ -199,3 +222,36 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
     </section>
     {% endfor %}
 </div>
+
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+    window.addEventListener('load', function() {
+        var blogSearchInput = document.getElementById('blog-search-input');
+        var blogResultsContainer = document.getElementById('blog-results-container');
+
+        SimpleJekyllSearch({
+            searchInput: blogSearchInput,
+            resultsContainer: blogResultsContainer,
+            json: '{{ "/search.json" | relative_url }}',
+            searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+            noResultsText: '<li style="padding:15px; color:#999;">找不到相關文章</li>'
+        });
+
+        // 監聽輸入框：有字才顯示
+        blogSearchInput.addEventListener('input', function() {
+            if (this.value.trim().length > 0) {
+                blogResultsContainer.style.display = 'block';
+            } else {
+                blogResultsContainer.style.display = 'none';
+            }
+        });
+
+        // 點擊外部關閉
+        document.addEventListener('click', function(e) {
+            if (e.target !== blogSearchInput) {
+                blogResultsContainer.style.display = 'none';
+            }
+        });
+    });
+</script>
