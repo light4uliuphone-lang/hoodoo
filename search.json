@@ -5,7 +5,6 @@ layout: null
   {% for post in site.posts %}
   {
     "title"    : {{ post.title | jsonify }},
-    "category" : {{ post.category | jsonify }},
     "url"      : {{ post.url | relative_url | jsonify }},
     "date"     : {{ post.date | date: '%Y/%m/%d' | jsonify }}
   }{% unless forloop.last %},{% endunless %}
