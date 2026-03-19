@@ -4,117 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
-    <link rel="stylesheet" href="/css/style.css">
-    
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+
     <style>
+        /* 搜尋框容器 */
         .nav-search-box {
             position: relative;
             margin-left: 20px;
             display: flex;
             align-items: center;
         }
+
         #search-input {
-            padding: 6px 12px;
-            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border: 1px solid #ccc;
             border-radius: 20px;
             font-size: 0.9rem;
             outline: none;
-            transition: border-color 0.3s;
-            width: 150px; /* 初始寬度 */
+            transition: all 0.3s ease;
+            width: 140px;
+            background: rgba(255, 255, 255, 0.9);
         }
+
         #search-input:focus {
-            border-color: #1a5f5f;
-            width: 200px; /* 點擊時伸長 */
+            border-color: #ff9800;
+            width: 200px;
+            background: #fff;
+            box-shadow: 0 0 8px rgba(255, 152, 0, 0.2);
         }
-        /* 搜尋結果浮動視窗 */
+
+        /* 搜尋結果下拉選單 */
         #results-container {
             position: absolute;
-            top: 40px;
+            top: 45px;
             right: 0;
-            width: 300px;
+            width: 320px;
             background: white;
             list-style: none;
             padding: 0;
             margin: 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            z-index: 999;
-            max-height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 9999;
+            max-height: 450px;
             overflow-y: auto;
         }
+
         #results-container li {
-            border-bottom: 1px solid #eee;
-        }
-        #results-container li:last-child { border: none; }
-        #results-container a {
-            display: block;
-            padding: 12px 15px;
-            color: #333;
-            text-decoration: none;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-        #results-container a:hover {
-            background-color: #f4f8f8;
-            color: #1a5f5f;
-        }
-        #results-container .search-date {
-            font-size: 0.8rem;
-            color: #888;
-            display: block;
+            border-bottom: 1px solid #f0f0f0;
         }
 
-        /* 手機版適應 */
+        #results-container li:last-child { border: none; }
+
+        #results-container a {
+            display: block;
+            padding: 15px;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        #results-container a:hover {
+            background-color: #f9fdfd;
+        }
+
+        .search-result-title {
+            display: block;
+            font-weight: bold;
+            color: #1a5f5f;
+            margin-bottom: 4px;
+        }
+
+        .search-result-date {
+            font-size: 0.75rem;
+            color: #999;
+        }
+
+        /* 手機版導覽列與搜尋框調整 */
         @media (max-width: 768px) {
-            .nav-container { flex-direction: column; }
-            .nav-search-box { margin: 10px 0; width: 100%; }
-            #search-input { width: 100% !important; }
-            #results-container { width: 100%; left: 0; }
+            .nav-container {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .nav-menu {
+                margin: 10px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .nav-search-box {
+                margin-left: 0;
+                width: 100%;
+            }
+            #search-input {
+                width: 100% !important;
+            }
+            #results-container {
+                width: 100%;
+                left: 0;
+            }
         }
     </style>
 </head>
 <body>
+
 <nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">四月老師</div>
-        
-        <ul class="nav-menu">
-            <li><a href="{{ '/index.html' | relative_url }}">首頁</a></li>
-            <li><a href="{{ '/course/' | relative_url }}">課程中心</a></li>
-            <li><a href="{{ '/rituals/' | relative_url }}">儀式與服務</a></li>
-            <li><a href="{{ '/blog/index.html' | relative_url }}">部落格</a></li>
-            <li><a href="{{ '/about/' | relative_url }}">關於我們</a></li>
+    <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 10px 20px;">
+        <div class="logo" style="font-size: 1.5rem; font-weight: bold; color: #1a5f5f;">四月老師</div>
+
+        <ul class="nav-menu" style="list-style: none; display: flex; margin: 0; padding: 0;">
+            <li style="margin: 0 15px;"><a href="{{ '/' | relative_url }}" style="text-decoration: none; color: #333; font-weight: 500;">首頁</a></li>
+            <li style="margin: 0 15px;"><a href="{{ '/course/' | relative_url }}" style="text-decoration: none; color: #333; font-weight: 500;">課程中心</a></li>
+            <li style="margin: 0 15px;"><a href="{{ '/rituals/' | relative_url }}" style="text-decoration: none; color: #333; font-weight: 500;">儀式與服務</a></li>
+            <li style="margin: 0 15px;"><a href="{{ '/blog/index.html' | relative_url }}" style="text-decoration: none; color: #333; font-weight: 500;">部落格</a></li>
+            <li style="margin: 0 15px;"><a href="{{ '/about/' | relative_url }}" style="text-decoration: none; color: #333; font-weight: 500;">關於我們</a></li>
         </ul>
 
         <div class="nav-search-box">
-            <input type="text" id="search-input" placeholder="搜尋文章...">
+            <input type="text" id="search-input" placeholder="搜尋魔法知識...">
             <ul id="results-container"></ul>
         </div>
     </div>
 </nav>
 
+<main class="main-content">
     {{ content }}
+</main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 四月老師 - 魔法課程中心。版權所有。</p>
-            <p>報名方式：<a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
-        </div>
-    </footer>
+<footer class="footer" style="background: #f8f9f9; padding: 40px 0; margin-top: 50px; border-top: 1px solid #eee; text-align: center;">
+    <div class="container">
+        <p>&copy; 2026 四月老師 - 魔法課程中心。版權所有。</p>
+        <p>報名方式：<a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}" style="color: #1a5f5f; text-decoration: none;">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
+    </div>
+</footer>
 
-    <script src="/js/main.js"></script>
-    
-    <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
-    <script>
-        window.simpleJekyllSearch = new SimpleJekyllSearch({
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('results-container'),
-            json: '/search.json',
-            searchResultTemplate: '<li><a href="{url}"><span class="search-date">{date}</span>{title}</a></li>',
-            noResultsText: '<li style="padding: 15px; color: #999;">找不到相關文章</li>',
-            limit: 10,
-            fuzzy: false
-        });
-    </script>
+<script src="{{ '/js/main.js' | relative_url }}"></script>
+
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+    var sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ "/search.json" | relative_url }}',
+        searchResultTemplate: '<li><a href="{url}"><span class="search-result-title">{title}</span><span class="search-result-date">{date}</span></a></li>',
+        noResultsText: '<li style="padding: 15px; color: #999;">找不到相關文章...</li>',
+        limit: 10,
+        fuzzy: false
+    });
+</script>
+
 </body>
 </html>
