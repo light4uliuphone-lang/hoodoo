@@ -1,34 +1,22 @@
 ---
 layout: default
-title: "分類：心理與生活探索 - 四月老師"
-permalink: /blog/category/life.html
+title: "心理與生活探索 - 四月老師""
+permalink:  /blog/category/life.html
 ---
 
 <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif;">
-    <div style="margin-bottom: 20px;">
-        <a href="/blog/" style="color: #1a5f5f; text-decoration: none; font-weight: bold;">← 返回部落格首頁</a>
-    </div>
-
-    <header style="border-left: 6px solid #ff9800; padding-left: 15px; margin-bottom: 40px;">
-        <h1 style="color: #1a5f5f; font-size: 2rem; margin: 0;">🧠 心理與生活探索</h1>
-    </header>
-
-    <div class="category-main-content">
-        {% assign posts = site.posts | where_exp: "item", "item.categories contains 'life' or item.category == 'life'" %}
-        {% for post in posts %}
-            <article style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                <div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">📅 {{ post.date | date: "%Y/%m/%d" }}</div>
-                <h3 style="margin: 0 0 10px 0; font-size: 1.4rem;">
-                    <a href="{{ post.url | relative_url }}" style="color: #333; text-decoration: none; font-weight: bold;">{{ post.title }}</a>
-                </h3>
-                <div style="color: #666; line-height: 1.6; font-size: 1rem;">
-                    {{ post.excerpt | strip_html | truncate: 120 }}
-                </div>
-            </article>
+    <div style="margin-bottom: 20px;"><a href="/blog/" style="color: #1a5f5f; text-decoration: none;">← 返回部落格</a></div>
+    <h1 style="border-left: 6px solid #ff9800; padding-left: 15px; color: #1a5f5f;">🕯️ 神祕學與魔法知識</h1>
+    
+    <div style="margin-top: 30px;">
+        {% for post in site.posts %}
+            {% if post.category == "magic" or post.categories contains "magic" or post.category == "occult" or post.categories contains "occult" %}
+                <article style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                    <div style="color: #888; font-size: 0.85rem;">📅 {{ post.date | date: "%Y/%m/%d" }}</div>
+                    <h3 style="margin: 10px 0;"><a href="{{ post.url | relative_url }}" style="color: #333; text-decoration: none; font-weight: bold;">{{ post.title }}</a></h3>
+                    <p style="color: #666; line-height: 1.6;">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+                </article>
+            {% endif %}
         {% endfor %}
-        
-        {% if posts.size == 0 %}
-            <p style="text-align: center; color: #bbb; padding: 50px 0;">目前此分類下尚無文章，敬請期待...</p>
-        {% endif %}
     </div>
 </div>
