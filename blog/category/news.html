@@ -14,21 +14,18 @@ permalink: /blog/category/news.html
     </header>
 
     <div class="category-main-content">
-        {% assign posts = site.posts | where_exp: "item", "item.categories contains 'news' or item.category == 'news'" %}
-        {% for post in posts %}
-            <article style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                <div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">📅 {{ post.date | date: "%Y/%m/%d" }}</div>
-                <h3 style="margin: 10px 0; font-size: 1.4rem;">
-                    <a href="{{ post.url | relative_url }}" style="color: #333; text-decoration: none; font-weight: bold;">{{ post.title }}</a>
-                </h3>
-                <div style="color: #666; line-height: 1.6; font-size: 1rem;">
-                    {{ post.excerpt | strip_html | truncate: 120 }}
-                </div>
-            </article>
+        {% for post in site.posts %}
+            {% if post.categories contains "news" or post.category == "news" %}
+                <article style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                    <div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">📅 {{ post.date | date: "%Y/%m/%d" }}</div>
+                    <h3 style="margin: 10px 0; font-size: 1.4rem;">
+                        <a href="{{ post.url | relative_url }}" style="color: #333; text-decoration: none; font-weight: bold;">{{ post.title }}</a>
+                    </h3>
+                    <div style="color: #666; line-height: 1.6; font-size: 1rem;">
+                        {{ post.excerpt | strip_html | truncate: 120 }}
+                    </div>
+                </article>
+            {% endif %}
         {% endfor %}
-        
-        {% if posts.size == 0 %}
-            <p style="text-align: center; color: #bbb; padding: 50px 0;">目前此分類下尚無文章，敬請期待...</p>
-        {% endif %}
     </div>
 </div>
