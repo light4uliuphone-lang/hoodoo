@@ -37,14 +37,23 @@
             <li><a href="{{ '/about/' | relative_url }}">關於我們</a></li>
         </ul>
 
-        <div class="search-area">
-            <input type="text" id="search-input" placeholder="搜尋...">
-            <ul id="results-container"></ul>
-        </div>
-    </div>
-</nav>
-
-<main>{{ content }}</main>
+     <div class="search-area" style="position: relative;">
+    <input type="text" id="search-input" placeholder="搜尋..." autocomplete="off">
+    <ul id="results-container" style="
+        position: absolute; 
+        top: 40px; 
+        right: 0; 
+        width: 300px; 
+        background: white; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+        list-style: none; 
+        padding: 0; 
+        margin: 0; 
+        z-index: 999;
+        border-radius: 8px;
+        overflow: hidden;">
+    </ul>
+</div>
 
 <footer class="footer" style="text-align: center; padding: 30px 0; border-top: 1px solid #eee; margin-top: 50px;">
     <p>&copy; 2026 四月老師 - 魔法課程中心</p>
