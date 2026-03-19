@@ -1,14 +1,18 @@
 ---
 layout: default
-title: "現代魔法－金錢魔法符印實作(實體) - 歐比路老師"
+title: "現代魔法 - 金錢魔法符印實作(實體) - 歐比路老師"
 ---
 
-<div class="container" style="padding: 3rem 0;">
-    <a href="/course/" class="back-link">← 返回課程中心</a>
+{% comment %} 先定義好變數，避免在 HTML 屬性內寫太長的邏輯，這能防止報錯 {% endcomment %}
+{% assign course_pure_title = page.title | split: " - " | first %}
+{% assign contact_email = site.email | default: "herbmagic@hotmail.com.tw" %}
 
-    <div class="course-detail-header">
-        <h1>{{ page.title | split: " - " | first }}</h1>
-        <div class="meta">
+<div class="container" style="max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; font-family: sans-serif;">
+    <a href="{{ '/course/' | relative_url }}" style="text-decoration: none; color: #1a5f5f; font-weight: bold;">← 返回課程中心</a>
+
+    <div class="course-detail-header" style="margin-top: 2rem; border-bottom: 2px solid #eee; padding-bottom: 1.5rem;">
+        <h1 style="color: #1a5f5f; font-size: 2.2rem; margin-bottom: 1rem;">{{ course_pure_title }}</h1>
+        <div class="meta" style="display: flex; gap: 15px; flex-wrap: wrap; color: #666; font-size: 0.9rem;">
             <span>📚 現代與符印魔法</span>
             <span>🌀 混沌魔法</span>
             <span>📊 初級</span>
@@ -16,51 +20,52 @@ title: "現代魔法－金錢魔法符印實作(實體) - 歐比路老師"
         </div>
     </div>
 
-    <div class="course-detail-content">
-        <h2>課程概述</h2>
+    <div class="course-detail-content" style="line-height: 1.8; color: #333; margin-top: 2rem;">
+        <h2 style="color: #1a5f5f; border-left: 5px solid #ff9800; padding-left: 10px;">課程概述</h2>
         <p>在魔法的發展歷史當中有許多不同的魔法系統。除了傳統的胡督魔法外，近代最受矚目的便是<strong>「混沌魔法」</strong>。本課程將聚焦於混沌魔法中最實用的技術——<strong>符印（Sigils）</strong>，教您如何將純粹的意念轉化為顯化的能量符號。</p>
 
-        <h2>課程詳情</h2>
+        <h2 style="color: #1a5f5f; border-left: 5px solid #ff9800; padding-left: 10px; margin-top: 2.5rem;">課程詳情</h2>
         <p>台語俗諺說：「有錢烏龜坐大廳，無錢秀才人人驚」。無論自身多麼有才華，在現實社會中，金錢始終是不可或缺的推動力。在混沌魔法系統中，符印是一種高度個人化且強大的符咒形式。</p>
+        <p>這門課程不只談理論，歐比路老師更設計了<strong>四張針對現代生活需求的魔法符印</strong>。藉由深入淺出的脈絡講解與現場啟動實作，讓魔法不再只是書本上的符號，而是能直接協助您日常生活實踐的工具。</p>
 
-        <p>這門課程不只談理論，歐比路老師更設計了<strong>四張針對現代生活需求的魔法符印</strong>。藉由深入淺出的脈絡講解與現場啟動實作，讓魔法不再只是書本上的符號，而是能直接協助您日常生活實踐的工具，感受能量對於物質生活的實質協助。</p>
-
-        <h2>課程大綱</h2>
-        <div class="syllabus-grid">
-            <ol>
+        <h2 style="color: #1a5f5f; border-left: 5px solid #ff9800; padding-left: 10px; margin-top: 2.5rem;">課程大綱</h2>
+        <div style="background: #f9f9f9; padding: 1.5rem; border-radius: 8px;">
+            <ol style="padding-left: 1.2rem;">
                 <li><strong>符印魔法簡介：</strong> 混沌魔法的核心觀點與符印原理。</li>
-                <li><strong>啟動與使用技術：</strong> 學習如何正確喚醒符印能量並部署在生活中。</li>
-                <li><strong>魔法符印 I：</strong> 賺錢順利——開啟正財運勢的能量入口。</li>
-                <li><strong>魔法符印 II：</strong> 成交順利——強化商業談判與業務顯化力。</li>
-                <li><strong>魔法符印 III：</strong> 擺脫貧窮——清理停滯的匱乏磁場。</li>
-                <li><strong>魔法符印 IV：</strong> 消除破財——架設財務漏洞的防禦牆。</li>
+                <li><strong>啟動與使用技術：</strong> 學習如何正確喚醒符印能量。</li>
+                <li><strong>魔法符印 I：</strong> 賺錢順利——開啟正財運勢。</li>
+                <li><strong>魔法符印 II：</strong> 成交順利——強化業務顯化力。</li>
+                <li><strong>魔法符印 III：</strong> 擺脫貧窮——清理匱乏磁場。</li>
+                <li><strong>魔法符印 IV：</strong> 消除破財——架設財務防禦牆。</li>
             </ol>
         </div>
 
-        <h2>課程信息</h2>
-        <div class="course-info-box">
+        <h2 style="color: #1a5f5f; border-left: 5px solid #ff9800; padding-left: 10px; margin-top: 2.5rem;">課程信息</h2>
+        <div style="border: 1px solid #eee; padding: 1.5rem; border-radius: 8px; background: #fffdf9;">
             <p><strong>上課時間：</strong>7/06(日) 17:00-18:30</p>
             <p><strong>講師：</strong>歐比路老師</p>
             <p><strong>課程價格：</strong>原價：3800元 | <span style="color: #e67e22; font-weight: bold;">特價：2800元</span></p>
             <p style="font-size: 0.9rem; color: #666;">※ 本課程含四張已設計完成之魔法符印紙卡及啟動引導。</p>
         </div>
 
-        <h2>老師介紹</h2>
-        <div class="teacher-info">
-            <h3>歐比路老師</h3>
-            <p>歐比路老師擁有精神醫學背景，這使他能以獨特的「心理動力觀點」來解析魔法運作。他白天是熱愛統計學的工程師，晚上則是鑽研咒術的魔法工作者。他擅長整合有限資源，以「策略魔法」的邏輯協助學員獲得最佳化的現實效益。</p>
-            <p><strong>粉絲專頁：</strong>歐比路藥草魔法實驗室</p>
+        <h2 style="color: #1a5f5f; border-left: 5px solid #ff9800; padding-left: 10px; margin-top: 2.5rem;">老師介紹</h2>
+        <div style="background: #f0f4f4; padding: 1.5rem; border-radius: 8px;">
+            <h3 style="margin-top: 0;">歐比路老師</h3>
+            <p>歐比路老師擁有精神醫學背景，這使他能以獨特的「心理動力觀點」來解析魔法運作。他白天是熱愛統計學的工程師，晚上則是鑽研咒術的魔法工作者。</p>
         </div>
 
-        <h2>報名方式</h2>
-        <div class="registration-info">
-            <p><strong>方式一：</strong>請填寫官方報名表單，完成後將於三日內回信給您。</p>
-            <p><strong>方式二：</strong>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
-            <p>郵件標題請註明：<strong>「報名 {{ page.title | split: " - " | first }}」</strong>，並告知您的姓名、聯絡電話及收件地址。</p>
+        <h2 style="color: #1a5f5f; border-left: 5px solid #ff9800; padding-left: 10px; margin-top: 2.5rem;">報名方式</h2>
+        <div style="background: #fff; border: 1px dashed #ccc; padding: 1.5rem; border-radius: 8px;">
+            <p><strong>方式一：</strong>請填寫官方報名表單。</p>
+            <p><strong>方式二：</strong>請來信至 <a href="mailto:{{ contact_email }}" style="color: #1a5f5f;">{{ contact_email }}</a></p>
+            <p>郵件標題請註明：<strong>「報名 {{ course_pure_title }}」</strong></p>
         </div>
 
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-{{ page.title | split: ' - ' | first }}" class="btn-primary">立即報名</a>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="mailto:{{ contact_email }}?subject=報名-{{ course_pure_title }}" 
+               style="display: inline-block; background: #1a5f5f; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem;">
+               立即報名
+            </a>
         </div>
     </div>
 </div>
