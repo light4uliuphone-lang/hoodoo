@@ -6,7 +6,7 @@ title: "我變柔軟了：神的話語如擊碎岩石的鐵錘"
 
 date: 2026-03-18
 
-author: 
+author:靈火巫境 
 
 category: [magic]
 
