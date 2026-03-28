@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "聖徽集：但基督及時用盾牌守護著它"
+title: "聖徽集：祢的光芒從高天降下"
 date: 2026-03-25
 author: 靈火巫境
 category: [magic]
