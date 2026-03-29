@@ -9,11 +9,13 @@ layout: null
       <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     </url>
   {% endfor %}
+
   {% for page in site.pages %}
-    {% if page.url contains '.html' %}
+    {% comment %} 排除掉非網頁檔案，如 CSS, XML, Feed 等 {% endcomment %}
+    {% unless page.url contains '.css' or page.url contains '.xml' or page.url contains 'assets' %}
     <url>
-      <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | replace: "index.html", "" }}</loc>
     </url>
-    {% endif %}
+    {% endunless %}
   {% endfor %}
 </urlset>
