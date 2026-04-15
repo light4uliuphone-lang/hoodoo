@@ -10,6 +10,7 @@ baseurl: "" # 這是最重要的修正：告訴系統你的專案資料夾名稱
 include:
   - ads.txt
   - CNAME
+  - sitemap.xml
 
 # 渲染與效能設定
 markdown: kramdown
