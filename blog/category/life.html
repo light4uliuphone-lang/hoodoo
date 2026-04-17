@@ -4,19 +4,134 @@ title: "分類：心理與生活探索"
 permalink: /blog/category/life.html
 ---
 
+<style>
+    /* 分頁控制區樣式 */
+    .pagination-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 4rem 0;
+    }
+
+    .pagination-btn {
+        padding: 10px 25px;
+        background: #1a5f5f;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 25px;
+        cursor: pointer;
+        border: none;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+
+    .pagination-btn:hover {
+        background: #ff9800;
+    }
+
+    .pagination-btn:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+    }
+
+    /* 初始隱藏所有文章，由 JS 控制顯示 */
+    .category-post-item {
+        display: none; 
+        margin-bottom: 30px; 
+        padding-bottom: 20px; 
+        border-bottom: 1px solid #eee;
+    }
+
+    .category-post-item.is-visible {
+        display: block;
+    }
+</style>
+
 <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: sans-serif;">
-    <div style="margin-bottom: 20px;"><a href="/blog/" style="color: #1a5f5f; text-decoration: none;">← 返回部落格</a></div>
+    <div style="margin-bottom: 20px;">
+        <a href="/blog/" style="color: #1a5f5f; text-decoration: none;">← 返回部落格</a>
+    </div>
+    
     <h1 style="border-left: 6px solid #ff9800; padding-left: 15px; color: #1a5f5f;">🧠 心理與生活探索</h1>
     
-    <div style="margin-top: 30px;">
+    <div id="paginated-list" style="margin-top: 30px;">
         {% for post in site.posts %}
             {% if post.category == "life" or post.categories contains "life" %}
-                <article style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                <article class="category-post-item">
                     <div style="color: #888; font-size: 0.85rem;">📅 {{ post.date | date: "%Y/%m/%d" }}</div>
-                    <h3 style="margin: 10px 0;"><a href="{{ post.url | relative_url }}" style="color: #333; text-decoration: none; font-weight: bold;">{{ post.title }}</a></h3>
+                    <h3 style="margin: 10px 0;">
+                        <a href="{{ post.url | relative_url }}" style="color: #333; text-decoration: none; font-weight: bold;">{{ post.title }}</a>
+                    </h3>
                     <p style="color: #666; line-height: 1.6;">{{ post.excerpt | strip_html | truncate: 100 }}</p>
                 </article>
             {% endif %}
         {% endfor %}
     </div>
+
+    <div class="pagination-container">
+        <button id="prev-btn" class="pagination-btn">← 上一頁</button>
+        <span id="page-indicator" style="color: #666; font-weight: bold;">第 1 頁</span>
+        <button id="next-btn" class="pagination-btn">下一頁 →</button>
+    </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 設定每頁顯示 20 篇，與 _config.yml 的 paginate 設定一致
+        const itemsPerPage = 20; 
+        let currentPage = 1;
+        const items = document.querySelectorAll('#paginated-list .category-post-item');
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const pageIndicator = document.getElementById('page-indicator');
+
+        function showPage(page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            items.forEach((item, index) => {
+                if (index >= start && index < end) {
+                    item.classList.add('is-visible');
+                } else {
+                    item.classList.remove('is-visible');
+                }
+            });
+
+            // 更新 UI 狀態與頁碼
+            pageIndicator.innerText = `第 ${page} 頁 / 共 ${totalPages} 頁`;
+            prevBtn.disabled = (page === 1);
+            nextBtn.disabled = (page === totalPages || totalPages === 0);
+            
+            // 換頁時自動捲動回頂部
+            if(page !== 1) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+
+        // 初始化頁面顯示
+        if (items.length > 0) {
+            showPage(currentPage);
+        } else {
+            // 若無內容則顯示提示並隱藏按鈕
+            document.getElementById('paginated-list').innerHTML = '<p style="text-align:center; color:#999;">目前尚無相關文章</p>';
+            document.querySelector('.pagination-container').style.display = 'none';
+        }
+    });
+</script>
