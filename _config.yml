@@ -22,6 +22,16 @@ timezone: Asia/Taipei
 # 文章網址格式
 permalink: /blog/:year/:month/:day/:title/
 
+# --- 分頁設定 (Pagination) ---
+paginate: 5                    # 每頁顯示的文章數量
+paginate_path: "/blog/page:num/" # 分頁網址的路徑格式
+
+# --- 外掛程式 (Plugins) ---
+# GitHub Pages 原生支援這些外掛
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
 # 排除不需要編譯的檔案（保持 Repo 乾淨）
 exclude:
   - Gemfile
