@@ -23,7 +23,7 @@ timezone: Asia/Taipei
 permalink: /blog/:year/:month/:day/:title/
 
 # --- 分頁設定 (Pagination) ---
-paginate: 5                    # 每頁顯示的文章數量
+paginate: 20                    # 每頁顯示的文章數量
 paginate_path: "/blog/page:num/" # 分頁網址的路徑格式
 
 # --- 外掛程式 (Plugins) ---
