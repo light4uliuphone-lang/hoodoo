@@ -14,8 +14,8 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         margin-bottom: 3rem;
         border-radius: 15px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        position: relative; /* 為了搜尋結果定位 */
-        overflow: visible !important; /* 確保搜尋結果不被切掉 */
+        position: relative;
+        overflow: visible !important;
     }
 
     /* 🔍 搜尋框樣式 */
@@ -45,7 +45,6 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
-    /* 搜尋結果下拉選單 */
     #blog-results-container {
         position: absolute;
         top: 100%;
@@ -64,10 +63,7 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         text-align: left;
     }
 
-    #blog-results-container li {
-        border-bottom: 1px solid #eee;
-    }
-
+    #blog-results-container li { border-bottom: 1px solid #eee; }
     #blog-results-container li a {
         display: block;
         padding: 12px 20px;
@@ -76,23 +72,17 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         font-size: 0.95rem;
     }
 
-    #blog-results-container li a:hover {
-        background: #f0f7f7;
-        color: #1a5f5f;
-    }
-
     /* 2. 分類導覽卡片 */
     .category-nav {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 1.5rem;
         margin-bottom: 4rem;
-        padding: 0;
     }
 
     .category-card {
         background: #ffffff;
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
         border-radius: 12px;
         text-align: center;
         border: 1px solid #eaeaea;
@@ -100,34 +90,36 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         color: #333 !important;
         transition: all 0.3s ease;
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
 
     .category-card:hover {
         transform: translateY(-5px);
         border-color: #ff9800;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
-    .category-card span.icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
-    .category-card h3 { margin: 0; font-size: 1.2rem; font-weight: bold; }
-
-    /* 3. 文章區塊標題 */
-    .section-title {
+    /* 3. 分頁樣式 */
+    .pagination {
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
-        margin: 4rem 0 1.5rem 0;
-        border-left: 6px solid #ff9800;
-        padding-left: 1.2rem;
+        gap: 1rem;
+        margin: 4rem 0;
     }
 
-    .section-title h2 { margin: 0; font-size: 1.6rem; color: #1a5f5f; display: flex; align-items: center; gap: 0.5rem; }
+    .pagination a {
+        padding: 8px 20px;
+        background: #1a5f5f;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
 
-    /* 4. 文章列表網格 */
+    .pagination a:hover { background: #ff9800; }
+    .pagination .page-info { color: #666; font-size: 0.9rem; }
+
+    /* 4. 文章網格 */
     .post-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -144,9 +136,6 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
 
     .post-item:hover { border-bottom-color: #1a5f5f; }
     .post-meta { font-size: 0.85rem; color: #888; margin-bottom: 0.8rem; }
-    .post-item h3 { margin: 0 0 1rem 0; line-height: 1.4; }
-    .post-item h3 a { color: #333; text-decoration: none; font-weight: bold; }
-    .post-item h3 a:hover { color: #ff9800; }
     .post-excerpt { font-size: 0.95rem; color: #666; line-height: 1.6; }
 
     @media (max-width: 600px) {
@@ -161,66 +150,62 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
         
         <div class="blog-search-container">
             <label for="blog-search-input" class="blog-search-label">搜尋部落格文章</label>
-            <input type="text" id="blog-search-input" placeholder="輸入關鍵字（如：占卜、藥草）..." autocomplete="off">
+            <input type="text" id="blog-search-input" placeholder="輸入關鍵字..." autocomplete="off">
             <ul id="blog-results-container"></ul>
         </div>
     </header>
 
     <nav class="category-nav">
-        <a href="#magic" class="category-card">
-            <span class="icon">🕯️</span>
+        <a href="{{ '/blog/category/magic.html' | relative_url }}" class="category-card">
+            <span style="font-size: 2rem;">🕯️</span>
             <h3>魔法知識</h3>
         </a>
-        <a href="#life" class="category-card">
-            <span class="icon">🧠</span>
+        <a href="{{ '/blog/category/life.html' | relative_url }}" class="category-card">
+            <span style="font-size: 2rem;">🧠</span>
             <h3>心理探索</h3>
         </a>
-        <a href="#legend" class="category-card">
-            <span class="icon">👻</span>
+        <a href="{{ '/blog/category/legend.html' | relative_url }}" class="category-card">
+            <span style="font-size: 2rem;">👻</span>
             <h3>奇聞傳說</h3>
         </a>
-        <a href="#news" class="category-card">
-            <span class="icon">📢</span>
+        <a href="{{ '/blog/category/news.html' | relative_url }}" class="category-card">
+            <span style="font-size: 2rem;">📢</span>
             <h3>商店公告</h3>
         </a>
     </nav>
 
-    <hr style="border: 0; border-top: 1px solid #eee; margin: 4rem 0;">
+    <div class="section-title" style="border-left: 6px solid #ff9800; padding-left: 1.2rem; margin-bottom: 2rem;">
+        <h2 style="margin: 0; font-size: 1.6rem; color: #1a5f5f;">✨ 最新文章</h2>
+    </div>
 
-    {% assign category_slugs = "magic,life,legend,news" | split: "," %}
-    {% assign category_titles = "神祕學與魔法知識,心理與生活探索,奇聞與都市傳說,商店公告與活動情報" | split: "," %}
-    {% assign category_icons = "🕯️,🧠,👻,📢" | split: "," %}
+    <div class="post-grid">
+        {% for post in paginator.posts %}
+        <article class="post-item">
+            <div class="post-meta">
+                📅 {{ post.date | date: "%Y/%m/%d" }} 
+                <span style="margin-left: 10px;">🏷️ {{ post.categories | first }}</span>
+            </div>
+            <h3 style="margin-bottom: 1rem;"><a href="{{ post.url | relative_url }}" style="color: #333; text-decoration: none; font-weight: bold;">{{ post.title }}</a></h3>
+            <div class="post-excerpt">
+                {{ post.excerpt | strip_html | truncate: 100 }}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
 
-    {% for slug in category_slugs %}
-    <section id="{{ slug }}">
-        <div class="section-title">
-            <h2>{{ category_icons[forloop.index0] }} {{ category_titles[forloop.index0] }}</h2>
-            <a href="{{ '/blog/category/' | append: slug | append: '.html' | relative_url }}" style="font-size: 0.9rem; color: #1a5f5f; text-decoration: none; font-weight: bold;">查看全部 →</a>
-        </div>
-        
-        <div class="post-grid">
-            {% assign found_post = false %}
-            {% for post in site.posts %}
-                {% if post.categories contains slug or post.category == slug %}
-                    {% assign found_post = true %}
-                    <article class="post-item">
-                        <div class="post-meta">📅 {{ post.date | date: "%Y/%m/%d" }}</div>
-                        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                        <div class="post-excerpt">
-                            {{ post.excerpt | strip_html | truncate: 80 }}
-                        </div>
-                    </article>
-                {% endif %}
-            {% endfor %}
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}">← 上一頁</a>
+        {% endif %}
 
-            {% if found_post == false %}
-                <p style="color: #bbb; grid-column: 1 / -1; padding: 2rem; background: #fafafa; border-radius: 8px; text-align: center;">
-                    目前「{{ slug }}」分類下尚無文章，敬請期待...
-                </p>
-            {% endif %}
-        </div>
-    </section>
-    {% endfor %}
+        <span class="page-info">第 {{ paginator.page }} 頁 / 共 {{ paginator.total_pages }} 頁</span>
+
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}">下一頁 →</a>
+        {% endif %}
+    </div>
+    {% endif %}
 </div>
 
 <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
@@ -238,20 +223,12 @@ title: "靈性札記：魔法與生活的交界處 - 四月老師"
             noResultsText: '<li style="padding:15px; color:#999;">找不到相關文章</li>'
         });
 
-        // 監聽輸入框：有字才顯示
         blogSearchInput.addEventListener('input', function() {
-            if (this.value.trim().length > 0) {
-                blogResultsContainer.style.display = 'block';
-            } else {
-                blogResultsContainer.style.display = 'none';
-            }
+            this.value.trim().length > 0 ? blogResultsContainer.style.display = 'block' : blogResultsContainer.style.display = 'none';
         });
 
-        // 點擊外部關閉
         document.addEventListener('click', function(e) {
-            if (e.target !== blogSearchInput) {
-                blogResultsContainer.style.display = 'none';
-            }
+            if (e.target !== blogSearchInput) blogResultsContainer.style.display = 'none';
         });
     });
 </script>
