@@ -1,21 +1,2251 @@
----
-layout: null
----
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for post in site.posts %}
-    <url>
-      <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
-      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-    </url>
-  {% endfor %}
+WEBVTT
+Kind: captions
+Language: en
 
-  {% for page in site.pages %}
-    {% comment %} 排除掉非網頁檔案，如 CSS, XML, Feed 等 {% endcomment %}
-    {% unless page.url contains '.css' or page.url contains '.xml' or page.url contains 'assets' %}
-    <url>
-      <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | replace: "index.html", "" }}</loc>
-    </url>
-    {% endunless %}
-  {% endfor %}
-</urlset>
+00:00:00.240 --> 00:00:05.920
+Welcome to introduction to witchcraft
+everybody. This is lesson one. So this
+
+00:00:03.679 --> 00:00:13.599
+slide occurs at the beginning of every
+class. We very rarely do this slide out
+
+00:00:09.679 --> 00:00:18.880
+loud. I'm going to do it today. I use it
+when honestly for me as the teacher
+
+00:00:16.240 --> 00:00:22.400
+sometimes when we start class I'm like
+not really in the zone. Like there's
+
+00:00:20.640 --> 00:00:26.160
+stuff going on in my life that I'm
+anxious about or whatever and I need
+
+00:00:24.000 --> 00:00:29.760
+help like now it's time for learning
+witchcraft. And that's what this prayer
+
+00:00:28.000 --> 00:00:33.120
+is. So, I'm going to do it out loud, but
+we don't normally do it. It just sits in
+
+00:00:31.439 --> 00:00:37.760
+the slides if anybody ever wants to do
+it for yourself. So, it goes like this.
+
+00:00:35.440 --> 00:00:41.680
+Blessed goddess of the crocco, you are
+limonality who keeps the doors of
+
+00:00:39.920 --> 00:00:47.200
+initiation. And so many call you
+propilia or she who stands before the
+
+00:00:44.079 --> 00:00:52.239
+gates. You are liberation who helps us
+freely choose. And so many call you
+
+00:00:49.440 --> 00:00:56.079
+triadus or she of the forked path. You
+are a goddess of learning who guides us
+
+00:00:53.920 --> 00:01:00.640
+from ignorance to understanding. And so
+many call you Didalos or she who knows.
+
+00:00:58.719 --> 00:01:06.640
+Blessed goddess of the crocco. In the
+name of Python Draena, I ask be with me
+
+00:01:03.840 --> 00:01:10.880
+now as I open my mind. This is
+introduction to witchcraft 13 lesson.
+
+00:01:08.560 --> 00:01:15.119
+Oh, okay. This class used to be called
+13 lessons in practical spellcraft. But
+
+00:01:13.119 --> 00:01:19.680
+on the advice of my publisher, it is now
+called 13 lessons in the practice of
+
+00:01:17.119 --> 00:01:25.360
+magic, which is a better name. Good job,
+guys. This is lesson one. We say it's
+
+00:01:22.320 --> 00:01:30.080
+about color and candle magic, but really
+I think this class is about like opening
+
+00:01:28.159 --> 00:01:34.880
+your heart and soul to the wonder of
+magic. Like that's the big theme of
+
+00:01:31.920 --> 00:01:40.320
+today's lesson. So I'm Sarah Mastros.
+Please call me Sarah. I guess you can
+
+00:01:36.880 --> 00:01:44.320
+call me teacher Sarah if you want. I
+like that's good. I've been practicing
+
+00:01:42.320 --> 00:01:47.280
+witchcraft for it says 30 years, but
+obviously these slides are 10 years old,
+
+00:01:45.840 --> 00:01:51.759
+so I suppose about 40 years at this
+point. Um, I used to teach university
+
+00:01:49.520 --> 00:01:55.600
+and then high school math and then I
+quit to be a degenerate with no real
+
+00:01:53.520 --> 00:01:58.960
+job, which is going great for me. I've
+written a bunch of books, including the
+
+00:01:57.439 --> 00:02:02.560
+one the textbook for this course, which
+is not on this list because I failed to
+
+00:02:00.560 --> 00:02:07.200
+update the slide.
+Our divine patron for this class, if
+
+00:02:05.439 --> 00:02:10.319
+you're into that, but if you don't, just
+if you're not, don't ignore it. It
+
+00:02:09.200 --> 00:02:15.680
+doesn't really matter. Like, it's not
+central to the class, is Thoth, the
+
+00:02:12.879 --> 00:02:19.760
+great teacher of teachers, right? So,
+he's an ibis headed. Ibis is a kind of
+
+00:02:17.680 --> 00:02:24.879
+an aquatic bird kind of like a stork or
+a crane. If I had to say I would say
+
+00:02:22.879 --> 00:02:29.120
+Ibis is like a cross between a stork and
+a goose. We don't have ibises where I
+
+00:02:27.040 --> 00:02:32.959
+live. Right. So Ibis had an Egyptian
+scribal god. He's a lunar god of the
+
+00:02:31.440 --> 00:02:36.480
+crocco peplo which it doesn't matter
+what that means. You'll learn in a later
+
+00:02:34.400 --> 00:02:41.120
+class. And occasionally he's going to
+pop up like this image will pop up and
+
+00:02:38.560 --> 00:02:45.200
+there'll be like a a bubble here and
+he'll like give you advice that is not
+
+00:02:43.360 --> 00:02:50.480
+really about magic. It's just about what
+as a teacher we would call studentship.
+
+00:02:47.920 --> 00:02:54.800
+Okay. He's an ibis. So the way his voice
+sounds in my head, my human throat
+
+00:02:52.800 --> 00:02:59.840
+cannot make that noise, but I'll do my
+best. It goes like
+
+00:02:57.280 --> 00:03:03.440
+most important
+because he's like a goose crane and
+
+00:03:01.440 --> 00:03:08.879
+that's what he sounds like. But I can't
+make the right noise because I have a
+
+00:03:05.680 --> 00:03:13.200
+human throat and not an throat. So this
+course, as I mentioned, is for adults
+
+00:03:10.640 --> 00:03:17.120
+only. If you are a parent, you are
+welcome to have your child sitting next
+
+00:03:15.200 --> 00:03:20.720
+to you as long as you are also in the
+room. I will tell you for people who
+
+00:03:19.120 --> 00:03:25.200
+want to do that, the lessons on
+planetary magic have a little bit of sex
+
+00:03:22.879 --> 00:03:30.319
+magic in them that I personally and I'm
+a like witchy libertine do not really
+
+00:03:27.920 --> 00:03:34.080
+feel like as appropriate for kids. But
+other than that, maybe some naughty
+
+00:03:32.000 --> 00:03:37.680
+words. In my opinion, far more
+appropriate than regular prime time
+
+00:03:35.840 --> 00:03:42.239
+television where people are like getting
+their guts pulled out or whatever.
+
+00:03:39.840 --> 00:03:46.400
+Everyone is welcome here. If you are a
+beginner, you should think about this
+
+00:03:44.400 --> 00:03:49.840
+course that your goal is to like learn
+fundamental skills that you can then
+
+00:03:48.239 --> 00:03:53.680
+take into whatever kind of magic you
+want to do. If you think of yourself as
+
+00:03:51.840 --> 00:03:57.920
+like intermediate, right? You've been
+practicing for a while, but you would
+
+00:03:55.680 --> 00:04:02.640
+not consider yourself advanced, then I
+think the best thing to do is look for
+
+00:03:59.360 --> 00:04:05.280
+the like look to fill the gaps, right?
+Like you know some stuff and you don't
+
+00:04:04.080 --> 00:04:09.840
+know some stuff. Look to fill those
+gaps. And also like I encourage you to
+
+00:04:07.599 --> 00:04:12.720
+come at it with like a fresh and open
+mind which is also true for advanced
+
+00:04:11.120 --> 00:04:17.840
+people but for intermediate people
+right? If you consider yourself advanced
+
+00:04:15.599 --> 00:04:22.560
+then I think you should try and pretend
+that you are a beginner in this class
+
+00:04:20.639 --> 00:04:26.320
+because at least for me like I consider
+myself an advanced sorceress. Like I've
+
+00:04:24.400 --> 00:04:29.120
+been doing this for a long time. I teach
+it. I take your money to teach it. So
+
+00:04:27.919 --> 00:04:33.280
+it' be pretty sad if I didn't think I
+was advanced, right? Sometimes I feel
+
+00:04:31.280 --> 00:04:37.840
+kind of stuck and stagnant and I just
+want something new to like break me out
+
+00:04:34.880 --> 00:04:41.520
+of a rut. And if that's you, I think the
+best way to do that is try and come at
+
+00:04:39.360 --> 00:04:46.800
+everything with like a beginner mind.
+That being said, this class is designed
+
+00:04:43.520 --> 00:04:50.720
+for and like centered on beginner level
+teaching, which means that like
+
+00:04:49.040 --> 00:04:54.880
+sometimes somebody's going to ask a
+question and I might say that's a little
+
+00:04:52.720 --> 00:04:57.360
+too advanced for this class and then
+I'll tell you like ask it in the
+
+00:04:56.320 --> 00:05:01.440
+Facebook group and we'll talk about it
+there. No prerequisites for this class
+
+00:04:59.600 --> 00:05:07.280
+except you probably should be fluent in
+English because I talk pretty fast. This
+
+00:05:04.720 --> 00:05:11.440
+class is also available in Italian and
+traditional Chinese like with a human
+
+00:05:09.600 --> 00:05:16.400
+translator in Italian and traditional
+Chinese, but I assume you speak English
+
+00:05:14.000 --> 00:05:18.880
+if you're here already. Every month
+you're going to receive it says a
+
+00:05:17.440 --> 00:05:23.039
+written chapter, but that's false.
+There's a textbook. You have a textbook.
+
+00:05:21.120 --> 00:05:28.240
+You'll get a Zoom lecture. It says about
+three hours. They're rarely shorter than
+
+00:05:26.080 --> 00:05:32.320
+two and they're never really longer than
+four, but about three hours. This one I
+
+00:05:30.720 --> 00:05:35.680
+think is this one's a little long
+because there's all this like boring
+
+00:05:33.600 --> 00:05:41.039
+syllabus stuff at the beginning. You'll
+get a video of the lecture. Uh there's a
+
+00:05:38.960 --> 00:05:45.680
+human being named Caroline who edits the
+videos. So sometimes she has a life and
+
+00:05:43.759 --> 00:05:49.919
+it takes a little longer than a week. If
+it's been more than a week and the
+
+00:05:47.360 --> 00:05:54.560
+video's not up, please email me because
+usually she's not the one who's late.
+
+00:05:52.320 --> 00:05:58.720
+She said it to me and I failed to put it
+like I failed to put it in the syllabus.
+
+00:05:56.320 --> 00:06:02.320
+If it's late, I apologize. I'm gonna
+tell you guys the worst thing about me
+
+00:06:00.400 --> 00:06:07.440
+as a teacher is I'm kind of sloppy and
+disorganized.
+
+00:06:04.160 --> 00:06:11.120
+Sorry, I'm an ADD magician. So, I think
+honestly I'm less sloppy and
+
+00:06:08.960 --> 00:06:16.240
+disorganized than most of my colleagues.
+Okay, if you do all of the homework,
+
+00:06:13.600 --> 00:06:22.240
+like if you do everything I tell you to
+do, then in addition to the four hours
+
+00:06:18.720 --> 00:06:27.360
+of class, it's probably 10 to 15 hours
+of work on your own. For most people, I
+
+00:06:25.039 --> 00:06:31.840
+actually don't recommend doing it. Like,
+do whatever catches your fancy. For most
+
+00:06:29.759 --> 00:06:36.160
+people, I think the best way to go
+through this class is to take it once
+
+00:06:34.080 --> 00:06:41.280
+and like not do a very good job. like
+take it, watch the videos, you know, do
+
+00:06:38.880 --> 00:06:46.080
+any homework that seems fun and not the
+rest of them. And then if at the end of
+
+00:06:43.520 --> 00:06:50.880
+the class you still want to deep dive,
+go back and take it again. In terms of
+
+00:06:48.800 --> 00:06:54.080
+pricing, once you've paid for this
+class, you're just in this class for
+
+00:06:52.639 --> 00:06:57.440
+well, I don't want to say forever. I
+mean, I'm going to die at some point.
+
+00:06:56.000 --> 00:07:01.520
+You're going to die. Like, it's not
+eternal, but you're in this class until
+
+00:06:59.440 --> 00:07:06.880
+either I stop teaching this class or you
+tell me to take you out of this class. I
+
+00:07:04.319 --> 00:07:13.360
+strongly encourage you guys to keep like
+a magical journal. And some people get
+
+00:07:10.639 --> 00:07:17.919
+really precious about their magical
+journal. I am not encouraging to you to
+
+00:07:15.440 --> 00:07:22.080
+make like a super fancy beautiful book
+of shadows grimmooire that's like bound
+
+00:07:19.680 --> 00:07:26.240
+in fetal goat skin. That kind of art
+project is fun and if you're into that,
+
+00:07:24.000 --> 00:07:29.199
+go for it. I'm kind of into that. Like I
+like that. But I'm just saying like a
+
+00:07:27.599 --> 00:07:33.759
+sloppy journal where you just take
+notes. just whatever you think about,
+
+00:07:31.759 --> 00:07:38.560
+whatever you research your exercises,
+write it all down. There is a Facebook
+
+00:07:36.240 --> 00:07:44.080
+group which is the primary group like
+discussion group for this class. I'm
+
+00:07:42.160 --> 00:07:49.280
+trying to move it off Facebook because
+Facebook is a toxic cess pit
+
+00:07:46.639 --> 00:07:51.520
+and also getting worse day by day.
+Yeah,
+
+00:07:49.599 --> 00:07:55.039
+there is also a Discord group, but
+nobody uses it.
+
+00:07:53.440 --> 00:07:58.080
+I'm looking for other options. So, if
+people have ideas, please send me an
+
+00:07:56.400 --> 00:08:04.000
+email. like I would like to get this
+class off of Facebook and somewhere else
+
+00:08:00.879 --> 00:08:08.240
+before Facebook implodes.
+The I the in the Facebook group, it's
+
+00:08:06.479 --> 00:08:11.199
+not just this class, it's all my
+classes, which I like. It's kind of one
+
+00:08:09.840 --> 00:08:17.599
+room schoolhouse, right? So beginner
+students and advanced students are all
+
+00:08:12.960 --> 00:08:20.960
+in the group together, right? And if you
+watch the questions and answers, you'll
+
+00:08:19.280 --> 00:08:26.560
+be able to sort out who's a beginner and
+who's not pretty quick, right? But I
+
+00:08:23.919 --> 00:08:30.319
+very much encourage discussion. I am of
+the opinion when I am asked what is the
+
+00:08:28.400 --> 00:08:36.159
+my single piece of advice for beginner
+magicians. It is get a com magician.
+
+00:08:34.320 --> 00:08:43.360
+Like it's not that I have some moral
+objection to solitary practice but like
+
+00:08:40.959 --> 00:08:49.200
+Talmud says in terms of like studying
+Jewish stuff that studying alone makes
+
+00:08:45.920 --> 00:08:53.360
+you stupider. Like I just think partners
+and working together with other people
+
+00:08:50.800 --> 00:08:58.640
+one is good for the soul to like engage
+with other human beings ideally without
+
+00:08:56.080 --> 00:09:02.480
+a robot in between you like in the same
+room together but if you can't do that
+
+00:09:00.399 --> 00:09:08.399
+on the phone online I just think it's
+good practice it helps people learn and
+
+00:09:05.760 --> 00:09:13.680
+it's fun
+okay beg you to read the syllabus every
+
+00:09:11.600 --> 00:09:17.519
+if you email me about logistics I'm
+going to answer it but I assure you any
+
+00:09:15.680 --> 00:09:23.040
+question you have about like when is
+class, what's the Zoom link? It's there.
+
+00:09:20.080 --> 00:09:26.240
+It's all in the syllabus. Um, which is
+that that's the document I sent out
+
+00:09:24.560 --> 00:09:30.399
+called like welcome to introduction to
+witchcraft. Everything you need is in
+
+00:09:27.920 --> 00:09:35.200
+there, but I'm always here. I'm a nice
+person. You're welcome to contact me at
+
+00:09:32.480 --> 00:09:40.320
+any time. What I do ask is that you
+please not use Facebook Messenger for
+
+00:09:37.760 --> 00:09:44.480
+course stuff because Facebook Messenger
+is where I talk to my friends. And if
+
+00:09:43.360 --> 00:09:49.360
+every time I'm trying to talk to my
+friends, my job, my work, I get work
+
+00:09:47.279 --> 00:09:54.560
+messages over and over and over, it's
+like hard to have a life, right? So, if
+
+00:09:52.880 --> 00:09:58.240
+you have a question about content, like
+you have a question about witchcraft,
+
+00:09:56.240 --> 00:10:02.399
+the best place to ask it is either in
+class or in the Facebook group because
+
+00:10:00.399 --> 00:10:05.600
+that way like you can get answers from a
+lot of people, including, you know, many
+
+00:10:04.480 --> 00:10:09.440
+other professional teachers of
+witchcraft. Like Jason Miller's in that
+
+00:10:07.360 --> 00:10:13.760
+group, BJ Swain is in that group. So,
+like they'll answer your questions too
+
+00:10:10.800 --> 00:10:16.800
+sometimes if they feel like it. I'll
+tell you I answer questions in their
+
+00:10:15.200 --> 00:10:21.279
+classroom groups when I'm bored
+basically. Um,
+
+00:10:19.600 --> 00:10:23.760
+but also that way everybody can learn
+together. Like everybody gets to learn
+
+00:10:22.640 --> 00:10:28.240
+from your question. If you have a
+question about logistics, please email.
+
+00:10:25.839 --> 00:10:31.760
+But again, I I beg you don't send work
+messages to my Facebook Messenger.
+
+00:10:30.240 --> 00:10:36.079
+Please. I mean, if you do, I'll be nice
+and answer them. But also,
+
+00:10:34.880 --> 00:10:39.839
+if you send something Facebook
+Messenger, either I'm going to answer it
+
+00:10:37.600 --> 00:10:43.680
+right away or never. Where if you send
+it by email, like my email box is like a
+
+00:10:42.000 --> 00:10:47.519
+to-do list. I will eventually like
+chuggle through.
+
+00:10:45.600 --> 00:10:51.920
+As I mentioned before, I am sloppy and
+disorganized. So, if I miss an email,
+
+00:10:50.000 --> 00:10:58.240
+like you should always feel free to nag
+me. I apologize for being ADD and
+
+00:10:55.600 --> 00:11:02.079
+disorganized. My dream in life is to
+have like a gaggle of secretaries who
+
+00:11:00.079 --> 00:11:07.440
+just follow me around and organize my
+life for me. That's that's my dream.
+
+00:11:04.880 --> 00:11:11.680
+Problem is everybody I like is like the
+sort of people who are uptight and have
+
+00:11:09.680 --> 00:11:15.360
+everything like are really good at
+organizing. They I don't really get on.
+
+00:11:13.920 --> 00:11:19.519
+I will say so I mentioned this before.
+Caroline who edits the videos is not a
+
+00:11:18.000 --> 00:11:25.440
+secretary but like does help. And I also
+have an assistant named Alice who every
+
+00:11:22.560 --> 00:11:30.079
+once in a while does stuff like
+I don't think you guys ever notice
+
+00:11:27.279 --> 00:11:35.680
+anything she does. She does like backend
+like paperwork kind of stuff for me. So
+
+00:11:32.959 --> 00:11:39.920
+probably you'll never hear about her,
+but maybe she'll send you like the
+
+00:11:37.760 --> 00:11:44.959
+Google calendar.
+She made that. She's 22 and like knows
+
+00:11:42.959 --> 00:11:49.680
+how computers work better than I do. So
+she really does that for me. As I said
+
+00:11:47.839 --> 00:11:55.360
+before, I really encourage people to
+find a study buddy to like partner with.
+
+00:11:52.720 --> 00:12:01.040
+The easiest thing to do is just ask in
+the Facebook group, right? But, you
+
+00:11:58.720 --> 00:12:04.079
+know, there are 400 people in this
+class. So, hopefully you can find a
+
+00:12:02.560 --> 00:12:07.519
+study buddy that like you can work out
+times with. If you don't like to use
+
+00:12:06.079 --> 00:12:11.920
+Facebook, which is totally legitimate
+because as I mentioned, it's a toxic
+
+00:12:08.800 --> 00:12:16.240
+cess pit. Um, if you email me, I will
+hook you up with the next person who
+
+00:12:13.760 --> 00:12:21.519
+emails and asks. But like I can't
+matchmate. I'm just gonna kind of give
+
+00:12:18.800 --> 00:12:25.120
+you somebody and if you don't get along,
+I don't know, find somebody else. Don't
+
+00:12:23.440 --> 00:12:27.839
+get along is usually not personal. It's
+usually like you're in different time
+
+00:12:26.399 --> 00:12:31.279
+zones and you can't get the schedule to
+work or something like that. Okay. So,
+
+00:12:29.600 --> 00:12:34.560
+we're going to move into like actually
+getting to learn some witchcraft now.
+
+00:12:33.200 --> 00:12:38.639
+So, this is just a quote from Redard
+Kipling. It goes, "I've had six faithful
+
+00:12:36.320 --> 00:12:43.200
+serving men who taught me all I know.
+Their names are what and why and when
+
+00:12:40.639 --> 00:12:47.360
+and how and where and who." And Thoth
+says, "Asking questions is the best way
+
+00:12:45.040 --> 00:12:52.079
+to learn." Honk talk.
+There we go. So, we're gonna talk a
+
+00:12:49.839 --> 00:12:57.200
+little bit about the styles of magic you
+learn. So, sometimes on like, okay,
+
+00:12:55.200 --> 00:13:00.880
+sometimes I'm just hang out in beginner
+witch groups on Facebook and answer
+
+00:12:59.200 --> 00:13:05.200
+questions. And sometimes I ask questions
+like, "What kind of witch am I?" And I
+
+00:13:02.880 --> 00:13:10.240
+don't I don't know. I've been a witch
+for 35 years at this point. I mean, in
+
+00:13:09.040 --> 00:13:14.079
+some ways I've been a witch since I was
+born, but like I've been identifying as
+
+00:13:12.320 --> 00:13:18.959
+a witch for 35 years and I don't know
+what kind of witch I am. I'm the Sarah
+
+00:13:16.320 --> 00:13:23.360
+Mastros kind, right? So, I'm going to
+try and teach you like a sampler of all
+
+00:13:21.279 --> 00:13:28.480
+different methods. So, if you're in a
+class and you see a lesson and like it
+
+00:13:26.320 --> 00:13:31.040
+just doesn't seem like your style, well,
+the next lesson is going to be a
+
+00:13:29.839 --> 00:13:37.040
+different style. I tried to do a
+sampler. Of course, it is biased towards
+
+00:13:33.839 --> 00:13:40.480
+the kinds I like best. And what the the
+most important thing you need to know
+
+00:13:38.240 --> 00:13:45.680
+about my style is that I'm a nerd and I
+like nerd magic. So there's a lot of
+
+00:13:42.639 --> 00:13:50.000
+like poetry and like numerology and like
+nerd [&nbsp;__&nbsp;] in my magic because I'm into
+
+00:13:47.839 --> 00:13:55.200
+that. You'll see as we go through this
+class, right? I try to keep this class
+
+00:13:52.320 --> 00:14:01.120
+what I call paradigm agnostic, which is
+to say even though sometimes I'll like
+
+00:13:57.839 --> 00:14:06.000
+reference like gods, there's really no
+religious content in this class. You
+
+00:14:03.760 --> 00:14:10.079
+don't really have to believe anything.
+It doesn't really matter what you
+
+00:14:07.279 --> 00:14:15.920
+believe. I'm going to say that sometimes
+as we get very much later in the class,
+
+00:14:14.079 --> 00:14:21.440
+like when I'm teaching you how to
+conjure a spirit in a mirror
+
+00:14:19.360 --> 00:14:26.000
+to make it work the way I teach it, you
+probably do have to at least be able to
+
+00:14:24.160 --> 00:14:29.839
+convince your you need to be able to
+pretend that you believe spirits are
+
+00:14:27.920 --> 00:14:34.959
+real for approximately an hour at a
+time. But even that you don't have to
+
+00:14:31.839 --> 00:14:39.199
+believe until like lesson 10 or 11. Just
+to be clear, this is not a class on
+
+00:14:37.040 --> 00:14:44.639
+Wikah, which is a religion, a religion I
+do not practice. This is not a class on
+
+00:14:42.160 --> 00:14:47.839
+traditional witchcraft. How about a
+traditional witch? Like kind of yes,
+
+00:14:46.399 --> 00:14:51.920
+kind of no. It depends. Like I don't
+think traditional witchcraft has a very
+
+00:14:49.120 --> 00:14:56.880
+clear definition. I am certainly a witch
+and the witchcraft I practice is very
+
+00:14:54.560 --> 00:15:01.680
+traditional but sometimes the phrase
+traditional witchcraft means something
+
+00:14:58.880 --> 00:15:06.720
+more specific that I'm not exactly. This
+class is not about like religion or
+
+00:15:04.639 --> 00:15:13.760
+beliefs or anything like that although
+sometimes those come up right is a class
+
+00:15:10.320 --> 00:15:18.880
+is a craft class like the witchcraft is
+the craft that witches do like craft in
+
+00:15:16.639 --> 00:15:24.880
+this context means like profession like
+you do stuff right you make stuff right
+
+00:15:22.560 --> 00:15:29.360
+and the stuff that witchcraft you're
+making is resultsoriented spell work
+
+00:15:27.120 --> 00:15:34.399
+like I'm going to teach you to do spells
+that will make changes is in the world.
+
+00:15:32.079 --> 00:15:39.600
+Not just in your heart and mind, but
+also out in the world, right? But also
+
+00:15:36.959 --> 00:15:43.920
+in your heart and mind. And again, the
+goal of this class for me as a teacher
+
+00:15:42.160 --> 00:15:47.839
+is to teach you fundamental skills so
+that you could go to any when we talk
+
+00:15:45.519 --> 00:15:52.639
+about like kinds of magic that you could
+just show up at say a Golden Dawn ritual
+
+00:15:50.800 --> 00:15:57.279
+and know what's going on. Like you can
+follow what's going on by the end of
+
+00:15:54.160 --> 00:16:02.240
+this class. you can go to like a voodoo,
+right, and like understand what is going
+
+00:16:00.560 --> 00:16:06.399
+on, right? Like that's not to say you're
+an initiate in those things, but like
+
+00:16:04.480 --> 00:16:12.639
+you you know what's what. Like you have
+you're basically fluent in magic. That's
+
+00:16:08.959 --> 00:16:16.959
+the goal of this class, right? So the
+specific skills you're going to learn,
+
+00:16:15.040 --> 00:16:21.360
+this is just the curriculum. So today
+we're going to learn candle color and
+
+00:16:18.720 --> 00:16:27.519
+petition magic. Next month we're gonna
+learn sympathetic magic and about like
+
+00:16:24.240 --> 00:16:30.320
+magical materials. And it says amulets.
+We're going to learn a little bit about
+
+00:16:28.800 --> 00:16:34.560
+amulets, but truthfully most of the
+amulet stuff is in lesson three, which
+
+00:16:32.399 --> 00:16:39.839
+is about like symbols basically.
+Talisman, sigils, seals, symbols, right?
+
+00:16:37.839 --> 00:16:43.920
+Um, and then divination. I'll tell you
+that historically I taught divination
+
+00:16:41.600 --> 00:16:46.880
+and then symbols and my editor was like,
+"Hey Sarah, that's dumb. You should take
+
+00:16:45.519 --> 00:16:50.160
+symbol." I mean, she said it. They said
+it nicer than that, but like, yeah,
+
+00:16:48.880 --> 00:16:54.399
+obviously I should have been teaching
+symbols before divination, so now I do.
+
+00:16:52.480 --> 00:16:58.160
+Lesson five is about the sun and the
+magic of the sun and the moon. Lesson
+
+00:16:56.160 --> 00:17:01.600
+six is the rest of the planets. There
+used to be one planetary lesson, but it
+
+00:16:59.920 --> 00:17:06.720
+was like five hours long, so I split it
+into two lessons. Lesson seven is about
+
+00:17:04.000 --> 00:17:11.120
+centers and circles. Lesson eight is
+about cleansing and protection. Lesson
+
+00:17:08.799 --> 00:17:14.959
+nine is about cursing and also curse
+breaking because you can't learn to
+
+00:17:12.799 --> 00:17:18.480
+break curses until after you learn to
+cast curses. It's actually easier to
+
+00:17:16.880 --> 00:17:22.240
+curse someone than it is to break a
+curse. So, you kind of have to learn
+
+00:17:19.839 --> 00:17:26.079
+cursing first. Lesson 10 is all about
+dreaming and dream magic, which is a
+
+00:17:24.000 --> 00:17:29.760
+favorite topic of mine that in my
+opinion other like just doesn't get
+
+00:17:27.839 --> 00:17:33.919
+taught. And I I don't know why people
+don't talk about dream magic. I think
+
+00:17:32.400 --> 00:17:38.480
+people should talk about it more. I
+think it's amazing. Uh lesson 11 is
+
+00:17:36.160 --> 00:17:42.400
+trance journey. Lesson 12 is
+shapeshifting. Although I'm going to
+
+00:17:39.840 --> 00:17:45.919
+tell you, the last time I taught it, I
+felt like it didn't go very well. So, I
+
+00:17:43.919 --> 00:17:50.799
+might tweak it around a little bit. Um,
+and then lesson 13 is dark mirror
+
+00:17:47.919 --> 00:17:54.320
+conjuration. So, the art of summoning a
+spirit in a I do it in a dark mirror,
+
+00:17:53.039 --> 00:17:57.360
+but you could also do it like in a
+crystal ball. It's basically the same
+
+00:17:55.760 --> 00:18:02.160
+technique.
+For me, that's the thing I learned that
+
+00:17:59.520 --> 00:18:06.240
+made me feel like a real grown-up badass
+witch. Like the first time I could
+
+00:18:03.919 --> 00:18:10.480
+conjure a spirit and have a face-tof
+face conversation with a spirit in a
+
+00:18:08.559 --> 00:18:14.240
+mirror,
+I felt like a badass magician. So that's
+
+00:18:12.880 --> 00:18:17.520
+when I thought about what do you want
+what I want people to be able to do in
+
+00:18:15.760 --> 00:18:21.679
+some sense like this course is to
+prepare you to be able to do that,
+
+00:18:20.000 --> 00:18:25.200
+right? But you learn tons of other cool
+stuff along it. So the first thing we're
+
+00:18:23.840 --> 00:18:29.600
+going to learn and you're going to learn
+o over the yearong that we're going to
+
+00:18:27.679 --> 00:18:34.240
+study together. You're going to learn a
+lot of different ways to like enter into
+
+00:18:32.080 --> 00:18:39.600
+magical consciousness, which you we
+could also call like tramps or like not
+
+00:18:37.679 --> 00:18:43.360
+all altered states of consciousness are
+magical consciousness. There's lots of
+
+00:18:41.280 --> 00:18:46.559
+different kinds, but like we're going to
+learn a lot of different kinds. The one
+
+00:18:45.120 --> 00:18:52.080
+we're going to work with today is
+childlike wonder, which in my opinion is
+
+00:18:49.440 --> 00:18:54.400
+honestly one of the best ones for magic.
+And I think people don't talk about it a
+
+00:18:53.600 --> 00:18:58.799
+lot because they think it's
+embarrassing. Like it's like silly to
+
+00:18:56.640 --> 00:19:04.160
+behave like a child, but that's dumb.
+That's just dumb. Right? So the essence
+
+00:19:01.760 --> 00:19:07.280
+of the magic
+that we're going to learn today, not
+
+00:19:05.760 --> 00:19:11.520
+through the whole course, but today is
+that we're going to play make believe.
+
+00:19:09.280 --> 00:19:16.559
+Right? And we're going to do that until
+we make ourselves believe it. And then
+
+00:19:14.720 --> 00:19:20.480
+we're going to keep doing it until we
+make other people believe it. And then
+
+00:19:18.880 --> 00:19:25.280
+we're going to keep doing it until the
+universe believes it, too. That is the
+
+00:19:23.280 --> 00:19:30.000
+essence of the kind of magic we're going
+to do today, which I personally just
+
+00:19:27.520 --> 00:19:36.080
+call makebelieve magic, but other people
+would give other pretentious names, too.
+
+00:19:33.520 --> 00:19:40.000
+The most important thing that you need
+for this kind of magic is to not be
+
+00:19:37.919 --> 00:19:45.120
+ashamed of yourself. You can't be like,
+"Oh, I'm too cool to pretend I'm an
+
+00:19:41.919 --> 00:19:51.360
+eight-year-old. I'm too cool to like say
+magic rhymes and wish for things." Like,
+
+00:19:49.280 --> 00:19:55.280
+you're not too cool. You're not cool
+enough. Like if you're too cool for
+
+00:19:53.200 --> 00:19:58.480
+magic, I believe you to be not cool
+enough for magic. But I know I'm
+
+00:19:57.039 --> 00:20:01.919
+preaching to the choir because you guys
+literally paid to be in this choir. Most
+
+00:20:00.480 --> 00:20:07.200
+of you, many people are on scholarship,
+right? So shame. The thing you have the
+
+00:20:04.799 --> 00:20:11.520
+thing if you if the magic we I teach you
+today doesn't work. The most likely
+
+00:20:09.760 --> 00:20:15.280
+reason is that you're ashamed of
+yourself because you think magic is
+
+00:20:13.840 --> 00:20:19.679
+silly because you think you're going to
+go to hell. Some kind of reason. And I
+
+00:20:18.000 --> 00:20:23.440
+encourage you to like be on the lookout
+for that. That being said, you signed up
+
+00:20:21.919 --> 00:20:29.360
+for a witchcraft class. You've probably
+already made it over that hurdle,
+
+00:20:26.400 --> 00:20:33.919
+right? Okay. So,
+the next piece of most magic, so almost
+
+00:20:31.760 --> 00:20:39.520
+all magic, step one is enter into
+magical consciousness. Step two is enter
+
+00:20:36.799 --> 00:20:44.159
+into magical spaceime. And o you'll
+learn lots of different kinds of magical
+
+00:20:41.919 --> 00:20:47.679
+spacetime. The kind we're going to do
+today, which I believe to be the easiest
+
+00:20:45.760 --> 00:20:53.600
+kind. That's why I do it in lesson one.
+I call standing at the sacred center.
+
+00:20:50.559 --> 00:20:58.320
+Many people call it centering,
+but that word can mean a lot of
+
+00:20:56.080 --> 00:21:02.400
+different things. So, I'm going to call
+it standing at the sacred center, but
+
+00:21:00.400 --> 00:21:08.640
+most people would call this centering. I
+just think my name is clearer and I'm a
+
+00:21:04.799 --> 00:21:12.000
+fussy wizard, so I care about names.
+Okay. The essence of standing at the
+
+00:21:10.559 --> 00:21:15.520
+sacred center, and we're going to learn
+like details about how to do it. This is
+
+00:21:13.520 --> 00:21:20.480
+like the coming attractions, is that
+your heart, by which I mean both like
+
+00:21:18.240 --> 00:21:25.760
+your metaphoric heart, like the seat of
+your soul, but I also mean literally
+
+00:21:22.880 --> 00:21:30.720
+like the organ that pumps your blood,
+you're that you should put that in the
+
+00:21:28.240 --> 00:21:34.320
+center of the universe. That's the
+essence of standing at the sacred
+
+00:21:32.559 --> 00:21:38.080
+center, which we will talk about a
+little bit more, but that's more or less
+
+00:21:36.480 --> 00:21:44.640
+what you're going to learn how to do. So
+the first thing to do when you center is
+
+00:21:40.960 --> 00:21:50.159
+just like become aware of your body.
+Just like move around a little bit. And
+
+00:21:47.200 --> 00:21:54.320
+my my teacher my one of my teachers
+would have called this like airrating
+
+00:21:51.840 --> 00:21:58.720
+yourself, right? Like take some deep
+breaths, move around, maybe dance a
+
+00:21:55.919 --> 00:22:02.640
+little. Like get yourself in your body.
+Then whenever you're ready, you're going
+
+00:22:00.000 --> 00:22:08.159
+to stand up nice and straight or like
+you know sitting down is also fine, but
+
+00:22:05.679 --> 00:22:13.039
+like try and keep your spine vertical.
+If for whatever reason like you have to
+
+00:22:10.400 --> 00:22:17.760
+lay on your back, that's okay, but it is
+easier to do this with your spine
+
+00:22:14.960 --> 00:22:22.159
+vertical. That is like your head pointed
+toward the sky and your feet pointed
+
+00:22:20.000 --> 00:22:27.120
+toward the center of the earth. Right?
+Close your eyes.
+
+00:22:24.960 --> 00:22:30.000
+Just breathe slow and deep. We're not
+going to do this right now. like I'm
+
+00:22:28.480 --> 00:22:35.679
+going to teach you how to do this, but
+we're not going to do it in class. If we
+
+00:22:32.880 --> 00:22:41.039
+if in class we did every piece of magic
+we were going to learn, then every class
+
+00:22:38.240 --> 00:22:44.960
+would be like 20 hours long. So that's
+why we don't do it together, right? So
+
+00:22:43.679 --> 00:22:50.720
+you're just going to close your eyes,
+breathe deep and slow, and then take
+
+00:22:47.520 --> 00:22:55.120
+your fist and put it on your sternum and
+push on it. That really helps. that
+
+00:22:53.520 --> 00:22:59.679
+little trick I learned from Jason Miller
+about like pushing on your sternum. It
+
+00:22:57.520 --> 00:23:03.679
+does help, right? So, put your fist on
+your sternum and push with your other
+
+00:23:01.200 --> 00:23:08.080
+hand. Personally, I've used my left hand
+for the fist and push with my right. I
+
+00:23:06.000 --> 00:23:11.640
+don't think it matters, right? And then
+you're going to sing out
+
+00:23:12.400 --> 00:23:17.840
+and you're going to feel it in your
+chest.
+
+00:23:15.840 --> 00:23:22.000
+I can't carry a tune in a bucket. So
+sometimes people ask me what pitch I
+
+00:23:20.159 --> 00:23:26.080
+don't know like the pitch that feels
+like it's in your chest is the only way
+
+00:23:23.600 --> 00:23:30.880
+I know how to answer that question,
+right? And just do that a bunch of times
+
+00:23:28.559 --> 00:23:34.159
+until you can feel it vibrating in your
+chest. Sometimes people will say
+
+00:23:32.880 --> 00:23:39.120
+something like like the Golden Dawn
+sometimes has like vibrate a god name.
+
+00:23:36.880 --> 00:23:44.640
+It's not like a metaphor. Like you're
+vibrating a piece of your body like
+
+00:23:42.880 --> 00:23:50.000
+like if you hit yourself, you can make
+it vibrate really obviously, but you
+
+00:23:47.600 --> 00:23:55.600
+don't need it to be that obvious, right?
+Vibrate, right?
+
+00:23:53.200 --> 00:24:00.480
+Okay. Next, you're going to you're going
+to reach upward with your whole body.
+
+00:23:57.919 --> 00:24:05.000
+So, up on your tippy toes, reach up up
+to the heavens. And here you're going to
+
+00:24:02.000 --> 00:24:05.000
+go
+
+00:24:06.000 --> 00:24:13.120
+in your head, right? Just do it however
+many times you feel like you need to do
+
+00:24:10.320 --> 00:24:18.400
+it to like get it to fill up your head.
+Basically, once you've done that, you're
+
+00:24:15.679 --> 00:24:24.240
+going to just like grab the heavens and
+pull it down. And you're going to pull
+
+00:24:21.120 --> 00:24:29.039
+that down through the top of your head
+and into your chest. And your chest
+
+00:24:26.080 --> 00:24:32.240
+should already be like lit up sort of
+because you did that vibrating before.
+
+00:24:30.799 --> 00:24:36.000
+You're going to pull it down into your
+chest, right? And then you're going to
+
+00:24:34.400 --> 00:24:41.039
+just keep going down. So, just like we
+reached up, we're going to go down,
+
+00:24:38.080 --> 00:24:45.200
+right? But don't bend over. Like, don't
+bow, don't lean, keep your back
+
+00:24:43.039 --> 00:24:51.200
+straight, but reach down with your hands
+as low as you can. Bend your knees. You
+
+00:24:49.360 --> 00:24:55.679
+know, I'm a fat old lady and my ability
+to like squat is and then get back up is
+
+00:24:54.080 --> 00:25:01.440
+not that good. Like, I use a cane. My
+knees, my left knee in particular is
+
+00:24:58.000 --> 00:25:07.000
+like not right. Right. But just push
+down with your body. And then you want
+
+00:25:03.840 --> 00:25:07.000
+to sing
+
+00:25:09.200 --> 00:25:16.080
+and you should feel it vibrating in your
+genitals or maybe like your lower belly,
+
+00:25:14.159 --> 00:25:20.320
+but like that part of your body. And
+just do it. And then right and just like
+
+00:25:18.559 --> 00:25:25.919
+you pull down the heavens, you're going
+to pull up hell. Pull up the underworld.
+
+00:25:23.760 --> 00:25:29.520
+Pull it up through your bum and up your
+spine and into your chest. So now the
+
+00:25:27.440 --> 00:25:34.159
+heavens and the underworld have like
+combined in your chest.
+
+00:25:32.320 --> 00:25:38.320
+If you're really good at this, you could
+just stop here, but we're learning. So
+
+00:25:37.039 --> 00:25:43.039
+we're going to do it a couple times,
+right? Just going to do it a couple of
+
+00:25:39.919 --> 00:25:46.520
+times. For a while, you want to go top,
+middle, bottom.
+
+00:25:48.400 --> 00:25:54.720
+For right now, I encourage you to simply
+think of those as sounds that you are
+
+00:25:52.400 --> 00:25:59.520
+making. But if you're a nerd, they are
+also the ancient Greek what we would
+
+00:25:56.320 --> 00:26:03.279
+call barbarous magical name. Yao yao
+like the correct that is what we're
+
+00:26:01.440 --> 00:26:09.080
+doing. But that's you don't need to know
+about that. Just the sound. Focus on the
+
+00:26:06.080 --> 00:26:09.080
+sound
+
+00:26:09.840 --> 00:26:12.840
+right.
+
+00:26:13.840 --> 00:26:20.480
+Do it a bunch of times. Play around with
+how fast we're going to spread a
+
+00:26:17.279 --> 00:26:25.679
+rainbow. Like I will say broadly the
+answer to your question is your body is
+
+00:26:23.200 --> 00:26:30.240
+going to become a rainbow pillar with
+red at the bottom and violet at the top.
+
+00:26:28.640 --> 00:26:35.360
+Like it's an electromatic spectrum in
+that order, but we'll talk about that a
+
+00:26:32.400 --> 00:26:38.880
+lot more. But good question. Um again,
+so you want to like do it a bunch of
+
+00:26:37.039 --> 00:26:47.200
+times and like play around with the
+pacing. And then you can also play
+
+00:26:40.960 --> 00:26:52.159
+around with the order like uh uh o e
+o uh like play around, right? And you
+
+00:26:50.000 --> 00:26:56.320
+want to get fluent at doing this like
+fast and easy. So just play because
+
+00:26:54.240 --> 00:27:01.279
+right now we're just learning, right? We
+haven't actually done anything really,
+
+00:26:59.600 --> 00:27:07.120
+right? We're just sort of prepping
+ourselves, right? We're like energizing
+
+00:27:04.240 --> 00:27:11.679
+our body. So whenever you're, you know,
+you're ready to go, like keep playing
+
+00:27:09.200 --> 00:27:15.600
+around, feel the energy move around.
+When you feel like you're full of light,
+
+00:27:14.080 --> 00:27:19.120
+and for some people that might be
+visual, like you might be able to see
+
+00:27:17.120 --> 00:27:22.720
+your aura, right, light up. And for
+other people, it might be like a for me
+
+00:27:20.720 --> 00:27:29.039
+it's more of like a physical sensation
+in my body. Kind of like getting chills
+
+00:27:26.240 --> 00:27:32.240
+but slower. kind of like I don't know if
+this is true for men or not but my
+
+00:27:30.960 --> 00:27:36.960
+experience and I think most women is
+that orgasm can kind of ripple across
+
+00:27:34.880 --> 00:27:41.919
+the body and that's kind of the feeling
+you're looking for probably not that
+
+00:27:39.520 --> 00:27:45.600
+intensely right but whenever you feel
+like you're full of light whether you
+
+00:27:43.520 --> 00:27:50.559
+can see it or not some people will never
+be able to like see it visually
+
+00:27:48.159 --> 00:27:54.000
+musicians sometimes experience I will
+say musicians have told me that
+
+00:27:52.480 --> 00:27:59.039
+sometimes when they do this what they
+experience is like a chorus of angels
+
+00:27:56.960 --> 00:28:03.120
+making singing with them, like making
+those sounds with them. But I think
+
+00:28:00.880 --> 00:28:06.799
+we're all kind of experiencing the same
+phenomenon. We're just experiencing it
+
+00:28:04.799 --> 00:28:12.080
+in different ways. So for me, it's a
+quite physical like vibration kind of
+
+00:28:10.000 --> 00:28:17.520
+tingle in my body, but there's no like
+visual component to it for me, which is
+
+00:28:15.120 --> 00:28:21.919
+why like what color I don't know. Mine
+aren't colors at all really when I do
+
+00:28:19.200 --> 00:28:27.360
+it. There's just like a vibration.
+Okay. So, just like we went up and down,
+
+00:28:24.399 --> 00:28:34.000
+now we're going to go front and back,
+right? So, I always do front first and
+
+00:28:31.200 --> 00:28:39.600
+then back. But you could do it however
+you want, right? So, just like you reach
+
+00:28:36.240 --> 00:28:44.399
+high up, reach high as far front as you
+can and pull that into you. I personally
+
+00:28:42.799 --> 00:28:48.799
+don't make a sound at all when I do
+that, but if I was gonna, it would
+
+00:28:46.080 --> 00:28:53.679
+probably still be ah like everything on
+this slide because it's kind of in your
+
+00:28:50.240 --> 00:28:56.640
+chesty region, right? Like in your heart
+that I would use the a sound, but I
+
+00:28:55.360 --> 00:29:00.080
+actually don't make a sound at all when
+I do this. Right? So, you're going to go
+
+00:28:58.720 --> 00:29:04.320
+just like you pulled from above and
+below. You're going to pull them in from
+
+00:29:01.600 --> 00:29:09.440
+the front and the back. Again, I
+typically do front first and then back.
+
+00:29:07.840 --> 00:29:13.520
+I don't actually think it matters which
+order you do front and back in. So, you
+
+00:29:11.919 --> 00:29:19.520
+can try both and see what feels better
+to you. Left and right. I pretty much
+
+00:29:16.720 --> 00:29:23.120
+always go left and then right. I'm
+right-handed, but again, I don't
+
+00:29:21.840 --> 00:29:27.200
+actually think it matters what order you
+eat them in. But I do think it's
+
+00:29:24.480 --> 00:29:32.320
+important to first go up, down, and then
+front, back, and then left, right for
+
+00:29:30.399 --> 00:29:37.120
+like biological reasons, right? So,
+human beings are not even remotely
+
+00:29:35.279 --> 00:29:42.480
+up, down, symmetric. Like the top of
+your body and the bottom of your body
+
+00:29:38.320 --> 00:29:46.880
+are completely different shapes, right?
+The front of your body and the back of
+
+00:29:44.320 --> 00:29:50.320
+your body are like more similar than up
+and down are, but they're still very
+
+00:29:48.320 --> 00:29:53.840
+different. And then left and right,
+you're not left right symmetric either,
+
+00:29:52.320 --> 00:29:58.799
+but like you're more left right
+symmetric than front back symmetric. I'm
+
+00:29:57.120 --> 00:30:02.799
+going to say almost all humans. Like
+even if you're missing an arm, I would
+
+00:30:00.080 --> 00:30:06.080
+tell you're still more right, left
+symmetric than you are front, back
+
+00:30:04.399 --> 00:30:11.520
+because internally you're pretty
+symmetric, right?
+
+00:30:08.480 --> 00:30:15.520
+So these six directions, up, down,
+front, back, left, right, that when I
+
+00:30:14.000 --> 00:30:20.399
+say six directions, those are the ones
+I'm talking about, right? And you're
+
+00:30:17.440 --> 00:30:24.960
+going to pull all those energies in and
+like feel the mix. And when you're new
+
+00:30:23.039 --> 00:30:29.200
+at this, this can take a long time. Like
+this ritual that I'm teaching you, the
+
+00:30:27.279 --> 00:30:33.039
+first couple times you do it can easily
+take 20 minutes or half an hour to do,
+
+00:30:31.520 --> 00:30:37.440
+but once you're good at it, you'll be
+able to do it really fast. It's just
+
+00:30:34.799 --> 00:30:41.360
+practice. It's just practice. I mean,
+some magic is about skill, some magic is
+
+00:30:39.440 --> 00:30:46.799
+about talent, but this one just
+practice, right? So now you're going to
+
+00:30:44.480 --> 00:30:52.240
+try and ex like you're going to breathe
+in. And when you do, I want you to
+
+00:30:48.880 --> 00:30:57.760
+expand your body or your aura or however
+you think about it. Your sensory bubble,
+
+00:30:55.279 --> 00:31:01.919
+expand it outwards in all six directions
+at once, like a balloon blowing up,
+
+00:30:59.760 --> 00:31:08.000
+right? All directions at once. And then
+breathe out and like shrink back.
+
+00:31:05.440 --> 00:31:11.120
+Breathe in and get big. Breathe out and
+get small. And you know how when you're
+
+00:31:09.919 --> 00:31:15.200
+going to blow up a balloon, you like
+stretch it first? That's really what
+
+00:31:13.520 --> 00:31:20.240
+we're doing. We're like stretching out
+your energetic body to prepare. Like we
+
+00:31:18.159 --> 00:31:24.720
+still haven't really done any magic yet.
+This is all we're just like getting
+
+00:31:21.600 --> 00:31:30.080
+ready to do magic. This is the important
+step of centering. You've been
+
+00:31:27.360 --> 00:31:36.080
+stretching, expanding, and contracting.
+Keep contracting down until you're like
+
+00:31:32.720 --> 00:31:42.399
+your consciousness, your unice is a tiny
+little ball in the center of your body.
+
+00:31:38.880 --> 00:31:48.320
+And I need you to know for a fact that
+that is the center of the universe.
+
+00:31:46.480 --> 00:31:52.159
+Now, the universe does not have a
+center. Like, it just doesn't. Some
+
+00:31:50.960 --> 00:31:55.200
+people would say the center of the earth
+is the center of the universe, but
+
+00:31:53.360 --> 00:31:58.320
+that's false. Some people would say the
+center of the sun is the center of the
+
+00:31:56.480 --> 00:32:02.480
+universe. False. Some people would say
+the galactic center is the center of the
+
+00:32:00.080 --> 00:32:07.279
+universe. False. All of those things are
+false. I do have a graduate degree in
+
+00:32:04.799 --> 00:32:13.120
+mathematics with a specialty in fancy
+space-time geometry. I assure you the
+
+00:32:10.159 --> 00:32:17.279
+universe does not have a center. You can
+put the center wherever you want it to
+
+00:32:14.880 --> 00:32:21.039
+be. What's the center is just about how
+you kind of lay out your coordinate
+
+00:32:19.039 --> 00:32:27.679
+grid. And I want you to lay out a
+coordinate grid with your heart at the
+
+00:32:23.679 --> 00:32:32.960
+center. An axis that goes up, down, an
+axis that goes front, back and left,
+
+00:32:30.399 --> 00:32:39.679
+right. So these are internal directions
+not east west and north south but front
+
+00:32:37.120 --> 00:32:45.840
+back and left right. So as you turn the
+entire coordinate like you're as if you
+
+00:32:42.880 --> 00:32:50.640
+were to turn around then what I want you
+to imagine is that you're holding still
+
+00:32:48.320 --> 00:32:56.240
+and the entire universe is turning
+around you which is true. Like that is a
+
+00:32:53.760 --> 00:33:01.519
+mathematical fact for any point anywhere
+in the universe because movement is
+
+00:32:58.880 --> 00:33:06.720
+always relative. So like there's no like
+this is really all you're reentering is
+
+00:33:04.559 --> 00:33:10.640
+really your understanding of the earth.
+You didn't do anything to the universe.
+
+00:33:08.559 --> 00:33:16.640
+You didn't really even do anything to
+your body except notice it like pay
+
+00:33:13.760 --> 00:33:20.640
+attention to it. Like like those energy
+flows like the cord of energy that is
+
+00:33:18.799 --> 00:33:25.360
+now running from the heavens to your
+heart. It it's actually always there.
+
+00:33:23.600 --> 00:33:29.120
+The ritual just made you pay attention
+to it but it's always there. You didn't
+
+00:33:27.039 --> 00:33:34.960
+establish that chord. If you are a
+living breathing creature, those cords
+
+00:33:31.760 --> 00:33:38.320
+are always there. It's just like they I
+don't know everything's connected to
+
+00:33:36.399 --> 00:33:42.080
+everything else as we will discuss a bit
+more later in the class.
+
+00:33:39.600 --> 00:33:47.279
+So that is centering, right?
+And then what you typically we would
+
+00:33:44.320 --> 00:33:49.760
+center and then do some magic and then
+let go. But this time we're just
+
+00:33:48.720 --> 00:33:55.039
+practicing. So we're just going to
+center and then whenever you're done
+
+00:33:52.159 --> 00:33:58.880
+being centered, just let go. And you
+should be able to just let go. Like it's
+
+00:33:56.799 --> 00:34:02.480
+actually pretty hard to stay centered.
+It requires you to pay attention to it.
+
+00:34:00.480 --> 00:34:07.360
+So pretty much as soon as you stop
+paying attention to it. It It's not
+
+00:34:05.679 --> 00:34:12.000
+you're not centered anymore. You're just
+not noticing that you're centered.
+
+00:34:09.919 --> 00:34:16.800
+You're always centered. It like human
+beings cannot be uncentered.
+
+00:34:14.720 --> 00:34:20.720
+Nor can anything else. Like that's just
+not how the world works in my opinion.
+
+00:34:19.119 --> 00:34:25.520
+So it's really about what you're paying
+attention to. Sometimes on the internet
+
+00:34:23.200 --> 00:34:29.919
+I see people say like magic is all about
+intention and I don't think that's true.
+
+00:34:28.000 --> 00:34:34.800
+I actually think intention is like
+barely relevant. What I think is
+
+00:34:32.800 --> 00:34:40.480
+important is attention. What are you
+paying attention to? That's the secret
+
+00:34:37.520 --> 00:34:43.599
+sauce of magic is paying attention.
+Right? Pay attention to what you're
+
+00:34:41.839 --> 00:34:48.159
+doing. Pay attention to who you are. Pay
+attention to what you want. All of those
+
+00:34:45.839 --> 00:34:52.560
+things, right? But when you're ready,
+just just be done. just stop do paying
+
+00:34:51.200 --> 00:34:57.359
+attention to it and just go back to your
+regular however you normally live your
+
+00:34:54.720 --> 00:35:00.960
+life. Right? Move around. You might feel
+like especially if you're good at this
+
+00:34:59.599 --> 00:35:04.960
+like not good you've practiced a lot but
+you have a natural talent for it. You
+
+00:35:03.040 --> 00:35:08.720
+might feel like your body has like
+stretched out like Alice and Wonderland
+
+00:35:06.880 --> 00:35:12.160
+style but if you just move around a
+little bit you'll shake it off unless
+
+00:35:10.560 --> 00:35:16.400
+you're on a lot of drugs which is not a
+wise thing to do. Like beginner
+
+00:35:14.880 --> 00:35:22.480
+magicians should not really be doing
+magic on drugs. it like it's not wise.
+
+00:35:20.079 --> 00:35:27.680
+Yeah. Again, you're always centered. All
+incarnate beings, everything that has a
+
+00:35:24.560 --> 00:35:32.320
+physical body, even if it's not alive.
+Like a rock is also always centered.
+
+00:35:30.640 --> 00:35:36.560
+That's just what it means to be
+incarnate, like to have a body. I
+
+00:35:34.560 --> 00:35:41.119
+encourage you if you are a beginner,
+like if you really haven't done any
+
+00:35:38.240 --> 00:35:44.880
+magic before, in general, for everything
+I teach you, I do encourage you to
+
+00:35:42.960 --> 00:35:50.480
+follow the instructions the first time
+you do it. after you've done it a couple
+
+00:35:47.599 --> 00:35:53.839
+times, you should adapt it for yourself.
+But if you've never done it before, I
+
+00:35:52.480 --> 00:35:57.359
+wrote the instructions because I think
+that's the way that is best for
+
+00:35:55.200 --> 00:36:01.760
+beginners to do it. That being said, as
+an advanced man, I actually don't do it
+
+00:35:59.359 --> 00:36:05.920
+that way exactly. Like that is how I
+think beginners should do it. It's
+
+00:36:03.119 --> 00:36:09.599
+easier, but not exactly. So, if you have
+experience, I don't know, do whatever
+
+00:36:07.839 --> 00:36:13.359
+you want to do, but you're in this
+course because you want to learn my way
+
+00:36:10.720 --> 00:36:18.160
+of doing it, presumably because that's
+the only kind of magic I can teach you
+
+00:36:15.599 --> 00:36:23.200
+is mine. That's the only kind I can
+teach you, right? So, just a reminder
+
+00:36:21.200 --> 00:36:28.240
+that like if you're not sure if it's
+working, it's kind of a fake it until
+
+00:36:25.680 --> 00:36:32.000
+you make it situation. Like make believe
+that you can. So, if you don't know what
+
+00:36:29.599 --> 00:36:36.160
+I mean when I say it it feels like
+you're lit up with like you're full of
+
+00:36:33.839 --> 00:36:40.320
+light, make believe that you're full up
+with light, like what do you think it
+
+00:36:38.560 --> 00:36:45.280
+would feel like? And make believe that
+really hard and then eventually it'll
+
+00:36:43.440 --> 00:36:49.440
+happen and you'll be like, "Oh, oh, that
+that was real and not imaginary." And
+
+00:36:47.839 --> 00:36:54.560
+you'll be able to tell the difference.
+You'll be able to tell. Everything we've
+
+00:36:51.839 --> 00:36:58.400
+done so far, I really would not
+characterize as magic. I would
+
+00:36:56.640 --> 00:37:03.280
+characterize it as preparation for
+magic. So, now we're going to start to
+
+00:37:00.480 --> 00:37:09.760
+talk about some magic. And the first
+magic we're going to learn is color
+
+00:37:05.040 --> 00:37:14.640
+magic. I love colors. Every time I see
+somebody make like magic art in black
+
+00:37:11.920 --> 00:37:19.839
+and white, in my heart, I'm like, that
+is a missed opportunity for using
+
+00:37:16.400 --> 00:37:24.560
+colors. If you are color blind, I
+apologize. This lesson is going to be
+
+00:37:21.839 --> 00:37:28.560
+pretty theoretical for you, but only
+this one. So, you know, and I will say
+
+00:37:27.200 --> 00:37:33.599
+if you're color blind, I would actually
+really like your feedback on this
+
+00:37:30.400 --> 00:37:39.760
+lesson, right? Which is primarily about
+color blind, right? Our spectrum has
+
+00:37:36.960 --> 00:37:44.640
+seven colors. Red, orange, yellow,
+green, blue, indigo, violet. When I say
+
+00:37:42.480 --> 00:37:49.599
+ours, I mean the English language. Like
+that's how we label it in English. Does
+
+00:37:47.440 --> 00:37:53.200
+anybody want to guess why there are
+seven in English? Not in every language.
+
+00:37:52.160 --> 00:37:57.040
+that like different languages have
+different numbers but in English we use
+
+00:37:54.480 --> 00:38:02.560
+seven. So the answer is that the person
+who like named the color spectrum in
+
+00:37:59.280 --> 00:38:08.480
+English like who decided that
+indigo is a color but like blue violet
+
+00:38:05.839 --> 00:38:12.240
+is not one of the spectral colors. The
+person who decided that was Isaac Newton
+
+00:38:10.960 --> 00:38:17.040
+in English. Like he's the one who
+labeled them in English or the the
+
+00:38:14.880 --> 00:38:20.240
+labeling we typically use today was
+invented by Isaac Newton. He was an
+
+00:38:18.800 --> 00:38:24.720
+alchemist. I know they didn't tell you
+that in high school science class, but I
+
+00:38:21.920 --> 00:38:29.119
+assure you Isaac Newton was no question
+a magician. If you just read I mean
+
+00:38:27.040 --> 00:38:32.079
+honestly probably his Wikipedia page
+will tell you that he's an alchemist.
+
+00:38:30.240 --> 00:38:35.920
+Like it's not a secret, but they didn't
+tell you that in high school because in
+
+00:38:33.760 --> 00:38:38.800
+my as a high former high school teacher
+sometimes high school teachers seem
+
+00:38:37.040 --> 00:38:43.599
+really committed to making things
+boring. Like Isaac Newton was a magician
+
+00:38:41.760 --> 00:38:49.040
+and they didn't tell you that which
+would have been interesting. I imagine
+
+00:38:46.079 --> 00:38:55.599
+he chose seven so that he could assign
+them to the seven classical planets used
+
+00:38:52.320 --> 00:38:58.800
+in alchemy and traditional western magic
+which we'll talk about more in lessons
+
+00:38:57.200 --> 00:39:03.839
+five and six but that's why there are
+seven in English before Isaac Newton I
+
+00:39:01.839 --> 00:39:07.119
+think there wasn't necessarily a clear
+number like different people would just
+
+00:39:05.440 --> 00:39:10.240
+say it differently
+okay
+
+00:39:07.520 --> 00:39:16.560
+and in other cultures so for example I
+believe that in Russian there are 12 but
+
+00:39:14.000 --> 00:39:20.079
+I'm not positive. Like in other
+languages there are other numbers and
+
+00:39:18.240 --> 00:39:24.720
+again it's a rainbow. How many colors
+are in a rainbow? All the colors are in
+
+00:39:22.560 --> 00:39:28.720
+the rainbow but you have to chunk it
+into bits to talk about. And like the
+
+00:39:26.640 --> 00:39:33.440
+question of is this green or is this
+blue? Obviously there's like a bunch of
+
+00:39:30.880 --> 00:39:37.839
+colors in between. So when we teach
+little kids there are seven colors. I
+
+00:39:35.440 --> 00:39:42.720
+mean obviously that is false. Like
+there's way there's an almost infinite
+
+00:39:41.359 --> 00:39:46.400
+number of colors. We're going to talk
+about seven. The reason in this class
+
+00:39:44.560 --> 00:39:51.200
+we're going to do seven is because we
+are later on in the class going to tie
+
+00:39:48.560 --> 00:39:55.599
+them to the planets. A useful thing we
+can do that was invented by Isaac. Like
+
+00:39:52.880 --> 00:39:59.839
+that magical trick. Like one weird trick
+that makes your alchemy work is to label
+
+00:39:57.680 --> 00:40:03.520
+the rainbow so that it's actually
+secretly corresponding planets. And
+
+00:40:01.760 --> 00:40:08.560
+that's an a trick I learned from Isaac
+Newton and our culture learned from
+
+00:40:05.520 --> 00:40:12.560
+Isaac Newton. I don't I don't know what
+it used to be in older English. In
+
+00:40:10.560 --> 00:40:17.119
+Greece, I believe in ancient Greek,
+there's, I believe, five.
+
+00:40:14.880 --> 00:40:19.839
+Like, blue and green are not really
+understood to be diff. I mean, it's not
+
+00:40:18.800 --> 00:40:24.320
+that they don't know the difference
+between blue and green. They also have
+
+00:40:22.640 --> 00:40:27.760
+arguments. Is this blue? Is this green?
+Is it green blue? Is it blue green? Blah
+
+00:40:26.000 --> 00:40:30.480
+blah blah. They can see all the colors.
+Like, it's not like their vision is
+
+00:40:29.200 --> 00:40:35.200
+different than ours. They just have
+different words for it. Sometimes I see
+
+00:40:33.200 --> 00:40:37.040
+like internet like ancient Greek people
+didn't know about the color blue. I'm
+
+00:40:36.720 --> 00:40:38.800
+like,
+oh god.
+
+00:40:37.680 --> 00:40:43.359
+But they did.
+They did. They they call it wine. If
+
+00:40:41.760 --> 00:40:46.160
+you've ever seen the internet memes I'm
+talking about, I'm going to tell you as
+
+00:40:44.560 --> 00:40:50.800
+a person who reads ancient Greek, when
+they say the wine dark sea, they're
+
+00:40:49.440 --> 00:40:55.040
+actually not talking about the color at
+all. They're saying the sea is drunk.
+
+00:40:52.960 --> 00:41:00.480
+It's drunk and that's why it's so wild
+and violent and stormy. Like the way we
+
+00:40:58.240 --> 00:41:07.040
+would describe a an ocean as like
+especially wavy when it's storming,
+
+00:41:05.280 --> 00:41:10.720
+they refer to that as the ocean being
+drunk. When they say wine dark, they
+
+00:41:08.880 --> 00:41:15.440
+mean drunk. The same way that people's
+faces turn darker when they're like
+
+00:41:12.880 --> 00:41:21.760
+excited and drunk. Why do I teach colors
+first? It's because
+
+00:41:18.000 --> 00:41:27.440
+sometimes a lot teach like and vibration
+magic first and it's I find it a little
+
+00:41:24.480 --> 00:41:34.240
+vague what they are talking about. Like
+color is a vibration. That's how color
+
+00:41:30.079 --> 00:41:38.240
+works. Like it is an energy. Like and I
+think color is like a good way to start
+
+00:41:36.079 --> 00:41:44.319
+with that. But color is also a good way
+to learn to work with spirits. So like
+
+00:41:40.960 --> 00:41:48.880
+the spirit of the color red, I actually
+think all of us already kind of have an
+
+00:41:46.400 --> 00:41:52.720
+idea what that spirit's going to be like
+from just sharing a cultural
+
+00:41:50.640 --> 00:41:58.800
+understanding of the color red and
+sharing even more so a biological
+
+00:41:55.119 --> 00:42:02.079
+understanding of the color red. Again,
+if you're colorb blind, I'm interested
+
+00:42:00.800 --> 00:42:07.119
+because that means you have the cultural
+one but not biological one. So, I'm
+
+00:42:03.920 --> 00:42:07.119
+interested in how this works for
+
