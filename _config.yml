@@ -3,10 +3,9 @@ title: 靈火巫境
 description: 策略魔法、藥草魔法與胡督傳統課程中心
 email: herbmagic@hotmail.com.tw
 url: "https://hoodoo.pro"
-baseurl: "" # 這是最重要的修正：告訴系統你的專案資料夾名稱
+baseurl: ""
 
-# --- 核心修正：強制包含 ads.txt 與 CNAME ---
-# 確保 Jekyll 在編譯時不會跳過這些重要的靜態檔案
+# --- 核心修正：強制包含靜態檔案 ---
 include:
   - ads.txt
   - CNAME
@@ -15,24 +14,23 @@ include:
 # 渲染與效能設定
 markdown: kramdown
 highlighter: rouge
-future: true # 確保即使伺服器時間有一點誤差，今天的文章也能顯示出來
+future: true
 encoding: utf-8
 timezone: Asia/Taipei
 
 # 文章網址格式
 permalink: /blog/:year/:month/:day/:title/
 
-# --- 分頁設定 (Pagination) ---
-paginate: 20                    # 每頁顯示的文章數量
-paginate_path: "/blog/page:num/" # 分頁網址的路徑格式
+# 分頁設定
+paginate: 20
+paginate_path: "/blog/page:num/"
 
 # --- 外掛程式 (Plugins) ---
-# GitHub Pages 原生支援這些外掛
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-# 排除不需要編譯的檔案（保持 Repo 乾淨）
+# 排除不需要編譯的檔案
 exclude:
   - Gemfile
   - Gemfile.lock
