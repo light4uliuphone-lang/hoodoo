@@ -5,12 +5,11 @@ email: herbmagic@hotmail.com.tw
 url: "https://hoodoo.pro"
 baseurl: "" # 這是最重要的修正：告訴系統你的專案資料夾名稱
 
-# --- 核心修正：強制包含 ads.txt 與 CNAME ---
+# --- 核心修正：強制包含廣告與網域設定 ---
 # 確保 Jekyll 在編譯時不會跳過這些重要的靜態檔案
 include:
   - ads.txt
   - CNAME
-  - sitemap.xml
 
 # 渲染與效能設定
 markdown: kramdown
@@ -27,10 +26,9 @@ paginate: 20                    # 每頁顯示的文章數量
 paginate_path: "/blog/page:num/" # 分頁網址的路徑格式
 
 # --- 外掛程式 (Plugins) ---
-# GitHub Pages 原生支援這些外掛
+# 已移除 jekyll-sitemap，僅保留分頁外掛
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap
 
 # 排除不需要編譯的檔案（保持 Repo 乾淨）
 exclude:
