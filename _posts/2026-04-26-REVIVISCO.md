@@ -12,7 +12,7 @@ category: [magic]
 
 
 <div style="text-align: center; margin: 2rem 0;">
-    <img src="/assets/img/2026026.jpg" alt="重生 - Emblemata Sacra" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <img src="/assets/img/20260426.jpg" alt="重生 - Emblemata Sacra" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
 </div>
 
 > **約翰福音 1:5**： 光照在黑暗裡，黑暗卻不接受光。
