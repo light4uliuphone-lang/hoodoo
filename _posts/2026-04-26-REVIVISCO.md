@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "聖徽集：重生"
-date: 2026-04-15
+date: 2026-04-26
 author: 靈火巫境
 category: [magic]
 ---
