@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
+
 Sitemap: https://hoodoo.pro/sitemap.xml
