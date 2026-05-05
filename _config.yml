@@ -28,7 +28,6 @@ paginate_path: "/blog/page:num/"
 # --- 外掛程式 (Plugins) ---
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap
 
 # 排除不需要編譯的檔案
 exclude:
