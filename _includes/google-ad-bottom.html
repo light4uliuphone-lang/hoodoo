@@ -1,20 +1,60 @@
-<div style="margin-top: 3rem; text-align: center; border-top: 1px solid #eee; padding-top: 2rem; margin-bottom: 3rem;">
+<div id="random-ad-container" style="margin-top: 3rem; text-align: center; border-top: 1px solid #eee; padding-top: 2rem; margin-bottom: 3rem; display: none;">
     
     <p style="font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; letter-spacing: 1px;">- 精選推薦 -</p>
     
-    <a href="https://go98.me/shop01" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: inline-block; max-width: 100%; margin-bottom: 2rem;">
-        <div style="position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background: #fff; transition: transform 0.3s ease;" 
-             onmouseover="this.style.transform='translateY(-5px)'" 
-             onmouseout="this.style.transform='translateY(0)'">
+    <a id="ad-link" href="#" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: inline-block; max-width: 100%; margin-bottom: 2rem;">
+        <div id="ad-card" style="position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background: #fff; transition: transform 0.3s ease;">
             
-            <img src="https://go98.me/shopimg01" alt="精選商品推薦" style="display: block; max-width: 100%; height: auto; border-radius: 12px;">
+            <img id="ad-img" src="" alt="精選商品推薦" style="display: block; max-width: 100%; height: auto; border-radius: 12px;">
             
-            <div style="padding: 15px; background: #1a5f5f; color: white; font-weight: bold; font-size: 1rem; border-radius: 0 0 12px 12px;">
+            <div id="ad-text" style="padding: 15px; background: #1a5f5f; color: white; font-weight: bold; font-size: 1rem; border-radius: 0 0 12px 12px;">
                 立即前往了解更多 →
             </div>
         </div>
     </a>
 
-
-
 </div>
+
+<script>
+(function() {
+    // 【設定區：在這裡新增你的商品】
+    var ads = [
+        {
+            link: "https://go98.me/shop01",
+            img: "https://go98.me/shopimg01",
+            text: "立即前往了解更多 →"
+        },
+        {
+            link: "https://go98.me/shop02",
+            img: "https://go98.me/shopimg02",
+            text: "限時優惠實施中 →"
+        }
+        // 如果有第三樣，可以依照格式繼續加：
+        // , { link: "...", img: "...", text: "..." }
+    ];
+
+    // 隨機演算法
+    var randomAd = ads[Math.floor(Math.random() * ads.length)];
+
+    // 取得 HTML 元素
+    var container = document.getElementById('random-ad-container');
+    var adLink = document.getElementById('ad-link');
+    var adImg = document.getElementById('ad-img');
+    var adCard = document.getElementById('ad-card');
+    var adText = document.getElementById('ad-text');
+
+    if (randomAd) {
+        // 填入隨機抽選到的資料
+        adLink.href = randomAd.link;
+        adImg.src = randomAd.img;
+        adText.innerText = randomAd.text;
+
+        // 顯示廣告容器
+        container.style.display = 'block';
+
+        // 加入滑鼠移入效果 (取代原本標籤內的 inline JS，更乾淨)
+        adCard.onmouseover = function() { this.style.transform = 'translateY(-5px)'; };
+        adCard.onmouseout = function() { this.style.transform = 'translateY(0)'; };
+    }
+})();
+</script>
