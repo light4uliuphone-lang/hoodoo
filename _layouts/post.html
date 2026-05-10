@@ -60,13 +60,16 @@ layout: default
         <div class="post-date">📅 {{ page.date | date: "%Y-%m-%d" }}</div>
     </header>
 
+      <div style="margin-top: 40px;">
+        {% include google-ad-bottom.html %}
+    </div>
+
+    
     <div class="post-main-content">
         {{ content }}
     </div>
 
-    <div style="margin-top: 40px;">
-        {% include google-ad-bottom.html %}
-    </div>
+  
 
     <nav style="margin-top: 50px; display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 20px;">
         {% if page.previous %}
