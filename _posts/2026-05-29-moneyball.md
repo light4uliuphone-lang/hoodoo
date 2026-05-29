@@ -7,7 +7,7 @@ category: [news]
 ---
 
 <div style="text-align: center; margin: 2rem 0;">
-    <img src="/assets/img/moneyball.jpg" alt="醫治 - Emblemata Sacra" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <img src="/assets/img/moneyball.jpg" alt="金錢吸引魔珠" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
 </div>
 
 有些人努力工作卻總是存不到錢；有些人則總能在關鍵時刻獲得機會、貴人或意想不到的收入。傳統根源工作者認為，除了現實中的行動之外，還可以透過適當的魔法工作，讓自己與財富的能量更加同步。
