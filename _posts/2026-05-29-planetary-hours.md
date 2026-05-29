@@ -3,7 +3,7 @@ layout: post
 title: "行星時刻計算器"
 date: 2026-05-29
 author: 靈火巫境
-category: [tool]
+category: [magic]
 ---
 
 ## 使用方式
