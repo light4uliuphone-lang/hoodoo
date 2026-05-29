@@ -13,7 +13,6 @@ category: [magic]
 - 月相卡顯示該日相位、照度與漸盈漸虧；下方並列「下次滿月」與「下次新月」的日期
 - 行星時刻表會自動標示當下所在的時刻
 
-{% include google-ad-bottom.html %}
 
 {% raw %}
 <style>
