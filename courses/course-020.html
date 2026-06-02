@@ -62,4 +62,21 @@ permalink: /courses/course-020/
             <p>填寫完下方 Google 表單並送出後，我們將於三日內回信與您確認。</p>
             
             <p style="margin-top: 1.5rem;"><strong>方式二：請來信至信箱報名</strong></p>
-            <p>請來信至 <a href="mailto:herbmagic@hotmail.com.
+            <p>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
+            <p>郵件標題請註明：<strong>「報名 {{ page.title | split: ' - ' | first }}」</strong>，並告知您的姓名與聯絡電話即可。</p>
+        </div>
+
+        <div class="registration-form" style="margin-top: 2rem; background: #fff; padding: 10px; border-radius: 8px;">
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSebe3Zz56_lgc7dhmcwq1i3eIrL7_06rgl5EVcY5QPtrcmD3w/viewform?embedded=true" 
+                width="100%" 
+                height="1250" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0" 
+                style="display: block; margin: 0 auto; max-width: 640px;">
+                載入中…
+            </iframe>
+        </div>
+    </div>
+</div>
