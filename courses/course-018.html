@@ -59,8 +59,12 @@ description: "由歐比路老師授課，課程結合現實策略與靈性技術
 
         <h2>課程資訊</h2>
         <div class="course-info-box">
-            <p><strong>⏰ 課程形式：</strong>兩日密集班</p>
-            <p><strong>💰 課程價格：</strong>特價 <strong>21,000元</strong></p>
+            <p><strong>⏰ 上課時間：</strong>2026 年 8/15（六）–8/16（日）10:00–16:30</p>
+            <p><strong>🌐 課程形式：</strong>兩日實體課程</p>
+            <p><strong>📘 先修條件：</strong>需修畢藥草初階</p>
+            <p><strong>💰 課程價格：</strong>特惠價 <strong>12,000元</strong>（原價：16,800元）；於 2026 年 8/02 前完成報名繳費，享早鳥價 <strong>11,000元</strong></p>
+            <p><strong>🤝 合報優惠：</strong>與「金錢魔術盒實作課」兩課合報 13,000元；與「職場保護配方解析」兩課合報 14,000元</p>
+            <p><strong>⌛ 報名截止：</strong>2026 年 8/10</p>
             <p><strong>🎓 授課老師：</strong>歐比路老師</p>
             <p><strong>🎓 適合對象：</strong>不論程度，只要追求魔法視覺地圖與實作能力提升者皆適合。</p>
         </div>
@@ -70,9 +74,11 @@ description: "由歐比路老師授課，課程結合現實策略與靈性技術
             <p style="margin-bottom: 1rem; font-weight: bold; color: #1a5f5f;">📈 金錢策略魔法系列：</p>
             <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
                 <li><strong>▶ 1. 【初階】金錢策略魔法初階（目前所在）</strong></li>
-                <li><a href="/courses/course-019/">2. 【中階】策略魔法：祭壇工作與神靈同盟</a></li>
-                <li><a href="/courses/course-012/">3. 【高階】單元一：財務糾紛</a></li>
-                <li><a href="/courses/course-013/">4. 【高階】單元二：店面風水</a></li>
+                <li><a href="/courses/course-021/">2. 【實作】金錢策略魔法實作課程：金錢魔術盒</a></li>
+                <li><a href="/courses/course-022/">3. 【配方邏輯】單元一：職場保護配方解析</a></li>
+                <li><a href="/courses/course-019/">4. 【中階】策略魔法：祭壇工作與神靈同盟</a></li>
+                <li><a href="/courses/course-012/">5. 【高階】單元一：財務糾紛</a></li>
+                <li><a href="/courses/course-013/">6. 【高階】單元二：店面風水</a></li>
             </ul>
         </div>
 
@@ -83,10 +89,26 @@ description: "由歐比路老師授課，課程結合現實策略與靈性技術
         </div>
 
         <h2>報名方式</h2>
-        <div class="registration-info">
-            <p><strong>方式一：</strong>請填寫 <a href="https://www.hoodoo.me/" target="_blank">官方報名表單</a>。</p>
-            <p><strong>方式二：</strong>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
+        <div class="registration-info" style="line-height: 1.8; margin-bottom: 2rem;">
+            <p><strong>方式一：請填寫官方報名表單（直接於下方填寫嵌入表單）</strong></p>
+            <p>填寫完下方 Google 表單並送出後，我們將於三日內回信與您確認。</p>
+            
+            <p style="margin-top: 1.5rem;"><strong>方式二：請來信至信箱報名</strong></p>
+            <p>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
             <p>郵件標題請註明：<strong>「報名 {{ page.title | split: " - " | first }}」</strong>，並告知您的姓名與聯絡電話。</p>
+        </div>
+
+        <div class="registration-form" style="margin-top: 2rem; background: #fff; padding: 10px; border-radius: 8px;">
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeeXlYhQTM9IuSxqBhZsE2gXmSveKW0DGxJEulCNkiEw9K8XQ/viewform?embedded=true" 
+                width="100%" 
+                height="1280" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0" 
+                style="display: block; margin: 0 auto; max-width: 640px;">
+                載入中…
+            </iframe>
         </div>
     </div>
 </div>
@@ -105,13 +127,15 @@ description: "由歐比路老師授課，課程結合現實策略與靈性技術
   "offers": [
     {
       "@type": "Offer",
-      "price": "21000",
+      "price": "12000",
       "priceCurrency": "TWD"
     }
   ],
   "hasCourseInstance": {
     "@type": "CourseInstance",
     "courseMode": "Physical",
+    "startDate": "2026-08-15T10:00:00+08:00",
+    "endDate": "2026-08-16T16:30:00+08:00",
     "instructor": {
       "@type": "Person",
       "name": "歐比路老師"
