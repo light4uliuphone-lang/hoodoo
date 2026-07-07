@@ -1,732 +1,457 @@
 ---
 layout: default
 title: "課程中心 | 四月老師 - 專業胡督、金錢與現代魔法教學"
-description: "探索四月老師的課程中心，提供金錢魔法、愛情吸引、防禦保護、藥草植物及胡督魔法等多元教學系統。由歐比路、四月與澤誼老師親自授課，結合實戰策略與傳統技術，助您精準顯化心願並優化生活能量場。"
+description: "探索四月老師的課程中心，依學習路徑編排：藥草魔法師基礎為金錢、愛情、胡督三大策略體系的共同必修；另有防禦、本土藥草、混沌魔法、能量療癒等獨立路線與入門單堂。由歐比路、四月與澤誼老師親自授課。"
 ---
 
-<div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
-    <h1 style="text-align: center; color: #1a5f5f; margin-bottom: 2rem; font-size: 2.5rem;">課程中心</h1>
+<style>
+/* 課程中心 · 路徑導覽輔助樣式（僅作用於本頁） */
+.path-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: -0.25rem 0 1.25rem; font-size: 0.8rem; }
+.path-strip .step { background: #eceff1; color: #455a64; border-radius: 12px; padding: 3px 11px; white-space: nowrap; }
+.path-strip .arrow { color: #b0bec5; font-weight: bold; }
+.prereq-pill { display: inline-block; font-size: 0.75rem; font-weight: 600; color: #00695c; background: #e0f2f1; border: 1px solid #b2dfdb; border-radius: 4px; padding: 3px 10px; margin-left: 10px; vertical-align: middle; }
+.course-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.course-tags .course-tag { position: static; display: inline-block; }
+.tag-new { background: #fff3e0; color: #e65100; border: 1px solid #ffb74d; }
+.section-note { color: #607d8b; font-size: 0.9rem; margin: -0.5rem 0 1.25rem; }
+.unlock-divider { text-align: center; color: #00897b; font-weight: 600; letter-spacing: 2px; margin: 0 0 2rem; font-size: 0.9rem; }
+</style>
 
-    <section class="course-categories" style="margin-bottom: 4rem;">
-        <div class="categories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
-            <a href="#money" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;">
-                <div class="category-icon">💰</div>
-                <h3>金錢魔法</h3>
-            </a>
-            <a href="#love" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;">
-                <div class="category-icon">💕</div>
-                <h3>愛情吸引</h3>
-            </a>
-            <a href="#protection" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;">
-                <div class="category-icon">🛡️</div>
-                <h3>防禦保護</h3>
-            </a>
-            <a href="#herbs" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;">
-                <div class="category-icon">🌿</div>
-                <h3>藥草植物</h3>
-            </a>
-            <a href="#hoodoo" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;">
-                <div class="category-icon">🏺</div>
-                <h3>胡督魔法</h3>
-            </a>
-            <a href="#modern" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;">
-                <div class="category-icon">✨</div>
-                <h3>現代魔法</h3>
-            </a>
+<div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+    <h1 style="text-align: center; color: #1a5f5f; margin-bottom: 1rem; font-size: 2.5rem;">課程中心</h1>
+    <p style="text-align: center; max-width: 760px; margin: 0 auto 2.5rem; color: #546e7a; line-height: 1.9;">
+        課程依<strong>學習路徑</strong>編排。最上方的 🌿<strong>藥草魔法師基礎</strong>是<strong>金錢・愛情・胡督</strong>三大策略體系的共同必修，修畢後即可進入三條主幹。<br>
+        下方四條<strong>獨立路線</strong>（防禦・本土藥草・混沌魔法・能量療癒）<strong>無需藥草基礎</strong>，可直接入門；最後為無先修的入門單堂與主題工作坊。
+    </p>
+
+    <!-- 導覽錨點 -->
+    <section class="course-categories" style="margin-bottom: 3.5rem;">
+        <div class="categories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px;">
+            <a href="#foundation" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;"><div class="category-icon">🌿</div><h3>藥草基礎</h3></a>
+            <a href="#money" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;"><div class="category-icon">💰</div><h3>金錢策略</h3></a>
+            <a href="#love" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;"><div class="category-icon">💕</div><h3>愛情策略</h3></a>
+            <a href="#hoodoo" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;"><div class="category-icon">🏺</div><h3>胡督系列</h3></a>
+            <a href="#defense" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;"><div class="category-icon">🛡️</div><h3>防禦策略</h3></a>
+            <a href="#local" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;"><div class="category-icon">🌏</div><h3>本土藥草</h3></a>
+            <a href="#chaos" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;"><div class="category-icon">🌀</div><h3>混沌魔法</h3></a>
+            <a href="#healing" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;"><div class="category-icon">🔮</div><h3>能量療癒</h3></a>
+            <a href="#intro" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;"><div class="category-icon">🌱</div><h3>入門單堂</h3></a>
+            <a href="#topics" class="category-card" style="text-decoration: none; color: inherit; cursor: pointer;"><div class="category-icon">🎨</div><h3>主題工作坊</h3></a>
         </div>
     </section>
 
-    <!-- 💰 金錢魔法 -->
+    <!-- 🌿 共同必修：藥草魔法師基礎 -->
+    <section id="foundation" style="margin-bottom: 2rem; scroll-margin-top: 100px;">
+        <div style="background: linear-gradient(135deg,#e0f2f1,#f1f8f7); border: 2px solid #00897b; border-radius: 12px; padding: 1.5rem 1.75rem;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
+                <span style="font-size: 1.7rem;">🌿</span>
+                <h2 style="margin: 0; color: #00695c; border: none; padding: 0; font-size: 1.5rem;">藥草魔法師基礎課程</h2>
+                <span style="background: #00897b; color: #fff; border-radius: 4px; padding: 3px 10px; font-size: 0.75rem; font-weight: bold;">策略三系共同必修</span>
+            </div>
+            <p style="margin: 0.25rem 0 1rem; color: #33691e; line-height: 1.8;">
+                進入策略魔法的第一步，也是 <strong>金錢策略・愛情策略・胡督單元</strong> 三大體系的共同起點。學習五十種常用藥草、配方邏輯，並實際製作護符包與財富咒瓶。<strong>修畢後即可解鎖下方三大策略主幹。</strong>
+            </p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px;">
+                <a href="/courses/course-hoodoo-00/" class="learn-more" style="margin: 0;">了解更多</a>
+                <span style="color: #00695c; font-size: 0.9rem;">🌐 遠距 · 基礎 · 早鳥 4,200 元</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="unlock-divider">↓ 修畢後解鎖以下三大策略主幹 ↓</div>
+
+    <!-- 💰 金錢策略體系 -->
     <section id="money" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
-        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">💰 金錢魔法</h2>
+        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.25rem;">💰 金錢策略體系<span class="prereq-pill">🔒 需先修 藥草魔法師基礎</span></h2>
+        <div class="path-strip">
+            <span class="step">① 初階</span><span class="arrow">→</span>
+            <span class="step">② 中階</span><span class="arrow">→</span>
+            <span class="step">③ 高階I 財務糾紛</span><span class="arrow">→</span>
+            <span class="step">④ 高階II 店面風水</span><span class="arrow">＋</span>
+            <span class="step">實作延伸：魔術盒 · 職場配方</span>
+        </div>
         <div class="courses-grid">
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初級</span>
-                </div>
-                <h3>適合金錢魔法的神靈</h3>
-                <p>回歸胡督歷史，介紹三位適合金錢魔法的神靈：Oshun、Damballa、Papa Legba。建立正確的神靈工作入門框架與風險認知，學習如何與神靈同盟以增益金錢魔法品質。</p>
-                <div class="course-info">
-                    <span class="price">優惠：3500元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-017/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初階</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
                 <h3>金錢策略魔法初階</h3>
-                <p>反思魔法本質與現實策略的結合，解決「為何魔法無效」的盲點。課程涵蓋宏觀/微觀魔法目的、木星 16 張金錢符印及三種核心許願技術，助您創造長期品質提升。（需修畢藥草初階）</p>
-                <div class="course-info">
-                    <span class="price">特惠12000元（原價16800）<br>早鳥11000元｜兩課合報13000元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
+                <p>反思魔法本質與現實策略的結合，解決「為何魔法無效」的盲點。涵蓋宏觀/微觀魔法目的、木星 16 張金錢符印及三種核心許願技術。（需修畢藥草基礎）</p>
+                <div class="course-info"><span class="price">特惠12000元（原價16800）<br>早鳥11000元｜兩課合報13000元</span><span class="teacher">歐比路老師</span></div>
                 <a href="/courses/course-018/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #ff5722;">實作</span>
-                </div>
-                <h3>金錢策略魔法實作課程：金錢魔術盒</h3>
-                <p>金錢策略魔法的實作延伸。手把手帶你製作專屬「金錢魔術盒」，將策略魔法的意圖與符印能量收束落地，轉化為可日常操作的顯化工具。（需修畢金錢策略初階）</p>
-                <div class="course-info">
-                    <span class="price">特惠2800元（原價3800）<br>與初階合報13000元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-021/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #f44336;">進階</span>
-                </div>
-                <h3>金錢策略魔法配方邏輯單元一：職場保護配方解析</h3>
-                <p>金錢策略魔法的配方邏輯進階。拆解「職場保護」配方的組成原理與藥草搭配思路，帶你理解配方背後的策略脈絡，而非死記硬背，日後能自行推演調配。（需修畢金錢策略初階）</p>
-                <div class="course-info">
-                    <span class="price">特惠2800元（原價3800）<br>與初階合報14000元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-022/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #2196f3;">中階</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #2196f3;">中階</span></div>
                 <h3>金錢策略魔法中階：祭壇工作與神靈同盟</h3>
-                <p>恭喜完成初階！本課程將正式邁入「祭壇工作」，教導與神靈共事的四大規則。系統跨足聖徒、惡魔與所羅門大鑰，解析 16 位適合金錢工作的神靈封印與專屬祈禱文，並教授進階魔法油燈儀式與 Oil in Oil 技巧。</p>
-                <div class="course-info">
-                    <span class="price">特惠：13,000元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
+                <p>正式邁入「祭壇工作」，教導與神靈共事的四大規則。跨足聖徒、惡魔與所羅門大鑰，解析 16 位金錢神靈封印與祈禱文，並教授進階魔法油燈儀式與 Oil in Oil 技巧。</p>
+                <div class="course-info"><span class="price">特惠：13,000元</span><span class="teacher">歐比路老師</span></div>
                 <a href="/courses/course-019/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初級</span>
-                </div>
-                <h3>魔法新手入門實作課I: 金錢吸引與除障</h3>
-                <p>胡督魔法新手首選。透過藥草咒瓶與咒包製作，學習移除金錢障礙並開啟金錢吸引的能量，建立穩固的物質根基。</p>
-                <div class="course-info">
-                    <span class="price">特價：2500元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-001/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #2196f3;">中級</span>
-                </div>
-                <h3>台灣本土藥草實作課程：日進斗金</h3>
-                <p>結合台灣民間招財象徵與胡督魔法邏輯。學習辨識本土藥草魔性，並利用聚寶陶甕製作專屬招財藥草小祭壇，兼顧引財與守財。</p>
-                <div class="course-info">
-                    <span class="price">特價：2800元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-local-04/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初級</span>
-                </div>
-                <h3>現代魔法－金錢魔法符印實作</h3>
-                <p>混沌魔法實踐。提供四張專屬魔法符印，講解符印脈絡與使用技術，幫助學員從日常生活實踐中感受能量對顯化的協助。</p>
-                <div class="course-info">
-                    <span class="price">特惠：3000元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-011/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #f44336;">高級</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #f44336;">高階</span></div>
                 <h3>金錢策略魔法高階單元I：財務糾紛</h3>
                 <p>直面債務、資金斷裂與法律糾紛。結合《所羅門王的大鑰》封印實務操作，從被動應對轉為主動部署，開創穩定未來。</p>
-                <div class="course-info">
-                    <span class="price">首開：8800元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
+                <div class="course-info"><span class="price">首開：8800元</span><span class="teacher">歐比路老師</span></div>
                 <a href="/courses/course-012/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #f44336;">高級</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #f44336;">高階</span></div>
                 <h3>金錢策略魔法高階單元II：店面風水</h3>
                 <p>以《大鑰》封印、行星與藥草魔法協助化解經營困境，優化實體店面或工作室的場域能量，打造事業後台支援系統。</p>
-                <div class="course-info">
-                    <span class="price">首開：8800元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
+                <div class="course-info"><span class="price">首開：8800元</span><span class="teacher">歐比路老師</span></div>
                 <a href="/courses/course-013/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #2196f3;">中級</span>
-                </div>
-                <h3>金錢魔法與祭壇-胡督魔法三</h3>
-                <p>解決債務、改善財務或增加財富. 學習金錢藥草運用、咒袋與金錢水製作，並架設專屬個人的金錢祭壇。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：7800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-hoodoo-03/" class="learn-more">了解更多</a>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #ff5722;">實作</span></div>
+                <h3>金錢策略魔法實作課程：金錢魔術盒</h3>
+                <p>金錢策略魔法的實作延伸。手把手帶你製作專屬「金錢魔術盒」，將策略意圖與符印能量收束落地，轉化為可日常操作的顯化工具。（需修畢金錢策略初階）</p>
+                <div class="course-info"><span class="price">特惠2800元（原價3800）<br>與初階合報13000元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-021/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #2196f3;">進階</span></div>
+                <h3>金錢策略魔法配方邏輯單元一：職場保護配方解析</h3>
+                <p>拆解「職場保護」配方的組成原理與藥草搭配思路，帶你理解配方背後的策略脈絡，而非死記硬背，日後能自行推演調配。（需修畢金錢策略初階）</p>
+                <div class="course-info"><span class="price">特惠2800元（原價3800）<br>與初階合報14000元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-022/" class="learn-more">了解更多</a>
             </div>
         </div>
     </section>
 
-    <!-- 💕 愛情與吸引力 -->
+    <!-- 💕 愛情策略體系 -->
     <section id="love" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
-        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">💕 愛情與吸引力</h2>
+        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.25rem;">💕 愛情策略體系（魅惑策略）<span class="prereq-pill">🔒 需先修 藥草魔法師基礎</span></h2>
+        <div class="path-strip">
+            <span class="step">① 從魅力到影響力</span><span class="arrow">→</span>
+            <span class="step">② 紅燈區女郎</span><span class="arrow">→</span>
+            <span class="step">③ 甜蜜魔術盒（實作）</span>
+        </div>
+        <p class="section-note">※ 走「魅惑策略」路線；若想學傳統胡督式愛情法，請見胡督系列 ④ 愛情魔法篇。</p>
         <div class="courses-grid">
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初級</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
                 <h3>魅惑策略魔法：從魅力到影響力</h3>
                 <p>生命力是根，魅力是花。教你如何滋養豐沛生命力，將魅力轉化為現實世界的強大影響力，在不干涉意志下達成心願。</p>
-                <div class="course-info">
-                    <span class="price">特價：10000元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
+                <div class="course-info"><span class="price">特價：10000元</span><span class="teacher">歐比路老師</span></div>
                 <a href="/courses/course-016/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #f44336;">高級</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #f44336;">高階</span></div>
                 <h3>魅惑策略魔法：紅燈區女郎的秘密</h3>
                 <p>源自紐奧良傳統。學習在不干涉意志下維繫有利的商業與社交關係，掌握主導權。包含魅惑耶洗別等經典配方。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：9500元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
+                <div class="course-info"><span class="price">早鳥：9500元</span><span class="teacher">歐比路老師</span></div>
                 <a href="/courses/course-007/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #ff5722;">實作</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #ff5722;">實作</span></div>
                 <h3>魅惑策略實作：甜蜜魔術盒</h3>
                 <p>手把手教你製作「甜蜜戰略魔術盒」。結合符印、象徵物與行星祝聖，克服實作焦慮，讓魅惑能量精準落地。</p>
-                <div class="course-info">
-                    <span class="price">優惠價：2800元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
+                <div class="course-info"><span class="price">優惠價：2800元</span><span class="teacher">歐比路老師</span></div>
                 <a href="/courses/course-006/" class="learn-more">了解更多</a>
             </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #2196f3;">中級</span>
-                </div>
-                <h3>愛情魔法篇-胡督魔法四</h3>
-                <p>運用傳統胡督儀式吸引愛情、復合關係或重燃熱情。包含蜂蜜罐魔法、吸引有錢伴侶的魔力包製作。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：7800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-hoodoo-04/" class="learn-more">了解更多</a>
-            </div>
         </div>
     </section>
 
-    <!-- 🛡️ 防禦與保護 -->
-    <section id="protection" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
-        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">🛡️ 防禦與保護</h2>
-        <div class="courses-grid">
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初級</span>
-                </div>
-                <h3>魔法防禦-保護符咒</h3>
-                <p>保護咒術是咒術入門的基礎。學習辨識心靈攻擊與各種詛咒層次，掌握西方常用的三種保護符咒。內容包含符咒繪製、啟動、祝聖與實際使用方式，並親手製作護符。</p>
-                <div class="course-info">
-                    <span class="price">線上教學 (Google Meet)</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-protection-05/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #2196f3;">中級</span>
-                </div>
-                <h3>防禦策略魔法單元一：抵禦魔法攻擊</h3>
-                <p>學習辨識八種魔法攻擊型態，並針對不同干擾部署防護手段。課程包含經典「保護火牆」魔法配方解析與實作。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：6800元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-009/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #2196f3;">中級</span>
-                </div>
-                <h3>防禦策略魔法單元二：杜絕謠言</h3>
-                <p>人際與商業中的混亂防禦。學習如何運用魔法止損並鞏固局勢，包含專屬教學「繞頸娃娃」的製作與制衡技術。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：6800元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-010/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初級</span>
-                </div>
-                <h3>魔法新手入門實作課II：淨化與保護</h3>
-                <p>新手前導推薦。學習魔法咒瓶與咒包製作，掌握配方藥草與維護要點，為自己建立第一道靈性防禦防線。</p>
-                <div class="course-info">
-                    <span class="price">特價：2500元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-014/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #f44336;">高級</span>
-                </div>
-                <h3>關係破壞者-胡督單元五</h3>
-                <p>深入胡督黑暗面，針對敵人或有害關係施展攻擊、分裂與報復實踐。旨在達到精準懲戒與自我防衛。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：7800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-hoodoo-05/" class="learn-more">了解更多</a>
-            </div>
+    <!-- 🏺 胡督單元系列 -->
+    <section id="hoodoo" style="margin-bottom: 3.5rem; scroll-margin-top: 100px;">
+        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.25rem;">🏺 胡督單元系列<span class="prereq-pill">🔒 需先修 藥草魔法師基礎</span></h2>
+        <div class="path-strip">
+            <span class="step">① 淨化療癒</span><span class="arrow">→</span>
+            <span class="step">② 反轉詛咒</span><span class="arrow">→</span>
+            <span class="step">③ 金錢祭壇</span><span class="arrow">→</span>
+            <span class="step">④ 愛情魔法</span><span class="arrow">→</span>
+            <span class="step">⑤ 關係破壞者</span><span class="arrow">＋</span>
+            <span class="step">進階選修：魔法油 · 藥草行星</span>
         </div>
-    </section>
-
-    <!-- 🌿 藥草與植物魔法 -->
-    <section id="herbs" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
-        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">🌿 藥草與植物魔法</h2>
         <div class="courses-grid">
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #ff9800;">新課</span>
-                </div>
-                <h3>大地魔法：來自土地的靈性恩賜</h3>
-                <p>除了魔法藥草，真正承載大地力量的往往是我們腳下的「塵土與場域」。本課程將深入理解土地與靈性力量的連結，介紹常見 15 種塵土與場域的魔法運用、進入場域的獻祭儀式，以及場域與藥草間的魔法策略搭配。</p>
-                <div class="course-info">
-                    <span class="price">首開特惠：2,800元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-020/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初級</span>
-                </div>
-                <h3>台灣本土藥草魔法 (實體)</h3>
-                <p>藥草魔法不再依賴進口。教導如何運用台灣本地易取得的 50 支藥草進行工作，貼近胡督的原始生活精神。</p>
-                <div class="course-info">
-                    <span class="price">特價：11000元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-local-01/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #f44336;">高級</span>
-                </div>
-                <h3>台灣本土藥草魔法：七行星藥草</h3>
-                <p>跨系統搭接技術！運用西方七行星魔法觀點重新區辨台灣本土藥草，學習實驗區辨技巧並製作專屬行星魔術盒，不再侷限於本土視野。</p>
-                <div class="course-info">
-                    <span class="price">早鳥價：8500元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-local-02/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #ff5722;">實作</span>
-                </div>
-                <h3>台灣本土藥草實作：好運成雙</h3>
-                <p>運用陶瓷碗製作專屬好運祭壇，並辨識三支秘傳本土藥草魔性，為生活在金錢與愛情上吸引雙重好運。</p>
-                <div class="course-info">
-                    <span class="price">特價：2800元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-local-03/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #2196f3;">中級</span>
-                </div>
-                <h3>台灣本土藥草實作課程：日進斗金</h3>
-                <p>結合台灣民間招財象徵與胡督魔法邏輯。學習辨識本土藥草魔性，並利用聚寶陶甕製作專屬招財藥草小祭壇，兼顧引財與守財。</p>
-                <div class="course-info">
-                    <span class="price">特價：2800元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-local-04/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #f44336;">高級</span>
-                </div>
-                <h3>台灣本土藥草魔法-配方解析</h3>
-                <p>進階單元 I。剖析六支經典本土藥草配方（如大吉大利錢滾錢、堆金積玉財庫盈等），講述調配原理與藥草運用技巧，並實作魔法油。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：8800元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-local-05/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #2196f3;">中級</span>
-                </div>
-                <h3>魔法蠟燭課</h3>
-                <p>親手實作愛情、金錢與淨化三大主題蠟燭。學習雕刻、塗油與轉化技巧，一次帶走強力魔法材料包。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：7500元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-candle/" class="learn-more">了解更多</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 🏺 胡督魔法 -->
-    <section id="hoodoo" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
-        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">🏺 胡督魔法</h2>
-        <div class="courses-grid">
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #ff5722;">實作</span>
-                </div>
-                <h3>胡督繩結魔法</h3>
-                <p>繩結魔法橫跨東西方，胡督傳統中以高度實作性著稱。學習透過特定纏繞、打結與「餵養」儀式，將願望鎖入物質界。涵蓋守護防禦、健康療癒、愛情關係、財務事業及策略放逐等五大實踐領域。</p>
-                <div class="course-info">
-                    <span class="price">費用：2000元 (特惠 1500元)</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-hoodoo-09/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">基礎</span>
-                </div>
-                <h3>藥草魔法師基礎課程</h3>
-                <p>進入胡督魔法的第一步。學習五十種常用藥草貼近胡督的原始生活精神，建構配方邏輯，並實際製作護符包與財富咒瓶。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：4200元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-hoodoo-00/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">單元一</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #607d8b;">單元一</span></div>
                 <h3>淨化療癒篇</h3>
                 <p>學習傳統巫師的藥草運用智慧。透過咒包與咒瓶製作，掌握胡督系統中最重要的淨化、療癒與移除障礙技術。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：4200元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
+                <div class="course-info"><span class="price">早鳥：4200元</span><span class="teacher">四月老師</span></div>
                 <a href="/courses/course-hoodoo-01/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #2196f3;">單元二</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #2196f3;">單元二</span></div>
                 <h3>反轉詛咒篇</h3>
                 <p>解決「交叉狀態 (Crossed Conditions)」。學習解除詛咒與反轉惡意的技術，將負面能量原路奉還給施咒者，並建立居家防禦結界。</p>
-                <div class="course-info">
-                    <span class="price">請洽詢</span>
-                    <span class="teacher">四月老師</span>
-                </div>
+                <div class="course-info"><span class="price">請洽詢</span><span class="teacher">四月老師</span></div>
                 <a href="/courses/course-hoodoo-02/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #2196f3;">單元三</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #2196f3;">單元三</span></div>
                 <h3>金錢魔法與祭壇</h3>
                 <p>針對債務解決與財富增加。運用金錢藥草、咒瓶、祭壇架設、銀行追跡法與詩篇魔法，全方位優化個人財務能量磁場。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：7800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
+                <div class="course-info"><span class="price">早鳥：7800元</span><span class="teacher">四月老師</span></div>
                 <a href="/courses/course-hoodoo-03/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #2196f3;">單元四</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #2196f3;">單元四</span></div>
                 <h3>愛情魔法篇</h3>
                 <p>學習吸引愛情、重燃熱情與復合術。包含蜂蜜罐儀式原型、甜蜜老爹/老媽魔力包，以及愛情魔法操作的實務經驗分享。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：7800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
+                <div class="course-info"><span class="price">早鳥：7800元</span><span class="teacher">四月老師</span></div>
                 <a href="/courses/course-hoodoo-04/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #f44336;">單元五</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #f44336;">單元五</span></div>
                 <h3>關係破壞者</h3>
                 <p>探討胡督的黑暗面向。針對背叛、傷害或衝突，施展精準的懲戒與分裂魔法，使敵人遭遇社交或財務上的阻斷。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：7800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
+                <div class="course-info"><span class="price">早鳥：7800元</span><span class="teacher">四月老師</span></div>
                 <a href="/courses/course-hoodoo-05/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #009688;">選修</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #009688;">進階選修</span></div>
                 <h3>魔法油配方解析</h3>
                 <p>深入研究八種核心胡督配方（如家庭金錢祝福、耶洗別油等）。學習逆轉藥草屬性、配方微調及魔法油祝福保存箱製作。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：8800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
+                <div class="course-info"><span class="price">早鳥：8800元</span><span class="teacher">四月老師</span></div>
                 <a href="/courses/course-hoodoo-06/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #009688;">選修</span>
-                </div>
-                <h3>藥草行星魔法</h3>
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #009688;">進階選修</span></div>
+                <h3>藥草行星魔法-胡督單元</h3>
                 <p>跨接胡督與占星系統。運用符印、行星魔方與奧菲斯祈禱歌架設行星祭壇，釀造行星油與酊劑，實踐更高層次的命運優化。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：8800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
+                <div class="course-info"><span class="price">早鳥：8800元</span><span class="teacher">四月老師</span></div>
                 <a href="/courses/course-hoodoo-07/" class="learn-more">了解更多</a>
-            </div>
-
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #ff5722;">實作</span>
-                </div>
-                <h3>魔法蠟燭製作</h3>
-                <p>三大主題（愛情、金錢、淨化）蠟燭實作課。包含留留在身邊、金錢吸引、四賊醋等六款配方，掌握雕刻、塗油與能量啟動。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：7500元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-hoodoo-08/" class="learn-more">了解更多</a>
-            </div>
-
-            <!-- 🏺 完美修正：印度式胡督豐盛魔法教學 (補上正確首開特惠價) -->
-            <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #ff9800;">新課</span>
-                </div>
-                <h3>印度式胡督豐盛魔法教學</h3>
-                <p>少數將印度吠陀與胡督根源工作完整融合的線上技術系統。結合家庭豐盛祭壇、象神與拉克希米女神供養，並搭配真言呼吸科學、胡督藥草粉筆與招財空間沐浴清理，打造真實財富磁場。</p>
-                <div class="course-info">
-                    <span class="price">首開特惠：3,800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-hoodoo-10/" class="learn-more">了解更多</a>
             </div>
         </div>
     </section>
 
-    <!-- ✨ 現代魔法 -->
-    <section id="modern" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
-        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">✨ 現代魔法</h2>
+    <hr style="border: none; border-top: 1px dashed #cfd8dc; margin: 0 0 2.5rem;">
+    <p style="text-align: center; color: #607d8b; margin-bottom: 2rem; font-size: 0.95rem;">以下為<strong>獨立路線</strong>，<strong>無需先修藥草基礎</strong>，可各自直接入門 ↓</p>
+
+    <!-- 🛡️ 防禦策略 -->
+    <section id="defense" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
+        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.25rem;">🛡️ 防禦策略</h2>
+        <div class="path-strip">
+            <span class="step">① 抵禦魔法攻擊</span><span class="arrow">→</span>
+            <span class="step">② 杜絕謠言</span><span class="arrow">＋</span>
+            <span class="step">保護符咒（單堂）</span>
+        </div>
         <div class="courses-grid">
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">單元一</span>
-                </div>
-                <h3>星光魔法單元一</h3>
-                <p>整合東西方神祕主義。學習出神技巧進行星光體投射與星界旅行，架設專屬星光神殿並與守護者連結。內容涵蓋下部世界探尋及運用藥草強化靈性保護技術。</p>
-                <div class="course-info">
-                    <span class="price">費用：15000元 (早鳥 9900元)</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-modern-06/" class="learn-more">了解更多</a>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #2196f3;">中階</span></div>
+                <h3>防禦策略魔法單元一：抵禦魔法攻擊</h3>
+                <p>學習辨識八種魔法攻擊型態，並針對不同干擾部署防護手段。課程包含經典「保護火牆」魔法配方解析與實作。</p>
+                <div class="course-info"><span class="price">早鳥：6800元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-009/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #f44336;">進階</span>
-                </div>
-                <h3>個人業力課程</h3>
-                <p>透過六個特殊符印與咒語，轉化累世固著的思維印記（如清貧思維）。課程強調信念創造現實的觀點，協助學員釋放業力模式，連結守護靈，恢復覺知清明。</p>
-                <div class="course-info">
-                    <span class="price">費用：3600元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-modern-05/" class="learn-more">了解更多</a>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #2196f3;">中階</span></div>
+                <h3>防禦策略魔法單元二：杜絕謠言</h3>
+                <p>人際與商業中的混亂防禦。學習如何運用魔法止損並鞏固局勢，包含專屬教學「繞頸娃娃」的製作與制衡技術。</p>
+                <div class="course-info"><span class="price">早鳥：6800元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-010/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初級</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
+                <h3>魔法防禦-保護符咒</h3>
+                <p>保護咒術是咒術入門的基礎。學習辨識心靈攻擊與各種詛咒層次，掌握西方常用的三種保護符咒，並親手製作護符。</p>
+                <div class="course-info"><span class="price">線上教學 (Google Meet)</span><span class="teacher">四月老師</span></div>
+                <a href="/courses/course-protection-05/" class="learn-more">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🌏 本土藥草 -->
+    <section id="local" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
+        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.25rem;">🌏 台灣本土藥草</h2>
+        <div class="path-strip">
+            <span class="step">① 台灣本土藥草（50支入門）</span><span class="arrow">→</span>
+            <span class="step">② 日進斗金</span><span class="arrow">→</span>
+            <span class="step">③ 七行星藥草</span><span class="arrow">→</span>
+            <span class="step">④ 配方解析</span><span class="arrow">＋</span>
+            <span class="step">實作：好運成雙</span>
+        </div>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
+                <h3>台灣本土藥草魔法 (實體)</h3>
+                <p>藥草魔法不再依賴進口。教導如何運用台灣本地易取得的 50 支藥草進行工作，貼近胡督的原始生活精神。</p>
+                <div class="course-info"><span class="price">特價：11000元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-local-01/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #2196f3;">中階</span></div>
+                <h3>台灣本土藥草實作課程：日進斗金</h3>
+                <p>結合台灣民間招財象徵與胡督魔法邏輯。學習辨識本土藥草魔性，並利用聚寶陶甕製作專屬招財藥草小祭壇，兼顧引財與守財。</p>
+                <div class="course-info"><span class="price">特價：2800元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-local-04/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #f44336;">高階</span></div>
+                <h3>台灣本土藥草魔法：七行星藥草</h3>
+                <p>跨系統搭接技術！運用西方七行星魔法觀點重新區辨台灣本土藥草，學習實驗區辨技巧並製作專屬行星魔術盒。</p>
+                <div class="course-info"><span class="price">早鳥價：8500元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-local-02/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #f44336;">高階</span></div>
+                <h3>台灣本土藥草魔法-配方解析</h3>
+                <p>進階單元。剖析六支經典本土藥草配方（如大吉大利錢滾錢、堆金積玉財庫盈等），講述調配原理與藥草運用技巧，並實作魔法油。</p>
+                <div class="course-info"><span class="price">早鳥：8800元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-local-05/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #ff5722;">實作</span></div>
+                <h3>台灣本土藥草實作：好運成雙</h3>
+                <p>運用陶瓷碗製作專屬好運祭壇，並辨識三支秘傳本土藥草魔性，為生活在金錢與愛情上吸引雙重好運。</p>
+                <div class="course-info"><span class="price">特價：2800元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-local-03/" class="learn-more">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🌀 混沌魔法（符印・星光） -->
+    <section id="chaos" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
+        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.25rem;">🌀 混沌魔法（符印・星光）</h2>
+        <div class="path-strip">
+            <span class="step">① 簡單易懂的現代魔法</span><span class="arrow">→</span>
+            <span class="step">② 天使符印</span><span class="arrow">→</span>
+            <span class="step">③ 行星符印</span><span class="arrow">＋</span>
+            <span class="step">符印實作 · 業力 · 星光專題</span>
+        </div>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
                 <h3>簡單易懂的現代魔法 -遠距</h3>
                 <p>不再求，而是命令！一套嚴謹的 SOP 化儀式系統，教你透過意志宣告與五個力量之門，快速顯化能量。</p>
-                <div class="course-info">
-                    <span class="price">首開：8000元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
+                <div class="course-info"><span class="price">首開：8000元</span><span class="teacher">四月老師</span></div>
                 <a href="/courses/course-modern-01/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初級</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
                 <h3>天使符印 (遠距)</h3>
-                <p>學習設計專屬大天使符印。透過理解天使長職能、統治權與獨家「中文轉換技術」，教你如何繪製並啟動符印，與天使長溝通顯化渴望。</p>
-                <div class="course-info">
-                    <span class="price">費用：4800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
+                <p>學習設計專屬大天使符印。透過理解天使長職能、統治權與獨家「中文轉換技術」，教你如何繪製並啟動符印。</p>
+                <div class="course-info"><span class="price">費用：4800元</span><span class="teacher">四月老師</span></div>
                 <a href="/courses/course-modern-02/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #f44336;">高級</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #f44336;">高階</span></div>
                 <h3>現代魔法-行星符印課程 (遠距)</h3>
-                <p>進階符印技術。結合玫瑰十字系統與行星魔方陣（Magic Squares），教導如何透過希伯來字母轉換邏輯，設計出完全契合行星能量的專屬符印與護符。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：7800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
+                <p>進階符印技術。結合玫瑰十字系統與行星魔方陣，教導如何透過希伯來字母轉換邏輯，設計出契合行星能量的專屬符印與護符。</p>
+                <div class="course-info"><span class="price">早鳥：7800元</span><span class="teacher">四月老師</span></div>
                 <a href="/courses/course-modern-03/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">入門</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
+                <h3>現代魔法－金錢魔法符印實作</h3>
+                <p>混沌魔法實踐。提供四張專屬魔法符印，講解符印脈絡與使用技術，幫助學員從日常生活實踐中感受能量對顯化的協助。</p>
+                <div class="course-info"><span class="price">特惠：3000元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-011/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
+                <h3>現代魔法－保護符印實作</h3>
+                <p>混沌魔法實踐。聚焦於「穩定自身狀態」以抵禦外界消耗。提供四張專屬設計之保護符印，詳解脈絡、日常啟動與維護，建立個人能量界線。</p>
+                <div class="course-info"><span class="price">首開特惠：2,800元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-modern-07/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #2196f3;">進階</span></div>
+                <h3>個人業力課程</h3>
+                <p>透過六個特殊符印與咒語，轉化累世固著的思維印記（如清貧思維）。協助學員釋放業力模式，連結守護靈，恢復覺知清明。</p>
+                <div class="course-info"><span class="price">費用：3600元</span><span class="teacher">四月老師</span></div>
+                <a href="/courses/course-modern-05/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #2196f3;">專題</span></div>
+                <h3>星光魔法單元一</h3>
+                <p>整合東西方神祕主義。學習出神技巧進行星光體投射與星界旅行，架設專屬星光神殿並與守護者連結，並運用藥草強化靈性保護。</p>
+                <div class="course-info"><span class="price">費用：15000元 (早鳥 9900元)</span><span class="teacher">四月老師</span></div>
+                <a href="/courses/course-modern-06/" class="learn-more">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔮 能量療癒 -->
+    <section id="healing" style="margin-bottom: 3.5rem; scroll-margin-top: 100px;">
+        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.25rem;">🔮 能量療癒（澤誼老師）</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #607d8b;">入門</span></div>
                 <h3>天元回歸盤能量療癒｜入門工作坊</h3>
-                <p>從能量運作的根本原理出發，透過專屬開發的「天元回歸盤」與螺旋能量原理，協助身體恢復自我平衡能力，觸及醫療尚未觸及的深層能量領域。</p>
-                <div class="course-info">
-                    <span class="price">首開：8000元</span>
-                    <span class="teacher">澤誼老師</span>
-                </div>
+                <p>從能量運作的根本原理出發，透過專屬開發的「天元回歸盤」與螺旋能量原理，協助身體恢復自我平衡能力，觸及深層能量領域。</p>
+                <div class="course-info"><span class="price">首開：8000元</span><span class="teacher">澤誼老師</span></div>
                 <a href="/courses/course-modern-04/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初級</span>
-                </div>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
                 <h3>行星許願課(實體)</h3>
                 <p>配合七大行星能量法則，許下真正能實現的願望。包含大天使許願缽與夢夢版儀式，幫助你精準連結宇宙機運。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：3500元</span>
-                    <span class="teacher">澤誼老師</span>
-                </div>
+                <div class="course-info"><span class="price">早鳥：3500元</span><span class="teacher">澤誼老師</span></div>
                 <a href="/courses/course-015/" class="learn-more">了解更多</a>
             </div>
+        </div>
+    </section>
 
+    <hr style="border: none; border-top: 1px dashed #cfd8dc; margin: 0 0 2.5rem;">
+
+    <!-- 🌱 入門單堂 -->
+    <section id="intro" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
+        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 0.75rem;">🌱 入門單堂（無先修 · 試水首選）</h2>
+        <p class="section-note">低門檻、單堂可完成，適合第一次接觸魔法的你。</p>
+        <div class="courses-grid">
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #9c27b0;">遠距</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #f44336;">高級</span>
-                </div>
-                <h3>藥草行星魔法-胡督單元</h3>
-                <p>將古典七大行星能量與藥草結合。學習行星時刻與符印，進行行星油釀造，是胡督系統中的高階選修課程。</p>
-                <div class="course-info">
-                    <span class="price">早鳥：8800元</span>
-                    <span class="teacher">四月老師</span>
-                </div>
-                <a href="/courses/course-hoodoo-07/" class="learn-more">了解更多</a>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
+                <h3>魔法新手入門實作課I: 金錢吸引與除障</h3>
+                <p>胡督魔法新手首選。透過藥草咒瓶與咒包製作，學習移除金錢障礙並開啟金錢吸引的能量，建立穩固的物質根基。</p>
+                <div class="course-info"><span class="price">特價：2500元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-001/" class="learn-more">了解更多</a>
             </div>
-
             <div class="course-card">
-                <div class="course-tags" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem;">
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #4caf50;">實體</span>
-                    <span class="course-tag" style="position: static; display: inline-block; background-color: #607d8b;">初級</span>
-                </div>
-                <h3>現代魔法－保護符印實作</h3>
-                <p>混沌魔法實踐。相較於傳統驅邪避煞，本課程聚焦於「穩定自身狀態」以抵禦外界消耗。提供四張專屬設計之保護符印，詳細講解符印脈絡、日常啟動與維護技術，建立個人的能量界線。</p>
-                <div class="course-info">
-                    <span class="price">首開特惠：2,800元</span>
-                    <span class="teacher">歐比路老師</span>
-                </div>
-                <a href="/courses/course-modern-07/" class="learn-more">了解更多</a>
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
+                <h3>魔法新手入門實作課II：淨化與保護</h3>
+                <p>新手前導推薦。學習魔法咒瓶與咒包製作，掌握配方藥草與維護要點，為自己建立第一道靈性防禦防線。</p>
+                <div class="course-info"><span class="price">特價：2500元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-014/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #607d8b;">初階</span></div>
+                <h3>適合金錢魔法的神靈</h3>
+                <p>回歸胡督歷史，介紹三位適合金錢魔法的神靈：Oshun、Damballa、Papa Legba。建立正確的神靈工作入門框架與風險認知。</p>
+                <div class="course-info"><span class="price">優惠：3500元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-017/" class="learn-more">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🎨 主題工作坊 -->
+    <section id="topics" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
+        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 0.75rem;">🎨 主題工作坊（獨立主題 · 隨時可選）</h2>
+        <p class="section-note">不隸屬特定體系的獨立主題課與手作工作坊。</p>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #4caf50;">實體</span><span class="course-tag" style="background-color: #607d8b;">初階</span><span class="course-tag tag-new">新開</span></div>
+                <h3>大地魔法：來自土地的靈性恩賜</h3>
+                <p>真正承載大地力量的往往是我們腳下的「塵土與場域」。介紹 15 種塵土與場域的魔法運用、進入場域的獻祭儀式，以及場域與藥草的策略搭配。</p>
+                <div class="course-info"><span class="price">首開特惠：2,800元</span><span class="teacher">歐比路老師</span></div>
+                <a href="/courses/course-020/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #607d8b;">初階</span><span class="course-tag tag-new">新開</span></div>
+                <h3>印度式胡督豐盛魔法教學</h3>
+                <p>少數將印度吠陀與胡督根源工作完整融合的線上系統。結合家庭豐盛祭壇、象神與拉克希米女神供養，搭配真言呼吸科學與招財空間清理。</p>
+                <div class="course-info"><span class="price">首開特惠：3,800元</span><span class="teacher">四月老師</span></div>
+                <a href="/courses/course-hoodoo-10/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #ff5722;">實作</span></div>
+                <h3>胡督繩結魔法</h3>
+                <p>繩結魔法橫跨東西方，以高度實作性著稱。透過纏繞、打結與「餵養」儀式將願望鎖入物質界，涵蓋守護、療癒、愛情、財務與放逐五大領域。</p>
+                <div class="course-info"><span class="price">費用：2000元 (特惠 1500元)</span><span class="teacher">四月老師</span></div>
+                <a href="/courses/course-hoodoo-09/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #ff5722;">實作</span></div>
+                <h3>魔法蠟燭課</h3>
+                <p>親手實作愛情、金錢與淨化三大主題蠟燭。學習雕刻、塗油與轉化技巧，一次帶走強力魔法材料包。</p>
+                <div class="course-info"><span class="price">早鳥：7500元</span><span class="teacher">四月老師</span></div>
+                <a href="/courses/course-candle/" class="learn-more">了解更多</a>
+            </div>
+            <div class="course-card">
+                <div class="course-tags"><span class="course-tag" style="background-color: #9c27b0;">遠距</span><span class="course-tag" style="background-color: #ff5722;">實作</span></div>
+                <h3>魔法蠟燭製作</h3>
+                <p>三大主題（愛情、金錢、淨化）蠟燭實作課。包含留在身邊、金錢吸引、四賊醋等六款配方，掌握雕刻、塗油與能量啟動。</p>
+                <div class="course-info"><span class="price">早鳥：7500元</span><span class="teacher">四月老師</span></div>
+                <a href="/courses/course-hoodoo-08/" class="learn-more">了解更多</a>
             </div>
         </div>
     </section>
@@ -737,38 +462,18 @@ description: "探索四月老師的課程中心，提供金錢魔法、愛情吸
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "四月老師魔法課程清單",
-  "description": "提供包含胡督(Hoodoo)、金錢策略魔法、藥草魔法與現代符印等專業教學。",
+  "description": "依學習路徑編排：藥草魔法師基礎為金錢、愛情、胡督三大策略體系的共同必修；另有防禦、本土藥草、混沌魔法、能量療癒等獨立路線。",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "金錢魔法課程",
-      "url": "https://hoodoo.pro/course.html#money"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "愛情與吸引力課程",
-      "url": "https://hoodoo.pro/course.html#love"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "藥草與植物魔法課程",
-      "url": "https://hoodoo.pro/course.html#herbs"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "胡督魔法系列課程",
-      "url": "https://hoodoo.pro/course.html#hoodoo"
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
-      "name": "現代魔法課程",
-      "url": "https://hoodoo.pro/course.html#modern"
-    }
+    { "@type": "ListItem", "position": 1, "name": "藥草魔法師基礎（共同必修）", "url": "https://hoodoo.pro/course.html#foundation" },
+    { "@type": "ListItem", "position": 2, "name": "金錢策略體系", "url": "https://hoodoo.pro/course.html#money" },
+    { "@type": "ListItem", "position": 3, "name": "愛情策略體系", "url": "https://hoodoo.pro/course.html#love" },
+    { "@type": "ListItem", "position": 4, "name": "胡督單元系列", "url": "https://hoodoo.pro/course.html#hoodoo" },
+    { "@type": "ListItem", "position": 5, "name": "防禦策略", "url": "https://hoodoo.pro/course.html#defense" },
+    { "@type": "ListItem", "position": 6, "name": "台灣本土藥草", "url": "https://hoodoo.pro/course.html#local" },
+    { "@type": "ListItem", "position": 7, "name": "混沌魔法（符印・星光）", "url": "https://hoodoo.pro/course.html#chaos" },
+    { "@type": "ListItem", "position": 8, "name": "能量療癒", "url": "https://hoodoo.pro/course.html#healing" },
+    { "@type": "ListItem", "position": 9, "name": "入門單堂", "url": "https://hoodoo.pro/course.html#intro" },
+    { "@type": "ListItem", "position": 10, "name": "主題工作坊", "url": "https://hoodoo.pro/course.html#topics" }
   ]
 }
 </script>
