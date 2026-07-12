@@ -1,0 +1,43 @@
+{% comment %}
+  學員見證元件
+  用法：{% include testimonials.html tag="hoodoo-00" limit=4 %}
+  邏輯：優先顯示帶有該課程標籤的回饋，不足 limit 則以 general 標籤遞補
+{% endcomment %}
+
+{% assign tst_tag = include.tag | default: "general" %}
+{% assign tst_limit = include.limit | default: 4 %}
+{% assign tst_matched = "" | split: "" %}
+
+{% for t in site.data.testimonials %}
+  {% if t.tags contains tst_tag %}
+    {% assign tst_matched = tst_matched | push: t %}
+  {% endif %}
+{% endfor %}
+
+{% for t in site.data.testimonials %}
+  {% unless t.tags contains tst_tag %}
+    {% if t.tags contains "general" %}
+      {% assign tst_matched = tst_matched | push: t %}
+    {% endif %}
+  {% endunless %}
+{% endfor %}
+
+<style>
+  .tst-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin:1.4rem 0; }
+  .tst-card { background:#fff; border:1px solid #ddd0b4; border-radius:8px;
+              padding:1.3rem 1.4rem; text-align:left; line-height:1.9; }
+  .tst-card blockquote { margin:0; font-size:.96rem; }
+  .tst-card blockquote::before { content:"「"; color:#c9973f; font-size:1.3rem; }
+  .tst-card blockquote::after { content:"」"; color:#c9973f; font-size:1.3rem; }
+  .tst-meta { margin-top:.8rem; font-size:.85rem; color:#8c6a3a; }
+  @media (max-width: 768px) { .tst-grid { grid-template-columns:1fr; } }
+</style>
+
+<div class="tst-grid">
+  {% for t in tst_matched limit: tst_limit %}
+  <div class="tst-card">
+    <blockquote>{{ t.text }}</blockquote>
+    <p class="tst-meta">—— {{ t.name }}｜{{ t.course }}</p>
+  </div>
+  {% endfor %}
+</div>
