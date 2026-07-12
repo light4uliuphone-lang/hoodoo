@@ -1,0 +1,41 @@
+---
+layout: default
+title: "學員回饋 - 靈火巫境"
+description: "來自台灣、香港、馬來西亞學員的真實課程回饋：天使符印、藥草魔法、淨化與反擊魔法、天國星燈等課程心得分享。"
+permalink: /testimonials/
+---
+<div class="container" style="padding: 3rem 0;">
+
+  <style>
+    .tsp-page { max-width:860px; margin:0 auto; padding:0 1.25rem; line-height:1.9; color:#241a12; }
+    .tsp-page h1 { font-size:1.9rem; letter-spacing:.06em; }
+    .tsp-intro { color:#5a4a35; margin-bottom:2.5rem; }
+    .tsp-course { font-size:1.25rem; color:#8c3b2e; letter-spacing:.08em;
+                  border-bottom:2px solid #e9dcc4; padding-bottom:.5rem; margin:2.8rem 0 1.2rem; }
+    .tsp-card { background:#faf6ec; border:1px solid #ddd0b4; border-radius:8px;
+                padding:1.3rem 1.4rem; margin-bottom:1.2rem; }
+    .tsp-card blockquote { margin:0; font-size:.98rem; }
+    .tsp-card blockquote::before { content:"「"; color:#c9973f; font-size:1.3rem; }
+    .tsp-card blockquote::after { content:"」"; color:#c9973f; font-size:1.3rem; }
+    .tsp-meta { margin-top:.8rem; font-size:.85rem; color:#8c6a3a; }
+    .tsp-note { font-size:.85rem; color:#8a7a60; margin-top:3rem; border-top:1px solid #e9dcc4; padding-top:1.2rem; }
+  </style>
+
+  <div class="tsp-page">
+    <h1>學員回饋</h1>
+    <p class="tsp-intro">以下皆為學員上課後主動分享的真實回饋，依課程分類陳列。魔法的效果因人而異，這些分享代表學員的個人體驗。</p>
+
+    {% assign grouped = site.data.testimonials | group_by: "course" %}
+    {% for group in grouped %}
+      <h2 class="tsp-course">{{ group.name }}</h2>
+      {% for t in group.items %}
+      <div class="tsp-card">
+        <blockquote>{{ t.text }}</blockquote>
+        <p class="tsp-meta">—— {{ t.name }}</p>
+      </div>
+      {% endfor %}
+    {% endfor %}
+
+    <p class="tsp-note">想了解各課程詳情，請前往 <a href="/course/">課程中心</a>。</p>
+  </div>
+</div>
