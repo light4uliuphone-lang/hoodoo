@@ -1,0 +1,520 @@
+---
+layout: default
+title: "藥草魔法師基礎課程 - 四月老師"
+description: "50 支藥草，開啟你的魔法實作之路。8/8 線上開課，實作咒包、咒瓶與魔法水調配。零基礎可上，早鳥優惠 7/25 截止。"
+permalink: /courses/course-hoodoo-00/
+image: /assets/images/courses/hoodoo-00/og-herb-basics.jpg
+---
+
+<style>
+  /* ===== 藥草魔法基礎課 銷售頁（hb- 前綴，避免與全站樣式衝突）===== */
+  .hb-page { --hb-ink:#241a12; --hb-paper:#f4ecdd; --hb-paper-deep:#e9dcc4;
+             --hb-dark:#1b1410; --hb-dark2:#2a1f16; --hb-gold:#c9973f;
+             --hb-gold-soft:#e6cfa0;
+             --hb-green:#3e5c48; --hb-red:#8c3b2e;
+             font-size:1rem; color:var(--hb-ink); line-height:1.85; }
+  .hb-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--hb-ink); letter-spacing:.05em; }
+  .hb-section { padding:3.5rem 1.25rem; }
+  .hb-inner { max-width:860px; margin:0 auto; }
+  .hb-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--hb-red);
+                border-bottom:1px solid var(--hb-red); padding-bottom:.3rem; margin-bottom:1rem; }
+  .hb-cta { display:inline-block; background:var(--hb-red); color:#fff !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(140,59,46,.35); transition:transform .15s ease, box-shadow .15s ease; }
+  .hb-cta:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(140,59,46,.45); }
+  @media (prefers-reduced-motion: reduce){ .hb-cta{ transition:none } .hb-cta:hover{ transform:none } }
+
+  /* Hero */
+  .hb-hero { position:relative; background:var(--hb-dark); color:var(--hb-paper);
+             padding:5rem 1.25rem 4rem; overflow:hidden; }
+  .hb-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.55; }
+  .hb-hero-inner { position:relative; max-width:860px; margin:0 auto; }
+  .hb-hero h1 { font-size:clamp(1.7rem, 4.5vw, 2.6rem); line-height:1.4; margin:.5rem 0 1rem; color:#fff; }
+  .hb-hero .hb-sub { font-size:1.05rem; color:var(--hb-gold-soft); max-width:34em; }
+  .hb-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem; color:#f1e7d4; }
+  .hb-hero-note { font-size:.85rem; color:var(--hb-gold-soft); margin-top:.7rem; }
+
+  /* 痛點清單 */
+  .hb-pain { background:var(--hb-paper); }
+  .hb-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .hb-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #cbbd9e; }
+  .hb-pain li::before { content:"✓"; position:absolute; left:.4rem; color:var(--hb-green); font-weight:700; }
+  .hb-punch { background:var(--hb-paper-deep); border-left:4px solid var(--hb-gold);
+              padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  /* 敘事 */
+  .hb-story { background:var(--hb-dark2); color:#efe4cd; }
+  .hb-story h2 { color:#fff; }
+  .hb-story img { width:100%; height:auto; border-radius:6px; margin-top:1.4rem;
+                  border:1px solid rgba(201,151,63,.4); }
+
+  /* 成果 */
+  .hb-gain { background:var(--hb-paper); }
+  .hb-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .hb-gain-card { background:#fff; border:1px solid #ddd0b4; border-radius:8px; padding:1.2rem 1.3rem; }
+  .hb-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--hb-green); letter-spacing:.08em; }
+  .hb-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+  .hb-gain-photos { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.8rem; }
+  .hb-gain-photos img { width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; border-radius:6px; }
+
+  /* 大綱 */
+  .hb-syllabus { background:var(--hb-paper-deep); }
+  .hb-syl-part { margin-bottom:1.6rem; }
+  .hb-syl-part h3 { font-size:1.05rem; color:var(--hb-red); letter-spacing:.1em; margin:0 0 .5rem; }
+  .hb-syl-part ul { margin:0; padding-left:1.3rem; }
+
+  /* 見證 */
+  .hb-proof { background:var(--hb-paper); }
+  .hb-proof-single { margin:1.4rem 0; text-align:center; }
+  .hb-proof-single img { width:100%; max-width:680px; height:auto; border-radius:6px;
+                         border:1px solid #ddd0b4; }
+  .hb-trustbar { display:flex; flex-wrap:wrap; gap:.6rem 1.8rem; justify-content:center;
+                 font-size:.92rem; color:var(--hb-green); border-top:1px solid #d8caa9;
+                 padding-top:1.2rem; margin-top:.6rem; }
+
+  /* 老師 */
+  .hb-teacher { background:var(--hb-dark2); color:#efe4cd; }
+  .hb-teacher h2 { color:#fff; }
+  .hb-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .hb-teacher-flex img { width:240px; height:auto; border-radius:8px; flex:0 0 auto;
+                         border:1px solid rgba(201,151,63,.4); }
+
+  /* 路徑 */
+  .hb-path { background:var(--hb-paper); text-align:center; }
+  .hb-path img { max-width:520px; width:100%; height:auto; margin:1.4rem auto 0; display:block; }
+  .hb-path .hb-punch { text-align:left; margin-top:1.6rem; }
+
+  /* 價格 */
+  .hb-price { background:var(--hb-dark); color:var(--hb-paper); }
+  .hb-price h2 { color:#fff; }
+  .hb-price-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; margin:1.4rem auto; max-width:820px; }
+  .hb-price-card { background:var(--hb-dark2); border:1px solid rgba(201,151,63,.5); border-radius:10px;
+                   padding:2rem 1.6rem; text-align:center; }
+  .hb-price-card--soon { border-style:dashed; }
+  .hb-plan-tag { display:inline-block; font-size:.85rem; letter-spacing:.2em; color:var(--hb-gold);
+                 border:1px solid var(--hb-gold); border-radius:999px; padding:.2rem 1rem; margin-bottom:1rem; }
+  .hb-price-old { text-decoration:line-through; color:#a99b82; font-size:1.05rem; }
+  .hb-price-now { font-size:2rem; color:var(--hb-gold); font-weight:700; margin:.3rem 0; }
+  .hb-price-save { color:var(--hb-gold-soft); font-size:.95rem; }
+  .hb-includes { text-align:left; margin:1.4rem auto; padding-left:1.3rem; font-size:.95rem; }
+  .hb-deadline { text-align:center; font-size:.95rem; color:var(--hb-gold-soft);
+                 letter-spacing:.08em; margin-bottom:1.6rem; }
+  .hb-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:2rem; }
+  .hb-alt-signup { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#e7dcc6; }
+  .hb-alt-signup a { color:var(--hb-gold); }
+
+  /* FAQ */
+  .hb-faq { background:var(--hb-paper); }
+  .hb-faq details { border-bottom:1px solid #d8caa9; padding:.9rem 0; }
+  .hb-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .hb-faq summary::before { content:"＋ "; color:var(--hb-red); }
+  .hb-faq details[open] summary::before { content:"－ "; }
+  .hb-faq details p { margin:.6rem 0 0; }
+
+  /* 頁尾補網 */
+  .hb-net { background:var(--hb-paper-deep); text-align:center; }
+  .hb-net img { width:180px; height:auto; margin:1rem auto; display:block; }
+  .hb-net-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:2rem;
+                 text-align:center; align-items:start; }
+  .hb-net-col h3 { font-size:1.1rem; color:var(--hb-ink); letter-spacing:.08em; margin:0 0 .8rem; }
+
+  /* Brevo 表單融合樣式（覆蓋預設外觀） */
+  .hb-net .sib-form { background:transparent !important; padding:0 !important; }
+  .hb-net #sib-container { background:#fff !important; border-color:#ddd0b4 !important;
+                           border-radius:8px !important; max-width:420px !important; margin:0 auto; }
+  .hb-net #sib-container p, .hb-net #sib-container label { font-family:inherit !important; color:var(--hb-ink) !important; }
+  .hb-net .sib-form-block__button { background-color:var(--hb-red) !important; border-radius:4px !important;
+                                    letter-spacing:.15em; font-family:inherit !important; width:100%; text-align:center !important; }
+  .hb-net #sib-container a { color:var(--hb-red) !important; }
+
+  @media (max-width: 768px) {
+    .hb-section { padding:2.6rem 1.1rem; }
+    .hb-gain-grid, .hb-gain-photos, .hb-net-grid, .hb-price-grid { grid-template-columns:1fr; }
+    .hb-teacher-flex { flex-direction:column; }
+    .hb-teacher-flex img { width:100%; max-width:320px; }
+    .hb-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="hb-page">
+
+  <!-- ① Hero 首屏 -->
+  <header class="hb-hero">
+    <picture>
+      <source media="(max-width: 768px)" srcset="/assets/images/courses/hoodoo-00/hero-mobile.webp">
+      <img class="hb-hero-bg" src="/assets/images/courses/hoodoo-00/hero-desktop.webp"
+           alt="" width="2400" height="1350" fetchpriority="high">
+    </picture>
+    <div class="hb-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#e6cfa0; font-size:.9rem; opacity:.85; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="hb-eyebrow" style="display:block; width:fit-content; color:#e6cfa0; border-color:#e6cfa0;">胡督魔法系列・基礎必修</p>
+      <h1>
+        <span style="display:block; font-size:1.05rem; font-weight:400; letter-spacing:.25em; color:#e6cfa0; margin-bottom:.7rem;">藥草魔法師基礎課程</span>
+        50 支藥草，<br>是你進入魔法世界的第一把鑰匙
+      </h1>
+      <p class="hb-sub">一堂課，從「看得懂配方」到「自己設計配方」。課堂中實際動手：咒包、咒瓶與魔法水的調配，把知識變成手感。</p>
+      <div class="hb-hero-meta">
+        <span>📅 線上班 2026/8/08（六）13:00–16:00</span>
+        <span>🏛 台北實體班籌備中</span>
+        <span>🎓 零基礎可上</span>
+      </div>
+      <a class="hb-cta" href="#signup">搶早鳥價，立即報名</a>
+      <p class="hb-hero-note">早鳥優惠 7/25 截止，現省 600 元</p>
+    </div>
+  </header>
+
+  <!-- ② 適合誰 -->
+  <section class="hb-section hb-pain">
+    <div class="hb-inner">
+      <p class="hb-eyebrow">適合誰</p>
+      <h2>你是不是也遇過這些狀況？</h2>
+      <ul>
+        <li>對魔法藥草有興趣，買了一堆書，但每本講的都不一樣，不知道該信哪個</li>
+        <li>網路上抄了配方照著做，效果時好時壞，也說不出為什麼</li>
+        <li>想調魔法油、做咒瓶，卻連藥草的基本屬性都還沒摸清楚</li>
+        <li>想走根工作者（Rootworker）這條路，但找不到有系統的中文入門課</li>
+      </ul>
+      <p class="hb-punch">問題不在你不夠認真，而是你缺的是「基礎」——不是背配方，是理解配方背後的邏輯。這門課要給你的，就是這個。</p>
+    </div>
+  </section>
+
+  <!-- ③ 品牌敘事 -->
+  <section class="hb-section hb-story">
+    <div class="hb-inner">
+      <p class="hb-eyebrow" style="color:#c9973f; border-color:#c9973f;">緣起</p>
+      <h2>巫師，本來就是藥草師</h2>
+      <p>在古老的年代，部落的巫師同時就是藥草師。他們在山上採集草藥、親自服食、經年累月觀察藥草的治療力量，逐漸和藥草的精靈達成默契。</p>
+      <p>時代改變了，醫療的部分交給了現代醫學，但藥草的「魔力」——那套關於屬性、對應、時機與意圖的知識——依然是每一個魔法工作者的根基。</p>
+      <p>想成為藥草魔法師、根工作者，想在未來調配魔法油與香，這裡就是起點。</p>
+      <img src="/assets/images/courses/hoodoo-00/story-herbalist.webp"
+           alt="山林間採集藥草的手部特寫" width="1600" height="1067" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ④ 成果轉化 -->
+  <section class="hb-section hb-gain">
+    <div class="hb-inner">
+      <p class="hb-eyebrow">學習成果</p>
+      <h2>一堂課之後，你將能夠——</h2>
+      <div class="hb-gain-grid">
+        <div class="hb-gain-card">
+          <h3>知識基礎</h3>
+          <ul>
+            <li>認識 50 支常用藥草的功能與屬性，看到配方能自己判讀</li>
+            <li>掌握月相與行星時刻表，知道「什麼時候做」和「做什麼」一樣重要</li>
+            <li>理解顏色對應與詩篇運用</li>
+          </ul>
+        </div>
+        <div class="hb-gain-card">
+          <h3>實作技術</h3>
+          <ul>
+            <li>掌握護符包、香、咒瓶、魔法粉、魔法油、酊劑、淨化水等形式的使用邏輯</li>
+            <li>學會抹油燭與藥粉燭、祝聖技巧，以及最多人忽略的「殘餘處理」</li>
+          </ul>
+        </div>
+        <div class="hb-gain-card">
+          <h3>動手實作</h3>
+          <ul>
+            <li>實際操作咒包、咒瓶的製作與魔法水的調配（實作項目依當期課程安排）</li>
+            <li>一套建構配方的思考方法——這才是最值錢的部分</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hb-gain-photos">
+        <img src="/assets/images/courses/hoodoo-00/product-mojo-bag.webp"
+             alt="學員親手製作的紅色法蘭絨護符包" width="800" height="800" loading="lazy">
+        <img src="/assets/images/courses/hoodoo-00/product-money-jar.webp"
+             alt="層疊藥草的財富咒瓶成品" width="800" height="800" loading="lazy">
+        <img src="/assets/images/courses/hoodoo-00/product-hands-crafting.webp"
+             alt="課程實作過程：將藥草舀入咒瓶" width="800" height="800" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 課程大綱 -->
+  <section class="hb-section hb-syllabus">
+    <div class="hb-inner">
+      <p class="hb-eyebrow">課程大綱</p>
+      <h2>三個階段，把基礎一次打穩</h2>
+      <div class="hb-syl-part">
+        <h3>Part 1｜觀念與時機</h3>
+        <ul>
+          <li>認識藥草魔法在各文化中的呈現方式</li>
+          <li>月相的影響——選擇適合時機</li>
+          <li>行星時刻表的運用</li>
+          <li>顏色的運用</li>
+        </ul>
+      </div>
+      <div class="hb-syl-part">
+        <h3>Part 2｜形式與技術</h3>
+        <ul>
+          <li>常見用法總覽：護符包（魔力袋、藥袋）、火盆、香、咒瓶、魔法粉、魔法油、魔法蠟燭、酊劑、淨化水</li>
+          <li>魔法蠟燭：抹油燭、藥粉燭</li>
+          <li>祝聖技巧</li>
+          <li>聖經詩篇的運用</li>
+        </ul>
+      </div>
+      <div class="hb-syl-part">
+        <h3>Part 3｜實作與體驗</h3>
+        <ul>
+          <li>認識藥草——體驗藥草的力量</li>
+          <li>製作自己的咒包</li>
+          <li>製作自己的咒瓶</li>
+          <li>認識淨化水的製作</li>
+          <li>處理殘餘</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 學員見證 -->
+  <section class="hb-section hb-proof">
+    <div class="hb-inner">
+      <p class="hb-eyebrow">學員回饋</p>
+      <h2>學員怎麼說</h2>
+      {% include testimonials.html tag="hoodoo-00" limit=4 %}
+      <p style="text-align:center; margin-top:.5rem;">
+        <a href="/testimonials/" style="color:var(--hb-red);">看更多學員回饋 →</a>
+      </p>
+      <div class="hb-trustbar">
+        <span>🌏 台灣・香港・馬來西亞學員遍布</span>
+        <span>📚 胡督系列完整課程體系</span>
+        <span>🕯️ 開課多年持續滿班</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ 老師介紹 -->
+  <section class="hb-section hb-teacher">
+    <div class="hb-inner">
+      <p class="hb-eyebrow" style="color:#c9973f; border-color:#c9973f;">授課老師</p>
+      <h2>四月老師</h2>
+      <div class="hb-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp"
+             alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>深耕身心靈領域數十年，台灣、香港、馬來西亞皆有眾多學員。曾獨自引進諸多身心靈技術與技巧，現今專研胡督魔法與混沌魔法體系，並以中國古代哲學思想與西方魔法傳統互為印證，指導自身實踐。</p>
+          <!-- TODO：補 2–3 條可驗證事實（翻譯著作／開課門數／學員數） -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧ 學習路徑 -->
+  <section class="hb-section hb-path">
+    <div class="hb-inner">
+      <p class="hb-eyebrow">學習路徑</p>
+      <h2>這是一個體系的入口，不是一堂孤立的課</h2>
+      <img src="/assets/images/shared/path-map-hoodoo.svg"
+           alt="胡督魔法系列學習路徑圖：由基礎課通往五大單元與三門選修" loading="lazy">
+      <ul style="text-align:left; line-height:2; margin-top:1.6rem;">
+        <li><strong>▶ 你在這裡：【基礎】藥草魔法師基礎課程</strong></li>
+        <li><a href="/courses/course-hoodoo-01/">【單元一】淨化療癒篇</a>：學習淨化、療癒厄運與傷害。</li>
+        <li><a href="/courses/course-hoodoo-02/">【單元二】反轉詛咒篇</a>：學習防禦並反轉惡意的魔法能量。</li>
+        <li><a href="/courses/course-hoodoo-03/">【單元三】金錢魔法與祭壇</a>：掌握吸引金錢的配方與個人財富祭壇。</li>
+        <li><a href="/courses/course-hoodoo-04/">【單元四】愛情魔法篇</a>：吸引愛情與關係增溫的經典胡督配方。</li>
+        <li><a href="/courses/course-hoodoo-05/">【單元五】關係破壞者</a>：進階探討如何切斷有害關係與阻礙。</li>
+        <li><a href="/courses/course-hoodoo-06/">【選修】魔法油配方解析</a>：深入拆解與製作核心魔法油。</li>
+        <li><a href="/courses/course-hoodoo-07/">【選修】藥草行星魔法</a>：星象學與藥草魔法結合的強大實作。</li>
+        <li><a href="/courses/course-hoodoo-08/">【選修】魔法蠟燭課</a>：蠟燭魔法的雕刻、塗油與祝聖技術。</li>
+      </ul>
+      <p class="hb-punch">基礎課是後續所有課程的先修條件。這一堂課，決定你之後每一堂課能吸收多少。</p>
+    </div>
+  </section>
+
+  <!-- ⑨ 價格與報名 -->
+  <section class="hb-section hb-price" id="signup">
+    <div class="hb-inner">
+      <p class="hb-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程費用</p>
+      <h2>報名資訊</h2>
+      <div class="hb-price-grid">
+        <!-- 線上班：可立即報名 -->
+        <div class="hb-price-card">
+          <span class="hb-plan-tag">🌐 線上班・現正招生</span>
+          <p style="margin:.2rem 0; font-size:1.05rem;">2026/8/08（六）13:00–16:00</p>
+          <p class="hb-price-old">原價 4,800 元</p>
+          <p class="hb-price-now">早鳥價 4,200 元</p>
+          <p class="hb-price-save">2026/7/25 前完成報名繳費，現省 600 元</p>
+          <ul class="hb-includes">
+            <li>在家即可上課，台港馬各地學員皆可參加</li>
+            <li>課程直播＋回放，可反覆複習實作細節</li>
+            <li>50 支藥草屬性講義</li>
+            <li>實作材料清單（開課前提供，在家即可準備）</li>
+            <li>跟著直播動手實作：咒包、咒瓶、魔法水調配（項目依當期安排）</li>
+            <li>課後提問管道</li>
+          </ul>
+          <a class="hb-cta" href="#hb-form">立即填寫報名表單</a>
+        </div>
+
+        <!-- 實體班：籌備中，收集意願名單 -->
+        <div class="hb-price-card hb-price-card--soon">
+          <span class="hb-plan-tag">🏛 台北實體班・籌備中</span>
+          <p style="margin:.2rem 0; font-size:1.05rem;">開課日期確認中｜10:00–16:00</p>
+          <p class="hb-price-now" style="font-size:1.6rem;">與線上班同價</p>
+          <p class="hb-price-save">一整天的課程時數，現場實作</p>
+          <ul class="hb-includes">
+            <li>台北市區教室，全日課程</li>
+            <li>藥草實物現場觸摸、辨識與體驗</li>
+            <li>老師現場逐一指導實作</li>
+            <li>實作成品當場完成帶回</li>
+          </ul>
+          <a class="hb-cta" href="#netcap" style="background:#3e5c48; box-shadow:0 4px 14px rgba(62,92,72,.35);">登記優先通知</a>
+          <p style="font-size:.82rem; color:#a99b82; margin-top:.8rem;">日期確定後，登記者將最先收到報名通知</p>
+        </div>
+      </div>
+      <p class="hb-deadline">⏳ 早鳥截止 7/25｜報名截止 8/01｜上課時間 8/08（六）13:00–16:00</p>
+
+      <div class="hb-form-wrap" id="hb-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdYVkTKhBbEVp-f57CAToSXBJ87bpG_r_8QWd9jFHMPdwR2OA/viewform?embedded=true"
+          width="100%"
+          height="1280"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="藥草魔法師基礎課程報名表單">
+          載入中…
+        </iframe>
+      </div>
+
+      <p class="hb-alt-signup">
+        或來信 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-藥草魔法師基礎課程">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名藥草魔法初階」，附上姓名、聯絡電話、收件地址。送出後三日內回信確認。
+      </p>
+    </div>
+  </section>
+
+  <!-- ⑩ FAQ -->
+  <section class="hb-section hb-faq">
+    <div class="hb-inner">
+      <p class="hb-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>我完全沒有魔法基礎，可以上嗎？</summary>
+        <p>可以，這門課就是為零基礎設計的，也是整個胡督系列的第一堂課。</p>
+      </details>
+      <details>
+        <summary>實作材料需要自己準備嗎？</summary>
+        <p>報名後會提供材料清單，都是容易取得的品項，開課前備妥即可跟著實作。</p>
+      </details>
+      <details>
+        <summary>線上課要怎麼做實作？</summary>
+        <p>課程中老師會逐步示範，你在家同步操作，有問題可即時提問。</p>
+      </details>
+      <details>
+        <summary>當天有事無法出席，有回放嗎？</summary>
+        <p>線上班會有回放，但要求學員當天至少一定要上線。如果當天完全無法上線，請告知我們辦理延期或退費。</p>
+      </details>
+      <details>
+        <summary>線上班和實體班該怎麼選？</summary>
+        <p>兩者課程體系相同、價格相同。線上班在家跟著直播實作，附回放；台北實體班為全日課程（10:00–16:00），可以現場觸摸辨識藥草實物、由老師逐一指導，成品當場完成帶回。實體班日期籌備中，想參加的話請先登記優先通知。</p>
+      </details>
+      <details>
+        <summary>上完這門課之後呢？</summary>
+        <p>你可以依需求選擇單元一到五（淨化、反詛咒、金錢、愛情、關係），或往選修的魔法油、行星魔法、蠟燭課深化。</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 頁尾補網 -->
+  <section class="hb-section hb-net" id="netcap">
+    <div class="hb-inner">
+      <h2>還沒準備好報名？</h2>
+      <p>想登記<strong>台北實體班優先通知</strong>，或先觀望一下——留下聯絡方式，開課與早鳥資訊第一時間通知你。</p>
+
+      <div class="hb-net-grid">
+        <!-- 左欄：LINE -->
+        <div class="hb-net-col">
+          <h3>加入 LINE 官方帳號</h3>
+          <p style="font-size:.95rem;">領取免費的「藥草魔法入門指南」</p>
+          <img src="/assets/images/shared/line-qr.webp" alt="靈火巫境 LINE 官方帳號 QR code" width="600" height="600" loading="lazy">
+          <!-- TODO：替換為實際 LINE OA 連結 -->
+          <a class="hb-cta" href="https://lin.ee/XXXXXXX" style="background:#3e5c48; box-shadow:0 4px 14px rgba(62,92,72,.35);">加入 LINE 領取指南</a>
+        </div>
+
+        <!-- 右欄：電子報（Brevo） -->
+        <div class="hb-net-col">
+          <h3>訂閱靈火巫境電子報</h3>
+          <p style="font-size:.95rem;">課程資訊與魔法知識，定期送進你的信箱</p>
+
+          <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+          <div class="sib-form">
+            <div id="sib-form-container" class="sib-form-container">
+              <div id="error-message" class="sib-form-message-panel" style="font-family:inherit; font-size:15px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px; max-width:420px; margin:0 auto .6rem;">
+                <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                  <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                    <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                  </svg>
+                  <span class="sib-form-message-panel__inner-text">您的訂閱並未儲存，請重新再填一次。</span>
+                </div>
+              </div>
+              <div id="success-message" class="sib-form-message-panel" style="font-family:inherit; font-size:15px; text-align:left; color:#085229; background-color:#e7faf0; border-color:#13ce66; border-radius:3px; max-width:420px; margin:0 auto .6rem;">
+                <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                  <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                    <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                  </svg>
+                  <span class="sib-form-message-panel__inner-text">您已成功訂閱，期待我們的訊息吧!</span>
+                </div>
+              </div>
+              <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:#fff; border-width:1px; border-style:solid; border-color:#ddd0b4; border-radius:8px; direction:ltr">
+                <form id="sib-form" method="POST" action="https://e6dc9204.sibforms.com/serve/MUIFAHgKB274mQgqRtyh6HNQmg_sGIE9_RatHZ4zDhfktXwMGsVTBvWmeh8-IXlKY7ve7MrQ5K4PmBdewML8ApwsvugH38keVR3Dt2gYSRikxQqU0_ZK1F3Jjgmoaod-yeHV4Lj-BOAe9jPj5WDGN_WldI_gCxx2tVKK5bOkLn7NybjBpUNsZhmq5-l2oEjB7t3XllvwKZF0ASSk" data-type="subscription">
+                  <div style="padding: 8px 0;">
+                    <div class="sib-input sib-form-block">
+                      <div class="form__entry entry_block">
+                        <div class="form__label-row ">
+                          <label class="entry__label" style="font-weight:700; text-align:left; font-size:15px; color:#241a12;" for="EMAIL" data-required="*">輸入您的電子郵件訂閱</label>
+                          <div class="entry__field">
+                            <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="EMAIL" data-required="true" required />
+                          </div>
+                        </div>
+                        <label class="entry__error entry__error--primary" style="font-size:15px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
+                        <label class="entry__specification" style="font-size:12px; color:#8390A4; text-align:left;">
+                          請正確輸入電子郵件地址，例如：abc@xyz.com
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="padding: 8px 0;">
+                    <div class="sib-form-block" style="text-align:left">
+                      <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; font-weight:700; color:#FFFFFF; background-color:#8c3b2e; border-width:0px; border-radius:4px;" form="sib-form" type="submit">
+                        <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                          <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                        </svg>
+                        訂閱電子報
+                      </button>
+                    </div>
+                  </div>
+                  <input type="text" name="email_address_check" value="" class="input--hidden">
+                  <input type="hidden" name="locale" value="en">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brevo 表單腳本 -->
+  <script>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+    window.LOCALE = 'en';
+    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "您提供的資料是無效或錯誤的，請重新檢查一次喔!";
+    window.REQUIRED_ERROR_MESSAGE = "此欄位為必填 ";
+    window.GENERIC_INVALID_MESSAGE = "您提供的資料是無效或錯誤的，請重新檢查一次喔!";
+    window.INVALID_NUMBER = "您提供的資料是無效或錯誤的，請重新檢查一次喔!";
+    window.INVALID_DATE = "Please enter a valid date";
+    window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
+    window.translation = {
+      common: {
+        selectedList: '{quantity} list selected',
+        selectedLists: '{quantity} lists selected',
+        selectedOption: '{quantity} selected',
+        selectedOptions: '{quantity} selected',
+      }
+    };
+    var AUTOHIDE = Boolean(1);
+  </script>
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+</div>
