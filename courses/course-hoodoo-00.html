@@ -87,12 +87,16 @@ image: /assets/images/courses/hoodoo-00/og-herb-basics.jpg
   /* 價格 */
   .hb-price { background:var(--hb-dark); color:var(--hb-paper); }
   .hb-price h2 { color:#fff; }
+  .hb-price-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; margin:1.4rem auto; max-width:820px; }
   .hb-price-card { background:var(--hb-dark2); border:1px solid rgba(201,151,63,.5); border-radius:10px;
-                   padding:2rem 1.6rem; max-width:520px; margin:1.4rem auto; text-align:center; }
+                   padding:2rem 1.6rem; text-align:center; }
+  .hb-price-card--soon { border-style:dashed; }
+  .hb-plan-tag { display:inline-block; font-size:.85rem; letter-spacing:.2em; color:var(--hb-gold);
+                 border:1px solid var(--hb-gold); border-radius:999px; padding:.2rem 1rem; margin-bottom:1rem; }
   .hb-price-old { text-decoration:line-through; color:#a99b82; font-size:1.05rem; }
-  .hb-price-now { font-size:2.2rem; color:var(--hb-gold); font-weight:700; margin:.3rem 0; }
+  .hb-price-now { font-size:2rem; color:var(--hb-gold); font-weight:700; margin:.3rem 0; }
   .hb-price-save { color:var(--hb-gold-soft); font-size:.95rem; }
-  .hb-includes { text-align:left; max-width:420px; margin:1.4rem auto; padding-left:1.3rem; }
+  .hb-includes { text-align:left; margin:1.4rem auto; padding-left:1.3rem; font-size:.95rem; }
   .hb-deadline { text-align:center; font-size:.95rem; color:var(--hb-gold-soft);
                  letter-spacing:.08em; margin-bottom:1.6rem; }
   .hb-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:2rem; }
@@ -125,7 +129,7 @@ image: /assets/images/courses/hoodoo-00/og-herb-basics.jpg
 
   @media (max-width: 768px) {
     .hb-section { padding:2.6rem 1.1rem; }
-    .hb-gain-grid, .hb-gain-photos, .hb-net-grid { grid-template-columns:1fr; }
+    .hb-gain-grid, .hb-gain-photos, .hb-net-grid, .hb-price-grid { grid-template-columns:1fr; }
     .hb-teacher-flex { flex-direction:column; }
     .hb-teacher-flex img { width:100%; max-width:320px; }
     .hb-hero { padding:3.5rem 1.1rem 3rem; }
@@ -147,8 +151,8 @@ image: /assets/images/courses/hoodoo-00/og-herb-basics.jpg
       <h1>50 支藥草，<br>是你進入魔法世界的第一把鑰匙</h1>
       <p class="hb-sub">一堂課，從「看得懂配方」到「自己設計配方」。課程結束時，你手上會有親手做出的護符包與財富咒瓶。</p>
       <div class="hb-hero-meta">
-        <span>📅 2026/8/08（六）13:00–16:00</span>
-        <span>🌐 線上遠距</span>
+        <span>📅 線上班 2026/8/08（六）13:00–16:00</span>
+        <span>🏛 台北實體班籌備中</span>
         <span>🎓 零基礎可上</span>
       </div>
       <a class="hb-cta" href="#signup">搶早鳥價，立即報名</a>
@@ -321,18 +325,39 @@ image: /assets/images/courses/hoodoo-00/og-herb-basics.jpg
     <div class="hb-inner">
       <p class="hb-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程費用</p>
       <h2>報名資訊</h2>
-      <div class="hb-price-card">
-        <p class="hb-price-old">原價 4,800 元</p>
-        <p class="hb-price-now">早鳥價 4,200 元</p>
-        <p class="hb-price-save">2026/7/25 前完成報名繳費，現省 600 元</p>
-        <ul class="hb-includes">
-          <li>3 小時線上直播課程</li>
-          <li>50 支藥草屬性講義</li>
-          <li>實作材料清單（開課前提供，在家即可準備）</li>
-          <li>親手完成護符包 ×1、財富咒瓶 ×1</li>
-          <li>課後提問管道</li>
-        </ul>
-        <a class="hb-cta" href="#hb-form">立即填寫報名表單</a>
+      <div class="hb-price-grid">
+        <!-- 線上班：可立即報名 -->
+        <div class="hb-price-card">
+          <span class="hb-plan-tag">🌐 線上班・現正招生</span>
+          <p style="margin:.2rem 0; font-size:1.05rem;">2026/8/08（六）13:00–16:00</p>
+          <p class="hb-price-old">原價 4,800 元</p>
+          <p class="hb-price-now">早鳥價 4,200 元</p>
+          <p class="hb-price-save">2026/7/25 前完成報名繳費，現省 600 元</p>
+          <ul class="hb-includes">
+            <li>3 小時線上直播課程</li>
+            <li>50 支藥草屬性講義</li>
+            <li>實作材料清單（開課前提供，在家即可準備）</li>
+            <li>親手完成護符包 ×1、財富咒瓶 ×1</li>
+            <li>課程回放＋課後提問管道</li>
+          </ul>
+          <a class="hb-cta" href="#hb-form">立即填寫報名表單</a>
+        </div>
+
+        <!-- 實體班：籌備中，收集意願名單 -->
+        <div class="hb-price-card hb-price-card--soon">
+          <span class="hb-plan-tag">🏛 台北實體班・籌備中</span>
+          <p style="margin:.2rem 0; font-size:1.05rem;">開課日期確認中｜10:00–16:00</p>
+          <p class="hb-price-now" style="font-size:1.6rem;">與線上班同價</p>
+          <p class="hb-price-save">一整天的課程時數，現場實作</p>
+          <ul class="hb-includes">
+            <li>台北市區教室，全日課程</li>
+            <li>藥草實物現場觸摸、辨識與體驗</li>
+            <li>老師現場逐一指導實作</li>
+            <li>護符包、財富咒瓶當場完成帶回</li>
+          </ul>
+          <a class="hb-cta" href="#netcap" style="background:#3e5c48; box-shadow:0 4px 14px rgba(62,92,72,.35);">登記優先通知</a>
+          <p style="font-size:.82rem; color:#a99b82; margin-top:.8rem;">日期確定後，登記者將最先收到報名通知</p>
+        </div>
       </div>
       <p class="hb-deadline">⏳ 早鳥截止 7/25｜報名截止 8/01｜上課時間 8/08（六）13:00–16:00</p>
 
@@ -375,7 +400,11 @@ image: /assets/images/courses/hoodoo-00/og-herb-basics.jpg
       </details>
       <details>
         <summary>當天有事無法出席，有回放嗎？</summary>
-        <p>本課程會有回放，但要求學員當天至少一定要上線。如果當天完全無法上線，請告知我們辦理延期或退費。</p>
+        <p>線上班會有回放，但要求學員當天至少一定要上線。如果當天完全無法上線，請告知我們辦理延期或退費。</p>
+      </details>
+      <details>
+        <summary>線上班和實體班該怎麼選？</summary>
+        <p>兩者課程體系相同、價格相同。線上班在家跟著直播實作，附回放；台北實體班為全日課程（10:00–16:00），可以現場觸摸辨識藥草實物、由老師逐一指導，成品當場完成帶回。實體班日期籌備中，想參加的話請先登記優先通知。</p>
       </details>
       <details>
         <summary>上完這門課之後呢？</summary>
@@ -385,10 +414,10 @@ image: /assets/images/courses/hoodoo-00/og-herb-basics.jpg
   </section>
 
   <!-- 頁尾補網 -->
-  <section class="hb-section hb-net">
+  <section class="hb-section hb-net" id="netcap">
     <div class="hb-inner">
       <h2>還沒準備好報名？</h2>
-      <p>先留下聯絡方式，開課與早鳥資訊第一時間通知你，不錯過任何優惠。</p>
+      <p>想登記<strong>台北實體班優先通知</strong>，或先觀望一下——留下聯絡方式，開課與早鳥資訊第一時間通知你。</p>
 
       <div class="hb-net-grid">
         <!-- 左欄：LINE -->
