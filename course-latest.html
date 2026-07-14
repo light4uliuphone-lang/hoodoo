@@ -1,0 +1,231 @@
+---
+layout: default
+title: 近期招生課程 - 靈火巫境｜四月老師
+description: 靈火巫境近期正在招生的魔法課程一覽——胡督、藥草、策略、現代魔法。依開課日期排列，早鳥優惠與報名截止一目了然，快速找到你想報名的課。
+permalink: /course/latest/
+---
+
+<style>
+  .lt { --lt-ink:#241a12; --lt-paper:#f4ecdd; --lt-dark:#14100b; --lt-dark2:#1f1810;
+        --lt-gold:#c9973f; --lt-gold-soft:#e6cfa0; --lt-teal:#1a5f5f; --lt-red:#8c3b2e;
+        color:var(--lt-ink); line-height:1.8; }
+  .lt * { box-sizing:border-box; }
+  .lt .wrap { max-width:1080px; margin:0 auto; padding:0 1.5rem; }
+
+  /* Hero */
+  .lt-hero { background:radial-gradient(ellipse at 50% 30%, #2a1f16, #14100b 70%); color:var(--lt-paper);
+             text-align:center; padding:4.5rem 1.5rem 3.5rem; }
+  .lt-hero .eyebrow { display:inline-block; font-size:.82rem; letter-spacing:.35em; color:var(--lt-gold);
+                      border-bottom:1px solid var(--lt-gold); padding-bottom:.3rem; margin-bottom:1rem; }
+  .lt-hero h1 { font-size:clamp(1.8rem,4.5vw,2.6rem); color:#fff; letter-spacing:.06em; margin:.5rem 0 1rem; }
+  .lt-hero p { color:var(--lt-gold-soft); max-width:32em; margin:0 auto; }
+
+  /* 篩選 */
+  .lt-filter { background:var(--lt-dark2); padding:1.2rem 1.5rem; position:sticky; top:0; z-index:10;
+               border-bottom:1px solid rgba(201,151,63,.25); }
+  .lt-filter-inner { max-width:1080px; margin:0 auto; display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; }
+  .lt-fbtn { background:transparent; border:1px solid rgba(201,151,63,.5); color:var(--lt-gold-soft);
+             padding:.45rem 1.2rem; border-radius:999px; font-size:.9rem; cursor:pointer; letter-spacing:.05em;
+             font-family:inherit; transition:all .15s ease; }
+  .lt-fbtn:hover { border-color:var(--lt-gold); color:#fff; }
+  .lt-fbtn.active { background:var(--lt-gold); color:#1a1109; border-color:var(--lt-gold); font-weight:700; }
+
+  /* 課程列表 */
+  .lt-list { background:var(--lt-paper); padding:3.5rem 0 4.5rem; }
+  .lt-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
+  .lt-card { background:#fff; border:1px solid #ddd0b4; border-radius:10px; overflow:hidden;
+             display:flex; flex-direction:column; transition:transform .15s ease, box-shadow .15s ease; }
+  .lt-card:hover { transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,.1); }
+  .lt-card .status { font-size:.75rem; font-weight:700; letter-spacing:.1em; padding:.4rem 1.2rem; color:#fff; }
+  .lt-card .status.soon { background:var(--lt-red); }
+  .lt-card .status.open { background:var(--lt-teal); }
+  .lt-card .status.ended { background:#9a8a6c; }
+  .lt-card .top { padding:1rem 1.2rem 0; display:flex; gap:.5rem; flex-wrap:wrap; }
+  .lt-card .badge { font-size:.72rem; font-weight:700; color:#fff; padding:.15rem .7rem; border-radius:4px; letter-spacing:.05em; }
+  .lt-card .body { padding:.7rem 1.2rem 1.3rem; display:flex; flex-direction:column; flex:1; }
+  .lt-card h3 { font-size:1.08rem; margin:.3rem 0 .6rem; letter-spacing:.02em; line-height:1.5; }
+  .lt-card p { font-size:.86rem; color:#5a4a35; flex:1; margin:0 0 1rem; line-height:1.7; }
+  .lt-card .meta { font-size:.82rem; color:#8c6a3a; margin-bottom:.3rem; }
+  .lt-card .meta .date { font-weight:700; color:var(--lt-ink); }
+  .lt-card .price { color:var(--lt-red); font-weight:700; font-size:.95rem; margin-bottom:.9rem; }
+  .lt-card .go { display:inline-block; background:var(--lt-teal); color:#fff; text-decoration:none;
+                 text-align:center; padding:.65rem; border-radius:4px; font-weight:700; font-size:.9rem; letter-spacing:.05em; }
+  .lt-empty { text-align:center; color:#8c6a3a; padding:3rem 0; display:none; }
+
+  .lt-more { text-align:center; margin-top:3rem; }
+  .lt-more a { color:var(--lt-teal); font-weight:700; text-decoration:none; font-size:1.05rem; }
+
+  @media (max-width:768px){
+    .lt-grid { grid-template-columns:1fr; }
+  }
+</style>
+
+<div class="lt">
+
+  <header class="lt-hero">
+    <p class="eyebrow">近 期 招 生</p>
+    <h1>最近開課的魔法課程</h1>
+    <p>以下是靈火巫境近期正在招生的課程，依開課日期排列。找到想上的課，把握早鳥優惠。</p>
+  </header>
+
+  <div class="lt-filter">
+    <div class="lt-filter-inner">
+      <button class="lt-fbtn active" data-filter="all">全部</button>
+      <button class="lt-fbtn" data-filter="hoodoo">胡督・藥草</button>
+      <button class="lt-fbtn" data-filter="strategy">策略魔法</button>
+      <button class="lt-fbtn" data-filter="modern">現代・混沌</button>
+      <button class="lt-fbtn" data-filter="online">遠距</button>
+      <button class="lt-fbtn" data-filter="onsite">實體</button>
+    </div>
+  </div>
+
+  <section class="lt-list">
+    <div class="wrap">
+      <div class="lt-grid" id="lt-grid">
+
+        <!-- 印度式胡督豐盛魔法 -->
+        <article class="lt-card" data-cat="hoodoo online" data-date="2026-07-26">
+          <div class="status soon">⏰ 即將開課</div>
+          <div class="top"><span class="badge" style="background:#9c27b0;">遠距</span><span class="badge" style="background:#ff9800;">新課</span></div>
+          <div class="body">
+            <h3>印度式胡督豐盛魔法</h3>
+            <p>將印度吠陀與胡督根源工作融合的線上系統。家庭豐盛祭壇、象神與拉克希米供養、真言呼吸、招財沐浴清理，打造財富磁場。</p>
+            <div class="meta"><span class="date">📅 7/26（日）</span>13:00–16:00</div>
+            <div class="meta">👨‍🏫 四月老師</div>
+            <div class="price">💰 首開 3,800（7/18 止）</div>
+            <a class="go" href="/courses/course-hoodoo-10/">了解更多</a>
+          </div>
+        </article>
+
+        <!-- 藥草行星魔法 -->
+        <article class="lt-card" data-cat="hoodoo online" data-date="2026-08-01">
+          <div class="status open">✓ 報名中</div>
+          <div class="top"><span class="badge" style="background:#9c27b0;">遠距</span><span class="badge" style="background:#607d8b;">高級</span></div>
+          <div class="body">
+            <h3>藥草行星魔法（胡督單元）</h3>
+            <p>跨接胡督與占星。以符印與行星魔方架設祭壇，製作行星魔力袋、行星瓶、行星燭，釀造行星油與酊劑，實踐命運優化。</p>
+            <div class="meta"><span class="date">📅 8/01（六）</span>13:00–16:00</div>
+            <div class="meta">👨‍🏫 四月老師</div>
+            <div class="price">💰 早鳥 8,800</div>
+            <a class="go" href="/courses/course-hoodoo-07/">了解更多</a>
+          </div>
+        </article>
+
+        <!-- 魔法油配方解析 -->
+        <article class="lt-card" data-cat="hoodoo online" data-date="2026-08-02">
+          <div class="status open">✓ 報名中</div>
+          <div class="top"><span class="badge" style="background:#9c27b0;">遠距</span><span class="badge" style="background:#607d8b;">中級</span></div>
+          <div class="body">
+            <h3>魔法油配方解析篇</h3>
+            <p>深入八種核心胡督配方，學習製作魔法油與酊劑，掌握逆轉藥草屬性、配方微調，以及魔法油祝福保存箱的製作。</p>
+            <div class="meta"><span class="date">📅 8/02（日）</span>13:00–16:00</div>
+            <div class="meta">👨‍🏫 四月老師</div>
+            <div class="price">💰 早鳥 8,800</div>
+            <a class="go" href="/courses/course-hoodoo-06/">了解更多</a>
+          </div>
+        </article>
+
+        <!-- 藥草基礎 -->
+        <article class="lt-card" data-cat="hoodoo online" data-date="2026-08-08">
+          <div class="status open">✓ 報名中</div>
+          <div class="top"><span class="badge" style="background:#9c27b0;">遠距</span><span class="badge" style="background:#607d8b;">初級</span></div>
+          <div class="body">
+            <h3>藥草魔法師基礎課程</h3>
+            <p>胡督藥草魔法的第一步。認識五十種常用藥草的功能與屬性，建構配方調配邏輯，實際做出護符包與財富咒瓶。</p>
+            <div class="meta"><span class="date">📅 8/08（六）</span>13:00–16:00</div>
+            <div class="meta">👨‍🏫 四月老師</div>
+            <div class="price">💰 早鳥 4,200</div>
+            <a class="go" href="/courses/course-hoodoo-00/">了解更多</a>
+          </div>
+        </article>
+
+        <!-- 胡督淨化 -->
+        <article class="lt-card" data-cat="hoodoo online" data-date="2026-08-09">
+          <div class="status open">✓ 報名中</div>
+          <div class="top"><span class="badge" style="background:#9c27b0;">遠距</span><span class="badge" style="background:#607d8b;">單元一</span></div>
+          <div class="body">
+            <h3>胡督淨化魔法（單元一）</h3>
+            <p>淨化與療癒是一切咒術的根本。學習淨化浴、雞蛋清理、聖水製作與多種功能型沐浴水配方，去除厄運與詛咒的侵擾。</p>
+            <div class="meta"><span class="date">📅 8/09（日）</span>13:00–16:00</div>
+            <div class="meta">👨‍🏫 四月老師</div>
+            <div class="price">💰 早鳥 4,200</div>
+            <a class="go" href="/courses/course-hoodoo-01/">了解更多</a>
+          </div>
+        </article>
+
+        <!-- 金錢策略初階 -->
+        <article class="lt-card" data-cat="strategy onsite" data-date="2026-08-15">
+          <div class="status open">✓ 報名中</div>
+          <div class="top"><span class="badge" style="background:#4caf50;">實體</span><span class="badge" style="background:#ff5722;">金錢策略</span></div>
+          <div class="body">
+            <h3>金錢策略魔法初階</h3>
+            <p>策略魔法系統入門。以 16 張木星策略符印對應六大金錢議題，傳授網狀、序列、鏈鎖式三大許願法，讓願望精準落地。</p>
+            <div class="meta"><span class="date">📅 8/15–16（六日）</span>10:00–16:30</div>
+            <div class="meta">👨‍🏫 歐比路老師</div>
+            <div class="price">💰 早鳥 11,000</div>
+            <a class="go" href="/courses/course-018/">了解更多</a>
+          </div>
+        </article>
+
+        <!-- 金錢魔術盒 -->
+        <article class="lt-card" data-cat="strategy onsite" data-date="2026-08-15">
+          <div class="status open">✓ 報名中</div>
+          <div class="top"><span class="badge" style="background:#4caf50;">實體</span><span class="badge" style="background:#ff5722;">實作</span></div>
+          <div class="body">
+            <h3>金錢策略魔法實作：金錢魔術盒</h3>
+            <p>策略魔法的實作延伸。搭配所羅門王大鑰封印，親手製作專屬金錢魔術盒，作為吸引財富的日常顯化工具。（需修畢初階）</p>
+            <div class="meta"><span class="date">📅 8/15（六）</span>17:00–18:00</div>
+            <div class="meta">👨‍🏫 歐比路老師</div>
+            <div class="price">💰 特惠 2,800</div>
+            <a class="go" href="/courses/course-021/">了解更多</a>
+          </div>
+        </article>
+
+        <!-- 職場保護配方 -->
+        <article class="lt-card" data-cat="strategy onsite" data-date="2026-08-16">
+          <div class="status open">✓ 報名中</div>
+          <div class="top"><span class="badge" style="background:#4caf50;">實體</span><span class="badge" style="background:#ff5722;">配方邏輯</span></div>
+          <div class="body">
+            <h3>金錢策略魔法配方邏輯一：職場保護配方解析</h3>
+            <p>以效益、成本、風險拆解職場保護配方。透過六大策略重構專屬配方，整合配方、策略、許願，穩定工作並增加升遷機會。（需修畢初階）</p>
+            <div class="meta"><span class="date">📅 8/16（日）</span>17:00–18:30</div>
+            <div class="meta">👨‍🏫 歐比路老師</div>
+            <div class="price">💰 特惠 2,800</div>
+            <a class="go" href="/courses/course-022/">了解更多</a>
+          </div>
+        </article>
+
+      </div>
+      <p class="lt-empty" id="lt-empty">這個分類目前沒有招生中的課程，看看其他分類吧。</p>
+
+      <div class="lt-more">
+        <a href="/course/">瀏覽全部課程分類 →</a>
+      </div>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#c9973f" bg="#ece1cc" %}
+
+</div>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('.lt-fbtn');
+  var cards = document.querySelectorAll('.lt-card');
+  var empty = document.getElementById('lt-empty');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      btns.forEach(function(x){ x.classList.remove('active'); });
+      b.classList.add('active');
+      var f = b.dataset.filter;
+      var shown = 0;
+      cards.forEach(function(c){
+        var match = (f === 'all') || c.dataset.cat.indexOf(f) !== -1;
+        c.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      empty.style.display = shown === 0 ? 'block' : 'none';
+    });
+  });
+})();
+</script>
