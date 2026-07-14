@@ -1,225 +1,268 @@
 ---
 layout: default
-title: 四月老師 - 魔法課程中心 | 胡督 Hoodoo、藥草魔法、策略魔法教學
-description: 探索四月老師的魔法教學中心，提供專業胡督(Hoodoo)傳統、藥草魔法、策略魔法與符印課程。透過邏輯化的教學，助您掌握能量顯化技術，在金錢、人際與自我保護上獲得質變。立即查看最新實體與遠距課程資訊。
+title: 四月老師 - 靈火巫境｜西方魔法系統化教學（胡督、藥草、混沌、策略魔法）
+description: 靈火巫境由四月老師主持，為華語世界提供系統化的西方魔法教學——胡督 Hoodoo、藥草魔法、混沌魔法、策略魔法與符印。免費電子書、線上與實體課程，帶你把神祕學變成能落實於生活的技術。
 ---
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>探索魔法的力量</h1>
-        <p>透過策略魔法、藥草魔法與胡督傳統，重新定義您的人生</p>
-        <a href="/course/" class="cta-button">探索全部課程</a>
+<style>
+  .home { --h-ink:#241a12; --h-paper:#f4ecdd; --h-paper2:#ece1cc;
+          --h-dark:#14100b; --h-dark2:#1f1810; --h-gold:#c9973f; --h-gold-soft:#e6cfa0;
+          --h-teal:#1a5f5f; --h-red:#8c3b2e; --h-plum:#5a3a52;
+          color:var(--h-ink); line-height:1.85; }
+  .home * { box-sizing:border-box; }
+  .home .wrap { max-width:1080px; margin:0 auto; padding:0 1.5rem; }
+  .home .eyebrow { display:inline-block; font-size:.82rem; letter-spacing:.35em;
+                   color:var(--h-gold); border-bottom:1px solid var(--h-gold); padding-bottom:.3rem; }
+  .home h2.sec-title { font-size:clamp(1.5rem,3.5vw,2rem); letter-spacing:.05em; margin:1rem 0 2.5rem; }
+  .home .cta { display:inline-block; text-decoration:none; font-weight:700; letter-spacing:.1em;
+               padding:.9rem 2.2rem; border-radius:4px; transition:transform .15s ease; }
+  .home .cta-solid { background:var(--h-gold); color:#1a1109 !important; box-shadow:0 4px 14px rgba(201,151,63,.3); }
+  .home .cta-ghost { border:1px solid var(--h-gold-soft); color:var(--h-gold-soft) !important; }
+  .home .cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .home .cta{transition:none} .home .cta:hover{transform:none} }
+
+  .home-hero { position:relative; background:radial-gradient(ellipse at 50% 20%, #2a1f16 0%, #14100b 70%);
+               color:var(--h-paper); padding:6rem 1.5rem 5rem; text-align:center; overflow:hidden; }
+  .home-hero::before { content:""; position:absolute; top:-30%; left:50%; transform:translateX(-50%);
+                       width:600px; height:600px; border-radius:50%;
+                       background:radial-gradient(circle, rgba(201,151,63,.12) 0%, transparent 60%); }
+  .home-hero-inner { position:relative; max-width:760px; margin:0 auto; }
+  .home-hero .glyph { font-size:2rem; color:var(--h-gold); margin-bottom:1.5rem; }
+  .home-hero h1 { font-size:clamp(2rem,5.5vw,3.2rem); line-height:1.4; color:#fff; margin:.5rem 0 1.5rem;
+                  letter-spacing:.06em; }
+  .home-hero .lede { font-size:1.15rem; color:var(--h-gold-soft); max-width:30em; margin:0 auto 1rem; }
+  .home-hero .scope { font-size:.95rem; color:#b09a76; letter-spacing:.2em; margin:1.5rem 0 2.5rem; }
+  .home-hero .btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+  .home-sec { padding:5rem 0; }
+  .home-sec.center { text-align:center; }
+
+  .home-books { background:var(--h-dark2); color:var(--h-paper); }
+  .home-books .book-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:1rem; text-align:left; }
+  .home-book { background:linear-gradient(150deg, #2a1f16, #1a1309); border:1px solid rgba(201,151,63,.35);
+               border-radius:10px; padding:2rem; display:flex; flex-direction:column; }
+  .home-book .tag { display:inline-block; font-size:.75rem; letter-spacing:.2em; color:var(--h-gold);
+                    border:1px solid var(--h-gold); border-radius:999px; padding:.15rem .9rem; margin-bottom:1rem; align-self:flex-start; }
+  .home-book h3 { font-size:1.4rem; color:#fff; margin:.3rem 0 .8rem; letter-spacing:.04em; }
+  .home-book p.desc { font-size:.95rem; color:#d8c9ad; margin-bottom:1.5rem; flex:1; }
+  .home-book .get-label { font-size:.85rem; color:#b09a76; letter-spacing:.05em; margin:0 0 .8rem; }
+  .home-book .get-btns { display:flex; gap:.7rem; flex-wrap:wrap; }
+  .home-book .btn-line { background:#3e5c48; color:#fff !important; }
+  .home-book .btn-mail { background:var(--h-gold); color:#1a1109 !important; }
+  .home-book .get-btns a { display:inline-block; text-decoration:none; font-weight:700; font-size:.9rem;
+                           letter-spacing:.05em; padding:.7rem 1.4rem; border-radius:4px; transition:transform .15s ease; }
+  .home-book .get-btns a:hover { transform:translateY(-2px); }
+  .home-book .hint { font-size:.78rem; color:#8c7a5c; margin-top:.8rem; }
+
+  .home-cats { background:var(--h-paper); }
+  .home-cat-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.3rem; margin-top:1rem; }
+  .home-cat { display:block; text-decoration:none; color:inherit; border-radius:10px; overflow:hidden;
+              border:1px solid #ddd0b4; background:#fff; transition:transform .15s ease, box-shadow .15s ease; }
+  .home-cat:hover { transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,.1); }
+  .home-cat .bar { height:6px; }
+  .home-cat .body { padding:1.6rem 1.8rem; text-align:left; }
+  .home-cat h3 { font-size:1.25rem; margin:0 0 .5rem; letter-spacing:.04em; }
+  .home-cat p { font-size:.92rem; color:#5a4a35; margin:0; }
+  .home-cat .go { margin-top:1rem; font-size:.85rem; font-weight:700; letter-spacing:.1em; }
+
+  .home-featured { background:var(--h-paper2); }
+  .home-course-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.3rem; margin-top:1rem; }
+  .home-course { background:#fff; border:1px solid #ddd0b4; border-radius:10px; overflow:hidden;
+                 display:flex; flex-direction:column; text-align:left; }
+  .home-course .top { padding:1rem 1.2rem 0; display:flex; gap:.5rem; }
+  .home-course .badge { font-size:.72rem; font-weight:700; color:#fff; padding:.15rem .7rem; border-radius:4px; letter-spacing:.05em; }
+  .home-course .body { padding:.8rem 1.2rem 1.2rem; display:flex; flex-direction:column; flex:1; }
+  .home-course h3 { font-size:1.05rem; margin:.3rem 0 .6rem; letter-spacing:.03em; }
+  .home-course p { font-size:.88rem; color:#5a4a35; flex:1; margin:0 0 1rem; }
+  .home-course .meta { font-size:.82rem; color:#8c6a3a; margin-bottom:.8rem; }
+  .home-course .price { color:var(--h-red); font-weight:700; }
+  .home-course .go { color:var(--h-teal); font-weight:700; text-decoration:none; font-size:.9rem; }
+
+  .home-proof { background:var(--h-paper); }
+
+  .home-teacher { background:var(--h-dark2); color:var(--h-paper); }
+  .home-teacher .flex { display:flex; gap:2.5rem; align-items:center; max-width:820px; margin:0 auto; }
+  .home-teacher img { width:220px; height:auto; border-radius:10px; flex:0 0 auto; border:1px solid rgba(201,151,63,.4); }
+  .home-teacher h2 { color:#fff; }
+  .home-teacher p { color:#d8c9ad; }
+  .home-teacher .facts { display:flex; gap:2rem; margin-top:1.5rem; flex-wrap:wrap; }
+  .home-teacher .fact b { display:block; font-size:1.6rem; color:var(--h-gold); }
+  .home-teacher .fact span { font-size:.82rem; color:#b09a76; letter-spacing:.05em; }
+
+  @media (max-width:768px){
+    .home-hero { padding:4rem 1.2rem 3.5rem; }
+    .home-sec { padding:3.5rem 0; }
+    .home-books .book-grid, .home-cat-grid, .home-course-grid { grid-template-columns:1fr; }
+    .home-teacher .flex { flex-direction:column; text-align:center; }
+    .home-teacher img { width:60%; max-width:220px; }
+    .home-teacher .facts { justify-content:center; }
+  }
+</style>
+
+<div class="home">
+
+  <header class="home-hero">
+    <div class="home-hero-inner">
+      <div class="glyph">✦</div>
+      <p class="eyebrow">靈 火 巫 境</p>
+      <h1>西方魔法的系統化教學，<br>為華語世界而生</h1>
+      <p class="lede">把繁複難解的神祕學，整理成能真正落實於生活的技術。從胡督咒術到混沌魔法，一步步帶你走進來。</p>
+      <p class="scope">胡督 Hoodoo ・ 藥草魔法 ・ 混沌魔法 ・ 策略魔法 ・ 符印</p>
+      <div class="btns">
+        <a class="cta cta-solid" href="/course/latest/">探索近期課程</a>
+        <a class="cta cta-ghost" href="#free-books">免費領取電子書</a>
+      </div>
     </div>
-</section>
+  </header>
 
-<section class="featured-courses">
-    <div class="container">
-        <h2 style="color: #1a5f5f; text-align: center; margin-bottom: 3rem;">最新課程</h2>
-        <div class="courses-grid">
-
-            <div class="course-card">
-                <div style="display: flex; gap: 8px; padding: 1rem 1rem 0;">
-                    <span style="background-color: #4caf50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">實體</span>
-                    <span style="background-color: #ff9800; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">新課</span>
-                </div>
-                <h3 style="margin-top: 1rem; padding: 0 1rem;">大地魔法：來自土地的靈性恩賜</h3>
-                <div style="padding: 0 1rem;">
-                    <p>除了魔法藥草，真正承載大地力量的往往是我們腳下的「塵土與場域」。本課程將深入理解土地與靈性力量的連結，介紹常見 15 種塵土與場域的魔法運用、進入場域的獻祭儀式，以及場域與藥草間的魔法策略搭配。</p>
-                    <div class="course-info">
-                        <div style="margin-bottom: 5px; color: #ff9800; font-weight: bold;">📅 2026/7/11 (六) 14:00-16:00</div>
-                        <span class="price">首開價：2800元</span>
-                        <span class="teacher">歐比路老師</span>
-                    </div>
-                    <a href="/courses/course-020/" class="learn-more">了解更多</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div style="display: flex; gap: 8px; padding: 1rem 1rem 0;">
-                    <span style="background-color: #4caf50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">實體</span>
-                    <span style="background-color: #ff9800; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">新課</span>
-                </div>
-                <h3 style="margin-top: 1rem; padding: 0 1rem;">現代魔法－保護符印實作</h3>
-                <div style="padding: 0 1rem;">
-                    <p>混沌魔法實踐系統。相較於傳統驅邪避煞，本課程聚焦於「穩定自身狀態」以抵禦外界消耗。提供四張專屬設計之保護符印，詳細講解符印脈絡、日常啟動與維護技術，建立個人的能量界線。</p>
-                    <div class="course-info">
-                        <div style="margin-bottom: 5px; color: #ff9800; font-weight: bold;">📅 2026/7/11 (六) 17:00-18:30</div>
-                        <span class="price">首開價：2800元</span>
-                        <span class="teacher">歐比路老師</span>
-                    </div>
-                    <a href="/courses/course-modern-07/" class="learn-more">了解更多</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div style="display: flex; gap: 8px; padding: 1rem 1rem 0;">
-                    <span style="background-color: #9c27b0; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">遠距</span>
-                    <span style="background-color: #ff9800; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">新課</span>
-                </div>
-                <h3 style="margin-top: 1rem; padding: 0 1rem;">印度式胡督豐盛魔法教學</h3>
-                <div style="padding: 0 1rem;">
-                    <p>少數將印度吠陀與胡督根源工作完整融合的線上技術系統。結合家庭豐盛祭壇、象神與拉克希米女神供養，並搭配真言呼吸科學、胡督藥草粉筆與招財空間沐浴清理，打造真實財富磁場。</p>
-                    <div class="course-info">
-                        <div style="margin-bottom: 5px; color: #ff9800; font-weight: bold;">📅 2026/7/26 (日) 13:00-16:00</div>
-                        <span class="price">首開價：3800元 (7/18止)</span>
-                        <span class="teacher">四月老師</span>
-                    </div>
-                    <a href="/courses/course-hoodoo-10/" class="learn-more">了解更多</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div style="display: flex; gap: 8px; padding: 1rem 1rem 0;">
-                    <span style="background-color: #9c27b0; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">遠距</span>
-                    <span style="background-color: #607d8b; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">高級</span>
-                </div>
-                <h3 style="margin-top: 1rem; padding: 0 1rem;">藥草行星魔法-胡督單元</h3>
-                <div style="padding: 0 1rem;">
-                    <p>跨接胡督與占星系統。運用符印與行星魔方架設祭壇，製作行星魔力袋、行星瓶、行星燭，並釀造行星油與酊劑，實踐更高層次的命運優化。</p>
-                    <div class="course-info">
-                        <div style="margin-bottom: 5px; color: #ff9800; font-weight: bold;">📅 2026/8/01 (六) 13:00-16:00</div>
-                        <span class="price">早鳥：8800元</span>
-                        <span class="teacher">四月老師</span>
-                    </div>
-                    <a href="/courses/course-hoodoo-07/" class="learn-more">了解更多</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div style="display: flex; gap: 8px; padding: 1rem 1rem 0;">
-                    <span style="background-color: #9c27b0; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">遠距</span>
-                    <span style="background-color: #607d8b; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">中級</span>
-                </div>
-                <h3 style="margin-top: 1rem; padding: 0 1rem;">魔法油配方解析篇</h3>
-                <div style="padding: 0 1rem;">
-                    <p>深入八種核心胡督配方，學習製作魔法油與酊劑，掌握逆轉藥草屬性、配方微調，以及魔法油祝福保存箱的製作。</p>
-                    <div class="course-info">
-                        <div style="margin-bottom: 5px; color: #ff9800; font-weight: bold;">📅 2026/8/02 (日) 13:00-16:00</div>
-                        <span class="price">早鳥：8800元</span>
-                        <span class="teacher">四月老師</span>
-                    </div>
-                    <a href="/courses/course-hoodoo-06/" class="learn-more">了解更多</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div style="display: flex; gap: 8px; padding: 1rem 1rem 0;">
-                    <span style="background-color: #9c27b0; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">遠距</span>
-                    <span style="background-color: #607d8b; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">初級</span>
-                </div>
-                <h3 style="margin-top: 1rem; padding: 0 1rem;">藥草魔法師基礎課程</h3>
-                <div style="padding: 0 1rem;">
-                    <p>胡督藥草魔法的第一步。認識五十種常用藥草的功能與屬性，建構配方調配的思考邏輯，並實際做出護符包與財富咒瓶。</p>
-                    <div class="course-info">
-                        <div style="margin-bottom: 5px; color: #ff9800; font-weight: bold;">📅 2026/8/08 (六) 13:00-16:00</div>
-                        <span class="price">早鳥：4200元</span>
-                        <span class="teacher">四月老師</span>
-                    </div>
-                    <a href="/courses/course-hoodoo-00/" class="learn-more">了解更多</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div style="display: flex; gap: 8px; padding: 1rem 1rem 0;">
-                    <span style="background-color: #9c27b0; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">遠距</span>
-                    <span style="background-color: #607d8b; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">單元一</span>
-                </div>
-                <h3 style="margin-top: 1rem; padding: 0 1rem;">淨化療癒篇-胡督魔法一</h3>
-                <div style="padding: 0 1rem;">
-                    <p>淨化與療癒是一切咒術的根本。學習胡督傳統的淨化浴、雞蛋清理、聖水製作與多種功能型沐浴水配方，去除厄運與詛咒的侵擾。</p>
-                    <div class="course-info">
-                        <div style="margin-bottom: 5px; color: #ff9800; font-weight: bold;">📅 2026/8/09 (日) 13:00-16:00</div>
-                        <span class="price">早鳥：4200元</span>
-                        <span class="teacher">四月老師</span>
-                    </div>
-                    <a href="/courses/course-hoodoo-01/" class="learn-more">了解更多</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div style="display: flex; gap: 8px; padding: 1rem 1rem 0;">
-                    <span style="background-color: #4caf50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">實體</span>
-                    <span style="background-color: #ff5722; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">金錢策略</span>
-                </div>
-                <h3 style="margin-top: 1rem; padding: 0 1rem;">金錢策略魔法初階</h3>
-                <div style="padding: 0 1rem;">
-                    <p>賈森米勒策略魔法系統入門。以 16 張木星策略符印對應六大金錢議題，並傳授網狀、序列、鏈鎖式三大許願法，讓願望精準落地。</p>
-                    <div class="course-info">
-                        <div style="margin-bottom: 5px; color: #ff9800; font-weight: bold;">📅 2026/8/15-16 (六、日) 10:00-16:30</div>
-                        <span class="price">早鳥：11000元</span>
-                        <span class="teacher">歐比路老師</span>
-                    </div>
-                    <a href="/courses/course-018/" class="learn-more">了解更多</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div style="display: flex; gap: 8px; padding: 1rem 1rem 0;">
-                    <span style="background-color: #4caf50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">實體</span>
-                    <span style="background-color: #ff5722; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">實作</span>
-                </div>
-                <h3 style="margin-top: 1rem; padding: 0 1rem;">金錢策略魔法實作課程：金錢魔術盒</h3>
-                <div style="padding: 0 1rem;">
-                    <p>金錢策略魔法的實作延伸。搭配所羅門王大鑰封印，親手製作專屬金錢魔術盒，作為吸引財富與機會的日常顯化工具。（需修畢金錢策略初階）</p>
-                    <div class="course-info">
-                        <div style="margin-bottom: 5px; color: #ff9800; font-weight: bold;">📅 2026/8/15 (六) 17:00-18:00</div>
-                        <span class="price">特惠：2800元</span>
-                        <span class="teacher">歐比路老師</span>
-                    </div>
-                    <a href="/courses/course-021/" class="learn-more">了解更多</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div style="display: flex; gap: 8px; padding: 1rem 1rem 0;">
-                    <span style="background-color: #4caf50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">實體</span>
-                    <span style="background-color: #ff5722; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">配方邏輯</span>
-                </div>
-                <h3 style="margin-top: 1rem; padding: 0 1rem;">金錢策略魔法配方邏輯單元一：職場保護配方解析</h3>
-                <div style="padding: 0 1rem;">
-                    <p>以效益、成本、風險拆解職場保護配方。透過六大策略重構專屬配方，整合配方、策略、許願三面向，穩定工作並增加升遷機會。（需修畢金錢策略初階）</p>
-                    <div class="course-info">
-                        <div style="margin-bottom: 5px; color: #ff9800; font-weight: bold;">📅 2026/8/16 (日) 17:00-18:30</div>
-                        <span class="price">特惠：2800元</span>
-                        <span class="teacher">歐比路老師</span>
-                    </div>
-                    <a href="/courses/course-022/" class="learn-more">了解更多</a>
-                </div>
-            </div>
-
+  <section class="home-sec home-books center" id="free-books">
+    <div class="wrap">
+      <p class="eyebrow">免費資源</p>
+      <h2 class="sec-title">先從一本免費電子書開始</h2>
+      <div class="book-grid">
+        <div class="home-book">
+          <span class="tag">藥草魔法入門</span>
+          <h3>藥草魔法入門指南</h3>
+          <p class="desc">八支超市就能買到的入門藥草、一個你今天就能動手完成的淨化實作，帶你踏出魔法的第一步。</p>
+          <p class="get-label">選擇你方便的方式，立即免費領取：</p>
+          <div class="get-btns">
+            <a class="btn-line" href="https://line.me/R/ti/p/@sorcery">加 LINE 領取</a>
+            <a class="btn-mail" href="https://hoodoo.pro/subscribe/">訂閱電子報領取</a>
+          </div>
+          <p class="hint">加入 LINE 官方帳號後，指南會自動傳送給你；或訂閱電子報，我們寄到你的信箱。</p>
         </div>
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="/course/" style="color: #1a5f5f; font-weight: bold; text-decoration: none; font-size: 1.2rem;">查看更多課程分類 →</a>
+        <div class="home-book">
+          <span class="tag">混沌魔法試閱</span>
+          <h3>萬物皆虛（試閱本）</h3>
+          <p class="desc">「萬物皆虛，萬事皆允。」混沌魔法如何把信念變成可切換的工具？試閱三章，走進現實的後台。</p>
+          <p class="get-label">加入 LINE 官方帳號即可領取：</p>
+          <div class="get-btns">
+            <a class="btn-line" href="https://line.me/R/ti/p/@sorcery">加 LINE 領取</a>
+          </div>
+          <p class="hint">加入後，於對話中傳送「萬物皆虛」，試閱本會立即自動傳送給你。</p>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="about-teacher" style="background-color: #f4f8f8; padding: 5rem 0;">
-    <div class="container">
-        <h2 style="color: #1a5f5f; text-align: center; margin-bottom: 3rem;">認識四月老師</h2>
-        <div class="teacher-content" style="max-width: 800px; margin: 0 auto;">
-            <div class="teacher-text" style="line-height: 1.8; color: #444;">
-                <p>致力於推廣「生活化的魔法」，將古老的西方咒術傳統與現代心理學、能量實作相結合。四月老師擅長以清晰、邏輯化的教學方式，協助學員打破神祕學的迷思，掌握真正能落實於生活的顯化技術。</p>
-                <p>專精領域包含：胡督（Hoodoo）傳統咒術、現代符印魔法、行星祝聖儀式以及魔法蠟燭實作。</p>
-                <p style="margin-top: 2rem; border-top: 1px solid #ddd; padding-top: 1rem;">
-                    <strong>官方連繫：</strong>四月老師魔法教室<br>
-                    <strong>電子信箱：</strong>{{ site.email | default: 'herbmagic@hotmail.com.tw' }}
-                </p>
-            </div>
-        </div>
+  <section class="home-sec home-cats center">
+    <div class="wrap">
+      <p class="eyebrow">教學體系</p>
+      <h2 class="sec-title">找到適合你的路</h2>
+      <div class="home-cat-grid">
+        <a class="home-cat" href="/course/#hoodoo">
+          <div class="bar" style="background:#8c3b2e;"></div>
+          <div class="body">
+            <h3 style="color:#8c3b2e;">胡督魔法體系</h3>
+            <p>從藥草基礎到淨化、反詛咒、金錢、愛情——一套完整的胡督咒術學習路徑。</p>
+            <div class="go" style="color:#8c3b2e;">查看課程 →</div>
+          </div>
+        </a>
+        <a class="home-cat" href="/course/#strategy">
+          <div class="bar" style="background:#b8863b;"></div>
+          <div class="body">
+            <h3 style="color:#b8863b;">策略魔法</h3>
+            <p>把魔法當成一套可規劃的策略系統。以符印與許願法對應金錢、職場等現實議題，讓願望精準落地。</p>
+            <div class="go" style="color:#b8863b;">查看課程 →</div>
+          </div>
+        </a>
+        <a class="home-cat" href="/course/#modern">
+          <div class="bar" style="background:#5a3a52;"></div>
+          <div class="body">
+            <h3 style="color:#5a3a52;">現代與混沌魔法</h3>
+            <p>符印、範式切換、意識技術——當代魔法如何重新定義你與現實的關係。</p>
+            <div class="go" style="color:#5a3a52;">查看課程 →</div>
+          </div>
+        </a>
+        <a class="home-cat" href="/rituals/">
+          <div class="bar" style="background:#1a5f5f;"></div>
+          <div class="body">
+            <h3 style="color:#1a5f5f;">儀式與服務</h3>
+            <p>道法法事、符籙施術、個人化的魔法協助。當你需要的不只是學習，而是直接的幫助。</p>
+            <div class="go" style="color:#1a5f5f;">查看服務 →</div>
+          </div>
+        </a>
+      </div>
     </div>
-</section>
+  </section>
+
+  <section class="home-sec home-featured center">
+    <div class="wrap">
+      <p class="eyebrow">近期招生</p>
+      <h2 class="sec-title">最近開課</h2>
+      <div class="home-course-grid">
+        <div class="home-course">
+          <div class="top"><span class="badge" style="background:#9c27b0;">遠距</span><span class="badge" style="background:#607d8b;">初級</span></div>
+          <div class="body">
+            <h3>藥草魔法師基礎課程</h3>
+            <p>胡督藥草魔法的第一步。認識五十種常用藥草，建構配方思考邏輯，實際做出護符包與財富咒瓶。</p>
+            <div class="meta">📅 8/08（六）13:00–16:00　<span class="price">早鳥 4,200</span></div>
+            <a class="go" href="/courses/course-hoodoo-00/">了解更多 →</a>
+          </div>
+        </div>
+        <div class="home-course">
+          <div class="top"><span class="badge" style="background:#9c27b0;">遠距</span><span class="badge" style="background:#607d8b;">單元一</span></div>
+          <div class="body">
+            <h3>胡督淨化魔法（單元一）</h3>
+            <p>淨化與療癒是一切咒術的根本。學習淨化浴、雞蛋清理、聖水製作，去除厄運與詛咒的侵擾。</p>
+            <div class="meta">📅 8/09（日）13:00–16:00　<span class="price">早鳥 4,200</span></div>
+            <a class="go" href="/courses/course-hoodoo-01/">了解更多 →</a>
+          </div>
+        </div>
+        <div class="home-course">
+          <div class="top"><span class="badge" style="background:#9c27b0;">遠距</span><span class="badge" style="background:#ff9800;">新課</span></div>
+          <div class="body">
+            <h3>印度式胡督豐盛魔法</h3>
+            <p>將印度吠陀與胡督根源工作融合的線上系統。家庭豐盛祭壇、真言呼吸、招財沐浴清理，打造財富磁場。</p>
+            <div class="meta">📅 7/26（日）13:00–16:00　<span class="price">首開 3,800</span></div>
+            <a class="go" href="/courses/course-hoodoo-10/">了解更多 →</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:2.5rem;">
+        <a class="cta cta-solid" href="/course/latest/">查看全部近期課程</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-sec home-proof center">
+    <div class="wrap">
+      <p class="eyebrow">學員回饋</p>
+      <h2 class="sec-title">他們的經歷</h2>
+      {% include testimonials.html tag="general" limit=4 %}
+      <p style="margin-top:1rem;"><a href="/testimonials/" style="color:var(--h-teal); font-weight:700;">看更多學員回饋 →</a></p>
+    </div>
+  </section>
+
+  <section class="home-sec home-teacher">
+    <div class="wrap">
+      <div class="flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p class="eyebrow">主理人</p>
+          <h2 class="sec-title" style="margin:1rem 0 1.2rem;">四月老師</h2>
+          <p>致力於推廣「生活化的魔法」，將古老的西方咒術傳統與現代心理學、能量實作相結合。擅長以清晰、邏輯化的教學，協助學員打破神祕學的迷思，掌握真正能落實於生活的顯化技術。專精胡督傳統咒術、混沌與符印魔法、行星祝聖與道法科儀。</p>
+          <div class="facts">
+            <div class="fact"><b>數十年</b><span>身心靈領域深耕</span></div>
+            <div class="fact"><b>台港馬</b><span>學員與客戶遍布</span></div>
+            <div class="fact"><b>40+</b><span>系統化課程</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#c9973f" bg="#ece1cc" %}
+
+</div>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  "name": "四月老師 - 魔法課程中心",
-  "description": "提供專業胡督(Hoodoo)、藥草魔法與策略魔法教學課程。",
-  "url": "http://hoodoo.pro/",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "TW"
-  }
+  "name": "靈火巫境 - 四月老師魔法教學",
+  "description": "為華語世界提供系統化的西方魔法教學：胡督 Hoodoo、藥草魔法、混沌魔法、策略魔法與符印。",
+  "url": "https://hoodoo.pro/",
+  "address": { "@type": "PostalAddress", "addressCountry": "TW" }
 }
 </script>
