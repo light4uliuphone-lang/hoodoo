@@ -1,71 +1,287 @@
 ---
 layout: default
-title: "反轉詛咒篇-胡督魔法二 - 四月老師"
+title: "反轉詛咒與厄運（胡督魔法單元二）- 四月老師"
+description: "胡督防禦魔法完整技術：辨識交叉狀態、解除詛咒配方、防禦護符咒袋、原路奉還蠟燭儀式、居家結界。9/12 線上開課。"
+permalink: /courses/course-hoodoo-02/
+image: /assets/images/courses/hoodoo-02/og-uncrossing.jpg
 ---
-<div class="container" style="padding: 3rem 0;">
-    <a href="/course/" class="back-link">← 返回課程中心</a>
 
-    <div class="course-detail-header">
-        <h1>反轉詛咒篇-胡督魔法二</h1>
-        <div class="meta">
-            <span>🕯️ 胡督魔法</span>
-            <span>🛡️ 防禦與保護</span>
-            <span>📊 中級</span>
-            <span>👨‍🏫 四月老師</span>
-        </div>
+<style>
+  /* ===== 反轉詛咒篇 銷售頁（uc- 前綴）===== */
+  .uc-page { --uc-ink:#1e1a24; --uc-paper:#eceef4; --uc-paper-deep:#dbe0ea;
+             --uc-dark:#151a26; --uc-dark2:#1e2637; --uc-blue:#2b4570;
+             --uc-blue-soft:#8fa3c4; --uc-gold:#c9973f; --uc-cream:#f4ecdd;
+             font-size:1rem; color:var(--uc-ink); line-height:1.85; }
+  .uc-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--uc-ink); letter-spacing:.05em; }
+  .uc-section { padding:3.5rem 1.25rem; }
+  .uc-inner { max-width:860px; margin:0 auto; }
+  .uc-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--uc-blue);
+                border-bottom:1px solid var(--uc-blue); padding-bottom:.3rem; margin-bottom:1rem; }
+  .uc-cta { display:inline-block; background:var(--uc-blue); color:#fff !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(43,69,112,.35); transition:transform .15s ease; }
+  .uc-cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .uc-cta{transition:none} .uc-cta:hover{transform:none} }
+
+  .uc-hero { position:relative; background:var(--uc-dark); color:var(--uc-cream);
+             padding:5rem 1.25rem 4rem; overflow:hidden; }
+  .uc-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .uc-hero::after { content:""; position:absolute; inset:0;
+                    background:linear-gradient(100deg, rgba(15,19,30,.95) 0%, rgba(15,19,30,.82) 42%, rgba(15,19,30,.35) 70%, rgba(15,19,30,.15) 100%); }
+  .uc-hero-inner { position:relative; z-index:2; max-width:860px; margin:0 auto; }
+  .uc-hero h1 { font-size:clamp(1.7rem,4.5vw,2.6rem); line-height:1.45; margin:.5rem 0 1rem; color:#fff;
+                text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .uc-hero h1 .kicker { display:block; font-size:1.05rem; font-weight:400; letter-spacing:.25em;
+                        color:var(--uc-blue-soft); margin-bottom:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.5); }
+  .uc-hero .uc-sub { font-size:1.05rem; color:#dde4ef; max-width:34em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .uc-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem;
+                  color:#e8edf5; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .uc-hero-note { font-size:.85rem; color:#c5d1e4; margin-top:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+
+  .uc-pain { background:var(--uc-paper); }
+  .uc-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .uc-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #b6bfd0; }
+  .uc-pain li::before { content:"✗"; position:absolute; left:.4rem; color:var(--uc-blue); font-weight:700; }
+  .uc-punch { background:var(--uc-paper-deep); border-left:4px solid var(--uc-blue);
+              padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  .uc-story { background:var(--uc-dark2); color:#e2e8f2; }
+  .uc-story h2 { color:#fff; }
+  .uc-story blockquote { border-left:3px solid var(--uc-gold); padding:.6rem 0 .6rem 1.2rem;
+                         margin:1.4rem 0; font-size:1.15rem; color:#fff; }
+
+  .uc-gain { background:var(--uc-paper); }
+  .uc-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .uc-gain-card { background:#fff; border:1px solid #c8d0de; border-radius:8px; padding:1.2rem 1.3rem; }
+  .uc-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--uc-blue); letter-spacing:.08em; }
+  .uc-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+
+  .uc-syllabus { background:var(--uc-paper-deep); }
+  .uc-syl-item { background:#fff; border-radius:8px; padding:1.1rem 1.3rem; margin:.8rem 0;
+                 border-left:3px solid var(--uc-blue); }
+  .uc-syl-item strong { color:var(--uc-blue); }
+
+  .uc-proof { background:var(--uc-paper); }
+
+  .uc-teacher { background:var(--uc-dark2); color:#e2e8f2; }
+  .uc-teacher h2 { color:#fff; }
+  .uc-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .uc-teacher-flex img { width:220px; height:auto; border-radius:8px; flex:0 0 auto; border:1px solid rgba(143,163,196,.4); }
+
+  .uc-path { background:var(--uc-paper); text-align:center; }
+  .uc-path img { max-width:520px; width:100%; height:auto; margin:1.4rem auto 0; display:block; }
+  .uc-path .uc-punch { margin-top:1.6rem; text-align:left; }
+
+  .uc-price { background:var(--uc-dark); color:var(--uc-cream); }
+  .uc-price h2 { color:#fff; }
+  .uc-price-card { background:var(--uc-dark2); border:1px solid rgba(201,151,63,.5); border-radius:10px;
+                   padding:2rem 1.6rem; max-width:520px; margin:1.4rem auto; text-align:center; }
+  .uc-price-old { text-decoration:line-through; color:#8b98ad; font-size:1.05rem; }
+  .uc-price-now { font-size:2.2rem; color:var(--uc-gold); font-weight:700; margin:.3rem 0; }
+  .uc-price-save { color:var(--uc-blue-soft); font-size:.95rem; }
+  .uc-includes { text-align:left; max-width:420px; margin:1.4rem auto; padding-left:1.3rem; font-size:.95rem; }
+  .uc-prereq { background:rgba(201,151,63,.12); border:1px solid rgba(201,151,63,.4); border-radius:6px;
+               padding:.8rem 1.2rem; margin:1.2rem auto; max-width:520px; font-size:.92rem; color:#e6cfa0; text-align:center; }
+  .uc-deadline { text-align:center; font-size:.95rem; color:var(--uc-blue-soft); letter-spacing:.08em; margin-bottom:1.6rem; }
+  .uc-alt { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#dde4ef; }
+  .uc-alt a { color:var(--uc-gold); }
+
+  .uc-faq { background:var(--uc-paper); }
+  .uc-faq details { border-bottom:1px solid #bcc6d6; padding:.9rem 0; }
+  .uc-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .uc-faq summary::before { content:"＋ "; color:var(--uc-blue); }
+  .uc-faq details[open] summary::before { content:"－ "; }
+  .uc-faq details p { margin:.6rem 0 0; }
+
+  @media (max-width:768px){
+    .uc-section { padding:2.6rem 1.1rem; }
+    .uc-gain-grid { grid-template-columns:1fr; }
+    .uc-teacher-flex { flex-direction:column; }
+    .uc-teacher-flex img { width:100%; max-width:320px; }
+    .uc-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="uc-page">
+
+  <header class="uc-hero">
+    <img class="uc-hero-bg" src="/assets/images/courses/hoodoo-02/hero-uncrossing.webp" alt=""
+         width="2400" height="1350" fetchpriority="high">
+    <div class="uc-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#8fa3c4; font-size:.9rem; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="uc-eyebrow" style="display:block; width:fit-content; color:#8fa3c4; border-color:#8fa3c4;">胡督魔法系列・單元二</p>
+      <h1>
+        <span class="kicker">反轉詛咒與厄運</span>
+        當淨化已經不夠，<br>你需要把惡意原路奉還
+      </h1>
+      <p class="uc-sub">胡督魔法中最重視的「交叉狀態」——處處受阻、莫名厄運纏身時，光是清理已經無效。這門課教你辨識、解除，並將惡意送回它來的地方。</p>
+      <div class="uc-hero-meta">
+        <span>📅 2026/9/12（六）13:00–16:00</span>
+        <span>🌐 線上遠距</span>
+        <span>📘 需先修單元一</span>
+      </div>
+      <a class="uc-cta" href="#signup">搶早鳥價，立即報名</a>
+      <p class="uc-hero-note">早鳥優惠 8/28 截止，現省 600 元</p>
     </div>
+  </header>
 
-    <div class="course-detail-content">
-        <h2>課程概述</h2>
-        <p>在我們實踐魔法或日常生活中，難免會遇到惡意的能量攻擊、小人干擾，或是莫名其妙的厄運纏身。胡督魔法中非常重視所謂的「交叉狀態 (Crossed Conditions)」，當你感到處處受阻時，單純的淨化已經不夠，你必須學會如何「反轉」與「解除詛咒 (Uncrossing)」。</p>
+  <section class="uc-section uc-pain">
+    <div class="uc-inner">
+      <p class="uc-eyebrow">適合誰</p>
+      <h2>你是不是遇到這些狀況？</h2>
+      <ul>
+        <li>做什麼都不順，處處受阻，努力了卻總是差一步</li>
+        <li>身邊有小人干擾、惡意中傷，感覺被針對</li>
+        <li>莫名其妙的厄運接連發生，說不出原因</li>
+        <li>已經做過淨化，但那股「卡住」的感覺還在</li>
+      </ul>
+      <p class="uc-punch">胡督魔法稱這種狀態為「交叉狀態（Crossed Conditions）」。當事情已經走到這一步，單純的淨化不夠——你必須學會「反轉」與「解除詛咒（Uncrossing）」，主動切斷源頭。</p>
+    </div>
+  </section>
 
-        <h2>課程詳情</h2>
-        <p>本課程將帶領學員深入了解防禦魔法的核心機制。我們不僅教導如何保護自己，更教導如何將惡意「原路奉還 (Return to Sender)」給施咒者。這是一門保護自己與家人的必備技術，學會設立界線，讓那些試圖傷害你的人自食其果。</p>
+  <section class="uc-section uc-story">
+    <div class="uc-inner">
+      <p class="uc-eyebrow" style="color:#c9973f; border-color:#c9973f;">關於防禦魔法</p>
+      <h2>保護自己，也讓惡意自食其果</h2>
+      <p>在實踐魔法或日常生活中，難免遇到惡意的能量攻擊、小人干擾，或莫名其妙的厄運纏身。胡督傳統對此有一整套成熟的應對技術，不迴避、不姑息。</p>
+      <p>本課程帶你深入防禦魔法的核心機制。我們不僅教你如何保護自己，更教你如何將惡意「原路奉還（Return to Sender）」給施咒者。</p>
+      <blockquote>這是保護自己與家人的必備技術——學會設立界線，讓那些試圖傷害你的人自食其果。</blockquote>
+      <p>防禦不是消極的躲避。在胡督的觀念裡，你有權利保護自己的生活，也有權利把不屬於你的東西退回去。</p>
+    </div>
+  </section>
 
-        <h2>課程大綱</h2>
-        <ol>
-            <li>認識交叉狀態與詛咒的運作原理</li>
-            <li>辨識魔法攻擊與厄運纏身的徵兆</li>
-            <li>解除詛咒 (Uncrossing) 的經典藥草配方</li>
+  <section class="uc-section uc-gain">
+    <div class="uc-inner">
+      <p class="uc-eyebrow">學習成果</p>
+      <h2>上完這門課，你將能夠——</h2>
+      <div class="uc-gain-grid">
+        <div class="uc-gain-card">
+          <h3>辨識</h3>
+          <ul>
+            <li>看懂交叉狀態與詛咒的運作原理</li>
+            <li>辨識魔法攻擊與厄運纏身的具體徵兆</li>
+          </ul>
+        </div>
+        <div class="uc-gain-card">
+          <h3>解除</h3>
+          <ul>
+            <li>操作解除詛咒（Uncrossing）的經典藥草配方</li>
+            <li>運用淨化沐浴法與詩篇防禦祈禱</li>
+          </ul>
+        </div>
+        <div class="uc-gain-card">
+          <h3>反擊與防護</h3>
+          <ul>
             <li>製作防禦與反轉的護符咒袋</li>
-            <li>淨化沐浴法與聖經詩篇的防禦祈禱</li>
-            <li>原路奉還 (Return to Sender) 蠟燭儀式實作</li>
-            <li>居家結界與祭壇保護技巧</li>
-        </ol>
-
-        <h2>課程信息</h2>
-        <div class="course-info-box">
-            <p><strong>上課資格：</strong>需修畢藥草魔法初階、胡督魔法單元一</p>
-            <p><strong>課程價格：</strong>請參閱官方最新開班資訊或來信詢問</p>
+            <li>執行原路奉還蠟燭儀式、架設居家結界</li>
+          </ul>
         </div>
-
-        <h2>老師介紹</h2>
-        <div class="teacher-info">
-            <h3>四月老師</h3>
-            <p>四月老師是一位非常出色的魔法工作者，於身心靈領域數十年。現今專研胡督魔法和混沌魔法體系，深入理解中國古代哲學思想和西方魔法傳統，並且能夠運用這些思想來指導自己的實踐。</p>
-        </div>
-
-        <h2>📜 胡督魔法系列課程總覽</h2>
-        <div style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #1a5f5f;">
-            <p style="margin-bottom: 1rem; font-weight: bold; color: #1a5f5f;">探索同系列其他課程，建立完整的胡督魔法體系：</p>
-            <ul style="line-height: 1.8;">
-                <li><a href="/courses/course-hoodoo-00/">【基礎】藥草魔法師基礎課程</a>：進入胡督魔法的第一步。</li>
-                <li><a href="/courses/course-hoodoo-01/">【單元一】淨化療癒篇</a>：學習防淨化、療癒厄運與傷害。</li>
-                <li><strong>▶ 目前所在：【單元二】反轉詛咒篇</strong></li>
-                <li><a href="/courses/course-hoodoo-03/">【單元三】金錢魔法與祭壇</a>：掌握吸引金錢的配方與個人財富祭壇。</li>
-                <li><a href="/courses/course-hoodoo-04/">【單元四】愛情魔法篇</a>：吸引愛情與關係增溫的經典胡督配方。</li>
-                <li><a href="/courses/course-hoodoo-05/">【單元五】關係破壞者</a>：進階探討如何切斷有害關係與阻礙。</li>
-                <li><a href="/courses/course-hoodoo-06/">【選修】魔法油配方解析</a>：深入拆解與製作核心魔法油。</li>
-                <li><a href="/courses/course-hoodoo-07/">【選修】藥草行星魔法</a>：星象學與藥草魔法結合的強大實作。</li>
-                <li><a href="/courses/course-hoodoo-08/">【選修】魔法蠟燭課</a>：蠟燭魔法的雕刻、塗油與祝聖技術。</li>
-            </ul>
-        </div>
-        <h2>報名方式</h2>
-        <div class="registration-info">
-            <p>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a> 報名。</p>
-        </div>
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}" class="btn-primary">立即報名</a>
-        </div>
+      </div>
     </div>
+  </section>
+
+  <section class="uc-section uc-syllabus">
+    <div class="uc-inner">
+      <p class="uc-eyebrow">課程大綱</p>
+      <h2>這堂課會教你</h2>
+      <div class="uc-syl-item">認識交叉狀態與詛咒的運作原理</div>
+      <div class="uc-syl-item">辨識魔法攻擊與厄運纏身的徵兆</div>
+      <div class="uc-syl-item"><strong>解除詛咒（Uncrossing）：</strong>經典藥草配方解析</div>
+      <div class="uc-syl-item">製作防禦與反轉的護符咒袋</div>
+      <div class="uc-syl-item">淨化沐浴法與聖經詩篇的防禦祈禱</div>
+      <div class="uc-syl-item"><strong>原路奉還（Return to Sender）：</strong>蠟燭儀式實作</div>
+      <div class="uc-syl-item">居家結界與祭壇保護技巧</div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-proof">
+    <div class="uc-inner">
+      <p class="uc-eyebrow">學員回饋</p>
+      <h2>學員怎麼說</h2>
+      {% include testimonials.html tag="hoodoo-02" limit=4 %}
+      <p style="text-align:center; margin-top:.5rem;">
+        <a href="/testimonials/" style="color:var(--uc-blue);">看更多學員回饋 →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="uc-section uc-teacher">
+    <div class="uc-inner">
+      <p class="uc-eyebrow" style="color:#c9973f; border-color:#c9973f;">授課老師</p>
+      <h2>四月老師</h2>
+      <div class="uc-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>深耕身心靈領域數十年，現今專研胡督魔法與混沌魔法體系，深入理解中國古代哲學思想與西方魔法傳統，擅長將繁瑣的傳統術法整理為系統化的現代教學。</p>
+          <p>台灣、香港、馬來西亞皆有眾多學員與客戶。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-path">
+    <div class="uc-inner">
+      <p class="uc-eyebrow">學習路徑</p>
+      <h2>你在體系的哪個位置</h2>
+      <img src="/assets/images/shared/path-map-hoodoo.svg" alt="胡督魔法系列學習路徑圖" loading="lazy">
+      {% include hoodoo-path.html current="02" accent="#2b4570" %}
+      <p class="uc-punch">防禦是進攻的前提。學會保護自己與解除阻礙之後，後續的金錢、愛情等單元才不會在有干擾的狀態下事倍功半。</p>
+    </div>
+  </section>
+
+  <section class="uc-section uc-price" id="signup">
+    <div class="uc-inner">
+      <p class="uc-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程費用</p>
+      <h2 style="text-align:center;">報名資訊</h2>
+      <div class="uc-price-card">
+        <p class="uc-price-old">原價 5,800 元</p>
+        <p class="uc-price-now">早鳥價 5,200 元</p>
+        <p class="uc-price-save">2026/8/28 前完成報名繳費，現省 600 元</p>
+        <ul class="uc-includes">
+          <li>線上直播課程</li>
+          <li>解除詛咒配方與講義</li>
+          <li>護符咒袋、原路奉還蠟燭儀式實作教學</li>
+          <li>居家結界與祭壇保護技巧</li>
+          <li>課後提問管道</li>
+        </ul>
+        <a class="uc-cta" href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-胡督單元二-反轉詛咒與厄運">立即來信報名</a>
+      </div>
+      <div class="uc-prereq">📘 先修條件：需修畢「胡督淨化魔法（單元一）」</div>
+      <p class="uc-deadline">⏳ 早鳥截止 8/28｜報名截止 9/05｜上課時間 9/12（六）13:00–16:00</p>
+
+      <p class="uc-alt">
+        來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-胡督單元二-反轉詛咒與厄運">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名胡督單元二 - 反轉詛咒」，並附上姓名、聯絡電話、收件地址。我們將於三日內回信與您確認。
+      </p>
+    </div>
+  </section>
+
+  <section class="uc-section uc-faq">
+    <div class="uc-inner">
+      <p class="uc-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>我一定要先上過單元一嗎？</summary>
+        <p>是的，本單元需先修畢「胡督淨化魔法（單元一）」。反轉與解咒的操作建立在淨化的基礎上，沒有先學會清理，直接做反轉容易事倍功半。</p>
+      </details>
+      <details>
+        <summary>「原路奉還」會不會傷到別人、造成業力問題？</summary>
+        <p>原路奉還的本質是把不屬於你的惡意退回原處，而不是主動攻擊。課堂上會完整說明操作的分寸、時機與注意事項，讓你在保護自己的同時知道界線在哪。</p>
+      </details>
+      <details>
+        <summary>實作材料需要自己準備嗎？</summary>
+        <p>報名後會提供材料清單，都是容易取得的品項，開課前備妥即可跟著實作。</p>
+      </details>
+      <details>
+        <summary>當天有事無法出席，有回放嗎？</summary>
+        <p>本課程會有回放，但要求學員當天至少一定要上線。如果當天完全無法上線，請告知我們辦理延期或退費。</p>
+      </details>
+      <details>
+        <summary>上完這門課之後呢？</summary>
+        <p>解除了阻礙之後，可以往單元三金錢魔法與祭壇、單元四愛情魔法等方向繼續深化。</p>
+      </details>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#2b4570" bg="#dbe0ea" %}
+
 </div>

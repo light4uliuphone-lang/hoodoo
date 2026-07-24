@@ -1,77 +1,297 @@
 ---
 layout: default
-title: "金錢魔法與祭壇-胡督魔法三 - 四月老師"
+title: "金錢魔法與祭壇（胡督魔法單元三）- 四月老師"
+description: "胡督金錢魔法完整實作：改運沐浴、金錢藥草運用、架設金錢祭壇、金錢水調製、銀行追跡法、磁沙吸錢法、聖羅莎莉葉祭壇。9/13 線上開課。"
+permalink: /courses/course-hoodoo-03/
+image: /assets/images/courses/hoodoo-03/og-money.jpg
 ---
-<div class="container" style="padding: 3rem 0;">
-    <a href="/course/" class="back-link">← 返回課程中心</a>
 
-    <div class="course-detail-header">
-        <h1>金錢魔法與祭壇-胡督魔法三</h1>
-        <div class="meta">
-            <span>🕯️ 胡督魔法</span>
-            <span>💰 金錢魔法</span>
-            <span>📊 中級</span>
-            <span>👨‍🏫 四月老師</span>
-        </div>
+<style>
+  /* ===== 金錢魔法與祭壇 銷售頁（mn- 前綴）===== */
+  .mn-page { --mn-ink:#1f2118; --mn-paper:#f0f2e9; --mn-paper-deep:#dfe4d4;
+             --mn-dark:#131709; --mn-dark2:#1e2416; --mn-green:#2f5233;
+             --mn-green-soft:#9ab89e; --mn-gold:#c9973f; --mn-cream:#f4ecdd;
+             font-size:1rem; color:var(--mn-ink); line-height:1.85; }
+  .mn-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--mn-ink); letter-spacing:.05em; }
+  .mn-section { padding:3.5rem 1.25rem; }
+  .mn-inner { max-width:860px; margin:0 auto; }
+  .mn-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--mn-green);
+                border-bottom:1px solid var(--mn-green); padding-bottom:.3rem; margin-bottom:1rem; }
+  .mn-cta { display:inline-block; background:var(--mn-gold); color:#1a1109 !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(201,151,63,.35); transition:transform .15s ease; }
+  .mn-cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .mn-cta{transition:none} .mn-cta:hover{transform:none} }
+
+  .mn-hero { position:relative; background:var(--mn-dark); color:var(--mn-cream);
+             padding:5rem 1.25rem 4rem; overflow:hidden; }
+  .mn-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .mn-hero::after { content:""; position:absolute; inset:0;
+                    background:linear-gradient(100deg, rgba(14,17,9,.95) 0%, rgba(14,17,9,.82) 42%, rgba(14,17,9,.35) 70%, rgba(14,17,9,.15) 100%); }
+  .mn-hero-inner { position:relative; z-index:2; max-width:860px; margin:0 auto; }
+  .mn-hero h1 { font-size:clamp(1.7rem,4.5vw,2.6rem); line-height:1.45; margin:.5rem 0 1rem; color:#fff;
+                text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .mn-hero h1 .kicker { display:block; font-size:1.05rem; font-weight:400; letter-spacing:.25em;
+                        color:var(--mn-gold); margin-bottom:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.5); }
+  .mn-hero .mn-sub { font-size:1.05rem; color:#e2e8dc; max-width:34em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .mn-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem;
+                  color:#eaf0e6; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .mn-hero-note { font-size:.85rem; color:#cfdac9; margin-top:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+
+  .mn-pain { background:var(--mn-paper); }
+  .mn-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .mn-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #bcc6b4; }
+  .mn-pain li::before { content:"✓"; position:absolute; left:.4rem; color:var(--mn-green); font-weight:700; }
+  .mn-punch { background:var(--mn-paper-deep); border-left:4px solid var(--mn-gold);
+              padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  .mn-story { background:var(--mn-dark2); color:#e4ebe0; }
+  .mn-story h2 { color:#fff; }
+  .mn-story blockquote { border-left:3px solid var(--mn-gold); padding:.6rem 0 .6rem 1.2rem;
+                         margin:1.4rem 0; font-size:1.15rem; color:#fff; }
+
+  .mn-gain { background:var(--mn-paper); }
+  .mn-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .mn-gain-card { background:#fff; border:1px solid #ccd5c4; border-radius:8px; padding:1.2rem 1.3rem; }
+  .mn-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--mn-green); letter-spacing:.08em; }
+  .mn-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+
+  .mn-syllabus { background:var(--mn-paper-deep); }
+  .mn-syl-item { background:#fff; border-radius:8px; padding:1.1rem 1.3rem; margin:.8rem 0;
+                 border-left:3px solid var(--mn-gold); }
+  .mn-syl-item strong { color:var(--mn-green); }
+
+  .mn-proof { background:var(--mn-paper); }
+
+  .mn-teacher { background:var(--mn-dark2); color:#e4ebe0; }
+  .mn-teacher h2 { color:#fff; }
+  .mn-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .mn-teacher-flex img { width:220px; height:auto; border-radius:8px; flex:0 0 auto; border:1px solid rgba(154,184,158,.4); }
+
+  .mn-path { background:var(--mn-paper); text-align:center; }
+  .mn-path img { max-width:520px; width:100%; height:auto; margin:1.4rem auto 0; display:block; }
+  .mn-path .mn-punch { margin-top:1.6rem; text-align:left; }
+
+  .mn-price { background:var(--mn-dark); color:var(--mn-cream); }
+  .mn-price h2 { color:#fff; }
+  .mn-price-card { background:var(--mn-dark2); border:1px solid rgba(201,151,63,.5); border-radius:10px;
+                   padding:2rem 1.6rem; max-width:520px; margin:1.4rem auto; text-align:center; }
+  .mn-price-old { text-decoration:line-through; color:#8b9a86; font-size:1.05rem; }
+  .mn-price-now { font-size:2.2rem; color:var(--mn-gold); font-weight:700; margin:.3rem 0; }
+  .mn-price-save { color:var(--mn-green-soft); font-size:.95rem; }
+  .mn-includes { text-align:left; max-width:420px; margin:1.4rem auto; padding-left:1.3rem; font-size:.95rem; }
+  .mn-prereq { background:rgba(201,151,63,.12); border:1px solid rgba(201,151,63,.4); border-radius:6px;
+               padding:.8rem 1.2rem; margin:1.2rem auto; max-width:520px; font-size:.92rem; color:#e6cfa0; text-align:center; }
+  .mn-deadline { text-align:center; font-size:.95rem; color:var(--mn-green-soft); letter-spacing:.08em; margin-bottom:1.6rem; }
+  .mn-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:2rem; }
+  .mn-alt { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#e2e8dc; }
+  .mn-alt a { color:var(--mn-gold); }
+
+  .mn-faq { background:var(--mn-paper); }
+  .mn-faq details { border-bottom:1px solid #c2cbba; padding:.9rem 0; }
+  .mn-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .mn-faq summary::before { content:"＋ "; color:var(--mn-green); }
+  .mn-faq details[open] summary::before { content:"－ "; }
+  .mn-faq details p { margin:.6rem 0 0; }
+
+  @media (max-width:768px){
+    .mn-section { padding:2.6rem 1.1rem; }
+    .mn-gain-grid { grid-template-columns:1fr; }
+    .mn-teacher-flex { flex-direction:column; }
+    .mn-teacher-flex img { width:100%; max-width:320px; }
+    .mn-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="mn-page">
+
+  <header class="mn-hero">
+    <img class="mn-hero-bg" src="/assets/images/courses/hoodoo-03/hero-money.webp" alt=""
+         width="2400" height="1350" fetchpriority="high">
+    <div class="mn-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#9ab89e; font-size:.9rem; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="mn-eyebrow" style="display:block; width:fit-content; color:#c9973f; border-color:#c9973f;">胡督魔法系列・單元三</p>
+      <h1>
+        <span class="kicker">金錢魔法與祭壇</span>
+        在金融風暴中被大量使用的<br>實用金錢咒術
+      </h1>
+      <p class="mn-sub">咒包、咒瓶、沐浴、祭壇、守夜儀式、詩篇魔法——胡督處理金錢的技術，是在真實困境中被反覆驗證出來的。這門課把整套交給你。</p>
+      <div class="mn-hero-meta">
+        <span>📅 2026/9/13（日）13:00–16:00</span>
+        <span>🌐 線上遠距</span>
+        <span>📘 需先修單元一</span>
+      </div>
+      <a class="mn-cta" href="#signup">搶早鳥價，立即報名</a>
+      <p class="mn-hero-note">早鳥優惠 8/28 截止，現省 1,000 元</p>
     </div>
+  </header>
 
-    <div class="course-detail-content">
-        <h2>課程概述</h2>
-        <p>金錢一直是大多數人的課題，要如何解決債務問題、改善財務狀況、或者使財富增加，在胡督魔法中有著許多的技巧。這些技巧包含了咒包、咒瓶、沐浴、祭壇、守夜儀式、詩篇魔法等等。透過藥草的組合運用，詩篇的祈禱，祭壇的擺設，用來幫助自己或他人運用胡督咒術來獲得金錢。</p>
-        <p>原本胡督只是非常小眾，雖源自於非裔在美洲逐漸演變的民間術法，但即便是非裔人士知道這些咒術存在很少。一直到金融風暴，許多人失去了他們的工作與房子，為了解決困境而找尋，或使用、或學習，胡督才越來越越廣為人知。由此可見，胡督在實際運用上的成效。</p>
+  <section class="mn-section mn-pain">
+    <div class="mn-inner">
+      <p class="mn-eyebrow">適合誰</p>
+      <h2>你是不是有這些課題？</h2>
+      <ul>
+        <li>債務壓著喘不過氣，想改善卻不知道從哪裡開始</li>
+        <li>收入卡在一個數字上不去，努力和回報不成比例</li>
+        <li>錢總是留不住，賺得到卻存不下來</li>
+        <li>做過招財，但零星不成系統，效果時有時無</li>
+      </ul>
+      <p class="mn-punch">金錢一直是大多數人的課題。如何解決債務、改善財務、使財富增加——胡督魔法對此有一整套成熟且實用的技巧，而不是零散的招財小術。</p>
+    </div>
+  </section>
 
-        <h2>課程大綱</h2>
-        <ol>
-            <li>改運沐浴法</li>
-            <li>金錢藥草的運用</li>
-            <li>架設你的金錢祭壇</li>
-            <li>帶來財富的祈禱文與詩篇</li>
-            <li>金錢水調製</li>
-            <li>銀行追跡法</li>
-            <li>磁沙吸錢法</li>
-            <li>聖羅莎莉葉的祭壇</li>
-        </ol>
+  <section class="mn-section mn-story">
+    <div class="mn-inner">
+      <p class="mn-eyebrow" style="color:#c9973f; border-color:#c9973f;">關於胡督金錢魔法</p>
+      <h2>被真實困境驗證過的技術</h2>
+      <p>胡督原本非常小眾。它源自非裔在美洲逐漸演變的民間術法，即便是非裔人士，知道這些咒術存在的也很少。</p>
+      <p>直到金融風暴——許多人失去了工作與房子。為了解決困境，人們開始尋找、使用、學習，胡督才逐漸廣為人知。</p>
+      <blockquote>一套術法能在最艱難的時刻被大量使用並流傳下來，本身就說明了它在實際運用上的成效。</blockquote>
+      <p>這門課涵蓋咒包、咒瓶、沐浴、祭壇、守夜儀式、詩篇魔法等技巧。透過藥草的組合運用、詩篇的祈禱、祭壇的擺設，幫助自己或他人運用胡督咒術來獲得金錢。</p>
+    </div>
+  </section>
 
-        <h2>課程信息</h2>
-        <div class="course-info-box">
-            <p><strong>上課時間：</strong>12/14(日) 10:00-16:00</p>
-            <p><strong>上課資格：</strong>需修畢藥草魔法初階、胡督魔法單元一</p>
-            <p><strong>課程價格：</strong>費用:8800元 | 早鳥價:7800元 (11/30前完成報名繳費)</p>
-            <p><strong>報名截止：</strong>12/08</p>
+  <section class="mn-section mn-gain">
+    <div class="mn-inner">
+      <p class="mn-eyebrow">學習成果</p>
+      <h2>上完這門課，你將能夠——</h2>
+      <div class="mn-gain-grid">
+        <div class="mn-gain-card">
+          <h3>清理與開路</h3>
+          <ul>
+            <li>操作改運沐浴法，清除財務上的阻滯</li>
+            <li>掌握金錢藥草的搭配邏輯</li>
+          </ul>
         </div>
+        <div class="mn-gain-card">
+          <h3>架設祭壇</h3>
+          <ul>
+            <li>建立屬於你自己的金錢祭壇</li>
+            <li>學會聖羅莎莉葉祭壇的設立與供養</li>
+          </ul>
+        </div>
+        <div class="mn-gain-card">
+          <h3>實作技法</h3>
+          <ul>
+            <li>調製金錢水、運用帶來財富的詩篇祈禱</li>
+            <li>執行銀行追跡法與磁沙吸錢法</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <h2>老師介紹</h2>
-        <div class="teacher-info">
-            <h3>四月老師</h3>
-            <p>四月老師是一位非常出色的魔法工作者，於身心靈領域數十年。現今專研胡督魔法和混沌魔法體系，深入理解中國古代哲學思想和西方魔法傳統，並且能夠運用這些思想來指導自己的實踐。</p>
-        </div>
+  <section class="mn-section mn-syllabus">
+    <div class="mn-inner">
+      <p class="mn-eyebrow">課程大綱</p>
+      <h2>這堂課會教你</h2>
+      <div class="mn-syl-item">改運沐浴法</div>
+      <div class="mn-syl-item">金錢藥草的運用</div>
+      <div class="mn-syl-item"><strong>架設你的金錢祭壇</strong></div>
+      <div class="mn-syl-item">帶來財富的祈禱文與詩篇</div>
+      <div class="mn-syl-item">金錢水調製</div>
+      <div class="mn-syl-item"><strong>銀行追跡法</strong></div>
+      <div class="mn-syl-item"><strong>磁沙吸錢法</strong></div>
+      <div class="mn-syl-item">聖羅莎莉葉的祭壇</div>
+    </div>
+  </section>
 
-        <h2>📜 胡督魔法系列課程總覽</h2>
-        <div style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #1a5f5f;">
-            <p style="margin-bottom: 1rem; font-weight: bold; color: #1a5f5f;">探索同系列其他課程，建立完整的胡督魔法體系：</p>
-            <ul style="line-height: 1.8;">
-                <li><a href="/courses/course-hoodoo-00/">【基礎】藥草魔法師基礎課程</a></li>
-                  <li><a href="/courses/course-hoodoo-01/">【單元一】淨化療癒篇</a></li>
-                <li><a href="/courses/course-hoodoo-02/">【單元二】反轉詛咒篇</a></li>
-                <li><strong>▶ 目前所在：【單元三】金錢魔法與祭壇</strong></li>
-                <li><a href="/courses/course-hoodoo-04/">【單元四】愛情魔法篇</a></li>
-                <li><a href="/courses/course-hoodoo-05/">【單元五】關係破壞者</a></li>
-                <li><a href="/courses/course-hoodoo-06/">【選修】魔法油配方解析</a></li>
-                <li><a href="/courses/course-hoodoo-07/">【選修】藥草行星魔法</a></li>
-                <li><a href="/courses/course-hoodoo-08/">【選修】魔法蠟燭課</a></li>
-            </ul>
-        </div>
+  <section class="mn-section mn-proof">
+    <div class="mn-inner">
+      <p class="mn-eyebrow">學員回饋</p>
+      <h2>學員怎麼說</h2>
+      {% include testimonials.html tag="hoodoo-03" limit=4 %}
+      <p style="text-align:center; margin-top:.5rem;">
+        <a href="/testimonials/" style="color:var(--mn-green);">看更多學員回饋 →</a>
+      </p>
+    </div>
+  </section>
 
-        <h2>報名方式I</h2>
-        <div class="registration-info">
-            <p>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題為「報名金錢祭壇篇」，告知您的姓名、聯絡電話、收件地址即可。</p>
-        </div>
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}" class="btn-primary">立即報名</a>
-        </div>
-         <h2>報名方式II-填寫下列表單</h2>
+  <section class="mn-section mn-teacher">
+    <div class="mn-inner">
+      <p class="mn-eyebrow" style="color:#c9973f; border-color:#c9973f;">授課老師</p>
+      <h2>四月老師</h2>
+      <div class="mn-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
         <div>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScHXoOpdc5UBeBkeHmJaKWOErPH-MkEI6CYeeLbzEOSg_IxNg/viewform?embedded=true" width="640" height="1250" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+          <p>深耕身心靈領域數十年，現今專研胡督魔法與混沌魔法體系，深入理解中國古代哲學思想與西方魔法傳統，擅長將繁瑣的傳統術法整理為系統化的現代教學。</p>
+          <p>台灣、香港、馬來西亞皆有眾多學員與客戶。</p>
         </div>
-        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mn-section mn-path">
+    <div class="mn-inner">
+      <p class="mn-eyebrow">學習路徑</p>
+      <h2>你在體系的哪個位置</h2>
+      <img src="/assets/images/shared/path-map-hoodoo.svg" alt="胡督魔法系列學習路徑圖" loading="lazy">
+      {% include hoodoo-path.html current="03" accent="#2f5233" %}
+      <p class="mn-punch">金錢魔法建立在乾淨的地基上。先完成淨化（單元一），財路才不會做了又堵。</p>
+    </div>
+  </section>
+
+  <section class="mn-section mn-price" id="signup">
+    <div class="mn-inner">
+      <p class="mn-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程費用</p>
+      <h2 style="text-align:center;">報名資訊</h2>
+      <div class="mn-price-card">
+        <p class="mn-price-old">原價 8,800 元</p>
+        <p class="mn-price-now">早鳥價 7,800 元</p>
+        <p class="mn-price-save">2026/8/28 前完成報名繳費，現省 1,000 元</p>
+        <ul class="mn-includes">
+          <li>線上直播課程</li>
+          <li>金錢藥草配方與詩篇講義</li>
+          <li>金錢祭壇架設完整教學</li>
+          <li>金錢水、銀行追跡法、磁沙吸錢法實作</li>
+          <li>課後提問管道</li>
+        </ul>
+        <a class="mn-cta" href="#mn-form">立即填寫報名表單</a>
+      </div>
+      <div class="mn-prereq">📘 先修條件：需修畢「胡督淨化魔法（單元一）」</div>
+      <p class="mn-deadline">⏳ 早鳥截止 8/28｜報名截止 9/05｜上課時間 9/13（日）13:00–16:00</p>
+
+      <div class="mn-form-wrap" id="mn-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScHXoOpdc5UBeBkeHmJaKWOErPH-MkEI6CYeeLbzEOSg_IxNg/viewform?embedded=true"
+          width="100%" height="1250" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="金錢魔法與祭壇報名表單">載入中…</iframe>
+      </div>
+
+      <p class="mn-alt">
+        或來信 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-胡督單元三-金錢魔法與祭壇">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名金錢祭壇篇」，附上姓名、聯絡電話、收件地址。送出後三日內回信確認。
+      </p>
+    </div>
+  </section>
+
+  <section class="mn-section mn-faq">
+    <div class="mn-inner">
+      <p class="mn-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>我一定要先上過單元一嗎？</summary>
+        <p>是的，本單元需先修畢「胡督淨化魔法（單元一）」。金錢魔法必須建立在清理過的基礎上，否則容易做了又堵。</p>
+      </details>
+      <details>
+        <summary>沒有空間架設祭壇怎麼辦？</summary>
+        <p>課堂上會說明不同居住條件下的變通做法，包含小型、可收納、以及低調不引人注意的祭壇形式，租屋族也能操作。</p>
+      </details>
+      <details>
+        <summary>實作材料需要自己準備嗎？</summary>
+        <p>報名後會提供材料清單，都是容易取得的品項，開課前備妥即可跟著實作。</p>
+      </details>
+      <details>
+        <summary>當天有事無法出席，有回放嗎？</summary>
+        <p>本課程會有回放，但要求學員當天至少一定要上線。如果當天完全無法上線，請告知我們辦理延期或退費。</p>
+      </details>
+      <details>
+        <summary>上完這門課之後呢？</summary>
+        <p>可以繼續往單元四愛情魔法、單元五關係破壞者，或選修的魔法油、行星魔法等方向深化。</p>
+      </details>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#2f5233" bg="#dfe4d4" %}
+
 </div>
