@@ -83,6 +83,7 @@ image: /assets/images/courses/hoodoo-02/og-uncrossing.jpg
   .uc-prereq { background:rgba(201,151,63,.12); border:1px solid rgba(201,151,63,.4); border-radius:6px;
                padding:.8rem 1.2rem; margin:1.2rem auto; max-width:520px; font-size:.92rem; color:#e6cfa0; text-align:center; }
   .uc-deadline { text-align:center; font-size:.95rem; color:var(--uc-blue-soft); letter-spacing:.08em; margin-bottom:1.6rem; }
+  .uc-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:2rem; }
   .uc-alt { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#dde4ef; }
   .uc-alt a { color:var(--uc-gold); }
 
@@ -244,13 +245,21 @@ image: /assets/images/courses/hoodoo-02/og-uncrossing.jpg
           <li>居家結界與祭壇保護技巧</li>
           <li>課後提問管道</li>
         </ul>
-        <a class="uc-cta" href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-胡督單元二-反轉詛咒與厄運">立即來信報名</a>
+        <a class="uc-cta" href="#uc-form">立即填寫報名表單</a>
       </div>
       <div class="uc-prereq">📘 先修條件：需修畢「胡督淨化魔法（單元一）」</div>
       <p class="uc-deadline">⏳ 早鳥截止 8/28｜報名截止 9/05｜上課時間 9/12（六）13:00–16:00</p>
 
+      <div class="uc-form-wrap" id="uc-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSe87i8Gl4ckI7Prd_liFnJ02NEWsjlFfWBbRlDbs7yXhrrjkA/viewform?embedded=true"
+          width="100%" height="1250" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="反轉詛咒與厄運報名表單">載入中…</iframe>
+      </div>
+
       <p class="uc-alt">
-        來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-胡督單元二-反轉詛咒與厄運">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名胡督單元二 - 反轉詛咒」，並附上姓名、聯絡電話、收件地址。我們將於三日內回信與您確認。
+        或來信 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-胡督單元二-反轉詛咒與厄運">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名胡督單元二 - 反轉詛咒」，附上姓名、聯絡電話、收件地址。送出後三日內回信確認。
       </p>
     </div>
   </section>
