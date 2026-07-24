@@ -1,96 +1,309 @@
 ---
 layout: default
-title: "藥草行星魔法-胡督單元 - 四月老師"
+title: "七行星藥草魔法（胡督選修）- 四月老師"
+description: "理解七行星的統治權與藥草對應，以符印與行星魔方架設祭壇，製作行星魔力袋、行星瓶、行星燭，釀造行星油與酊劑。11/07 線上開課。"
 permalink: /courses/course-hoodoo-07/
---- 
-<div class="container" style="padding: 3rem 0;">
-    <a href="/course/" class="back-link">← 返回課程中心</a>
+image: /assets/images/courses/hoodoo-07/og-planetary.jpg
+---
 
-    <div class="course-detail-header">
-        <h1>藥草行星魔法-胡督單元</h1>
-        <div class="meta">
-            <span>🕯️ 胡督魔法</span>
-            <span>✨ 現代魔法</span>
-            <span>📊 高級</span>
-            <span>👨‍🏫 四月老師</span>
-        </div>
+<style>
+  .pl-page { --pl-ink:#1c1b28; --pl-paper:#eeedf4; --pl-paper-deep:#dcdae8;
+             --pl-dark:#0f0e18; --pl-dark2:#1a1826; --pl-indigo:#3d3a6b;
+             --pl-indigo-soft:#a19dc4; --pl-gold:#c9973f; --pl-cream:#f4ecdd;
+             font-size:1rem; color:var(--pl-ink); line-height:1.85; }
+  .pl-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--pl-ink); letter-spacing:.05em; }
+  .pl-section { padding:3.5rem 1.25rem; }
+  .pl-inner { max-width:860px; margin:0 auto; }
+  .pl-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--pl-indigo);
+                border-bottom:1px solid var(--pl-indigo); padding-bottom:.3rem; margin-bottom:1rem; }
+  .pl-cta { display:inline-block; background:var(--pl-gold); color:#1a1109 !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(201,151,63,.35); transition:transform .15s ease; }
+  .pl-cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .pl-cta{transition:none} .pl-cta:hover{transform:none} }
+
+  .pl-hero { position:relative; background:var(--pl-dark); color:var(--pl-cream); padding:5rem 1.25rem 4rem; overflow:hidden; }
+  .pl-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .pl-hero::after { content:""; position:absolute; inset:0;
+                    background:linear-gradient(100deg, rgba(13,12,22,.95) 0%, rgba(13,12,22,.82) 42%, rgba(13,12,22,.35) 70%, rgba(13,12,22,.15) 100%); }
+  .pl-hero-inner { position:relative; z-index:2; max-width:860px; margin:0 auto; }
+  .pl-hero h1 { font-size:clamp(1.7rem,4.5vw,2.6rem); line-height:1.45; margin:.5rem 0 1rem; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .pl-hero h1 .kicker { display:block; font-size:1.05rem; font-weight:400; letter-spacing:.25em; color:var(--pl-indigo-soft); margin-bottom:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.5); }
+  .pl-hero .pl-sub { font-size:1.05rem; color:#e5e3f0; max-width:34em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .pl-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem; color:#eceaf5; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .pl-hero-note { font-size:.85rem; color:#c5c1de; margin-top:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+
+  .pl-pain { background:var(--pl-paper); }
+  .pl-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .pl-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #bab7cd; }
+  .pl-pain li::before { content:"✦"; position:absolute; left:.4rem; color:var(--pl-indigo); }
+  .pl-punch { background:var(--pl-paper-deep); border-left:4px solid var(--pl-indigo); padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  .pl-story { background:var(--pl-dark2); color:#e4e2ef; }
+  .pl-story h2 { color:#fff; }
+  .pl-story blockquote { border-left:3px solid var(--pl-gold); padding:.6rem 0 .6rem 1.2rem; margin:1.4rem 0; font-size:1.15rem; color:#fff; }
+
+  .pl-planets { background:var(--pl-dark); color:#e4e2ef; text-align:center; }
+  .pl-planets h2 { color:#fff; }
+  .pl-planet-row { display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap; margin-top:1.6rem; }
+  .pl-planet { border:1px solid rgba(161,157,196,.35); border-radius:50%; width:72px; height:72px;
+               display:flex; align-items:center; justify-content:center; flex-direction:column; font-size:.78rem; color:#c5c1de; }
+  .pl-planet b { font-size:1.4rem; color:var(--pl-gold); line-height:1.2; }
+
+  .pl-gain { background:var(--pl-paper); }
+  .pl-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .pl-gain-card { background:#fff; border:1px solid #c9c6da; border-radius:8px; padding:1.2rem 1.3rem; }
+  .pl-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--pl-indigo); letter-spacing:.08em; }
+  .pl-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+
+  .pl-syllabus { background:var(--pl-paper-deep); }
+  .pl-syl-item { background:#fff; border-radius:8px; padding:1.1rem 1.3rem; margin:.8rem 0; border-left:3px solid var(--pl-indigo); }
+  .pl-syl-item strong { color:var(--pl-indigo); }
+
+  .pl-proof { background:var(--pl-paper); }
+
+  .pl-teacher { background:var(--pl-dark2); color:#e4e2ef; }
+  .pl-teacher h2 { color:#fff; }
+  .pl-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .pl-teacher-flex img { width:220px; height:auto; border-radius:8px; flex:0 0 auto; border:1px solid rgba(161,157,196,.4); }
+
+  .pl-path { background:var(--pl-paper); text-align:center; }
+  .pl-path img { max-width:520px; width:100%; height:auto; margin:1.4rem auto 0; display:block; }
+  .pl-path .pl-punch { margin-top:1.6rem; text-align:left; }
+
+  .pl-price { background:var(--pl-dark); color:var(--pl-cream); }
+  .pl-price h2 { color:#fff; }
+  .pl-price-card { background:var(--pl-dark2); border:1px solid rgba(201,151,63,.5); border-radius:10px; padding:2rem 1.6rem; max-width:520px; margin:1.4rem auto; text-align:center; }
+  .pl-price-old { text-decoration:line-through; color:#8c88a6; font-size:1.05rem; }
+  .pl-price-now { font-size:2.2rem; color:var(--pl-gold); font-weight:700; margin:.3rem 0; }
+  .pl-price-save { color:var(--pl-indigo-soft); font-size:.95rem; }
+  .pl-alumni { background:rgba(161,157,196,.14); border:1px solid rgba(161,157,196,.4); border-radius:6px;
+               padding:.7rem 1rem; margin:1rem auto 0; max-width:420px; font-size:.9rem; color:#d8d5ea; }
+  .pl-includes { text-align:left; max-width:420px; margin:1.4rem auto; padding-left:1.3rem; font-size:.95rem; }
+  .pl-prereq { background:rgba(201,151,63,.12); border:1px solid rgba(201,151,63,.4); border-radius:6px; padding:.8rem 1.2rem; margin:1.2rem auto; max-width:520px; font-size:.92rem; color:#e6cfa0; text-align:center; }
+  .pl-deadline { text-align:center; font-size:.95rem; color:var(--pl-indigo-soft); letter-spacing:.08em; margin-bottom:1.6rem; }
+  .pl-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:2rem; }
+  .pl-alt { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#e5e3f0; }
+  .pl-alt a { color:var(--pl-gold); }
+
+  .pl-faq { background:var(--pl-paper); }
+  .pl-faq details { border-bottom:1px solid #c4c1d6; padding:.9rem 0; }
+  .pl-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .pl-faq summary::before { content:"＋ "; color:var(--pl-indigo); }
+  .pl-faq details[open] summary::before { content:"－ "; }
+  .pl-faq details p { margin:.6rem 0 0; }
+
+  @media (max-width:768px){
+    .pl-section { padding:2.6rem 1.1rem; }
+    .pl-gain-grid { grid-template-columns:1fr; }
+    .pl-teacher-flex { flex-direction:column; }
+    .pl-teacher-flex img { width:100%; max-width:320px; }
+    .pl-hero { padding:3.5rem 1.1rem 3rem; }
+    .pl-planet { width:62px; height:62px; }
+  }
+</style>
+
+<div class="pl-page">
+
+  <header class="pl-hero">
+    <img class="pl-hero-bg" src="/assets/images/courses/hoodoo-07/hero-planetary.webp" alt="" width="2400" height="1350" fetchpriority="high">
+    <div class="pl-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#a19dc4; font-size:.9rem; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="pl-eyebrow" style="display:block; width:fit-content; color:#a19dc4; border-color:#a19dc4;">胡督魔法系列・選修</p>
+      <h1>
+        <span class="kicker">七行星藥草魔法</span>
+        天上的行星，<br>投射著地上每件事的構成
+      </h1>
+      <p class="pl-sub">當人類可以理解行星的規則並加以運用，就能改變自身的命運。這門課教你以胡督的方式，運用符印與行星魔方架設祭壇、製作行星魔力袋、行星瓶與行星燭。</p>
+      <div class="pl-hero-meta">
+        <span>📅 2026/11/07（六）13:00–16:00</span>
+        <span>🌐 線上遠距</span>
+        <span>📘 需先修藥草基礎</span>
+      </div>
+      <a class="pl-cta" href="#pl-form">搶早鳥價，立即報名</a>
+      <p class="pl-hero-note">早鳥優惠 10/23 截止，現省 1,100 元｜舊生另有優惠</p>
     </div>
+  </header>
 
-    <div class="course-detail-content">
-        <h2>課程概述</h2>
-        <p>【七行星藥草魔法】主要目的是去了解和運用行星的力量，創造個人生活的美好，或者得到啟發。在神祕學的世界觀裡，天上的行星投射上主的意志，影響了地上每件事物的構成與發生，當人類可以理解行星的規則，並加以運用則可以改變自身的命運。</p>
-
-        <h2>課程詳情</h2>
-        <p>在藥草魔法與天使符印的課程中，我們已經說明了行星的基本屬性和職能。在這裡，我們將更進一步去理解行星的統治權，以及藥草對應。如何透過胡督的方式，運用符印與行星魔方去架設祭壇、製作行星魔力袋、行星瓶、行星燭或是許願。開展出更多樣化的操作方式。</p>
-
-        <h2>課程大綱</h2>
-        <ol>
-            <li>七行星的統治權與職能</li>
-            <li>行星魔方與符印</li>
-            <li>奧菲斯七行星祈禱歌</li>
-            <li>祭壇的架設</li>
-            <li>行星油、酊劑的釀造</li>
-            <li>行星平衡儀式</li>
-            <li>許願的運用</li>
-        </ol>
-
-        <h2>課程信息</h2>
-        <div class="course-info-box">
-            <p><strong>⏰ 上課時間：</strong>2026/8/01（六）13:00–16:00</p>
-            <p><strong>🌐 授課方式：</strong>線上遠距教學</p>
-            <p><strong>📘 先修條件：</strong>需修畢藥草魔法初階</p>
-            <p><strong>💰 課程價格：</strong>原價 9,900元；2026/7/18 前完成報名繳費，享早鳥價 8,800元</p>
-            <p><strong>🎓 學員優惠：</strong>完成「行星符印」或「金錢策略魔法初階」的學員，優惠價 7,800元</p>
-            <p><strong>⌛ 報名截止：</strong>2026/7/25</p>
-            <p><strong>👨‍🏫 授課老師：</strong>四月老師</p>
-        </div>
-
-        <h2>老師介紹</h2>
-        <div class="teacher-info">
-            <h3>四月老師</h3>
-            <p>四月老師是一位非常出色的魔法工作者，於身心靈領域數十年。現今專研胡督魔法和混沌魔法體系，深入理解中國古代哲學思想和西方魔法傳統，並且能夠運用這些思想來指導自己的實踐。</p>
-        </div>
-
-        <h2>📜 胡督魔法系列課程總覽</h2>
-        <div style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #1a5f5f;">
-            <p style="margin-bottom: 1rem; font-weight: bold; color: #1a5f5f;">探索同系列其他課程，建立完整的胡督魔法體系：</p>
-            <ul style="line-height: 1.8;">
-                <li><a href="/courses/course-hoodoo-00/">【基礎】藥草魔法師基礎課程</a></li>
-                <li><a href="/courses/course-hoodoo-01/">【單元一】淨化療癒篇</a></li>
-                <li><a href="/courses/course-hoodoo-02/">【單元二】反轉詛咒篇</a></li>
-                <li><a href="/courses/course-hoodoo-03/">【單元三】金錢魔法與祭壇</a></li>
-                <li><a href="/courses/course-hoodoo-04/">【單元四】愛情魔法篇</a></li>
-                <li><a href="/courses/course-hoodoo-05/">【單元五】關係破壞者</a></li>
-                <li><a href="/courses/course-hoodoo-06/">【選修】魔法油配方解析</a></li>
-                <li><strong>▶ 目前所在：【選修】藥草行星魔法</strong></li>
-                <li><a href="/courses/course-hoodoo-08.html">【選修】魔法蠟燭課</a></li>
-            </ul>
-        </div>
-
-        <h2>報名方式</h2>
-        <div class="registration-info" style="line-height: 1.8; margin-bottom: 2rem;">
-            <p><strong>方式一：請填寫官方報名表單（直接於下方填寫嵌入表單）</strong></p>
-            <p>填寫完下方 Google 表單並送出後，我們將於三日內回信與您確認。</p>
-
-            <p style="margin-top: 1.5rem;"><strong>方式二：請來信至信箱報名</strong></p>
-            <p>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題為「報名藥草行星魔法」，告知您的姓名、聯絡電話、收件地址即可。</p>
-        </div>
-
-        <div class="registration-form" style="margin-top: 2rem; background: #fff; padding: 10px; border-radius: 8px;">
-            <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfzinptGbx6OlzK5id_Tu7JDGX4dronzrtIROCcMNL4HPyLjA/viewform?embedded=true" 
-                width="100%" 
-                height="1280" 
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0" 
-                style="display: block; margin: 0 auto; max-width: 640px;">
-                載入中…
-            </iframe>
-        </div>
-
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}" class="btn-primary">以 Email 報名</a>
-        </div>
+  <section class="pl-section pl-pain">
+    <div class="pl-inner">
+      <p class="pl-eyebrow">適合誰</p>
+      <h2>你是不是想再往上一層？</h2>
+      <ul>
+        <li>已經會用藥草，想加入「時機」這個維度讓效果更強</li>
+        <li>學過行星符印或占星概念，但不知道怎麼落實成實作</li>
+        <li>想架設一套能長期運作的祭壇系統，而不是一次性的操作</li>
+        <li>對命運、時運的調整有興趣，想從根本層次著手</li>
+      </ul>
+      <p class="pl-punch">在神祕學的世界觀裡，天上的行星投射上主的意志，影響了地上每件事物的構成與發生。理解行星的規則，是從「做一個咒術」升級到「調整整體命運」的關鍵。</p>
     </div>
+  </section>
+
+  <section class="pl-section pl-story">
+    <div class="pl-inner">
+      <p class="pl-eyebrow" style="color:#c9973f; border-color:#c9973f;">關於七行星魔法</p>
+      <h2>從屬性到統治權</h2>
+      <p>【七行星藥草魔法】的主要目的，是去了解和運用行星的力量，創造個人生活的美好，或者得到啟發。</p>
+      <p>在藥草魔法與天使符印的課程中，我們已經說明了行星的基本屬性和職能。在這裡，我們將更進一步——去理解行星的<strong>統治權</strong>，以及完整的藥草對應。</p>
+      <blockquote>當人類可以理解行星的規則，並加以運用，則可以改變自身的命運。</blockquote>
+      <p>如何透過胡督的方式，運用符印與行星魔方去架設祭壇、製作行星魔力袋、行星瓶、行星燭或是許願，開展出更多樣化的操作方式——這就是這門課要交給你的。</p>
+    </div>
+  </section>
+
+  <section class="pl-section pl-planets">
+    <div class="pl-inner">
+      <p class="pl-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程核心</p>
+      <h2>七顆行星，七套統治權</h2>
+      <p style="color:#c5c1de;">每一顆行星都有它統轄的領域、對應的藥草與操作方式</p>
+      <div class="pl-planet-row">
+        <div class="pl-planet"><b>☉</b>太陽</div>
+        <div class="pl-planet"><b>☽</b>月亮</div>
+        <div class="pl-planet"><b>☿</b>水星</div>
+        <div class="pl-planet"><b>♀</b>金星</div>
+        <div class="pl-planet"><b>♂</b>火星</div>
+        <div class="pl-planet"><b>♃</b>木星</div>
+        <div class="pl-planet"><b>♄</b>土星</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pl-section pl-gain">
+    <div class="pl-inner">
+      <p class="pl-eyebrow">學習成果</p>
+      <h2>上完這門課，你將能夠——</h2>
+      <div class="pl-gain-grid">
+        <div class="pl-gain-card">
+          <h3>理解</h3>
+          <ul>
+            <li>掌握七行星的統治權與職能</li>
+            <li>看懂行星魔方與符印的運作</li>
+          </ul>
+        </div>
+        <div class="pl-gain-card">
+          <h3>架設</h3>
+          <ul>
+            <li>架設行星祭壇</li>
+            <li>運用奧菲斯七行星祈禱歌</li>
+          </ul>
+        </div>
+        <div class="pl-gain-card">
+          <h3>製作與運用</h3>
+          <ul>
+            <li>釀造行星油與酊劑</li>
+            <li>執行行星平衡儀式與許願操作</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pl-section pl-syllabus">
+    <div class="pl-inner">
+      <p class="pl-eyebrow">課程大綱</p>
+      <h2>這堂課會教你</h2>
+      <div class="pl-syl-item"><strong>七行星的統治權與職能</strong></div>
+      <div class="pl-syl-item">行星魔方與符印</div>
+      <div class="pl-syl-item">奧菲斯七行星祈禱歌</div>
+      <div class="pl-syl-item">祭壇的架設</div>
+      <div class="pl-syl-item">行星油、酊劑的釀造</div>
+      <div class="pl-syl-item"><strong>行星平衡儀式</strong></div>
+      <div class="pl-syl-item">許願的運用</div>
+    </div>
+  </section>
+
+  <section class="pl-section pl-proof">
+    <div class="pl-inner">
+      <p class="pl-eyebrow">學員回饋</p>
+      <h2>學員怎麼說</h2>
+      {% include testimonials.html tag="hoodoo-07" limit=4 %}
+      <p style="text-align:center; margin-top:.5rem;">
+        <a href="/testimonials/" style="color:var(--pl-indigo);">看更多學員回饋 →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="pl-section pl-teacher">
+    <div class="pl-inner">
+      <p class="pl-eyebrow" style="color:#c9973f; border-color:#c9973f;">授課老師</p>
+      <h2>四月老師</h2>
+      <div class="pl-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>深耕身心靈領域數十年，現今專研胡督魔法與混沌魔法體系，深入理解中國古代哲學思想與西方魔法傳統，擅長將繁瑣的傳統術法整理為系統化的現代教學。</p>
+          <p>台灣、香港、馬來西亞皆有眾多學員與客戶。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pl-section pl-path">
+    <div class="pl-inner">
+      <p class="pl-eyebrow">學習路徑</p>
+      <h2>你在體系的哪個位置</h2>
+      <img src="/assets/images/shared/path-map-hoodoo.svg" alt="胡督魔法系列學習路徑圖" loading="lazy">
+      {% include hoodoo-path.html current="07" accent="#3d3a6b" %}
+      <p class="pl-punch">行星魔法是把「時機」納入操作的關鍵一課。學會之後，你先前所有的咒術都能選在最有利的行星時刻進行。</p>
+    </div>
+  </section>
+
+  <section class="pl-section pl-price" id="signup">
+    <div class="pl-inner">
+      <p class="pl-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程費用</p>
+      <h2 style="text-align:center;">報名資訊</h2>
+      <div class="pl-price-card">
+        <p class="pl-price-old">原價 9,900 元</p>
+        <p class="pl-price-now">早鳥價 8,800 元</p>
+        <p class="pl-price-save">2026/10/23 前完成報名繳費，現省 1,100 元</p>
+        <div class="pl-alumni">🎓 <strong>舊生優惠 7,800 元</strong><br>完成「行星符印」或「金錢策略魔法初階」的學員適用</div>
+        <ul class="pl-includes">
+          <li>線上直播課程</li>
+          <li>七行星統治權與藥草對應講義</li>
+          <li>行星魔方、符印與祭壇架設教學</li>
+          <li>行星油、酊劑釀造實作</li>
+          <li>課後提問管道</li>
+        </ul>
+        <a class="pl-cta" href="#pl-form">立即填寫報名表單</a>
+      </div>
+      <div class="pl-prereq">📘 先修條件：需修畢「藥草魔法師基礎課程」</div>
+      <p class="pl-deadline">⏳ 早鳥截止 10/23｜報名截止 10/31｜上課時間 11/07（六）13:00–16:00</p>
+
+      <div class="pl-form-wrap" id="pl-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfzinptGbx6OlzK5id_Tu7JDGX4dronzrtIROCcMNL4HPyLjA/viewform?embedded=true"
+          width="100%" height="1280" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="七行星藥草魔法報名表單">載入中…</iframe>
+      </div>
+
+      <p class="pl-alt">
+        或來信 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-七行星藥草魔法">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名藥草行星魔法」，附上姓名、聯絡電話、收件地址。送出後三日內回信確認。
+      </p>
+    </div>
+  </section>
+
+  <section class="pl-section pl-faq">
+    <div class="pl-inner">
+      <p class="pl-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>我完全不懂占星，可以上嗎？</summary>
+        <p>可以。這門課教的是魔法運用中的行星系統，不需要你會排盤或解讀星盤。課堂會從行星的統治權與職能講起，用得到的部分都會說明。</p>
+      </details>
+      <details>
+        <summary>舊生優惠怎麼申請？</summary>
+        <p>完成過「行星符印」或「金錢策略魔法初階」的學員，優惠價 7,800 元。報名時在表單或來信中註明你上過的課程即可。</p>
+      </details>
+      <details>
+        <summary>實作材料需要自己準備嗎？</summary>
+        <p>報名後會提供材料清單，包含各行星對應藥草與基本器具，開課前備妥即可跟著實作。</p>
+      </details>
+      <details>
+        <summary>當天有事無法出席，有回放嗎？</summary>
+        <p>本課程會有回放，但要求學員當天至少一定要上線。如果當天完全無法上線，請告知我們辦理延期或退費。</p>
+      </details>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#3d3a6b" bg="#dcdae8" %}
+
 </div>
