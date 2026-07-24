@@ -65,7 +65,8 @@ body{margin:0;background:var(--ink);color:var(--paper);
 .claim p.note{font-size:14px;color:var(--paper-dim);margin:0 0 20px}
 .form-frame{position:relative;width:100%;max-width:540px;margin:0 auto;
   background:#fff;border:1px solid var(--line);}
-.form-frame iframe{display:block;width:100%;border:0;}
+.form-frame iframe{display:block;width:100%;border:0;min-height:480px;}
+@media (max-width:560px){.form-frame iframe{min-height:520px;}}
 .consent{font-size:12.5px;color:var(--paper-dim);line-height:1.75;margin:20px auto 0;max-width:38em}
 
 footer{padding:34px 0 60px;font-size:13px;color:var(--paper-dim)}
@@ -124,7 +125,7 @@ footer a:hover{text-decoration:underline}
     <h2>索取試閱本</h2>
     <p class="note">填寫 email，確認信寄達後點一下確認鈕，試閱本連結就會送到你的信箱。</p>
     <div class="form-frame">
-      <iframe width="540" height="305" src="https://e6dc9204.sibforms.com/v2/serve/MUIFAIQ8opHnRSgSeUp40IQSDhlyIdj7JqrlX4hZM0HQuSd4UZ5q8NGZBEzyImNcCnxyoq_Sayy-AhT-elAtBUfa0TCsWRymvn-UEop9syU6zByR69vhNdUQqFwSR05SVQTDMwkMbQ1zpFWL43IjJsK1-ZcBM-4tnTp3j2y4GvpT9O9EjceSxqXWzyMVgWDUq1HUnE5osWt3yJ6c" frameborder="0" scrolling="auto" allowfullscreen></iframe>
+      <iframe width="540" height="480" src="https://e6dc9204.sibforms.com/v2/serve/MUIFAIQ8opHnRSgSeUp40IQSDhlyIdj7JqrlX4hZM0HQuSd4UZ5q8NGZBEzyImNcCnxyoq_Sayy-AhT-elAtBUfa0TCsWRymvn-UEop9syU6zByR69vhNdUQqFwSR05SVQTDMwkMbQ1zpFWL43IjJsK1-ZcBM-4tnTp3j2y4GvpT9O9EjceSxqXWzyMVgWDUq1HUnE5osWt3yJ6c" frameborder="0" scrolling="auto" allowfullscreen></iframe>
     </div>
     <p class="consent">送出即表示你同意訂閱靈火巫境電子報。我會不定期分享混沌魔法與西方魔法傳統的深度內容，以及課程資訊。隨時可以退訂，不留任何為難。</p>
   </div>
