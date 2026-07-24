@@ -65,18 +65,20 @@ description: 靈火巫境由四月老師主持，為華語世界提供系統化�
   .home-cat p { font-size:.92rem; color:#5a4a35; margin:0; }
   .home-cat .go { margin-top:1rem; font-size:.85rem; font-weight:700; letter-spacing:.1em; }
 
-  .home-featured { background:var(--h-paper2); }
-  .home-course-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.3rem; margin-top:1rem; }
-  .home-course { background:#fff; border:1px solid #ddd0b4; border-radius:10px; overflow:hidden;
-                 display:flex; flex-direction:column; text-align:left; }
-  .home-course .top { padding:1rem 1.2rem 0; display:flex; gap:.5rem; }
-  .home-course .badge { font-size:.72rem; font-weight:700; color:#fff; padding:.15rem .7rem; border-radius:4px; letter-spacing:.05em; }
-  .home-course .body { padding:.8rem 1.2rem 1.2rem; display:flex; flex-direction:column; flex:1; }
-  .home-course h3 { font-size:1.05rem; margin:.3rem 0 .6rem; letter-spacing:.03em; }
-  .home-course p { font-size:.88rem; color:#5a4a35; flex:1; margin:0 0 1rem; }
-  .home-course .meta { font-size:.82rem; color:#8c6a3a; margin-bottom:.8rem; }
-  .home-course .price { color:var(--h-red); font-weight:700; }
-  .home-course .go { color:var(--h-teal); font-weight:700; text-decoration:none; font-size:.9rem; }
+  /* 從哪裡開始 */
+  .home-start { background:var(--h-paper2); }
+  .home-step-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.3rem; margin-top:1rem; }
+  .home-step { background:#fff; border:1px solid #ddd0b4; border-radius:10px; padding:2rem 1.6rem;
+               text-align:left; display:flex; flex-direction:column; }
+  .home-step .num { font-size:2.4rem; color:var(--h-gold); font-weight:700; line-height:1; margin-bottom:.8rem; }
+  .home-step h3 { font-size:1.15rem; margin:0 0 .6rem; letter-spacing:.03em; }
+  .home-step p { font-size:.92rem; color:#5a4a35; flex:1; margin:0 0 1.2rem; }
+  .home-step a { color:var(--h-teal); font-weight:700; text-decoration:none; font-size:.9rem; }
+
+  /* 招生導引帶 */
+  .home-band { background:var(--h-dark2); color:var(--h-paper); text-align:center; padding:3.5rem 1.5rem; }
+  .home-band h2 { font-size:clamp(1.3rem,3vw,1.8rem); color:#fff; letter-spacing:.05em; margin:0 0 .8rem; }
+  .home-band p { color:#c9b892; max-width:32em; margin:0 auto 1.8rem; }
 
   .home-proof { background:var(--h-paper); }
 
@@ -92,7 +94,7 @@ description: 靈火巫境由四月老師主持，為華語世界提供系統化�
   @media (max-width:768px){
     .home-hero { padding:4rem 1.2rem 3.5rem; }
     .home-sec { padding:3.5rem 0; }
-    .home-books .book-grid, .home-cat-grid, .home-course-grid { grid-template-columns:1fr; }
+    .home-books .book-grid, .home-cat-grid, .home-step-grid { grid-template-columns:1fr; }
     .home-teacher .flex { flex-direction:column; text-align:center; }
     .home-teacher img { width:60%; max-width:220px; }
     .home-teacher .facts { justify-content:center; }
@@ -186,42 +188,38 @@ description: 靈火巫境由四月老師主持，為華語世界提供系統化�
     </div>
   </section>
 
-  <section class="home-sec home-featured center">
+  <section class="home-sec home-start center">
     <div class="wrap">
-      <p class="eyebrow">近期招生</p>
-      <h2 class="sec-title">最近開課</h2>
-      <div class="home-course-grid">
-        <div class="home-course">
-          <div class="top"><span class="badge" style="background:#9c27b0;">遠距</span><span class="badge" style="background:#607d8b;">初級</span></div>
-          <div class="body">
-            <h3>藥草魔法師基礎課程</h3>
-            <p>胡督藥草魔法的第一步。認識五十種常用藥草，建構配方思考邏輯，實際做出護符包與財富咒瓶。</p>
-            <div class="meta">📅 8/08（六）13:00–16:00　<span class="price">早鳥 4,200</span></div>
-            <a class="go" href="/courses/course-hoodoo-00/">了解更多 →</a>
-          </div>
+      <p class="eyebrow">從 哪 裡 開 始</p>
+      <h2 class="sec-title">三步走進魔法的世界</h2>
+      <div class="home-step-grid">
+        <div class="home-step">
+          <div class="num">1</div>
+          <h3>先讀一本免費電子書</h3>
+          <p>不用花一毛錢，先看看這個世界長什麼樣子。八支超市買得到的藥草、一個今天就能動手的實作，判斷這條路適不適合你。</p>
+          <a href="#free-books">免費領取電子書 →</a>
         </div>
-        <div class="home-course">
-          <div class="top"><span class="badge" style="background:#9c27b0;">遠距</span><span class="badge" style="background:#607d8b;">單元一</span></div>
-          <div class="body">
-            <h3>胡督淨化魔法（單元一）</h3>
-            <p>淨化與療癒是一切咒術的根本。學習淨化浴、雞蛋清理、聖水製作，去除厄運與詛咒的侵擾。</p>
-            <div class="meta">📅 8/09（日）13:00–16:00　<span class="price">早鳥 4,200</span></div>
-            <a class="go" href="/courses/course-hoodoo-01/">了解更多 →</a>
-          </div>
+        <div class="home-step">
+          <div class="num">2</div>
+          <h3>從藥草魔法基礎入門</h3>
+          <p>整套胡督體系的共同地基。認識藥草的屬性與配方邏輯，親手做出護符包與咒瓶——不是背配方，而是學會自己設計配方。</p>
+          <a href="/courses/course-hoodoo-00/">了解基礎課程 →</a>
         </div>
-        <div class="home-course">
-          <div class="top"><span class="badge" style="background:#9c27b0;">遠距</span><span class="badge" style="background:#ff9800;">新課</span></div>
-          <div class="body">
-            <h3>印度式胡督豐盛魔法</h3>
-            <p>將印度吠陀與胡督根源工作融合的線上系統。家庭豐盛祭壇、真言呼吸、招財沐浴清理，打造財富磁場。</p>
-            <div class="meta">📅 7/26（日）13:00–16:00　<span class="price">首開 3,800</span></div>
-            <a class="go" href="/courses/course-hoodoo-10/">了解更多 →</a>
-          </div>
+        <div class="home-step">
+          <div class="num">3</div>
+          <h3>依你的方向深化</h3>
+          <p>淨化、反轉詛咒、金錢、愛情、行星魔法⋯⋯基礎打穩之後，往你真正在意的議題走。每個系列都有完整的學習路徑。</p>
+          <a href="/course/">瀏覽全部課程 →</a>
         </div>
       </div>
-      <div style="margin-top:2.5rem;">
-        <a class="cta cta-solid" href="/course/latest/">查看全部近期課程</a>
-      </div>
+    </div>
+  </section>
+
+  <section class="home-band">
+    <div class="wrap">
+      <h2>想知道最近開哪些課？</h2>
+      <p>正在招生的課程、開課日期與早鳥優惠，都整理在同一頁。</p>
+      <a class="cta cta-solid" href="/course/latest/">查看近期招生課程</a>
     </div>
   </section>
 
