@@ -1,69 +1,312 @@
 ---
 layout: default
-title: "魔法蠟燭課 - 四月老師"
+title: "魔法蠟燭課（胡督選修）- 四月老師"
+description: "三大主題、六款魔法蠟燭完整作法：留在我身邊、快吻我、金錢吸引、幸運、四賊醋、飛行惡魔。現場實作三顆，另附三組材料包帶回。"
+permalink: /courses/course-hoodoo-08/
+image: /assets/images/courses/hoodoo-08/og-candle.jpg
 ---
-<div class="container" style="padding: 3rem 0;">
-    <a href="/course/" class="back-link">← 返回課程中心</a>
 
-    <div class="course-detail-header">
-        <h1>魔法蠟燭課</h1>
-        <div class="meta">
-            <span>🕯️ 胡督魔法</span>
-            <span>🔥 儀式實作</span>
-            <span>📊 中級</span>
-            <span>👨‍🏫 四月老師</span>
-        </div>
+<style>
+  .cd-page { --cd-ink:#241812; --cd-paper:#f6efe8; --cd-paper-deep:#e9dbcd;
+             --cd-dark:#150e09; --cd-dark2:#241610; --cd-copper:#a8532a;
+             --cd-copper-soft:#d9a582; --cd-gold:#c9973f; --cd-cream:#f4ecdd;
+             font-size:1rem; color:var(--cd-ink); line-height:1.85; }
+  .cd-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--cd-ink); letter-spacing:.05em; }
+  .cd-section { padding:3.5rem 1.25rem; }
+  .cd-inner { max-width:860px; margin:0 auto; }
+  .cd-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--cd-copper);
+                border-bottom:1px solid var(--cd-copper); padding-bottom:.3rem; margin-bottom:1rem; }
+  .cd-cta { display:inline-block; background:var(--cd-copper); color:#fff !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(168,83,42,.35); transition:transform .15s ease; }
+  .cd-cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .cd-cta{transition:none} .cd-cta:hover{transform:none} }
+
+  .cd-hero { position:relative; background:var(--cd-dark); color:var(--cd-cream); padding:5rem 1.25rem 4rem; overflow:hidden; }
+  .cd-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .cd-hero::after { content:""; position:absolute; inset:0;
+                    background:linear-gradient(100deg, rgba(19,13,8,.95) 0%, rgba(19,13,8,.82) 42%, rgba(19,13,8,.35) 70%, rgba(19,13,8,.15) 100%); }
+  .cd-hero-inner { position:relative; z-index:2; max-width:860px; margin:0 auto; }
+  .cd-hero h1 { font-size:clamp(1.7rem,4.5vw,2.6rem); line-height:1.45; margin:.5rem 0 1rem; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .cd-hero h1 .kicker { display:block; font-size:1.05rem; font-weight:400; letter-spacing:.25em; color:var(--cd-copper-soft); margin-bottom:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.5); }
+  .cd-hero .cd-sub { font-size:1.05rem; color:#f0e5da; max-width:34em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .cd-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem; color:#f6ece2; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .cd-hero-note { font-size:.85rem; color:#dcc0a8; margin-top:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+
+  .cd-pain { background:var(--cd-paper); }
+  .cd-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .cd-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #cdb9a6; }
+  .cd-pain li::before { content:"🕯"; position:absolute; left:.3rem; font-size:.9rem; }
+  .cd-punch { background:var(--cd-paper-deep); border-left:4px solid var(--cd-copper); padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  .cd-story { background:var(--cd-dark2); color:#ebdfd3; }
+  .cd-story h2 { color:#fff; }
+  .cd-story blockquote { border-left:3px solid var(--cd-gold); padding:.6rem 0 .6rem 1.2rem; margin:1.4rem 0; font-size:1.15rem; color:#fff; }
+
+  .cd-take { background:var(--cd-dark); color:#ebdfd3; text-align:center; }
+  .cd-take h2 { color:#fff; }
+  .cd-take-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .cd-take-card { border:1px solid rgba(217,165,130,.35); border-radius:10px; padding:1.6rem 1.2rem; }
+  .cd-take-card b { display:block; font-size:2rem; color:var(--cd-gold); margin-bottom:.4rem; }
+  .cd-take-card span { font-size:.92rem; color:#d9c6b3; }
+
+  .cd-formulas { background:var(--cd-paper-deep); }
+  .cd-theme { background:#fff; border-radius:10px; padding:1.4rem 1.6rem; margin:1rem 0; border-left:4px solid var(--cd-copper); }
+  .cd-theme h3 { margin:0 0 .6rem; color:var(--cd-copper); font-size:1.15rem; letter-spacing:.04em; }
+  .cd-theme .recipes { display:flex; gap:.7rem; flex-wrap:wrap; margin-top:.6rem; }
+  .cd-theme .recipe { background:var(--cd-paper); border:1px solid #ddc9b4; border-radius:999px; padding:.35rem 1.1rem; font-size:.92rem; }
+
+  .cd-gain { background:var(--cd-paper); }
+  .cd-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .cd-gain-card { background:#fff; border:1px solid #dcc7b3; border-radius:8px; padding:1.2rem 1.3rem; }
+  .cd-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--cd-copper); letter-spacing:.08em; }
+  .cd-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+
+  .cd-proof { background:var(--cd-paper-deep); }
+
+  .cd-teacher { background:var(--cd-dark2); color:#ebdfd3; }
+  .cd-teacher h2 { color:#fff; }
+  .cd-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .cd-teacher-flex img { width:220px; height:auto; border-radius:8px; flex:0 0 auto; border:1px solid rgba(217,165,130,.4); }
+
+  .cd-path { background:var(--cd-paper); text-align:center; }
+  .cd-path img { max-width:520px; width:100%; height:auto; margin:1.4rem auto 0; display:block; }
+  .cd-path .cd-punch { margin-top:1.6rem; text-align:left; }
+
+  .cd-price { background:var(--cd-dark); color:var(--cd-cream); }
+  .cd-price h2 { color:#fff; }
+  .cd-price-card { background:var(--cd-dark2); border:1px solid rgba(201,151,63,.5); border-radius:10px; padding:2rem 1.6rem; max-width:520px; margin:1.4rem auto; text-align:center; }
+  .cd-price-old { text-decoration:line-through; color:#a08a78; font-size:1.05rem; }
+  .cd-price-now { font-size:2.2rem; color:var(--cd-gold); font-weight:700; margin:.3rem 0; }
+  .cd-price-save { color:var(--cd-copper-soft); font-size:.95rem; }
+  .cd-includes { text-align:left; max-width:420px; margin:1.4rem auto; padding-left:1.3rem; font-size:.95rem; }
+  .cd-prereq { background:rgba(201,151,63,.12); border:1px solid rgba(201,151,63,.4); border-radius:6px; padding:.8rem 1.2rem; margin:1.2rem auto; max-width:520px; font-size:.92rem; color:#e6cfa0; text-align:center; }
+  .cd-deadline { text-align:center; font-size:.95rem; color:var(--cd-copper-soft); letter-spacing:.08em; margin-bottom:1.6rem; }
+  .cd-alt { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#f0e5da; }
+  .cd-alt a { color:var(--cd-gold); }
+
+  .cd-faq { background:var(--cd-paper); }
+  .cd-faq details { border-bottom:1px solid #d5c0ac; padding:.9rem 0; }
+  .cd-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .cd-faq summary::before { content:"＋ "; color:var(--cd-copper); }
+  .cd-faq details[open] summary::before { content:"－ "; }
+  .cd-faq details p { margin:.6rem 0 0; }
+
+  @media (max-width:768px){
+    .cd-section { padding:2.6rem 1.1rem; }
+    .cd-gain-grid, .cd-take-grid { grid-template-columns:1fr; }
+    .cd-teacher-flex { flex-direction:column; }
+    .cd-teacher-flex img { width:100%; max-width:320px; }
+    .cd-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="cd-page">
+
+  <header class="cd-hero">
+    <img class="cd-hero-bg" src="/assets/images/courses/hoodoo-08/hero-candle.webp" alt="" width="2400" height="1350" fetchpriority="high">
+    <div class="cd-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#d9a582; font-size:.9rem; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="cd-eyebrow" style="display:block; width:fit-content; color:#d9a582; border-color:#d9a582;">胡督魔法系列・選修</p>
+      <h1>
+        <span class="kicker">魔法蠟燭課</span>
+        一次把魔法蠟燭<br>學到好、學到滿
+      </h1>
+      <p class="cd-sub">三大主題、六款完整作法、六組材料包。現場親手做三顆，另外三顆帶回家繼續練。你帶走的不只是技能，是一套真正能用的系統。</p>
+      <div class="cd-hero-meta">
+        <span>📅 上課時間：〔待補〕</span>
+        <span>🕯 六款配方・六組材料包</span>
+        <span>📘 需先修藥草基礎</span>
+      </div>
+      <a class="cd-cta" href="#signup">立即報名</a>
+      <p class="cd-hero-note">名額有限，材料包需提前備製</p>
     </div>
+  </header>
 
-    <div class="course-detail-content">
-        <h2>課程概述</h2>
-        <p>2025 魔法蠟燭課全新開班｜正式開放報名！想一次把魔法蠟燭學到好、學到滿嗎？這堂課，就是為你準備的。</p>
-        <p>四月老師將整整一天親自陪你實作—— 你會帶走技能、帶走六顆魔法蠟燭、帶走能量，也帶走真正能用的魔法系統。</p>
+  <section class="cd-section cd-pain">
+    <div class="cd-inner">
+      <p class="cd-eyebrow">適合誰</p>
+      <h2>你是不是有這些狀況？</h2>
+      <ul>
+        <li>點過蠟燭做魔法，但只會「點著它」，不知道還能怎麼處理</li>
+        <li>看過雕刻、塗油這些說法，卻沒人完整示範過一次</li>
+        <li>想要一套隨時能用的日常工具，不必每次都大費周章</li>
+        <li>上過線上課，但覺得這種手作的東西還是想現場學</li>
+      </ul>
+      <p class="cd-punch">蠟燭是胡督裡最普及、也最容易被低估的工具。同樣一支蠟燭，會做和不會做，差別在於雕刻、塗油、祝聖與燃燒方式——這些細節沒人示範，光看文字學不起來。</p>
+    </div>
+  </section>
 
-        <h2>課程大綱</h2>
-        <p>課程內容包含三大主題蠟燭，六款完整作法，並附上六組材料包。現場實作 3 顆主題蠟燭，帶回練習 3 顆主題蠟燭材料包。你不只會學到，還能親手做、帶回家持續練習。</p>
-        <ul>
-            <li><strong>① 愛情魔法蠟燭：</strong> "留在我身邊"配方、"快吻我"配方</li>
-            <li><strong>② 金錢魔法蠟燭：</strong> "金錢吸引"配方、"幸運"配方</li>
-            <li><strong>③ 淨化除厄魔法蠟燭：</strong> "四賊醋"配方、"飛行惡魔"配方</li>
+  <section class="cd-section cd-story">
+    <div class="cd-inner">
+      <p class="cd-eyebrow" style="color:#c9973f; border-color:#c9973f;">關於這門課</p>
+      <h2>親自陪你做完每一顆</h2>
+      <p>這堂課的設計很單純：不講抽象理論，直接動手。四月老師會親自陪你實作，從藥草配置、雕刻、塗油到祝聖，一步一步做完。</p>
+      <blockquote>你會帶走技能、帶走六顆魔法蠟燭、帶走能量，也帶走真正能用的魔法系統。</blockquote>
+      <p>課程涵蓋三大主題、六款完整作法，並附上六組材料包。現場實作三顆主題蠟燭，另外三顆的材料包帶回家練習——你不只會學到，還能親手做、回家持續操作。</p>
+    </div>
+  </section>
+
+  <section class="cd-section cd-take">
+    <div class="cd-inner">
+      <p class="cd-eyebrow" style="color:#c9973f; border-color:#c9973f;">你會帶走什麼</p>
+      <h2>不是聽完就結束</h2>
+      <div class="cd-take-grid">
+        <div class="cd-take-card"><b>3</b><span>大主題<br>愛情・金錢・淨化除厄</span></div>
+        <div class="cd-take-card"><b>6</b><span>款完整配方作法<br>每個主題各兩款</span></div>
+        <div class="cd-take-card"><b>6</b><span>組材料包<br>現場做 3 顆・帶回 3 顆</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cd-section cd-formulas">
+    <div class="cd-inner">
+      <p class="cd-eyebrow">課程內容</p>
+      <h2>三大主題，六款配方</h2>
+
+      <div class="cd-theme">
+        <h3>① 愛情魔法蠟燭</h3>
+        <p style="margin:0; color:#5a4a3a; font-size:.95rem;">吸引、挽留與升溫的兩款經典配方</p>
+        <div class="recipes">
+          <span class="recipe">留在我身邊</span>
+          <span class="recipe">快吻我</span>
+        </div>
+      </div>
+
+      <div class="cd-theme">
+        <h3>② 金錢魔法蠟燭</h3>
+        <p style="margin:0; color:#5a4a3a; font-size:.95rem;">招財與轉運的兩款核心配方</p>
+        <div class="recipes">
+          <span class="recipe">金錢吸引</span>
+          <span class="recipe">幸運</span>
+        </div>
+      </div>
+
+      <div class="cd-theme">
+        <h3>③ 淨化除厄魔法蠟燭</h3>
+        <p style="margin:0; color:#5a4a3a; font-size:.95rem;">清理與驅離的兩款強力配方</p>
+        <div class="recipes">
+          <span class="recipe">四賊醋</span>
+          <span class="recipe">飛行惡魔</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cd-section cd-gain">
+    <div class="cd-inner">
+      <p class="cd-eyebrow">學習成果</p>
+      <h2>上完這門課，你將能夠——</h2>
+      <div class="cd-gain-grid">
+        <div class="cd-gain-card">
+          <h3>製作</h3>
+          <ul>
+            <li>親手完成六款主題魔法蠟燭</li>
+            <li>掌握藥草配置與蠟燭的搭配邏輯</li>
+          </ul>
+        </div>
+        <div class="cd-gain-card">
+          <h3>技法</h3>
+          <ul>
+            <li>學會雕刻、塗油與祝聖的完整流程</li>
+            <li>知道不同意圖該用什麼顏色與處理方式</li>
+          </ul>
+        </div>
+        <div class="cd-gain-card">
+          <h3>持續運用</h3>
+          <ul>
+            <li>帶回三組材料包，回家繼續練習</li>
+            <li>把蠟燭變成日常隨時能用的工具</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cd-section cd-proof">
+    <div class="cd-inner">
+      <p class="cd-eyebrow">學員回饋</p>
+      <h2>學員怎麼說</h2>
+      {% include testimonials.html tag="hoodoo-08" limit=4 %}
+      <p style="text-align:center; margin-top:.5rem;">
+        <a href="/testimonials/" style="color:var(--cd-copper);">看更多學員回饋 →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="cd-section cd-teacher">
+    <div class="cd-inner">
+      <p class="cd-eyebrow" style="color:#c9973f; border-color:#c9973f;">授課老師</p>
+      <h2>四月老師</h2>
+      <div class="cd-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>深耕身心靈領域數十年，現今專研胡督魔法與混沌魔法體系，深入理解中國古代哲學思想與西方魔法傳統，擅長將繁瑣的傳統術法整理為系統化的現代教學。</p>
+          <p>台灣、香港、馬來西亞皆有眾多學員與客戶。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cd-section cd-path">
+    <div class="cd-inner">
+      <p class="cd-eyebrow">學習路徑</p>
+      <h2>你在體系的哪個位置</h2>
+      <img src="/assets/images/shared/path-map-hoodoo.svg" alt="胡督魔法系列學習路徑圖" loading="lazy">
+      {% include hoodoo-path.html current="08" accent="#a8532a" %}
+      <p class="cd-punch">蠟燭幾乎出現在每一個胡督操作裡——祝聖、咒瓶、祭壇、淨化都用得上。學會它，等於為前面所有單元加裝了一個共用零件。</p>
+    </div>
+  </section>
+
+  <section class="cd-section cd-price" id="signup">
+    <div class="cd-inner">
+      <p class="cd-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程費用</p>
+      <h2 style="text-align:center;">報名資訊</h2>
+      <div class="cd-price-card">
+        <p class="cd-price-old">原價 8,800 元</p>
+        <p class="cd-price-now">早鳥價 7,500 元</p>
+        <p class="cd-price-save">早鳥期限〔待補〕前完成報名繳費，現省 1,300 元</p>
+        <ul class="cd-includes">
+          <li>三大主題、六款配方完整教學</li>
+          <li><strong>六組材料包</strong>（現場實作 3 顆＋帶回 3 顆）</li>
+          <li>雕刻、塗油、祝聖完整示範</li>
+          <li>老師全程陪同實作</li>
+          <li>課後提問管道</li>
         </ul>
+        <a class="cd-cta" href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-魔法蠟燭課">立即來信報名</a>
+      </div>
+      <div class="cd-prereq">📘 先修條件：需修畢「藥草魔法師基礎課程」</div>
+      <p class="cd-deadline">⏳ 上課時間與報名截止日：〔待補〕</p>
 
-        <h2>課程信息</h2>
-        <div class="course-info-box">
-            <p><strong>上課時間：</strong>01/18(日) 14:00-16:30</p>
-            <p><strong>上課資格：</strong>需修畢藥草魔法初階</p>
-            <p><strong>課程價格：</strong>原價:8800元 | 早鳥價:7500元 (01/04前完成報名繳費)</p>
-            <p><strong>報名截止：</strong>01/12</p>
-        </div>
-
-        <h2>老師介紹</h2>
-        <div class="teacher-info">
-            <h3>四月老師</h3>
-            <p>四月老師是一位非常出色的魔法工作者，於身心靈領域數十年。現今專研胡督魔法和混沌魔法體系，深入理解中國古代哲學思想和西方魔法傳統，並且能夠運用這些思想來指導自己的實踐。</p>
-        </div>
-
-        <h2>📜 胡督魔法系列課程總覽</h2>
-        <div style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #1a5f5f;">
-            <p style="margin-bottom: 1rem; font-weight: bold; color: #1a5f5f;">探索同系列其他課程，建立完整的胡督魔法體系：</p>
-            <ul style="line-height: 1.8;">
-                <li><a href="/courses/course-hoodoo-00/">【基礎】藥草魔法師基礎課程</a></li>
-                <li><a href="/courses/course-hoodoo-01/">【單元一】淨化療癒篇</a></li>
-                <li><a href="/courses/course-hoodoo-02/">【單元二】反轉詛咒篇</a></li>
-                <li><a href="/courses/course-hoodoo-03/">【單元三】金錢魔法與祭壇</a></li>
-                <li><a href="/courses/course-hoodoo-04/">【單元四】愛情魔法篇</a></li>
-                <li><a href="/courses/course-hoodoo-05/">【單元五】關係破壞者</a></li>
-                <li><a href="/courses/course-hoodoo-06/">【選修】魔法油配方解析</a></li>
-                <li><a href="/courses/course-hoodoo-07/">【選修】藥草行星魔法</a></li>
-                <li><strong>▶ 目前所在：【選修】魔法蠟燭課</strong></li>
-            </ul>
-        </div>
-
-        <h2>報名方式</h2>
-        <div class="registration-info">
-            <p>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題為「報名魔法蠟燭篇」，告知您的姓名、聯絡電話、收件地址即可。</p>
-        </div>
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}" class="btn-primary">立即報名</a>
-        </div>
+      <p class="cd-alt">
+        來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-魔法蠟燭課">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名魔法蠟燭篇」，附上姓名、聯絡電話、收件地址。我們將於三日內回信與您確認。
+      </p>
     </div>
+  </section>
+
+  <section class="cd-section cd-faq">
+    <div class="cd-inner">
+      <p class="cd-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>我一定要先上過基礎課程嗎？</summary>
+        <p>是的，本課需先修畢「藥草魔法師基礎課程」。蠟燭配方建立在藥草屬性的理解上，有了基礎才知道為什麼是這些材料。</p>
+      </details>
+      <details>
+        <summary>材料需要自己準備嗎？</summary>
+        <p>不用。課程附六組材料包，現場實作三顆、另外三顆帶回家練習，材料都由我們準備好。</p>
+      </details>
+      <details>
+        <summary>完全沒做過蠟燭，會不會跟不上？</summary>
+        <p>不會。老師會全程陪同、逐步示範，從藥草配置到雕刻塗油都是現場跟著做，沒有經驗也能完成。</p>
+      </details>
+      <details>
+        <summary>做好的蠟燭要怎麼保存和使用？</summary>
+        <p>課堂上會說明保存方式、燃燒時機與後續處理（包含殘蠟該怎麼辦），讓你回家後知道怎麼接續操作。</p>
+      </details>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#a8532a" bg="#e9dbcd" %}
+
 </div>
