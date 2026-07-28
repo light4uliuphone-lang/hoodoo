@@ -1,152 +1,290 @@
 ---
 layout: default
-title: 儀式與服務 | 四月老師 - 專業胡督與能量調整服務
-description: 提供專業魔法儀式與服務，包含胡督(Hoodoo)傳統祈願、財運調整、愛情祝福、保護淨化與聖徒魔法。由四月老師親自執導，量身訂製客製化方案，協助您解決人生困境並吸引正向豐盛能量。
+title: 團體儀式與儀式 | 四月老師 - 靈火巫境
+description: 靈火巫境不定期舉辦的團體儀式與集體儀式——行星與神聖儀式、五雷開運、收魂安神、集體祈福等。由四月老師親自執行，開放報名，與眾人共同參與的魔法時刻。
 ---
 
-<div class="container" style="padding: 3rem 0;">
-    <h1 style="text-align: center; color: #1a5f5f; margin-bottom: 3rem; font-size: 2.5rem;">儀式與服務</h1>
+<style>
+  .rt { --rt-ink:#241a12; --rt-paper:#f4ecdd; --rt-paper2:#ece1cc; --rt-dark:#14100b; --rt-dark2:#1f1810;
+        --rt-gold:#c9973f; --rt-gold-soft:#e6cfa0; --rt-teal:#1a5f5f; --rt-red:#8c3b2e; --rt-cinnabar:#a83a28;
+        color:var(--rt-ink); line-height:1.85; }
+  .rt * { box-sizing:border-box; }
+  .rt .wrap { max-width:1000px; margin:0 auto; padding:0 1.5rem; }
+  .rt .eyebrow { display:inline-block; font-size:.82rem; letter-spacing:.35em; color:var(--rt-gold);
+                 border-bottom:1px solid var(--rt-gold); padding-bottom:.3rem; margin-bottom:1rem; }
+  .rt .cta { display:inline-block; text-decoration:none; font-weight:700; letter-spacing:.1em;
+             padding:.9rem 2.4rem; border-radius:4px; transition:transform .15s ease; }
+  .rt .cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .rt .cta{transition:none} .rt .cta:hover{transform:none} }
 
-    <div style="background-color: #f9f9f9; padding: 2rem; border-radius: 8px; border-left: 4px solid #ff9800; margin-bottom: 3rem;">
-        <p style="font-size: 1.1rem; color: #1a5f5f; line-height: 1.8;">除了課程教學，我們還提供專業的魔法儀式與服務。無論您是想要解決特定的人生困境，還是尋求靈性指導，我們都能為您提供量身訂製的魔法服務。</p>
+  /* Hero */
+  .rt-hero { position:relative; background:radial-gradient(ellipse at 50% 25%, #2a1f16, #14100b 72%);
+             color:var(--rt-paper); text-align:center; padding:5rem 1.5rem 4rem; overflow:hidden; }
+  .rt-hero::before { content:""; position:absolute; top:-25%; left:50%; transform:translateX(-50%);
+                     width:600px; height:600px; border-radius:50%;
+                     background:radial-gradient(circle, rgba(201,151,63,.12) 0%, transparent 62%); }
+  .rt-hero-in { position:relative; max-width:720px; margin:0 auto; }
+  .rt-hero .glyph { font-size:1.8rem; color:var(--rt-gold); margin-bottom:1.2rem; }
+  .rt-hero h1 { font-size:clamp(1.9rem,5vw,2.8rem); color:#fff; letter-spacing:.06em; margin:.3rem 0 1rem; }
+  .rt-hero p { color:var(--rt-gold-soft); max-width:31em; margin:0 auto; font-size:1.08rem; }
+
+  .rt-sec { padding:4.5rem 0; }
+  .rt-sec h2.sec { font-size:clamp(1.4rem,3.2vw,1.9rem); letter-spacing:.05em; margin:.8rem 0 2rem; text-align:center; }
+
+  /* 什麼是團體儀式 */
+  .rt-intro { background:var(--rt-paper); }
+  .rt-intro-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; margin-top:1rem; }
+  .rt-intro-card { background:#fff; border:1px solid #ddd0b4; border-radius:10px; padding:2rem 1.7rem; border-top:3px solid var(--rt-gold); }
+  .rt-intro-card .ic { font-size:1.8rem; margin-bottom:.8rem; }
+  .rt-intro-card h3 { color:var(--rt-teal); margin:0 0 .6rem; font-size:1.15rem; letter-spacing:.03em; }
+  .rt-intro-card p { color:#5a4a35; margin:0; font-size:.93rem; }
+
+  /* 近期場次 */
+  .rt-upcoming { background:var(--rt-dark2); }
+  .rt-upcoming h2.sec { color:#fff; }
+  .rt-upcoming-sub { text-align:center; color:#c9b892; max-width:34em; margin:0 auto 2.4rem; }
+
+  /* 儀式卡片（可複製插入） */
+  .rt-card { background:linear-gradient(155deg, #1a1109, #2a1f16); border:1px solid rgba(201,151,63,.35);
+             border-radius:14px; overflow:hidden; box-shadow:0 8px 28px rgba(0,0,0,.3); max-width:760px; margin:0 auto 1.6rem; }
+  .rt-card-body { padding:2.6rem 2.2rem; color:var(--rt-paper); }
+  .rt-tag { display:inline-block; font-size:.78rem; letter-spacing:.22em; color:var(--rt-gold);
+            border:1px solid var(--rt-gold); border-radius:999px; padding:.25rem 1.1rem; margin-bottom:1.3rem; }
+  .rt-card h3 { color:#fff; font-size:1.9rem; letter-spacing:.06em; margin:0 0 .4rem; }
+  .rt-card .sub { color:var(--rt-gold-soft); font-size:1.08rem; margin:0 0 1.5rem; }
+  .rt-card .desc { color:#d8c9ad; line-height:1.95; margin:0 0 1.5rem; }
+  .rt-card .desc strong { color:#fff; }
+  .rt-two { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.6rem 0; }
+  .rt-gate { background:rgba(201,151,63,.08); border:1px solid rgba(201,151,63,.28); border-radius:8px; padding:1.2rem 1.4rem; }
+  .rt-gate h4 { color:var(--rt-gold); font-size:1.02rem; margin:0 0 .5rem; letter-spacing:.05em; }
+  .rt-gate p { color:#cbb89a; font-size:.9rem; margin:0; line-height:1.8; }
+  .rt-meta { display:flex; flex-wrap:wrap; gap:.6rem 2rem; margin:1.6rem 0; font-size:.95rem; color:#f1e7d4;
+             padding-top:1.4rem; border-top:1px solid rgba(201,151,63,.2); }
+  .rt-btn-cinnabar { background:var(--rt-cinnabar); color:#fff !important; box-shadow:0 4px 14px rgba(168,58,40,.35); }
+
+  /* 無場次時的空狀態 */
+  .rt-empty { max-width:600px; margin:0 auto; text-align:center; background:rgba(201,151,63,.06);
+              border:1px dashed rgba(201,151,63,.4); border-radius:12px; padding:3rem 2rem; }
+  .rt-empty .glyph { font-size:2rem; color:var(--rt-gold); margin-bottom:1rem; }
+  .rt-empty p { color:#d8c9ad; margin:0 0 1.6rem; font-size:1.02rem; line-height:1.9; }
+
+  /* 訂製導引帶 */
+  .rt-band { background:var(--rt-paper2); text-align:center; padding:4rem 1.5rem; }
+  .rt-band h2 { font-size:clamp(1.3rem,3vw,1.7rem); letter-spacing:.05em; margin:0 0 .8rem; }
+  .rt-band p { color:#5a4a35; max-width:32em; margin:0 auto 1.8rem; }
+
+  /* FAQ */
+  .rt-faq { background:var(--rt-paper); }
+  .rt-faq details { border-bottom:1px solid #ddd0b4; padding:1rem 0; }
+  .rt-faq summary { cursor:pointer; font-weight:700; list-style:none; color:var(--rt-red); }
+  .rt-faq summary::before { content:"＋ "; color:var(--rt-gold); }
+  .rt-faq details[open] summary::before { content:"－ "; }
+  .rt-faq details p { margin:.7rem 0 0; color:#5a4a35; }
+
+  @media (max-width:768px){
+    .rt-intro-grid, .rt-two { grid-template-columns:1fr; }
+    .rt-sec { padding:3.2rem 0; }
+  }
+</style>
+
+<div class="rt">
+
+  <!-- Hero -->
+  <header class="rt-hero">
+    <div class="rt-hero-in">
+      <div class="glyph">✦</div>
+      <p class="eyebrow">團 體 儀 式 與 法 事</p>
+      <h1>與眾人一同，<br>參與集體的魔法時刻</h1>
+      <p>靈火巫境不定期舉辦團體儀式與集體儀式——行星與神聖儀式、集體祈願、豐盛與守護。由四月老師親自執行，開放報名，凝聚眾人之力共同祈願。</p>
     </div>
+  </header>
 
-    <!-- 近期法事主打：五雷轉運與收魂法 -->
-    <section style="margin-bottom: 3.5rem;">
-        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">🔥 近期法事・開放報名</h2>
-        <div style="background: linear-gradient(155deg, #1a1109, #2a1f16); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 28px rgba(0,0,0,.25);">
-            <div style="padding: 2.5rem 2rem 2rem; color: #f4ecdd;">
-                <div style="display: inline-block; font-size: 0.8rem; letter-spacing: 0.25em; color: #c9973f; border: 1px solid #c9973f; border-radius: 999px; padding: 0.2rem 1rem; margin-bottom: 1.2rem;">道 法 祈 福・限 額 20 名</div>
-                <h3 style="color: #fff; font-size: 1.8rem; letter-spacing: 0.06em; margin: 0 0 0.5rem;">五雷開運與收魂法</h3>
-                <p style="color: #e6cfa0; font-size: 1.05rem; margin: 0 0 1.5rem;">先為自己開路，也為自己安魂</p>
-
-                <p style="color: #d8c9ad; line-height: 1.9; margin: 0 0 1rem;">結合兩道法門：<strong style="color:#fff;">五雷轉運開門</strong>，以茅山符法與雷法之力，向外破除事業與運勢上的阻礙、打開財富的管道；<strong style="color:#fff;">收魂安神</strong>，以台灣民間收魂之法，向內收攝散失的魂魄、安定不寧的身心、恢復運勢。一外一內，一開一收。</p>
-
-                <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 2rem; margin: 1.5rem 0; font-size: 0.95rem; color: #f1e7d4;">
-                    <span>🗓 行法日：2026/07/28</span>
-                    <span>⌛ 報名截止：2026/07/21</span>
-                    <span>💰 雙法合一 NT$ 1,388 / 人</span>
-                </div>
-
-                <a href="https://hoodoo.pro/rituals/r-thunder/" style="display: inline-block; background-color: #a83a28; color: #fff; text-decoration: none; padding: 0.9rem 2.4rem; border-radius: 4px; font-weight: 700; letter-spacing: 0.12em; box-shadow: 0 4px 14px rgba(168,58,40,.35);">了解詳情與報名 →</a>
-            </div>
+  <!-- 什麼是團體儀式 -->
+  <section class="rt-sec rt-intro">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">關 於 團 體 儀 式</p>
+      <h2 class="sec">為什麼參與團體儀式</h2>
+      <div class="rt-intro-grid">
+        <div class="rt-intro-card">
+          <div class="ic">🔥</div>
+          <h3>集體之力</h3>
+          <p>眾人共同參與同一場儀式，願力匯聚，是個人儀式之外的另一種能量形式。適合想在特定時節與眾人同修祈願的人。</p>
         </div>
-    </section>
-
-    <section style="margin-bottom: 3rem;">
-        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">服務類別</h2>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            <div style="background-color: #f9f9f9; padding: 2rem; border-radius: 8px; border-left: 4px solid #ff9800;">
-                <h3 style="color: #1a5f5f; margin-bottom: 1rem; font-size: 1.3rem;">🕯️ 個人儀式</h3>
-                <p style="color: #666; margin-bottom: 1rem; line-height: 1.6;">根據您的具體需求，進行客製化的魔法儀式。包括但不限於：</p>
-                <ul style="margin-left: 1.5rem; color: #666;">
-                    <li style="margin-bottom: 0.5rem;">金錢吸引儀式</li>
-                    <li style="margin-bottom: 0.5rem;">愛情增進儀式</li>
-                    <li style="margin-bottom: 0.5rem;">防禦保護儀式</li>
-                    <li style="margin-bottom: 0.5rem;">淨化療癒儀式</li>
-                    <li style="margin-bottom: 0.5rem;">事業發展儀式</li>
-                </ul>
-                <p style="color: #ff9800; font-weight: 600; margin-top: 1rem;">聯絡我們了解詳情</p>
-            </div>
-
-            <div style="background-color: #f9f9f9; padding: 2rem; border-radius: 8px; border-left: 4px solid #ff9800;">
-                <h3 style="color: #1a5f5f; margin-bottom: 1rem; font-size: 1.3rem;">✨ 特殊服務</h3>
-                <p style="color: #666; margin-bottom: 1rem; line-height: 1.6;">針對特定情況的專業魔法服務：</p>
-                <ul style="margin-left: 1.5rem; color: #666;">
-                    <li style="margin-bottom: 0.5rem;">魔法諮詢與指導</li>
-                    <li style="margin-bottom: 0.5rem;">能量診斷與清理</li>
-                    <li style="margin-bottom: 0.5rem;">祭壇設置與祝聖</li>
-                    <li style="margin-bottom: 0.5rem;">魔法工具製作</li>
-                    <li style="margin-bottom: 0.5rem;">個人魔法系統設計</li>
-                </ul>
-                <p style="color: #ff9800; font-weight: 600; margin-top: 1rem;">聯絡我們了解詳情</p>
-            </div>
-
-            <div style="background-color: #f9f9f9; padding: 2rem; border-radius: 8px; border-left: 4px solid #ff9800;">
-                <h3 style="color: #1a5f5f; margin-bottom: 1rem; font-size: 1.3rem;">⛪ 聖徒魔法系列</h3>
-                <p style="color: #666; margin-bottom: 1rem; line-height: 1.6;">結合聖徒傳統的專業魔法服務：</p>
-                <ul style="margin-left: 1.5rem; color: #666;">
-                    <li style="margin-bottom: 0.5rem;">聖安東尼 - 愛情祝福</li>
-                    <li style="margin-bottom: 0.5rem;">聖加速 - 金錢吸引</li>
-                    <li style="margin-bottom: 0.5rem;">聖芭芭拉 - 神聖守護</li>
-                    <li style="margin-bottom: 0.5rem;">聖若瑟 - 家宅守護</li>
-                    <li style="margin-bottom: 0.5rem;">聖馬爾定 - 馬草水製作</li>
-                </ul>
-                <p style="color: #ff9800; font-weight: 600; margin-top: 1rem;">聯絡我們了解詳情</p>
-            </div>
+        <div class="rt-intro-card">
+          <div class="ic">🗓</div>
+          <h3>擇時而作</h3>
+          <p>團體儀式多配合特定的節氣、時運或神明聖誕擇日舉行，掌握天時。不定期開辦，開放報名即可參與。</p>
         </div>
-    </section>
-
-    <section style="margin-bottom: 3rem;">
-        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">服務流程</h2>
-        <div style="background-color: #f9f9f9; padding: 2rem; border-radius: 8px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                <div style="text-align: center;">
-                    <div style="background-color: #ff9800; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">1</div>
-                    <h3 style="color: #1a5f5f; margin-bottom: 0.5rem;">初步諮詢</h3>
-                    <p style="color: #666; font-size: 0.9rem;">與您溝通了解需求和目標</p>
-                </div>
-                <div style="text-align: center;">
-                    <div style="background-color: #ff9800; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
-                    <h3 style="color: #1a5f5f; margin-bottom: 0.5rem;">方案設計</h3>
-                    <p style="color: #666; font-size: 0.9rem;">根據您的情況設計客製化方案</p>
-                </div>
-                <div style="text-align: center;">
-                    <div style="background-color: #ff9800; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">3</div>
-                    <h3 style="color: #1a5f5f; margin-bottom: 0.5rem;">儀式執行</h3>
-                    <p style="color: #666; font-size: 0.9rem;">進行專業的魔法儀式</p>
-                </div>
-                <div style="text-align: center;">
-                    <div style="background-color: #ff9800; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">4</div>
-                    <h3 style="color: #1a5f5f; margin-bottom: 0.5rem;">後續指導</h3>
-                    <p style="color: #666; font-size: 0.9rem;">提供維護和後續支持</p>
-                </div>
-            </div>
+        <div class="rt-intro-card">
+          <div class="ic">💰</div>
+          <h3>親近的門檻</h3>
+          <p>相較於完整的個人訂製儀式，團體儀式以較親近的價格，讓更多人有機會參與行星魔法、胡督與各式傳統的儀式力量。</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section style="margin-bottom: 3rem;">
-        <h2 style="color: #1a5f5f; border-bottom: 3px solid #ff9800; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">常見問題</h2>
-        <div style="background-color: #f9f9f9; padding: 2rem; border-radius: 8px;">
-            <div style="margin-bottom: 2rem;">
-                <h3 style="color: #ff9800; margin-bottom: 0.8rem;">Q: 儀式服務需要多長時間？</h3>
-                <p style="color: #666;">A: 根據不同的服務類型，時間會有所不同。初步諮詢通常需要 30-60 分鐘，儀式執行時間根據具體內容而定。我們會在諮詢時為您詳細說明。</p>
+  <!-- 近期場次 -->
+  <section class="rt-sec rt-upcoming">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">近 期 場 次</p>
+      <h2 class="sec">目前開放報名的儀式</h2>
+      <p class="rt-upcoming-sub">以下為近期舉辦、開放報名的團體儀式。名額有限，額滿為止。</p>
+
+      <!-- 開新場次：複製一個 rt-card 區塊改內容即可。範本與空狀態封存於本檔最下方。 -->
+
+      <!-- ▼ 木星守財儀式（2026/08/20 單場） ▼ -->
+      <div class="rt-card">
+        <div class="rt-card-body">
+          <span class="rt-tag">道 法 團 體 法 事・限 額</span>
+          <h3>♃ 木星守財儀式</h3>
+          <p class="sub">守住你手中的財富，也為財源開路</p>
+          <p class="desc">借<strong>木星</strong>豐盛與擴張之力，一方面替你守住既有的財富、堵住財務的破口；另一方面擴張財源管道，讓進財的路更寬。選在木星有利的時機施作，遠距施作。</p>
+          <div class="rt-two">
+            <div class="rt-gate">
+              <h4>🛡️ 守財護盾</h4>
+              <p>堵住財務破口、穩固既有財富。適合賺得到卻留不住、近期有較大開銷想穩住財庫的人。</p>
             </div>
-            <div style="margin-bottom: 2rem;">
-                <h3 style="color: #ff9800; margin-bottom: 0.8rem;">Q: 儀式服務的費用是多少？</h3>
-                <p style="color: #666;">A: 費用根據服務類型和複雜程度而異。我們提供免費的初步諮詢，在諮詢後會給您詳細的報價。</p>
+            <div class="rt-gate">
+              <h4>🌿 開源引財</h4>
+              <p>擴張財源管道，為進財之路開闊空間。適合想在守成之餘、也讓財富持續成長的人。</p>
             </div>
-            <div style="margin-bottom: 2rem;">
-                <h3 style="color: #ff9800; margin-bottom: 0.8rem;">Q: 如何預約儀式服務？</h3>
-                <p style="color: #666;">A: 您可以通過以下方式聯絡我們：
-                <br>Email: <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}" style="color: #ff9800;">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>
-                </p>
-            </div>
+          </div>
+          <div class="rt-meta">
+            <span>🗓 儀式日：2026/08/20</span>
+            <span>⌛ 報名截止：2026/08/13</span>
+            <span>💰 NT$ 1,499</span>
+            <span>🎁 贈守財護符一枚</span>
+          </div>
+          <a href="/rituals/jupiter-wealth/" class="cta rt-btn-cinnabar">了解詳情與報名 →</a>
         </div>
-    </section>
+      </div>
+      <!-- ▲ 木星守財儀式 ▲ -->
 
-    <section style="background-color: #1a5f5f; color: white; padding: 2rem; border-radius: 8px; text-align: center;">
-        <h2 style="margin-bottom: 1rem;">需要專業的魔法服務？</h2>
-        <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">聯絡我們進行免費諮詢，了解我們如何能幫助您。</p>
-        <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}" style="display: inline-block; background-color: #ff9800; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: 600;">聯絡我們</a>
-    </section>
+    </div>
+  </section>
+
+  <!-- 個人訂製導引 -->
+  <section class="rt-band">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">找 不 到 適 合 的 場 次 ？</p>
+      <h2>你的狀況，值得一場專屬的儀式</h2>
+      <p>如果你有特定、個人的困境需要處理，或想要為自己量身安排一場儀式，個人訂製服務會更適合你。</p>
+      <a href="/rituals/custom/" class="cta" style="background:var(--rt-teal); color:#fff;">了解個人儀式訂製 →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="rt-sec rt-faq">
+    <div class="wrap">
+      <p class="eyebrow">常 見 問 題</p>
+      <h2 class="sec">關於團體儀式</h2>
+      <details>
+        <summary>團體儀式和個人訂製儀式有什麼不同？</summary>
+        <p>團體儀式是眾人共同參與同一場儀式，配合特定時節擇日舉行，價格較親近；個人訂製則是完全針對你一個人的狀況量身設計、單獨施作。兩者可依你的需求選擇。</p>
+      </details>
+      <details>
+        <summary>參加團體儀式需要親自到場嗎？</summary>
+        <p>多數團體儀式以遠距方式進行，你不需要親自到場，海外的參與者同樣適用。具體方式會在各場次的說明中告知。</p>
+      </details>
+      <details>
+        <summary>怎麼知道有新的儀式場次？</summary>
+        <p>新場次會公布在本頁面與 LINE 官方帳號 @sorcery。加入 LINE 官方帳號可在第一時間收到通知。</p>
+      </details>
+      <details>
+        <summary>報名後如何進行？</summary>
+        <p>各場次會有各自的報名方式與說明，通常於報名並完成繳費後，我們會與你確認相關細節與所需資料。</p>
+      </details>
+      <details>
+        <summary>儀式可以保證效果嗎？</summary>
+        <p>這類儀式屬於神祕學與傳統魔法的範疇，效果因人、因事、因緣而異，我們會盡心施作，但不對特定結果做出保證。若你有醫療或法律上的需求，請務必同時尋求專業協助。</p>
+      </details>
+    </div>
+  </section>
+
 </div>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Magic Rituals and Spiritual Services",
-  "name": "四月老師魔法儀式與服務",
-  "provider": {
-    "@type": "Person",
-    "name": "四月老師"
-  },
-  "description": "提供包含胡督(Hoodoo)傳統、個人化祈願儀式、能量淨化與聖徒魔法服務。",
-  "offers": {
-    "@type": "Offer",
-    "description": "提供免費初步諮詢"
-  }
+  "serviceType": "Group Rituals and Spiritual Ceremonies",
+  "name": "四月老師團體儀式與法會",
+  "provider": { "@type": "Person", "name": "四月老師" },
+  "description": "不定期舉辦的團體儀式與集體祈願，包含行星魔法、胡督與各式傳統的儀式。"
 }
 </script>
+
+
+<!--
+════════════════════════════════════════════════════════════════════
+　儀式卡片封存區（不會顯示在頁面上，供日後複製使用）
+　要開新場次時，把需要的卡片複製到上方「近期場次」的 rt-card 位置，
+　改標題、說明、日期、價格與連結即可。
+　沒有任何場次時，把上方的卡片刪除，改貼下方的「空狀態」區塊。
+════════════════════════════════════════════════════════════════════
+
+── 通用空白範本 ──────────────────────────────────────────────
+
+<div class="rt-card">
+  <div class="rt-card-body">
+    <span class="rt-tag">團 體 儀 式・限 額</span>
+    <h3>儀式名稱</h3>
+    <p class="sub">一句副標</p>
+    <p class="desc">儀式的說明文字。</p>
+    <div class="rt-two">
+      <div class="rt-gate">
+        <h4>面向一</h4>
+        <p>說明與適合對象。</p>
+      </div>
+      <div class="rt-gate">
+        <h4>面向二</h4>
+        <p>說明與適合對象。</p>
+      </div>
+    </div>
+    <div class="rt-meta">
+      <span>🗓 儀式日：YYYY/MM/DD</span>
+      <span>⌛ 報名截止：YYYY/MM/DD</span>
+      <span>💰 NT$ 0,000</span>
+    </div>
+    <a href="/rituals/儀式代號/" class="cta rt-btn-cinnabar">了解詳情與報名 →</a>
+  </div>
+</div>
+
+── 五雷開運與收魂法（道教法門，之後可再開）─────────────────────
+
+<div class="rt-card">
+  <div class="rt-card-body">
+    <span class="rt-tag">道 法 祈 福・限 額 施 作</span>
+    <h3>五雷開運與收魂法</h3>
+    <p class="sub">先為自己開路，也為自己安魂</p>
+    <p class="desc">結合兩道法門，一外一內、一開一收：<strong>五雷轉運開門</strong>，以茅山符法與雷法之力，向外破除事業與運勢上的阻礙、打開財富的管道；<strong>收魂安神</strong>，以台灣民間收魂之法，向內收攝散失的魂魄、安定不寧的身心、恢復運勢。</p>
+    <div class="rt-two">
+      <div class="rt-gate">
+        <h4>⚡ 五雷轉運開門</h4>
+        <p>破除事業與運勢阻礙，打開財路。適合諸事不順、努力卻總是受阻、財務淤塞的人。</p>
+      </div>
+      <div class="rt-gate">
+        <h4>🌙 收魂安神</h4>
+        <p>收攝散失的魂魄、安定身心。適合受驚、失眠多夢、精神不寧、感覺魂不守舍的人。</p>
+      </div>
+    </div>
+    <div class="rt-meta">
+      <span>🗓 行法日：YYYY/MM/DD</span>
+      <span>⌛ 報名截止：YYYY/MM/DD</span>
+      <span>💰 NT$ 1,388 / 人</span>
+    </div>
+    <a href="https://hoodoo.pro/rituals/r-thunder/" class="cta rt-btn-cinnabar">了解詳情與報名 →</a>
+  </div>
+</div>
+
+── 空狀態（完全沒有場次時，貼回「近期場次」區塊）──────────────
+
+<div class="rt-empty">
+  <div class="glyph">🕯</div>
+  <p>目前暫無開放報名的團體儀式場次。<br>新的場次將於此處與 LINE 官方帳號公布，歡迎加入以掌握最新消息。</p>
+  <a href="https://line.me/R/ti/p/@sorcery" class="cta" style="background:var(--rt-gold); color:#1a1109;">加入 LINE 接收通知</a>
+</div>
+
+════════════════════════════════════════════════════════════════════
+-->
