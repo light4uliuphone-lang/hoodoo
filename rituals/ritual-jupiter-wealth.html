@@ -71,6 +71,22 @@ image: /assets/images/rituals/jupiter-wealth/og-jupiter.jpg
   .jw-who li { padding:.7rem 0 .7rem 2.4rem; position:relative; border-bottom:1px dashed #cdbf9e; color:#4a3f2a; }
   .jw-who li::before { content:"♃"; position:absolute; left:.4rem; color:var(--jw-deepgold); font-size:1.1rem; }
 
+  /* 老師簡介 */
+  .jw-teacher { background:var(--jw-paper); }
+  .jw-teacher-flex { display:flex; gap:2.2rem; align-items:center; max-width:760px; margin:0 auto; }
+  .jw-teacher-flex img { width:200px; height:auto; border-radius:10px; flex:0 0 auto; border:1px solid rgba(201,151,63,.4); }
+  .jw-teacher h3 { font-size:1.4rem; color:var(--jw-deepgold); margin:0 0 .3rem; letter-spacing:.04em; }
+  .jw-teacher .role { color:var(--jw-teal); font-size:.92rem; margin:0 0 1rem; letter-spacing:.05em; }
+  .jw-teacher p { color:#4a3f2a; margin:0 0 .8rem; font-size:.96rem; }
+
+  /* 信心保證 */
+  .jw-trust { background:var(--jw-paper2); }
+  .jw-trust-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.3rem; max-width:760px; margin:1.4rem auto 0; }
+  .jw-trust-item { background:#fff; border:1px solid #ddceb0; border-radius:10px; padding:1.6rem 1.7rem; display:flex; gap:1rem; align-items:flex-start; }
+  .jw-trust-item .ic { font-size:1.6rem; flex:0 0 auto; line-height:1.2; }
+  .jw-trust-item h4 { margin:0 0 .4rem; color:var(--jw-deepgold); font-size:1.05rem; letter-spacing:.03em; }
+  .jw-trust-item p { margin:0; color:#5a4a35; font-size:.9rem; line-height:1.75; }
+
   /* 報名 */
   .jw-signup { background:var(--jw-dark); color:var(--jw-paper); text-align:center; }
   .jw-signup h2.sec { color:#fff; }
@@ -97,6 +113,9 @@ image: /assets/images/rituals/jupiter-wealth/og-jupiter.jpg
   @media (max-width:768px){
     .jw-feat { grid-template-columns:1fr; }
     .jw-sec { padding:3rem 0; }
+    .jw-teacher-flex { flex-direction:column; text-align:center; }
+    .jw-teacher-flex img { width:60%; max-width:200px; }
+    .jw-trust-grid { grid-template-columns:1fr; }
   }
 </style>
 
@@ -183,6 +202,60 @@ image: /assets/images/rituals/jupiter-wealth/og-jupiter.jpg
     </div>
   </section>
 
+  <!-- 老師簡介 -->
+  <section class="jw-sec jw-teacher">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1.6rem;">施 作 者</p>
+      <div class="jw-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <h3>四月老師</h3>
+          <p class="role">靈火巫境創辦人</p>
+          <p>深耕身心靈領域數十年，專研胡督魔法、混沌魔法與行星魔法體系，深入西方神祕學傳統與行星魔法的實作。擅長將繁複的西方術法整理為系統化、可操作的教學與服務。</p>
+          <p>台灣、香港、馬來西亞皆有眾多學員與客戶，長年為個案處理財富、感情、防禦等各類議題。這場木星守財儀式，由四月老師親自施作。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 信心保證 -->
+  <section class="jw-sec jw-trust">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">為 什 麼 放 心 交 給 我 們</p>
+      <h2 class="sec">報名前，你可以安心的理由</h2>
+      <div class="jw-trust-grid">
+        <div class="jw-trust-item">
+          <span class="ic">🎓</span>
+          <div>
+            <h4>老師親自施作</h4>
+            <p>儀式由四月老師本人執行，非代操、非罐頭流程。每位報名者的姓名都會納入儀式祈願。</p>
+          </div>
+        </div>
+        <div class="jw-trust-item">
+          <span class="ic">🌐</span>
+          <div>
+            <h4>遠距亦可，海外適用</h4>
+            <p>不需親自到場，台港馬與海外客戶同樣適用。全程以線上方式聯繫與確認。</p>
+          </div>
+        </div>
+        <div class="jw-trust-item">
+          <span class="ic">🎁</span>
+          <div>
+            <h4>實體護符，能量延續</h4>
+            <p>報名附贈經儀式祝聖的守財護符，儀式之後仍可隨身守護，不是做完就結束。</p>
+          </div>
+        </div>
+        <div class="jw-trust-item">
+          <span class="ic">🔒</span>
+          <div>
+            <h4>資料謹慎保管</h4>
+            <p>報名資訊與儀式所需的個人近照，僅供本次儀式使用，妥善保管、不作其他用途。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 報名 -->
   <section class="jw-sec jw-signup" id="signup">
     <div class="wrap">
@@ -230,7 +303,7 @@ image: /assets/images/rituals/jupiter-wealth/og-jupiter.jpg
       </details>
       <details>
         <summary>守財護符什麼時候會收到？</summary>
-        <p>護符會經本次儀式祝聖後寄出，因此會在 8/20 儀式之後才寄送。報名時請提供正確的收件地址。</p>
+        <p>護符會經本次儀式祝聖後寄出，因此會在儀式完成之後約一至兩週才寄送。報名時請提供正確的收件地址。</p>
       </details>
       <details>
         <summary>報名到什麼時候截止？</summary>
