@@ -31,6 +31,7 @@ description: "金錢策略魔法三課完整方案，整合策略思考、金錢
         linear-gradient(135deg, var(--deep-2), var(--deep));
     box-shadow: 0 18px 45px rgba(20,50,47,.18);
     margin: 22px 0 40px;
+    text-align: left !important;
 }
 .money-package-page .hero:after {
     content: "♃";
@@ -49,25 +50,34 @@ description: "金錢策略魔法三課完整方案，整合策略思考、金錢
     font-size: .88rem;
     letter-spacing: .08em;
     margin-bottom: 18px;
+    text-align: left !important;
 }
 .money-package-page .hero h1 {
-    margin: 0 0 16px;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    line-height: 1.18;
+    margin: 0 0 16px !important;
+    max-width: 920px;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    line-height: 1.2;
     color: var(--white);
+    text-align: left !important;
 }
 .money-package-page .hero p {
-    max-width: 780px;
-    margin: 0;
+    max-width: 900px;
+    margin: 0 !important;
     font-size: 1.08rem;
-    line-height: 1.9;
+    line-height: 1.85;
     color: #f3eee3;
+    text-align: left !important;
+}
+.money-package-page .hero p + p {
+    margin-top: 8px !important;
 }
 .money-package-page .hero-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 24px;
+    justify-content: flex-start !important;
+    text-align: left !important;
 }
 .money-package-page .hero-meta span {
     padding: 8px 12px;
