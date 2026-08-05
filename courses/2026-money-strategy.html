@@ -1,0 +1,606 @@
+---
+layout: default
+title: "金錢策略魔法三課特惠 - 歐比路老師"
+permalink: /courses/money-strategy-package/
+description: "金錢策略魔法三課完整方案，整合策略思考、金錢魔術盒實作與職場保護配方解析。三課可合報，也可依需求單獨報名。"
+---
+
+<style>
+.money-package-page {
+    --deep: #173f3b;
+    --deep-2: #0f2f2c;
+    --gold: #c79a45;
+    --gold-soft: #ead8ae;
+    --cream: #fbf7ef;
+    --ink: #2d302f;
+    --muted: #68706d;
+    --line: #ded8cc;
+    --white: #ffffff;
+    --accent: #9a4a2f;
+    color: var(--ink);
+}
+.money-package-page * { box-sizing: border-box; }
+.money-package-page .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 64px 28px;
+    border-radius: 18px;
+    color: var(--white);
+    background:
+        radial-gradient(circle at 88% 15%, rgba(199,154,69,.28), transparent 28%),
+        linear-gradient(135deg, var(--deep-2), var(--deep));
+    box-shadow: 0 18px 45px rgba(20,50,47,.18);
+    margin: 22px 0 40px;
+}
+.money-package-page .hero:after {
+    content: "♃";
+    position: absolute;
+    right: 28px;
+    bottom: -28px;
+    font-size: 180px;
+    line-height: 1;
+    color: rgba(255,255,255,.055);
+}
+.money-package-page .eyebrow {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 999px;
+    font-size: .88rem;
+    letter-spacing: .08em;
+    margin-bottom: 18px;
+}
+.money-package-page .hero h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.18;
+    color: var(--white);
+}
+.money-package-page .hero p {
+    max-width: 780px;
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: #f3eee3;
+}
+.money-package-page .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+.money-package-page .hero-meta span {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(255,255,255,.1);
+    font-size: .94rem;
+}
+.money-package-page .section { margin: 46px 0; }
+.money-package-page .section-title {
+    margin: 0 0 12px;
+    color: var(--deep);
+    font-size: 1.75rem;
+}
+.money-package-page .lead {
+    margin: 0 0 24px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+.money-package-page .life-box {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--gold);
+    padding: 24px 26px;
+    border-radius: 12px;
+    line-height: 1.9;
+}
+.money-package-page .life-box p { margin: 0 0 12px; }
+.money-package-page .life-box p:last-child { margin-bottom: 0; }
+.money-package-page .path-grid,
+.money-package-page .course-grid,
+.money-package-page .price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+.money-package-page .path-card,
+.money-package-page .course-card,
+.money-package-page .price-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(42,53,50,.06);
+}
+.money-package-page .step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--deep);
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+.money-package-page .path-card h3,
+.money-package-page .course-card h3,
+.money-package-page .price-card h3 {
+    margin: 0 0 10px;
+    color: var(--deep);
+    font-size: 1.25rem;
+}
+.money-package-page .path-card p,
+.money-package-page .course-card p,
+.money-package-page .price-card p {
+    margin: 0;
+    line-height: 1.8;
+    color: var(--muted);
+}
+.money-package-page .course-card {
+    display: flex;
+    flex-direction: column;
+}
+.money-package-page .tag {
+    align-self: flex-start;
+    margin-bottom: 12px;
+    padding: 5px 9px;
+    border-radius: 6px;
+    background: #eef4f1;
+    color: var(--deep);
+    font-size: .84rem;
+    font-weight: 700;
+}
+.money-package-page .course-card ul {
+    margin: 15px 0 0;
+    padding-left: 1.2rem;
+    line-height: 1.75;
+    color: var(--ink);
+}
+.money-package-page .course-card .course-info {
+    margin-top: auto;
+    padding-top: 18px;
+}
+.money-package-page .course-card .course-info p {
+    margin: 5px 0;
+    color: var(--ink);
+}
+.money-package-page .price-banner {
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 24px;
+    align-items: center;
+    background: linear-gradient(135deg, #f7eedb, #fffaf0);
+    border: 1px solid #dfc995;
+    border-radius: 16px;
+    padding: 28px;
+}
+.money-package-page .price-banner h3 {
+    margin: 0 0 10px;
+    color: var(--deep);
+    font-size: 1.5rem;
+}
+.money-package-page .price-banner p { margin: 6px 0; line-height: 1.75; }
+.money-package-page .grand-price {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--deep);
+    color: var(--white);
+}
+.money-package-page .grand-price small {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--gold-soft);
+}
+.money-package-page .grand-price strong {
+    display: block;
+    font-size: 2.35rem;
+    line-height: 1.2;
+}
+.money-package-page .price-card .amount {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+.money-package-page .price-card .original {
+    font-size: .92rem;
+    color: var(--muted);
+}
+.money-package-page .notice {
+    margin-top: 18px;
+    padding: 16px 18px;
+    border-radius: 10px;
+    background: #f4f6f5;
+    border-left: 4px solid var(--deep);
+    line-height: 1.75;
+}
+.money-package-page .schedule {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(42,53,50,.05);
+}
+.money-package-page .schedule th,
+.money-package-page .schedule td {
+    padding: 15px 16px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+.money-package-page .schedule th {
+    background: var(--deep);
+    color: var(--white);
+}
+.money-package-page .schedule tr:last-child td { border-bottom: 0; }
+.money-package-page .audience {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+.money-package-page .audience div {
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--white);
+}
+.money-package-page .teacher-box,
+.money-package-page .registration-box {
+    padding: 26px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: var(--white);
+    line-height: 1.9;
+}
+.money-package-page .teacher-box h3,
+.money-package-page .registration-box h3 {
+    margin-top: 0;
+    color: var(--deep);
+}
+.money-package-page .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+.money-package-page .btn {
+    display: inline-block;
+    padding: 11px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform .15s ease, opacity .15s ease;
+}
+.money-package-page .btn:hover { transform: translateY(-1px); opacity: .9; }
+.money-package-page .btn-primary { background: var(--deep); color: var(--white); }
+.money-package-page .btn-outline { border: 1px solid var(--deep); color: var(--deep); background: var(--white); }
+
+.money-package-page .google-form-wrap {
+    margin-top: 24px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+}
+.money-package-page .google-form-wrap iframe {
+    display: block;
+    width: 100%;
+    min-height: 1550px;
+    border: 0;
+}
+@media (max-width: 640px) {
+    .money-package-page .google-form-wrap iframe {
+        min-height: 1750px;
+    }
+}
+
+.money-package-page .final-cta {
+    margin-top: 46px;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    background: var(--deep);
+    color: var(--white);
+}
+.money-package-page .final-cta h2 { margin-top: 0; color: var(--white); }
+.money-package-page .final-cta p { color: #ece9df; line-height: 1.8; }
+.money-package-page .final-cta .btn { background: var(--gold); color: #1b2f2c; }
+@media (max-width: 820px) {
+    .money-package-page .path-grid,
+    .money-package-page .course-grid,
+    .money-package-page .price-grid,
+    .money-package-page .price-banner,
+    .money-package-page .audience { grid-template-columns: 1fr; }
+    .money-package-page .hero { padding: 44px 22px; }
+    .money-package-page .schedule { display: block; overflow-x: auto; }
+}
+</style>
+
+<div class="container money-package-page" style="padding: 3rem 0;">
+    <a href="/course/" class="back-link">← 返回課程中心</a>
+
+    <section class="hero">
+        <span class="eyebrow">金錢策略魔法系列｜三課完整方案</span>
+        <h1>金錢魔法，最後還是要回到生活裡</h1>
+        <p>很多人接觸金錢魔法，最先想到的是招財、增加收入，或者讓工作出現新的機會。但實際生活裡，問題往往沒有這麼單純。</p>
+        <p>有時候是不知道該先處理哪一件事，有時候是學了方法，回家卻不知道怎麼繼續做；也有些人好不容易讓工作穩定下來，卻又被職場人際、流言或其他阻礙影響。</p>
+        <p>這三門課分別處理這些不同的問題：先把金錢與工作的方向想清楚，再完成一個可以持續使用的金錢魔術盒，最後學習依照自己的職場狀況，調整適合的保護配方。</p>
+        <div class="hero-meta">
+            <span>📈 策略性思考</span>
+            <span>🪐 木星符印與儀式</span>
+            <span>🗝️ 金錢魔術盒實作</span>
+            <span>🛡️ 職場保護配方</span>
+            <span>👨‍🏫 歐比路老師</span>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">為什麼把這三門課放在一起？</h2>
+        <div class="life-box">
+            <p>生活中的金錢問題，通常不只是「錢不夠」這麼單純。有些人需要處理債務，有些人正在找工作、爭取加薪或增加接案；也有人明明遇到了機會，卻因為職場流言、人際消耗或工作阻礙，讓成果無法穩定累積。</p>
+            <p>因此，真正完整的金錢魔法，不只需要吸引機會，也需要知道問題出在哪裡、應該先做哪一步，以及如何保護已經建立起來的工作與收入。</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">三課的學習關係</h2>
+        <p class="lead">整套課程依照「思考—實作—應用」安排，讓魔法不只停留在願望，而能逐步落實到生活之中。</p>
+        <div class="path-grid">
+            <article class="path-card">
+                <span class="step">1</span>
+                <h3>先看懂問題</h3>
+                <p>從債務、金錢管理、工作、升遷、創業與投資等面向，找出真正需要處理的核心問題，建立策略與許願架構。</p>
+            </article>
+            <article class="path-card">
+                <span class="step">2</span>
+                <h3>再做出工具</h3>
+                <p>把符印、象徵物與個人目標整合成金錢魔術盒，將課堂中的知識轉化為可以帶回家、持續操作的實作工具。</p>
+            </article>
+            <article class="path-card">
+                <span class="step">3</span>
+                <h3>最後因應生活</h3>
+                <p>面對謠言、人際界限、工作阻礙與職場關係，學習以效益、成本與風險重新設計符合自身需求的保護配方。</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">三門課程介紹</h2>
+        <div class="course-grid">
+            <article class="course-card">
+                <span class="tag">第一階段｜核心觀念</span>
+                <h3>金錢策略魔法初階</h3>
+                <p>結合現實策略與魔法資源，重新思考金錢魔法的作用方式，並將模糊的願望整理成可執行的策略。</p>
+                <ul>
+                    <li>策略魔法系統與核心觀念</li>
+                    <li>七行星在金錢魔法中的運用</li>
+                    <li>16 張木星金錢策略符印</li>
+                    <li>債務、管理金錢、升遷、找工作、創業、投資六大議題</li>
+                    <li>網狀式、序列式與鏈鎖式許願法</li>
+                    <li>木星召喚、緊急魔法與基礎配方</li>
+                </ul>
+                <div class="course-info">
+                    <p><strong>時間：</strong>2026/8/15（六）–8/16（日）10:00–16:30</p>
+                    <p><strong>形式：</strong>兩日實體課程</p>
+                    <p><strong>先修：</strong>需修畢藥草初階</p>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <span class="tag">第二階段｜實作工具</span>
+                <h3>金錢魔術盒實作課</h3>
+                <p>親手製作搭配所羅門王大鑰封印的金錢魔術盒，將策略、符印與象徵物整合成可持續使用的魔法工具。</p>
+                <ul>
+                    <li>金錢魔術盒的用途與結構</li>
+                    <li>製作步驟與象徵物解析</li>
+                    <li>所羅門王大鑰封印的搭配</li>
+                    <li>完整製作與祝聖</li>
+                    <li>可運用於找工作、加薪、接案、業績與金錢流整理</li>
+                </ul>
+                <div class="course-info">
+                    <p><strong>時間：</strong>2026/8/15（六）17:00–18:00</p>
+                    <p><strong>形式：</strong>實體面授</p>
+                    <p><strong>先修：</strong>需修畢金錢策略魔法初階</p>
+                    <p><strong>成品：</strong>每人可帶回一個完成祝聖的金錢魔術盒</p>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <span class="tag">第三階段｜生活應用</span>
+                <h3>職場保護配方解析</h3>
+                <p>從實際職場情境出發，不再只尋找一支萬用藥草，而是學習依照自身需求設計適合的保護配方。</p>
+                <ul>
+                    <li>避免惡意謠言攻擊</li>
+                    <li>建立人際界限</li>
+                    <li>移除阻礙工作順利的障礙</li>
+                    <li>增加職場人際關係</li>
+                    <li>配方邏輯決策樹與評分表</li>
+                    <li>整合效益、成本、風險、策略與許願</li>
+                </ul>
+                <div class="course-info">
+                    <p><strong>時間：</strong>2026/8/16（日）17:00–18:30</p>
+                    <p><strong>形式：</strong>實體面授</p>
+                    <p><strong>先修：</strong>需修畢金錢策略魔法初階</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">課程費用</h2>
+        <div class="price-banner">
+            <div>
+                <h3>三課完整合報</h3>
+                <p>三堂課原價合計 24,400 元，三課合報特惠價 15,000 元。</p>
+                <p><strong>原價 24,400 元｜合報現省 9,400 元</strong></p>
+            </div>
+            <div class="grand-price">
+                <small>三課合報特惠價</small>
+                <strong>15,000 元</strong>
+            </div>
+        </div>
+
+        <div class="price-grid" style="margin-top:18px;">
+            <article class="price-card">
+                <h3>金錢策略魔法初階</h3>
+                <span class="amount">12,000 元</span>
+                <span class="original">原價 16,800 元</span>
+                <p style="margin-top:12px;">可單獨報名。</p>
+            </article>
+            <article class="price-card">
+                <h3>金錢魔術盒實作課</h3>
+                <span class="amount">2,800 元</span>
+                <span class="original">原價 3,800 元</span>
+                <p style="margin-top:12px;">可單獨報名，但須先修畢金錢策略魔法初階。</p>
+            </article>
+            <article class="price-card">
+                <h3>職場保護配方解析</h3>
+                <span class="amount">2,800 元</span>
+                <span class="original">原價 3,800 元</span>
+                <p style="margin-top:12px;">可單獨報名，但須先修畢金錢策略魔法初階。</p>
+            </article>
+        </div>
+
+        <div class="notice">
+            <strong>報名方式說明：</strong>學員可依需求選擇三課合報，或單獨報名其中一門課。實作課與配方解析課皆以「金錢策略魔法初階」為先修條件；若尚未修習初階，建議直接選擇三課完整方案。
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">完整上課時程</h2>
+        <table class="schedule">
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>時間</th>
+                    <th>課程</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2026/8/15（六）</td>
+                    <td>10:00–16:30</td>
+                    <td>金錢策略魔法初階｜第一日</td>
+                </tr>
+                <tr>
+                    <td>2026/8/15（六）</td>
+                    <td>17:00–18:00</td>
+                    <td>金錢魔術盒實作課</td>
+                </tr>
+                <tr>
+                    <td>2026/8/16（日）</td>
+                    <td>10:00–16:30</td>
+                    <td>金錢策略魔法初階｜第二日</td>
+                </tr>
+                <tr>
+                    <td>2026/8/16（日）</td>
+                    <td>17:00–18:30</td>
+                    <td>職場保護配方解析</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">這套課程適合誰？</h2>
+        <div class="audience">
+            <div>✓ 想增加收入，卻不知道應該先從哪個問題開始處理的人</div>
+            <div>✓ 正在找工作、爭取升遷、創業、接案或拓展業績的人</div>
+            <div>✓ 學過金錢魔法，卻仍不確定如何規劃願望與操作步驟的人</div>
+            <div>✓ 容易受到職場流言、人際壓力或工作阻礙影響的人</div>
+            <div>✓ 希望擁有一件可以長期操作的金錢魔法工具的人</div>
+            <div>✓ 想把現實策略、配方、符印與儀式整合起來的人</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="teacher-box">
+            <h3>授課老師｜歐比路老師</h3>
+            <p>白天是熱愛統計學的工程師，晚上則是鑽研咒術的魔法工作者。喜愛以心理動力觀點詮釋魔法，擅長策略性整合有限資源，以獲得最佳化的魔法效益。認為現實策略與魔法策略，都是構成魔法的重要因素。</p>
+            <p><strong>粉絲專頁：</strong>歐比路藥草魔法實驗室</p>
+        </div>
+    </section>
+
+    <section class="section" id="registration-form">
+        <div class="registration-box">
+            <h3>報名資訊</h3>
+            <p><strong>報名截止：</strong>2026/8/10</p>
+            <p><strong>授課形式：</strong>實體面授課程</p>
+            <p><strong>報名選項：</strong>三課合報、兩課合報，或依需求單獨報名。</p>
+            <p><strong>方式一｜填寫線上表單</strong></p>
+            <p>請直接填寫下方報名表。送出後，我們將以電子郵件聯繫，提供報名確認與繳費資訊。</p>
+
+            <p style="margin-top: 1.5rem;"><strong>方式二｜電子郵件報名</strong></p>
+            <p>請來信至 <a href="mailto:herbmagic@hotmail.com.tw">herbmagic@hotmail.com.tw</a>，郵件標題請註明「報名金錢策略魔法系列課程」，並告知姓名、聯絡電話、電子郵件、聯絡地址及欲報名的方案。</p>
+
+            <div class="buttons">
+                <a class="btn btn-outline" href="mailto:herbmagic@hotmail.com.tw?subject=%E5%A0%B1%E5%90%8D%E9%87%91%E9%8C%A2%E7%AD%96%E7%95%A5%E9%AD%94%E6%B3%95%E7%B3%BB%E5%88%97%E8%AA%B2%E7%A8%8B">使用電子郵件報名</a>
+                <a class="btn btn-outline" href="https://hoodoo.pro/courses/course-018/">查看初階課程</a>
+                <a class="btn btn-outline" href="https://hoodoo.pro/courses/course-021/">查看魔術盒實作課</a>
+                <a class="btn btn-outline" href="https://hoodoo.pro/courses/course-022/">查看職場保護配方課</a>
+            </div>
+            <div class="google-form-wrap">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdh13VfMF2eeIvoOnTdMGo4Wi0Pt7B1_jsLndQDoeEEgkICdw/viewform?embedded=true"
+                    title="金錢策略魔法系列課程報名表"
+                    loading="lazy"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0">載入中…</iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <h2>魔法不只是許下一個願望</h2>
+        <p>它也包含看清問題、選擇方法、建立工具，以及保護自己一路累積而來的成果。</p>
+    </section>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "金錢策略魔法三課完整方案",
+  "description": "整合金錢策略魔法初階、金錢魔術盒實作課與職場保護配方解析。三課可合報，也可單獨報名。",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Course",
+        "name": "金錢策略魔法初階",
+        "url": "https://hoodoo.pro/courses/course-018/",
+        "provider": { "@type": "Person", "name": "歐比路老師" },
+        "offers": { "@type": "Offer", "price": "12000", "priceCurrency": "TWD" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Course",
+        "name": "金錢策略魔法實作課程：金錢魔術盒",
+        "url": "https://hoodoo.pro/courses/course-021/",
+        "provider": { "@type": "Person", "name": "歐比路老師" },
+        "offers": { "@type": "Offer", "price": "2800", "priceCurrency": "TWD" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Course",
+        "name": "金錢策略魔法配方邏輯單元一：職場保護配方解析",
+        "url": "https://hoodoo.pro/courses/course-022/",
+        "provider": { "@type": "Person", "name": "歐比路老師" },
+        "offers": { "@type": "Offer", "price": "2800", "priceCurrency": "TWD" }
+      }
+    }
+  ]
+}
+</script>
