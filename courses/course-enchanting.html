@@ -1,0 +1,303 @@
+---
+layout: default
+title: "附魔教學｜賦予物品魔力的技術 - 四月老師"
+description: "將水晶礦石、手工品轉化為護符與法器的附魔應用課。探討奉獻、祈禱、符文、編織四種附魔模式的概念與操作，依物品特性與自身信仰體系賦予魔力。9/20 線上開課。"
+image: /assets/images/courses/enchanting/og-enchanting.jpg
+---
+
+<style>
+  .en-page { --en-ink:#152220; --en-paper:#eef3f1; --en-paper-deep:#d8e6e2;
+             --en-dark:#0b1412; --en-dark2:#132420; --en-teal:#1e6b5e;
+             --en-teal-soft:#8fc0b6; --en-copper:#b07a3c; --en-gold:#c9973f;
+             --en-cream:#f4ecdd; font-size:1rem; color:var(--en-ink); line-height:1.85; }
+  .en-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--en-ink); letter-spacing:.05em; }
+  .en-section { padding:3.5rem 1.25rem; }
+  .en-inner { max-width:860px; margin:0 auto; }
+  .en-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--en-teal);
+                border-bottom:1px solid var(--en-teal); padding-bottom:.3rem; margin-bottom:1rem; }
+  .en-cta { display:inline-block; background:var(--en-teal); color:#fff !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(30,107,94,.35); transition:transform .15s ease; }
+  .en-cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .en-cta{transition:none} .en-cta:hover{transform:none} }
+
+  .en-hero { position:relative; background:var(--en-dark); color:var(--en-cream); padding:5rem 1.25rem 4rem; overflow:hidden; }
+  .en-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .en-hero::after { content:""; position:absolute; inset:0;
+                    background:linear-gradient(100deg, rgba(11,20,18,.95) 0%, rgba(11,20,18,.82) 42%, rgba(11,20,18,.35) 70%, rgba(11,20,18,.15) 100%); }
+  .en-hero-inner { position:relative; z-index:2; max-width:860px; margin:0 auto; }
+  .en-hero h1 { font-size:clamp(1.7rem,4.5vw,2.6rem); line-height:1.45; margin:.5rem 0 1rem; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .en-hero h1 .kicker { display:block; font-size:1.05rem; font-weight:400; letter-spacing:.25em; color:var(--en-teal-soft); margin-bottom:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.5); }
+  .en-hero .en-sub { font-size:1.05rem; color:#e2ede9; max-width:34em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .en-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem; color:#e9f2ef; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .en-hero-note { font-size:.85rem; color:#a9cfc7; margin-top:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+
+  .en-pain { background:var(--en-paper); }
+  .en-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .en-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #b7ccc6; }
+  .en-pain li::before { content:"✦"; position:absolute; left:.4rem; color:var(--en-teal); }
+  .en-punch { background:var(--en-paper-deep); border-left:4px solid var(--en-teal); padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  .en-story { background:var(--en-dark2); color:#dde9e5; }
+  .en-story h2 { color:#fff; }
+  .en-story blockquote { border-left:3px solid var(--en-gold); padding:.6rem 0 .6rem 1.2rem; margin:1.4rem 0; font-size:1.15rem; color:#fff; }
+
+  .en-modes { background:var(--en-dark); color:#dde9e5; }
+  .en-modes h2 { color:#fff; text-align:center; }
+  .en-modes .en-modes-sub { text-align:center; color:#8fb5ac; max-width:34em; margin:0 auto 2rem; }
+  .en-mode-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem; }
+  .en-mode { background:linear-gradient(155deg,#16302a,#0e1f1b); border:1px solid rgba(143,192,182,.25);
+             border-radius:10px; padding:1.6rem 1.6rem; }
+  .en-mode .no { font-size:.8rem; letter-spacing:.2em; color:var(--en-copper); margin-bottom:.4rem; }
+  .en-mode h3 { color:var(--en-teal-soft); font-size:1.2rem; margin:0 0 .5rem; letter-spacing:.05em; }
+  .en-mode p { color:#b5cfc9; font-size:.92rem; margin:0; }
+
+  .en-gain { background:var(--en-paper); }
+  .en-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .en-gain-card { background:#fff; border:1px solid #c6dbd5; border-radius:8px; padding:1.2rem 1.3rem; }
+  .en-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--en-teal); letter-spacing:.08em; }
+  .en-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+
+  .en-syllabus { background:var(--en-paper-deep); }
+  .en-syl-item { background:#fff; border-radius:8px; padding:1.1rem 1.3rem; margin:.8rem 0; border-left:3px solid var(--en-teal); }
+  .en-syl-item strong { color:var(--en-teal); }
+
+  .en-proof { background:var(--en-paper); }
+
+  .en-teacher { background:var(--en-dark2); color:#dde9e5; }
+  .en-teacher h2 { color:#fff; }
+  .en-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .en-teacher-flex img { width:220px; height:auto; border-radius:8px; flex:0 0 auto; border:1px solid rgba(143,192,182,.4); }
+
+  .en-price { background:var(--en-dark); color:var(--en-cream); }
+  .en-price h2 { color:#fff; }
+  .en-price-card { background:var(--en-dark2); border:1px solid rgba(201,151,63,.5); border-radius:10px; padding:2rem 1.6rem; max-width:520px; margin:1.4rem auto; text-align:center; }
+  .en-price-old { text-decoration:line-through; color:#7f9a94; font-size:1.05rem; }
+  .en-price-now { font-size:2.2rem; color:var(--en-gold); font-weight:700; margin:.3rem 0; }
+  .en-price-save { color:var(--en-teal-soft); font-size:.95rem; }
+  .en-includes { text-align:left; max-width:420px; margin:1.4rem auto; padding-left:1.3rem; font-size:.95rem; }
+  .en-prereq { background:rgba(201,151,63,.12); border:1px solid rgba(201,151,63,.4); border-radius:6px; padding:.8rem 1.2rem; margin:1.2rem auto; max-width:520px; font-size:.92rem; color:#e6cfa0; text-align:center; }
+  .en-deadline { text-align:center; font-size:.95rem; color:var(--en-teal-soft); letter-spacing:.08em; margin-bottom:1.6rem; }
+  .en-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:2rem; }
+  .en-alt { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#e2ede9; }
+  .en-alt a { color:var(--en-gold); }
+
+  .en-faq { background:var(--en-paper); }
+  .en-faq details { border-bottom:1px solid #c2d7d1; padding:.9rem 0; }
+  .en-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .en-faq summary::before { content:"＋ "; color:var(--en-teal); }
+  .en-faq details[open] summary::before { content:"－ "; }
+  .en-faq details p { margin:.6rem 0 0; }
+
+  @media (max-width:768px){
+    .en-section { padding:2.6rem 1.1rem; }
+    .en-gain-grid, .en-mode-grid { grid-template-columns:1fr; }
+    .en-teacher-flex { flex-direction:column; }
+    .en-teacher-flex img { width:100%; max-width:320px; }
+    .en-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="en-page">
+
+  <header class="en-hero">
+    <img class="en-hero-bg" src="/assets/images/courses/enchanting/hero-enchanting.webp" alt="" width="2400" height="1350" fetchpriority="high">
+    <div class="en-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#8fc0b6; font-size:.9rem; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="en-eyebrow" style="display:block; width:fit-content; color:#8fc0b6; border-color:#8fc0b6;">主題工作坊・應用技術</p>
+      <h1>
+        <span class="kicker">附魔教學</span>
+        讓一塊石頭、一件手工品，<br>成為真正帶著魔力的法器
+      </h1>
+      <p class="en-sub">水晶礦石、手工品要如何轉化為護符或法器？這門應用課帶你理解四種附魔模式，依物品的特性與自身的信仰體系，親手為所持之物賦予魔力。</p>
+      <div class="en-hero-meta">
+        <span>📅 2026/09/20（日）14:00–16:00</span>
+        <span>🌐 線上遠距</span>
+        <span>🔮 四種附魔模式</span>
+      </div>
+      <a class="en-cta" href="#en-form">搶早鳥價，立即報名</a>
+      <p class="en-hero-note">早鳥優惠 9/04 截止，現省 700 元</p>
+    </div>
+  </header>
+
+  <section class="en-section en-pain">
+    <div class="en-inner">
+      <p class="en-eyebrow">適合誰</p>
+      <h2>你是不是有這些疑問？</h2>
+      <ul>
+        <li>買了水晶礦石，卻不知道怎麼「開光」或賦予它意義</li>
+        <li>手作了護符或飾品，想讓它不只是裝飾，而是真正有力量</li>
+        <li>學過一些魔法，但沒人完整教過「附魔」這件事該怎麼做</li>
+        <li>想依自己的信仰體系賦予物品魔力，卻不知從何下手</li>
+      </ul>
+      <p class="en-punch">附魔不是把石頭放在月光下就好。它有明確的技術與模式，依物品特性與你的信仰體系去操作，才能真正把魔力鎖進物件裡。</p>
+    </div>
+  </section>
+
+  <section class="en-section en-story">
+    <div class="en-inner">
+      <p class="en-eyebrow" style="color:#c9973f; border-color:#c9973f;">關於這門課</p>
+      <h2>回應同學們長久以來的提問</h2>
+      <p>近幾年來，一些同學持續在詢問關於附魔——賦予物品魔力的技術，包含水晶礦石、手工品等等，究竟要如何將其轉化為護符或法器。因此特別規劃了這堂應用課程。</p>
+      <blockquote>依據所持物的特性，以及自身的信仰體系，去操作技術來賦予魔力。</blockquote>
+      <p>在釐清概念之後，我們開始理解數種不同的技巧。這門課不綁定單一傳統，而是交給你一套可以依自己狀況靈活運用的附魔思維與操作方法。</p>
+    </div>
+  </section>
+
+  <section class="en-section en-modes">
+    <div class="en-inner">
+      <p class="en-eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem; color:#c9973f; border-color:#c9973f;">課程核心</p>
+      <h2>四種附魔模式</h2>
+      <p class="en-modes-sub">依物品特性與信仰體系，選擇最適合的方式賦予魔力</p>
+      <div class="en-mode-grid">
+        <div class="en-mode">
+          <div class="no">MODE 01</div>
+          <h3>奉獻模式</h3>
+          <p>以奉獻與獻供的方式，將物品交託於更高的力量，使其承載神聖的意圖與能量。</p>
+        </div>
+        <div class="en-mode">
+          <div class="no">MODE 02</div>
+          <h3>祈禱模式</h3>
+          <p>透過祈禱與言語的力量，反覆灌注意念與意圖，讓物品逐漸盈滿你所召喚的能量。</p>
+        </div>
+        <div class="en-mode">
+          <div class="no">MODE 03</div>
+          <h3>符文模式</h3>
+          <p>運用符文與印記，將特定的力量以符號的形式銘刻、封存於物品之上。</p>
+        </div>
+        <div class="en-mode">
+          <div class="no">MODE 04</div>
+          <h3>編織模式</h3>
+          <p>以編織、纏繞與結構的手法，將能量的網絡一層層織入物件的形體之中。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="en-section en-gain">
+    <div class="en-inner">
+      <p class="en-eyebrow">學習成果</p>
+      <h2>上完這門課，你將能夠——</h2>
+      <div class="en-gain-grid">
+        <div class="en-gain-card">
+          <h3>理解</h3>
+          <ul>
+            <li>掌握附魔的核心概念與原理</li>
+            <li>看懂物品特性與附魔方式的搭配</li>
+          </ul>
+        </div>
+        <div class="en-gain-card">
+          <h3>操作</h3>
+          <ul>
+            <li>執行奉獻、祈禱、符文、編織四種模式</li>
+            <li>依信仰體系調整操作方式</li>
+          </ul>
+        </div>
+        <div class="en-gain-card">
+          <h3>應用</h3>
+          <ul>
+            <li>將水晶、礦石、手工品轉化為護符法器</li>
+            <li>為自己的所持物量身附魔</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="en-section en-syllabus">
+    <div class="en-inner">
+      <p class="en-eyebrow">課程大綱</p>
+      <h2>這堂課會教你</h2>
+      <div class="en-syl-item"><strong>附魔的基本概念：</strong>什麼是附魔、物品如何承載魔力</div>
+      <div class="en-syl-item"><strong>物品特性與信仰體系：</strong>如何依所持物與自身體系選擇技術</div>
+      <div class="en-syl-item"><strong>奉獻模式：</strong>概念與操作技巧</div>
+      <div class="en-syl-item"><strong>祈禱模式：</strong>概念與操作技巧</div>
+      <div class="en-syl-item"><strong>符文模式：</strong>概念與操作技巧</div>
+      <div class="en-syl-item"><strong>編織模式：</strong>概念與操作技巧</div>
+    </div>
+  </section>
+
+  <section class="en-section en-proof">
+    <div class="en-inner">
+      <p class="en-eyebrow">學員回饋</p>
+      <h2>學員怎麼說</h2>
+      {% include testimonials.html tag="enchanting" limit=4 %}
+      <p style="text-align:center; margin-top:.5rem;">
+        <a href="/testimonials/" style="color:var(--en-teal);">看更多學員回饋 →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="en-section en-teacher">
+    <div class="en-inner">
+      <p class="en-eyebrow" style="color:#c9973f; border-color:#c9973f;">授課老師</p>
+      <h2>四月老師</h2>
+      <div class="en-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>深耕身心靈領域數十年，專研胡督魔法、混沌魔法與行星魔法體系，深入理解西方神祕學傳統，擅長將繁複的術法整理為系統化、可操作的現代教學。</p>
+          <p>台灣、香港、馬來西亞皆有眾多學員與客戶。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="en-section en-price" id="signup">
+    <div class="en-inner">
+      <p class="en-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程費用</p>
+      <h2 style="text-align:center;">報名資訊</h2>
+      <div class="en-price-card">
+        <p class="en-price-old">原價 3,500 元</p>
+        <p class="en-price-now">早鳥價 2,800 元</p>
+        <p class="en-price-save">2026/9/04 前完成報名繳費，現省 700 元</p>
+        <ul class="en-includes">
+          <li>線上直播課程</li>
+          <li>四種附魔模式完整講義</li>
+          <li>物品特性與附魔方式對應說明</li>
+          <li>實作操作示範</li>
+          <li>課後提問管道</li>
+        </ul>
+        <a class="en-cta" href="#en-form">立即填寫報名表單</a>
+      </div>
+      <p class="en-deadline">⏳ 早鳥截止 9/04｜報名截止 9/11｜上課時間 9/20（日）14:00–16:00</p>
+
+      <div class="en-form-wrap" id="en-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdCvw9Nb0cjAzZ2zB-M_I-GjBuEwlIBD6Xypfg_IPt76zwPoA/viewform?embedded=true"
+          width="100%" height="1250" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="附魔教學報名表單">載入中…</iframe>
+      </div>
+
+      <p class="en-alt">
+        或來信 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-附魔教學">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名附魔教學」，附上姓名、聯絡電話。送出後三日內回信確認。
+      </p>
+    </div>
+  </section>
+
+  <section class="en-section en-faq">
+    <div class="en-inner">
+      <p class="en-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>這門課需要先修其他課程嗎？</summary>
+        <p>不需要。附魔教學是獨立的應用課程，沒有先修條件。不論你是否上過其他魔法課，都能參加。</p>
+      </details>
+      <details>
+        <summary>我需要準備什麼物品？</summary>
+        <p>報名後會提供建議清單。你可以準備想附魔的水晶、礦石或手工品，課堂上跟著操作。沒有特別的物品也沒關係，課程會說明如何選擇適合的物件。</p>
+      </details>
+      <details>
+        <summary>我沒有特定的信仰，可以上嗎？</summary>
+        <p>可以。課程講的是「依自身信仰體系」靈活調整的方法，並不要求你屬於某個特定宗教。有信仰的人能對應到自己的體系，沒有的人也能學到通用的操作原則。</p>
+      </details>
+      <details>
+        <summary>當天有事無法出席，有回放嗎？</summary>
+        <p>本課程會有回放，但要求學員當天至少一定要上線。如果當天完全無法上線，請告知我們辦理延期或退費。</p>
+      </details>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#1e6b5e" bg="#d8e6e2" %}
+
+</div>
