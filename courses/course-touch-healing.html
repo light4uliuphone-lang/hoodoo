@@ -1,0 +1,288 @@
+---
+layout: default
+title: "接觸療癒 - 澤誼老師｜靈火巫境"
+description: "澤誼老師的接觸療癒基礎課：把能量從抽象概念拉回身體。透過雙手接觸與敏感度訓練，辨識冷熱麻脹沉緊與流動阻塞，建立真正可用的能量感知能力。"
+image: /assets/images/courses/touch-healing/og-touch-healing.jpg
+---
+
+<style>
+  .th-page{
+    --th-deep:#16443c;
+    --th-main:#2f7d6e;
+    --th-glow:#7fb8a4;
+    --th-warm:#d8a15e;
+    --th-cream:#f3f7f4;
+    --th-card:#ffffff;
+    --th-ink:#21322d;
+    --th-mut:#5a6d66;
+    --th-gold:#c9973f;
+    color:var(--th-ink);
+    line-height:1.85;
+  }
+  .th-page .th-wrap{max-width:920px;margin:0 auto;padding:0 1.5rem;}
+  .th-page section{padding:4.5rem 0;}
+  .th-page h2{font-family:"Noto Serif TC","Songti TC",serif;font-size:1.9rem;color:var(--th-deep);margin:0 0 1.4rem;line-height:1.4;}
+  .th-page h3{color:var(--th-main);margin:0 0 .6rem;font-size:1.15rem;}
+  .th-page .th-eyebrow{display:inline-block;font-size:.85rem;letter-spacing:.18em;color:var(--th-warm);border:1px solid rgba(216,161,94,.5);border-radius:999px;padding:.3rem .9rem;margin-bottom:1.2rem;}
+
+  /* Hero */
+  .th-hero{
+    position:relative;background:var(--th-deep);color:#eaf4f0;overflow:hidden;
+    padding:5.5rem 0 4.5rem;
+  }
+  .th-hero::before{
+    content:"";position:absolute;inset:0;
+    background:url('/assets/images/courses/touch-healing/hero-touch-healing.webp') center/cover no-repeat;
+    opacity:.5;
+  }
+  .th-hero::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(105deg, rgba(22,68,60,.92) 0%, rgba(22,68,60,.72) 45%, rgba(22,68,60,.35) 100%);
+  }
+  .th-hero .th-wrap{position:relative;z-index:2;}
+  .th-back{display:inline-block;color:var(--th-glow);text-decoration:none;font-size:.9rem;margin-bottom:1.5rem;}
+  .th-back:hover{color:#fff;}
+  .th-hero h1{
+    font-family:"Noto Serif TC","Songti TC",serif;
+    font-size:2.7rem;line-height:1.35;margin:.4rem 0 .8rem;color:#fff;
+    text-shadow:0 2px 18px rgba(0,0,0,.45);max-width:16em;
+  }
+  .th-hero .th-sub{font-size:1.15rem;color:#d7eae3;max-width:30em;text-shadow:0 1px 10px rgba(0,0,0,.4);}
+  .th-keyrow{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.8rem 0;}
+  .th-keyrow span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:.5rem .9rem;font-size:.92rem;}
+  .th-cta{
+    display:inline-block;background:var(--th-warm);color:#3a2a12;font-weight:700;
+    text-decoration:none;padding:.9rem 2rem;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.25);
+    transition:transform .15s ease;
+  }
+  .th-cta:hover{transform:translateY(-2px);}
+  .th-early{display:block;margin-top:.9rem;font-size:.9rem;color:var(--th-glow);}
+
+  /* Alternating bg */
+  .th-alt{background:var(--th-cream);}
+  .th-punch{font-size:1.35rem;color:var(--th-deep);font-weight:600;text-align:center;max-width:24em;margin:2rem auto 0;line-height:1.6;}
+
+  /* Cards */
+  .th-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem;}
+  .th-grid.two{grid-template-columns:repeat(2,1fr);}
+  .th-card{background:var(--th-card);border:1px solid #e2ece8;border-radius:14px;padding:1.6rem;box-shadow:0 3px 14px rgba(20,60,52,.05);}
+  .th-card .th-num{color:var(--th-warm);font-family:"Noto Serif TC",serif;font-size:1.1rem;}
+
+  /* Quote */
+  .th-quote{
+    border-left:4px solid var(--th-warm);background:#fff;
+    padding:1.6rem 1.8rem;margin:1.8rem 0;border-radius:0 12px 12px 0;
+    font-size:1.15rem;color:var(--th-deep);font-family:"Noto Serif TC","Songti TC",serif;line-height:1.7;
+  }
+
+  /* Outline list */
+  .th-outline{list-style:none;padding:0;margin:1.4rem 0 0;counter-reset:ch;}
+  .th-outline li{
+    position:relative;padding:1rem 0 1rem 3rem;border-bottom:1px solid #e2ece8;counter-increment:ch;
+  }
+  .th-outline li::before{
+    content:counter(ch,decimal-leading-zero);position:absolute;left:0;top:1rem;
+    color:var(--th-glow);font-family:"Noto Serif TC",serif;font-size:1rem;font-weight:700;
+  }
+
+  /* Teacher */
+  .th-teacher{display:flex;gap:2rem;align-items:flex-start;background:#fff;border:1px solid #e2ece8;border-radius:16px;padding:2rem;}
+  .th-teacher img{width:150px;height:150px;border-radius:14px;object-fit:cover;flex-shrink:0;background:#e2ece8;}
+  .th-teacher h3{font-size:1.3rem;color:var(--th-deep);}
+
+  /* Enroll */
+  .th-price{
+    background:linear-gradient(135deg,var(--th-deep),var(--th-main));color:#fff;
+    border-radius:16px;padding:2rem;text-align:center;margin-bottom:2rem;
+  }
+  .th-price .th-amt{font-size:2.4rem;font-weight:800;font-family:"Noto Serif TC",serif;}
+  .th-price .th-note{color:var(--th-glow);font-size:.95rem;margin-top:.4rem;}
+  .th-price .th-combo{margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid rgba(255,255,255,.25);font-size:1.02rem;line-height:1.7;}
+  .th-price .th-combo strong{color:var(--th-warm);font-size:1.25rem;}
+  .th-price .th-gift{display:inline-block;background:rgba(216,161,94,.22);border:1px solid rgba(216,161,94,.5);border-radius:999px;padding:.15rem .7rem;font-size:.9rem;margin-top:.3rem;}
+  .th-formbox{background:#fff;padding:10px;border-radius:8px;}
+  .th-help{text-align:center;color:var(--th-mut);font-size:.95rem;margin-top:1rem;}
+  .th-help a{color:var(--th-main);}
+
+  /* FAQ */
+  .th-faq details{background:#fff;border:1px solid #e2ece8;border-radius:12px;padding:0 1.3rem;margin-bottom:.8rem;}
+  .th-faq summary{cursor:pointer;font-weight:600;color:var(--th-deep);padding:1.1rem 0;list-style:none;}
+  .th-faq summary::-webkit-details-marker{display:none;}
+  .th-faq summary::after{content:"＋";float:right;color:var(--th-warm);}
+  .th-faq details[open] summary::after{content:"－";}
+  .th-faq details p{margin:0 0 1.1rem;color:var(--th-mut);}
+
+  .th-disc{font-size:.85rem;color:var(--th-mut);text-align:center;margin-top:1.5rem;}
+
+  @media(max-width:720px){
+    .th-page h2{font-size:1.55rem;}
+    .th-hero h1{font-size:2rem;}
+    .th-grid,.th-grid.two{grid-template-columns:1fr;}
+    .th-teacher{flex-direction:column;align-items:center;text-align:center;}
+    .th-page section{padding:3.2rem 0;}
+  }
+</style>
+
+<div class="th-page">
+
+  <!-- 1. HERO -->
+  <header class="th-hero">
+    <div class="th-wrap">
+      <a class="th-back" href="/course/#healing">← 返回課程總覽</a>
+      <span class="th-eyebrow">靈火巫境・能量療癒</span>
+      <h1>接觸療癒</h1>
+      <p class="th-sub">把「能量」從抽象概念拉回身體。透過雙手接觸，讓你重新學會感覺——並讓你的雙手開始學會聽。</p>
+      <div class="th-keyrow">
+        <span>👐 授課：澤誼老師</span>
+        <span>🗓️ 2026/10/03（六）10:00–16:00</span>
+        <span>📍 實體課程・含個案練習</span>
+        <span>💰 原價 NT$6,800</span>
+      </div>
+      <a class="th-cta" href="#enroll">查看報名資訊 →</a>
+      <span class="th-early">＊9/28 截止報名；名額有限，實作課建議儘早報名</span>
+    </div>
+  </header>
+
+  <!-- 2. 痛點／適合誰 -->
+  <section>
+    <div class="th-wrap">
+      <h2>你是不是也卡在「到底什麼叫能量」？</h2>
+      <p>很多人學能量工作，最容易卡住的地方就是：到底什麼叫做能量？我感覺到的，是自己的想像，還是真的有變化？</p>
+      <div class="th-grid" style="margin-top:1.8rem;">
+        <div class="th-card"><h3>還沒入門的你</h3><p>從沒接觸過能量療癒，想找一個踏實、不玄的起點，先培養最基本的能力。</p></div>
+        <div class="th-card"><h3>已有基礎的你</h3><p>學過靈氣、脈輪、能量療法、按摩或身心技術，想重新檢查自己的感知到底有多細緻。</p></div>
+        <div class="th-card"><h3>常懷疑自己的你</h3><p>總覺得「我是不是沒感覺」「我不知道感覺得對不對」——想確認自己到底接收到了什麼。</p></div>
+      </div>
+      <p class="th-punch">能量敏感度不是少數人的天賦，而是可以透過反覆練習逐漸發展的感官。</p>
+    </div>
+  </section>
+
+  <!-- 3. 關於這門課／敘事 -->
+  <section class="th-alt">
+    <div class="th-wrap">
+      <h2>關於接觸療癒</h2>
+      <p>接觸療癒是一套以「雙手接觸、能量感知與身體覺察」為核心的療癒方法。它並不是單純把自己的能量輸送給對方，而是透過穩定而有意識的接觸，感受身體不同區域的能量狀態，協助原本停滯、緊縮或失衡的生命力重新恢復流動。</p>
+      <p>它最重要的價值，就在於把能量工作拉回身體。透過雙手實際接觸，你會開始分辨冷、熱、麻、脹、沉、緊、鬆、流動、阻塞等不同感受，慢慢建立屬於自己的能量辨識能力。當療癒者能真正「感覺」到一個人的狀態，就不再只是照著固定流程操作，而是能根據當下接收到的訊息，判斷哪裡需要停留、哪裡需要引導、哪裡其實不需要過度介入。</p>
+      <blockquote class="th-quote">這堂課真正要教你的，不只是「怎麼替別人療癒」，而是讓你的雙手開始學會聽。</blockquote>
+    </div>
+  </section>
+
+  <!-- 4. 核心亮點 -->
+  <section>
+    <div class="th-wrap">
+      <h2>這門課的獨特之處</h2>
+      <div class="th-grid">
+        <div class="th-card"><span class="th-num">01</span><h3>把能量拉回身體</h3><p>不停在抽象理論，而是強調「實際操作之後，你到底感覺到了什麼」。</p></div>
+        <div class="th-card"><span class="th-num">02</span><h3>系統整合，不切開學</h3><p>把人體能量、脈輪、情緒與身體反應連在一起講，讓部位的緊繃與溫度都有意義。</p></div>
+        <div class="th-card"><span class="th-num">03</span><h3>照顧療癒者自身</h3><p>如何保持中心、不被個案情緒牽走、工作後完成整理與防護，都是訓練的一部分。</p></div>
+        <div class="th-card"><span class="th-num">04</span><h3>實務取向</h3><p>不需複雜儀式空間或大量工具，容易與按摩、身體工作、其他能量技術結合。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 學習成果 -->
+  <section class="th-alt">
+    <div class="th-wrap">
+      <h2>你會帶走的三種能力</h2>
+      <div class="th-grid">
+        <div class="th-card"><h3>理解</h3><p>人體能量與生命力如何運作，脈輪與身體、情緒之間的關係。</p></div>
+        <div class="th-card"><h3>操作</h3><p>雙手能量感知訓練，辨識冷、熱、麻、脹、沉重與阻塞，並完成一次完整的接觸療癒。</p></div>
+        <div class="th-card"><h3>應用</h3><p>自我接觸療癒、為他人施作，並把細緻的感知力接回你原有的療癒技術。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 課程大綱 -->
+  <section>
+    <div class="th-wrap">
+      <h2>課程大綱</h2>
+      <ol class="th-outline">
+        <li>人體能量與生命力運作的基本概念</li>
+        <li>脈輪與身體、情緒之間的關係</li>
+        <li>雙手能量感知與敏感度訓練</li>
+        <li>透過接觸辨識冷、熱、麻、脹、沉重與阻塞等不同狀態</li>
+        <li>身體緊繃與能量停滯的判讀</li>
+        <li>以意念與接觸協助能量恢復流動</li>
+        <li>自我接觸療癒的方法</li>
+        <li>為他人進行完整接觸療癒</li>
+        <li>療癒前的準備與狀態調整</li>
+        <li>療癒者的界線、穩定與能量保護</li>
+        <li>療癒結束後的整理與防護</li>
+        <li>實際操作與個案練習</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 7. 學員回饋（真實資料自動帶入，尚無資料時不顯示；切勿虛構） -->
+  {% assign ch_reviews = site.data.testimonials | where: "tag", "touch-healing" %}
+  {% if ch_reviews.size > 0 %}
+  <section class="th-alt">
+    <div class="th-wrap">
+      <h2>學員回饋</h2>
+      {% include testimonials.html tag="touch-healing" limit=4 %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- 8. 授課老師 -->
+  <section>
+    <div class="th-wrap">
+      <h2>授課老師</h2>
+      <div class="th-teacher">
+        <img src="/assets/images/shared/teacher-zeyi.webp" alt="澤誼老師">
+        <div>
+          <h3>澤誼老師</h3>
+          <p>澤誼老師專長能量療癒，另開設天元回歸盤能量療癒與行星許願課。他的教學特色，在於不把療癒教成一套神祕抽象的理論，而是非常強調「實際操作之後，你到底感覺到了什麼」——一方面保留能量療癒的靈性觀點，一方面十分重視身體的具體反應。</p>
+          <p>他會把人體能量、脈輪、情緒與身體反應連在一起講，也很重視療癒者本身的狀態：如何保持中心、如何在接觸個案時不被對方牽著走、如何在工作結束後完成整理與防護。透過反覆練習，讓學生慢慢建立真正可以使用的感知能力。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8b. 合報加購：光體手術 -->
+  <section>
+    <div class="th-wrap">
+      <h2>合報加購：光體手術</h2>
+      <p>光體手術是澤誼老師接觸療癒體系中的一環，也是他長期為個案施作的能量療癒方式。施作前，他會先以晤談了解對象目前的狀態——就像看診前的問診，在對話中抽絲剝繭、找到核心；接著以雙手在氣場與脈輪上工作，協助清理停滯、梳理糾結的情緒（例如切斷「情緒鎖」），並在需要時補充能量，最後帶回可以自我清理與整理的方法。</p>
+      <p>接觸療癒課程幫你打好雙手感知的基礎；若想更完整地體驗與學習這套工作方式，可於報名時選擇與光體手術課程<strong>合報</strong>，享特惠價 <strong>NT$15,000</strong>，並加贈水晶刀一只。單報接觸療癒亦可。</p>
+      <p class="th-disc">＊光體手術屬個人能量療癒體驗，非醫療行為，不能取代任何醫療診斷或治療；每個人的感受與效果因人而異，不構成任何保證。</p>
+    </div>
+  </section>
+
+  <!-- 9. 報名資訊 -->
+  <section class="th-alt" id="enroll">
+    <div class="th-wrap">
+      <h2>報名資訊</h2>
+      <div class="th-price">
+        <div class="th-amt">NT$6,800</div>
+        <div class="th-note">單堂原價</div>
+        <div class="th-combo">＋ 與「光體手術」課程合報　特惠 <strong>NT$15,000</strong>　<span class="th-gift">🎁 贈水晶刀一只</span></div>
+        <div class="th-note" style="margin-top:.8rem;">2026/10/03（六）10:00–16:00・實體課程<br>報名截止：9/28</div>
+      </div>
+      <div class="th-formbox">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScdPB9viTXY_MVjPm32Ws0pDY-JEmNhk5bVTkOhnwD66eA4XA/viewform?embedded=true"
+          width="100%" height="1250" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block;margin:0 auto;max-width:640px;"
+          title="接觸療癒報名表單">載入中…</iframe>
+      </div>
+      <p class="th-help">表單無法送出，或有其他問題，歡迎來信 <a href="mailto:herbmagic@hotmail.com.tw">herbmagic@hotmail.com.tw</a> 或加 LINE ＠sorcery。</p>
+    </div>
+  </section>
+
+  <!-- 10. FAQ -->
+  <section class="th-faq">
+    <div class="th-wrap">
+      <h2>常見問題</h2>
+      <details><summary>完全沒有能量療癒基礎，可以上嗎？</summary><p>可以，而且很推薦當作入門。比起一開始就學大量複雜的能量符號或遠距操作，接觸療癒讓你先回到最基本的能力：感覺。</p></details>
+      <details><summary>我已經學過靈氣／脈輪／按摩，還需要上嗎？</summary><p>反而更推薦。這堂課最大的價值未必是再多一套系統，而是讓你重新檢查自己的能量感知有多細緻——這種辨識力往往會直接提升你其他療癒技術的品質。</p></details>
+      <details><summary>我一直覺得「自己好像沒感覺」怎麼辦？</summary><p>能量敏感度不是天賦，而是可以練習發展的感官。這堂課提供了很直接的練習入口，透過反覆的雙手接觸練習逐步建立。</p></details>
+      <details><summary>這是實體課還是線上課？</summary><p>這是實體課程，時間為 2026/10/03（六）10:00–16:00，全程包含實際操作與個案練習，因此需親自到場才能獲得完整的手把手回饋。（上課地點與需準備物品，將於報名後另行通知。）</p></details>
+      <details><summary>課程當天無法出席怎麼辦？</summary><p>由於是實體實作課、名額有限，若確定無法出席，請儘早與我們聯繫協調。</p></details>
+      <details><summary>「光體手術」合報是什麼？</summary><p>光體手術是澤誼老師接觸療癒體系中的一環。若與光體手術課程一起合報，可享特惠價 NT$15,000，並加贈水晶刀一只。想單報接觸療癒也完全沒問題。</p></details>
+    </div>
+  </section>
+
+  <!-- 11. 名單捕捉 -->
+  {% include signup-capture.html accent="#2f7d6e" bg="#f3f7f4" %}
+
+</div>
