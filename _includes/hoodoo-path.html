@@ -5,8 +5,8 @@
     accent：連結主色（可省略，預設金色）
     desc：true 時顯示每門課的一句簡介（可省略，預設不顯示）
   改課名或簡介只需改這一個檔，全系列同步。
-  註：單元四(04)已改名為 course-hoodoo-love，下方對 04 的網址做了例外處理；
-      其代號仍用 "04"（current 判斷與清單順序不變）。
+  註：單元四(04)已改名為 course-hoodoo-love、單元五(05)已改名為 course-hoodoo-breakup，
+      下方對 04、05 的網址做了例外處理；其代號仍用 "04"/"05"（current 判斷與清單順序不變）。
 {% endcomment %}
 {% assign cur = include.current %}
 {% assign accent = include.accent | default: "#c9973f" %}
@@ -19,6 +19,8 @@
     {% assign name = names[idx] %}
     {% if code == "04" %}
       {% assign href = "/courses/course-hoodoo-love/" %}
+    {% elsif code == "05" %}
+      {% assign href = "/courses/course-hoodoo-breakup/" %}
     {% else %}
       {% assign href = "/courses/course-hoodoo-" | append: code | append: "/" %}
     {% endif %}
