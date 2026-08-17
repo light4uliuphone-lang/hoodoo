@@ -6,6 +6,10 @@ author: 四月老師
 category: [life]
 ---
 
+<p style="text-align:center; margin:1.5rem 0;">
+    <img src="/assets/images/blog/2026-08-17-make-your-own-luck.webp" alt="你能製造自己的好運嗎——用心態與行動創造好運" style="max-width:100%; width:640px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.1);">
+</p>
+
 <p>絕對可以。而且這與「改變你的心理與身體環境、把自己放到更有利的位置」有很大的關聯。積極心理學家、《魔法自我：積極療法》（The Enchanted Self: A Positive Therapy）作者<strong>芭芭拉·貝克爾·霍斯坦（Barbara Becker Holstein）</strong>說：「成功來自於許多因素。」</p>
 
 <p>專家們一致認為，通往好運的路不只一條，但有一個概念肯定能讓好運找到你——<strong>「過一種能讓你前進的生活」</strong>。</p>
