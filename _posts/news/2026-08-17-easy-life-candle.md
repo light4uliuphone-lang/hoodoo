@@ -8,6 +8,10 @@ category: [news]
 
 <p>有時候，我們真正需要的不是更多機會，而是讓生活不要每件事情都那麼費力。「輕鬆生活」儀式蠟燭，概念來自 Hoodoo 中的「輕鬆生活（Easy Life）」配方。<strong>限量預購中。</strong></p>
 
+<p style="text-align:center; margin:1.5rem 0;">
+    <img src="/assets/images/blog/2026-08-17-easy-life-candle.webp" alt="「輕鬆生活」儀式蠟燭，一組三支" style="max-width:100%; width:520px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.1);">
+</p>
+
 ---
 
 ## 為什麼你會需要這支蠟燭？
