@@ -1,32 +1,22 @@
+{% comment %}
+  推薦廣告橫幅（可重複使用）— 隨機播放・圖片卡片版
+  用法：{% include promo-banner.html %}
+  建議放在 index.html 與 course-latest.html 的最上方（Hero 之前或之後）
+  行為：從下方 adData 隨機抽選一則推薦廣告，以圖片卡片形式顯示（與 google-ad-bottom 相同版型與廣告）。
+  ※ 廣告清單（adData）同時存在於本檔、my-self-ad.html 與 google-ad-bottom.html，
+    要新增／修改廣告時，三處都要一起更新（或日後改為共用一份資料）。
+  停用：把引用這個 include 的那一行刪掉即可，不需改動其他內容。
+{% endcomment %}
 
-
-<style>
-  .promo-bar { display:block; text-decoration:none; background:linear-gradient(100deg,#1f1810 0%,#2f2317 55%,#1a1109 100%);
-               border-bottom:1px solid rgba(201,151,63,.4); padding:.9rem 1.5rem; text-align:center;
-               transition:filter .15s ease; }
-  .promo-bar:hover { filter:brightness(1.15); }
-  .promo-bar-in { max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:center;
-                  gap:.6rem 1.2rem; flex-wrap:wrap; }
-  .promo-bar .tag { background:#8c3b2e; color:#fff; font-size:.72rem; font-weight:700; letter-spacing:.15em;
-                    padding:.2rem .9rem; border-radius:999px; white-space:nowrap; }
-  .promo-bar .promo-ad-img { height:30px; width:auto; max-width:72px; border-radius:6px; object-fit:cover; vertical-align:middle; }
-  .promo-bar .msg { color:#f4ecdd; font-size:.98rem; letter-spacing:.03em; }
-  .promo-bar .msg b { color:#c9973f; font-size:1.1rem; }
-  .promo-bar .go { color:#c9973f; font-size:.9rem; font-weight:700; letter-spacing:.08em; white-space:nowrap; }
-  @media (max-width:600px){
-    .promo-bar { padding:.8rem 1rem; }
-    .promo-bar .msg { font-size:.9rem; }
-  }
-</style>
-
-<a class="promo-bar" data-ad-bar href="#" target="_blank" rel="noopener noreferrer" style="display:none;">
-  <span class="promo-bar-in">
-    <span class="tag">精 選 推 薦</span>
-    <img class="promo-ad-img" src="" alt="精選推薦" loading="lazy">
-    <span class="msg promo-ad-text">立即前往了解更多 →</span>
-    <span class="go">→</span>
-  </span>
-</a>
+<div class="promo-ad" style="max-width:640px; margin:1.5rem auto; padding:0 1rem; text-align:center; display:none;">
+  <p class="promo-ad-label" style="font-size:.8rem; color:#999; margin:0 0 .8rem; letter-spacing:1px;">- 精選推薦 -</p>
+  <a class="promo-ad-link" href="#" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:block;">
+    <div class="promo-ad-card" style="position:relative; overflow:hidden; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.1); background:#fff; transition:transform .3s ease;">
+      <img class="promo-ad-img" src="" alt="精選推薦" style="display:block; width:100%; height:auto; border-radius:12px;">
+      <div class="promo-ad-text" style="padding:15px; background:#1a5f5f; color:#fff; font-weight:bold; font-size:1rem; border-radius:0 0 12px 12px;">立即前往了解更多 →</div>
+    </div>
+  </a>
+</div>
 
 <script>
 (function () {
@@ -38,16 +28,21 @@
 
   var pick = adData[Math.floor(Math.random() * adData.length)];
 
-  // 填入頁面上所有尚未填好的推薦橫條（避免與其他相同橫條重複填入）
-  document.querySelectorAll('a.promo-bar[data-ad-bar]').forEach(function (bar) {
-    if (bar.getAttribute('data-filled') === '1') return;
-    bar.href = pick.link;
-    var img = bar.querySelector('.promo-ad-img');
-    if (img) { img.src = pick.img; img.alt = "精選推薦"; }
-    var txt = bar.querySelector('.promo-ad-text');
-    if (txt) txt.textContent = pick.text;
-    bar.setAttribute('data-filled', '1');
-    bar.style.display = 'block';
+  document.querySelectorAll('.promo-ad').forEach(function (box) {
+    if (box.getAttribute('data-filled') === '1') return;
+    var link = box.querySelector('.promo-ad-link');
+    var img  = box.querySelector('.promo-ad-img');
+    var text = box.querySelector('.promo-ad-text');
+    var card = box.querySelector('.promo-ad-card');
+    if (link) link.href = pick.link;
+    if (img)  { img.src = pick.img; img.alt = "精選推薦"; }
+    if (text) text.textContent = pick.text;
+    box.setAttribute('data-filled', '1');
+    box.style.display = 'block';
+    if (card) {
+      card.onmouseover = function () { this.style.transform = 'translateY(-5px)'; };
+      card.onmouseout  = function () { this.style.transform = 'translateY(0)'; };
+    }
   });
 })();
 </script>
