@@ -7,6 +7,7 @@
                   gap:.6rem 1.2rem; flex-wrap:wrap; }
   .promo-bar .tag { background:#8c3b2e; color:#fff; font-size:.72rem; font-weight:700; letter-spacing:.15em;
                     padding:.2rem .9rem; border-radius:999px; white-space:nowrap; }
+  .promo-bar .promo-ad-img { height:30px; width:auto; max-width:72px; border-radius:6px; object-fit:cover; vertical-align:middle; }
   .promo-bar .msg { color:#f4ecdd; font-size:.98rem; letter-spacing:.03em; }
   .promo-bar .msg b { color:#c9973f; font-size:1.1rem; }
   .promo-bar .go { color:#c9973f; font-size:.9rem; font-weight:700; letter-spacing:.08em; white-space:nowrap; }
@@ -15,11 +16,35 @@
     .promo-bar .msg { font-size:.9rem; }
   }
 </style>
- 
-<a class="promo-bar" href="/promo/2026h2/">
+
+<a class="promo-bar" data-ad-bar href="#" target="_blank" rel="noopener noreferrer" style="display:none;">
   <span class="promo-bar-in">
-    <span class="tag">限 時 優 惠</span>
-    <span class="msg">下半年度課程　一次報名三堂享 <b>85 折</b>　活動至 8/31 止</span>
-    <span class="go">看優惠詳情 →</span>
+    <span class="tag">精 選 推 薦</span>
+    <img class="promo-ad-img" src="" alt="精選推薦" loading="lazy">
+    <span class="msg promo-ad-text">立即前往了解更多 →</span>
+    <span class="go">→</span>
   </span>
 </a>
+
+<script>
+(function () {
+  // 【設定區：廣告清單】與 google-ad-bottom.html 相同
+  var adData = [
+    { link: "https://go98.me/shop01", img: "https://go98.me/shopimg01", text: "立即前往了解更多 →" },
+    { link: "https://go98.me/shop02", img: "https://go98.me/shopimg02", text: "限時優惠實施中 →" }
+  ];
+
+  var pick = adData[Math.floor(Math.random() * adData.length)];
+
+  document.querySelectorAll('a.promo-bar[data-ad-bar]').forEach(function (bar) {
+    if (bar.getAttribute('data-filled') === '1') return;
+    bar.href = pick.link;
+    var img = bar.querySelector('.promo-ad-img');
+    if (img) { img.src = pick.img; img.alt = "精選推薦"; }
+    var txt = bar.querySelector('.promo-ad-text');
+    if (txt) txt.textContent = pick.text;
+    bar.setAttribute('data-filled', '1');
+    bar.style.display = 'block';
+  });
+})();
+</script>
