@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <style>
     .post-wrapper {
         max-width: 800px;
@@ -50,17 +49,17 @@ layout: default
     }
 </style>
 <article class="post-wrapper">
+    {% comment %} 商店公告（category: news）或設定 hide_promo:true 的文章，不顯示頂部推薦廣告，避免與自家商品互相干擾 {% endcomment %}
+    {% unless page.categories contains "news" or page.hide_promo %}
     <div style="margin-bottom: 30px;">
         {% include promo-banner.html %}
     </div>
-
+    {% endunless %}
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
         <div class="post-date">📅 {{ page.date | date: "%Y-%m-%d" }}</div>
     </header>
-
   
-
     
     <div class="post-main-content">
         {{ content }}
@@ -71,10 +70,8 @@ layout: default
       <div style="margin-top: 2rem; border-top: 1px dashed #ddd; padding-top: 2.5rem;">
         <p style="font-size: 0.8rem; color: #999; margin-bottom: 0.5rem; letter-spacing: 1px;">- 訂閱靈火巫境電子報 -</p>
         <p style="font-size: 1.1rem; color: #333; margin-bottom: 1.5rem; font-weight: bold;">獲取最新的魔法知識與課程情報</p>
-
-<iframe width="540" height="305" src="https://e6dc9204.sibforms.com/v2/serve/MUIFAHgKB274mQgqRtyh6HNQmg_sGIE9_RatHZ4zDhfktXwMGsVTBvWmeh8-IXlKY7ve7MrQ5K4PmBdewML8ApwsvugH38keVR3Dt2gYSRikxQqU0_ZK1F3Jjgmoaod-yeHV4Lj-BOAe9jPj5WDGN_WldI_gCxx2tVKK5bOkLn7NybjBpUNsZhmq5-l2oEjB7t3XllvwKZF0ASSk" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+        <iframe width="540" height="480" src="https://e6dc9204.sibforms.com/v2/serve/MUIFAHgKB274mQgqRtyh6HNQmg_sGIE9_RatHZ4zDhfktXwMGsVTBvWmeh8-IXlKY7ve7MrQ5K4PmBdewML8ApwsvugH38keVR3Dt2gYSRikxQqU0_ZK1F3Jjgmoaod-yeHV4Lj-BOAe9jPj5WDGN_WldI_gCxx2tVKK5bOkLn7NybjBpUNsZhmq5-l2oEjB7t3XllvwKZF0ASSk" frameborder="0" scrolling="no" allowfullscreen style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; border-radius: 8px; overflow: hidden;"></iframe>
     </div>
-
     <nav style="margin-top: 50px; display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 20px;">
         {% if page.previous %}
             <a href="{{ page.previous.url }}" style="color: #1a5f5f; text-decoration: none;">← {{ page.previous.title }}</a>
