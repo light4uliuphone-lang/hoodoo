@@ -47,23 +47,44 @@ layout: default
         color: #000;
         background: linear-gradient(transparent 70%, #fff3b0 0);
     }
+    /* 文章中段廣告的上下間距 */
+    .in-article-ad { margin: 2.5rem 0; }
 </style>
 <article class="post-wrapper">
-    {% comment %} 商店公告（category: news）或設定 hide_promo:true 的文章，不顯示頂部推薦廣告，避免與自家商品互相干擾 {% endcomment %}
-    {% unless page.categories contains "news" or page.hide_promo %}
-    <div style="margin-bottom: 30px;">
-        {% include promo-banner.html %}
-    </div>
-    {% endunless %}
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
         <div class="post-date">📅 {{ page.date | date: "%Y-%m-%d" }}</div>
     </header>
-  
-    
+
+    {% comment %}
+      推薦廣告插入邏輯：
+      - 商店公告（category: news）或設 hide_promo:true 的文章 → 不顯示廣告。
+      - 其他文章 → 廣告插在「文章中段」：
+          優先：文章內若有 <!--AD--> 標記，就插在該處（精準控制）。
+          否則：依段落數自動插在中間那一段之後。
+    {% endcomment %}
+    {% assign show_ad = true %}
+    {% if page.categories contains "news" or page.hide_promo %}{% assign show_ad = false %}{% endif %}
+    {% capture promo %}<div class="in-article-ad">{% include promo-banner.html %}</div>{% endcapture %}
+
     <div class="post-main-content">
+    {% if show_ad and content contains "<!--AD-->" %}
+        {%- assign _chunks = content | split: "<!--AD-->" -%}
+        {{ _chunks[0] }}
+        {{ promo }}
+        {%- for _c in _chunks offset:1 -%}{{ _c }}{%- endfor -%}
+    {% elsif show_ad %}
+        {%- assign _paras = content | split: "</p>" -%}
+        {%- assign _mid = _paras.size | divided_by: 2 -%}
+        {%- for _p in _paras -%}
+            {{ _p }}{% unless forloop.last %}</p>{% endunless %}
+            {%- if forloop.index == _mid -%}{{ promo }}{%- endif -%}
+        {%- endfor -%}
+    {% else %}
         {{ content }}
+    {% endif %}
     </div>
+
     <div style="margin-top: 40px;">
         {% include google-ad-bottom.html %}
     </div>
