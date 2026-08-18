@@ -20,45 +20,40 @@ layout: default
         <div class="post-date">📅 {{ page.date | date: "%Y-%m-%d" }}</div>
     </header>
 
-    {% comment %}
-      推薦廣告插入邏輯
-      - 商店公告(category: news)或 hide_promo:true → 不顯示廣告。
-      - 手動：文章有 <!--AD--> 標記 → 每個標記各插一則（可多則、精準）。
-      - 自動：無標記 → 依段落數(_n)決定則數，平均分佈：
-            _n = 1~2  → 末尾插 1 則
-            _n = 3~11 → 1 則
-            _n = 12~17→ 2 則
-            _n = 18+  → 3 則（上限）
-        分佈方式：步距 = _n / (則數+1)，在步距的 1~則數 倍處插入（頭尾不插）。
-    {% endcomment %}
+    {% comment %} 廣告插入：news/hide_promo 不顯示；有 <!--AD--> 標記則精準多則；否則依段落數自動 1~3 則 {% endcomment %}
     {% assign show_ad = true %}
     {% if page.categories contains "news" or page.hide_promo %}{% assign show_ad = false %}{% endif %}
     {% capture promo %}<div class="in-article-ad">{% include promo-banner.html %}</div>{% endcapture %}
 
+    {% assign _has_marker = false %}
+    {% if content contains "<!--AD-->" %}{% assign _has_marker = true %}{% endif %}
+    {% assign _paras = content | split: "</p>" %}
+    {% assign _n = _paras.size %}
+    {% assign _count = 0 %}
+    {% if show_ad and _has_marker == false %}
+        {% if _n >= 18 %}{% assign _count = 3 %}
+        {% elsif _n >= 12 %}{% assign _count = 2 %}
+        {% else %}{% assign _count = 1 %}{% endif %}
+    {% endif %}
+
     <div class="post-main-content">
-    {% if show_ad and content contains "<!--AD-->" %}
+    <!-- ad-layout v3 | show_ad={{ show_ad }} | marker={{ _has_marker }} | paragraphs={{ _n }} | auto_count={{ _count }} -->
+    {% if show_ad and _has_marker %}
         {%- assign _chunks = content | split: "<!--AD-->" -%}
         {%- for _c in _chunks -%}{{ _c }}{%- unless forloop.last -%}{{ promo }}{%- endunless -%}{%- endfor -%}
+    {% elsif show_ad and _n <= 2 %}
+        {{ content }}
+        {{ promo }}
     {% elsif show_ad %}
-        {%- assign _paras = content | split: "</p>" -%}
-        {%- assign _n = _paras.size -%}
-        {%- if _n <= 2 -%}
-            {{ content }}
-            {{ promo }}
-        {%- else -%}
-            {%- if _n >= 18 -%}{%- assign _count = 3 -%}
-            {%- elsif _n >= 12 -%}{%- assign _count = 2 -%}
-            {%- else -%}{%- assign _count = 1 -%}{%- endif -%}
-            {%- assign _denom = _count | plus: 1 -%}
-            {%- assign _step = _n | divided_by: _denom -%}
-            {%- if _step < 1 -%}{%- assign _step = 1 -%}{%- endif -%}
-            {%- for _p in _paras -%}
-                {{ _p }}{% unless forloop.last %}</p>{% endunless %}
-                {%- assign _mod = forloop.index | modulo: _step -%}
-                {%- assign _which = forloop.index | divided_by: _step -%}
-                {%- if _mod == 0 and _which <= _count and forloop.index < _n -%}{{ promo }}{%- endif -%}
-            {%- endfor -%}
-        {%- endif -%}
+        {%- assign _denom = _count | plus: 1 -%}
+        {%- assign _step = _n | divided_by: _denom -%}
+        {%- if _step < 1 -%}{%- assign _step = 1 -%}{%- endif -%}
+        {%- for _p in _paras -%}
+            {{ _p }}{% unless forloop.last %}</p>{% endunless %}
+            {%- assign _mod = forloop.index | modulo: _step -%}
+            {%- assign _which = forloop.index | divided_by: _step -%}
+            {%- if _mod == 0 and _which <= _count and forloop.index < _n -%}{{ promo }}{%- endif -%}
+        {%- endfor -%}
     {% else %}
         {{ content }}
     {% endif %}
