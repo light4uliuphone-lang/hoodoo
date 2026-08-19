@@ -14,6 +14,10 @@ category: [magic]
 
 <p>它的形成，與美國南方、奴隸制度、非洲離散文化、基督宗教、植物知識，以及後來的美國民間文化密切相關。因此，要真正理解胡督，第一件事情不是問：「它有哪些法術？」而是先理解：<strong>胡督是從什麼歷史環境裡長出來的？</strong></p>
 
+<p style="text-align:center; margin:1.5rem 0;">
+    <img src="/assets/images/blog/2026-08-18-what-is-hoodoo.webp" alt="胡督（Hoodoo）民俗魔法常見的材料：藥草根、蠟燭、聖經、魔咒袋與磁石" style="max-width:100%; width:640px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.1);">
+</p>
+
 ## 胡督的核心，是一套「解決現實問題」的民俗實作
 
 <p>胡督很強烈的一個特色，就是它通常非常務實。傳統工作經常圍繞著人們生活中非常具體的需求，例如金錢、工作、愛情、人際關係、保護、健康、法庭問題、敵人、解除厄運、家庭、土地與祖先。</p>
