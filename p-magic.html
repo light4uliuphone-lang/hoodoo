@@ -1,0 +1,2297 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>進階行星魔法 · 中譯｜靈火巫境</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>:root{
+  --bg:#0b0e1a; --bg2:#0e1324; --panel:#131a2e; --panel2:#171f36;
+  --ink:#ece5d4; --ink2:#b7bccb; --dim:#7f8698;
+  --gold:#c9a24b; --gold-hi:#e6c67e; --rule:rgba(201,162,75,.26);
+  --moon:#c3cad6; --mercury:#e0975a; --venus:#79c2a0;
+  --sun:#e8c25c; --mars:#e06277; --jupiter:#7aa6e0; --saturn:#9aa0bf;
+  --serif:"Noto Serif TC",serif; --latin:"Cormorant Garamond",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+    radial-gradient(1200px 600px at 78% -8%, rgba(122,166,224,.10), transparent 60%),
+    radial-gradient(900px 500px at 8% 4%, rgba(201,162,75,.08), transparent 55%),
+    var(--bg);
+  color:var(--ink);font-family:var(--serif);line-height:1.92;font-size:18px;
+  letter-spacing:.01em;-webkit-font-smoothing:antialiased}
+a{color:var(--gold-hi);text-decoration:none}
+::selection{background:rgba(201,162,75,.28);color:#fff}
+
+.rail{position:fixed;top:0;left:0;height:100vh;width:82px;z-index:20;display:flex;
+  flex-direction:column;align-items:center;gap:.2rem;padding:18px 0;
+  background:linear-gradient(180deg,rgba(10,13,26,.9),rgba(10,13,26,.55));
+  border-right:1px solid var(--rule);backdrop-filter:blur(6px)}
+.rail .home{font-size:1.5rem;color:var(--gold);opacity:.9;margin-bottom:.4rem}
+.nav-planet{display:flex;flex-direction:column;align-items:center;gap:1px;width:56px;
+  padding:8px 0;border-radius:12px;color:var(--ink2);transition:.25s}
+.nav-planet .npg{font-size:1.35rem;line-height:1}
+.nav-planet .npc{font-size:.62rem;letter-spacing:.2em;color:var(--dim)}
+.nav-planet:hover{background:var(--panel);transform:translateY(-1px)}
+.np-moon:hover{color:var(--moon)} .np-mercury:hover{color:var(--mercury)}
+.np-venus:hover{color:var(--venus)} .np-sun:hover{color:var(--sun)}
+.np-mars:hover{color:var(--mars)} .np-jupiter:hover{color:var(--jupiter)}
+.np-saturn:hover{color:var(--saturn)}
+
+.wrap{max-width:830px;margin:0 auto;padding:0 26px 8rem}
+@media(min-width:1000px){.wrap{margin-left:max(auto,120px)}}
+
+.hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;padding:6rem 0 3rem}
+.hero .septwrap{width:min(60vw,300px);margin-bottom:2rem}
+.eyebrow{font-family:var(--latin);font-variant:small-caps;letter-spacing:.42em;
+  font-size:.8rem;color:var(--gold);margin:0 0 .8rem}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(2.6rem,7vw,4.4rem);
+  letter-spacing:.14em;margin:0;line-height:1.12;
+  background:linear-gradient(180deg,#fff,#e6c67e 62%,#a9812f);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 0 40px rgba(201,162,75,.12)}
+.hero .latin{font-family:var(--latin);font-style:italic;font-weight:500;
+  font-size:clamp(1.1rem,3vw,1.6rem);letter-spacing:.28em;color:var(--ink2);
+  margin:1rem 0 0;text-transform:uppercase}
+.hero .byl{margin-top:2.2rem;color:var(--dim);font-size:.95rem;letter-spacing:.08em}
+.hero .byl b{color:var(--ink2);font-weight:500}
+.hero .rule{width:1px;height:56px;margin:2.4rem auto 0;
+  background:linear-gradient(180deg,var(--gold),transparent)}
+
+.septagram .ring{fill:none;stroke:var(--rule);stroke-width:1}
+.septagram .ring-thin{stroke:rgba(201,162,75,.14)}
+.septagram .star{fill:none;stroke:var(--gold);stroke-width:1.3;stroke-linejoin:round;
+  opacity:.9;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3.4s ease forwards .3s}
+.septagram .node{fill:var(--gold-hi)}
+.septagram .gly{font-family:var(--latin);font-size:19px;fill:var(--ink)}
+.g-sun{fill:var(--sun)} .g-moon{fill:var(--moon)} .g-mercury{fill:var(--mercury)}
+.g-venus{fill:var(--venus)} .g-mars{fill:var(--mars)} .g-jupiter{fill:var(--jupiter)}
+.g-saturn{fill:var(--saturn)}
+.n-sun{fill:var(--sun)} .n-moon{fill:var(--moon)} .n-mercury{fill:var(--mercury)}
+.n-venus{fill:var(--venus)} .n-mars{fill:var(--mars)} .n-jupiter{fill:var(--jupiter)}
+.n-saturn{fill:var(--saturn)}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+.doc h2{font-weight:700;font-size:clamp(1.7rem,4vw,2.3rem);letter-spacing:.08em;
+  margin:5rem 0 1.6rem;padding-top:1.4rem;border-top:1px solid var(--rule);position:relative}
+.doc h2::after{content:"";position:absolute;left:0;top:-1px;width:64px;height:2px;background:var(--gold)}
+.doc h3{font-weight:600;font-size:1.35rem;letter-spacing:.06em;color:var(--gold-hi);margin:3.4rem 0 1.2rem}
+.doc h3[id^="series-"]{display:flex;align-items:center;gap:.7rem;padding:.7rem 0 .9rem;
+  border-bottom:1px solid var(--rule);margin-top:4rem}
+.doc h4{font-weight:600;font-size:1.16rem;letter-spacing:.05em;margin:2.8rem 0 .6rem;
+  padding-left:.9rem;border-left:3px solid var(--gold)}
+.doc h4[data-planet]{border-left-color:var(--accent)}
+[data-planet=moon]{--accent:var(--moon)} [data-planet=mercury]{--accent:var(--mercury)}
+[data-planet=venus]{--accent:var(--venus)} [data-planet=sun]{--accent:var(--sun)}
+[data-planet=mars]{--accent:var(--mars)} [data-planet=jupiter]{--accent:var(--jupiter)}
+[data-planet=saturn]{--accent:var(--saturn)}
+.doc p{margin:.9rem 0}
+.doc strong{color:var(--gold-hi);font-weight:600}
+.doc em{color:var(--ink2)}
+.doc hr{border:0;height:1px;background:var(--rule);margin:3rem 0}
+.doc ul,.doc ol{padding-left:1.3rem} .doc li{margin:.5rem 0}
+.doc li::marker{color:var(--gold)}
+
+.rubric-when{font-size:.92rem;color:var(--ink2);letter-spacing:.03em;margin:.2rem 0}
+.rubric-vowel{display:inline-block;font-family:var(--latin);font-size:1.05rem;
+  letter-spacing:.06em;color:var(--ink);background:var(--panel);border:1px solid var(--rule);
+  border-radius:8px;padding:.35rem .8rem;margin:.35rem 0 1rem}
+.rubric-vowel strong{color:var(--gold)}
+.commentary{font-size:.9rem;color:var(--dim);line-height:1.8;border-left:1px solid var(--rule);
+  padding-left:1rem;margin:1rem 0 2rem}
+.commentary em{color:var(--dim);font-style:italic}
+
+.colophon{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--rule);
+  border-radius:16px;padding:1.6rem 1.8rem;margin:2rem 0 1rem}
+.colophon>p:first-child strong{font-size:1.05rem}
+.colophon ol,.colophon ul{margin:.4rem 0}
+
+blockquote.quote{margin:1.6rem 0;padding:1.1rem 1.4rem;background:var(--bg2);
+  border-left:2px solid var(--gold);border-radius:0 12px 12px 0;color:var(--ink2)}
+blockquote.quote p{margin:.4rem 0}
+blockquote.quote[data-planet]{border-left-color:var(--accent)}
+
+.pair-wrap{margin:1.4rem 0 1.2rem}
+.pair-cap{font-family:var(--latin);font-variant:small-caps;letter-spacing:.28em;
+  font-size:.82rem;color:var(--gold);margin-bottom:.5rem;padding-left:.2rem}
+.verse-pair{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);
+  border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.verse{padding:1.25rem 1.35rem;background:var(--bg2)}
+.verse-en{font-family:var(--latin);font-size:1.14rem;line-height:1.75;font-weight:500;
+  color:#e8ddc4;letter-spacing:.01em}
+.verse-en p{margin:.15rem 0}
+.verse-zh{background:var(--panel);border-left:2px solid var(--accent,var(--gold))}
+.verse-zh p{margin:.15rem 0;line-height:1.95}
+.verse-en::before{content:"原文";display:block;font-family:var(--serif);font-size:.66rem;
+  letter-spacing:.34em;color:var(--dim);margin-bottom:.6rem}
+.verse-zh::before{content:"譯文";display:block;font-size:.66rem;letter-spacing:.34em;
+  color:var(--gold);margin-bottom:.6rem}
+.pair-wrap[data-planet] .verse-zh{border-left-color:var(--accent)}
+
+.note{margin:1.3rem 0;padding:1rem 1.25rem 1rem 1.3rem;background:rgba(224,98,119,.06);
+  border:1px solid rgba(224,98,119,.28);border-left:3px solid var(--mars);
+  border-radius:0 12px 12px 0;font-size:.9rem;color:var(--ink2);line-height:1.8}
+.note strong{color:#f0a0ad}
+.note .table-wrap,.note table{margin-top:.6rem}
+
+.plate{margin:1.8rem 0;padding:2rem 1.5rem;text-align:center;
+  background:repeating-linear-gradient(45deg,var(--bg2),var(--bg2) 12px,var(--panel) 12px,var(--panel) 24px);
+  border:1px dashed var(--accent,var(--gold));border-radius:14px;color:var(--ink2)}
+.plate strong{display:block;font-size:1rem;letter-spacing:.08em;color:var(--accent,var(--gold-hi));margin-bottom:.5rem}
+.plate em{font-size:.85rem;color:var(--dim);font-style:italic;line-height:1.75}
+
+.table-wrap{overflow-x:auto;margin:1.4rem 0;border:1px solid var(--rule);border-radius:12px;
+  -webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:min(100%,520px)}
+th,td{padding:.55rem .8rem;text-align:left;border-bottom:1px solid rgba(201,162,75,.12);white-space:nowrap}
+thead th{background:var(--panel2);color:var(--gold-hi);font-weight:600;letter-spacing:.04em;position:sticky;top:0}
+tbody tr:nth-child(even){background:rgba(255,255,255,.014)}
+tbody tr:hover{background:rgba(201,162,75,.05)}
+
+.foot{margin-top:5rem;padding-top:1.6rem;border-top:1px solid var(--rule);text-align:center;
+  color:var(--dim);font-size:.82rem;letter-spacing:.12em}
+
+@media(max-width:860px){
+  .rail{position:static;flex-direction:row;width:100%;height:auto;overflow-x:auto;
+    justify-content:flex-start;gap:.1rem;padding:10px 12px;border-right:0;border-bottom:1px solid var(--rule)}
+  .rail .home{margin:0 .4rem 0 0}
+  .nav-planet{flex-direction:row;gap:.35rem;width:auto;padding:6px 10px}
+  .nav-planet .npc{font-size:.7rem}
+  .verse-pair{grid-template-columns:1fr}
+  .verse-zh{border-left:0;border-top:2px solid var(--accent,var(--gold))}
+}
+@media(prefers-reduced-motion:reduce){
+  .septagram .star{animation:none;stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
+@media print{
+  body{background:#fff;color:#111;font-size:11pt}
+  .rail,.hero .rule{display:none}
+  .hero{min-height:auto;padding:1rem 0 2rem}
+  .hero h1{-webkit-text-fill-color:#111;color:#111;background:none}
+  .wrap{max-width:100%;margin:0;padding:0 12mm}
+  a{color:#111}
+  .verse,.verse-zh,.colophon,blockquote.quote,.note,.plate,.table-wrap{background:#fff!important;color:#111}
+  .verse-en{color:#222}
+  .pair-wrap,.note,.plate,.verse-pair,tr{break-inside:avoid}
+  .doc h2,.doc h3,.doc h4{break-after:avoid}
+  th,td{border:1px solid #ccc} thead th{background:#eee;color:#111}
+}
+
+/* 七曜索引 (Chapter 4 planet index) */
+.series-index{margin:2rem 0 2.6rem;padding:1.5rem 1.6rem;background:var(--bg2);
+  border:1px solid var(--rule);border-radius:16px}
+.si-cap{font-family:var(--latin);font-variant:small-caps;letter-spacing:.2em;
+  font-size:.9rem;color:var(--gold);margin:0 0 1.1rem}
+.si-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.7rem}
+.si-item{display:flex;align-items:center;gap:.9rem;padding:.75rem .9rem;
+  background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--accent,var(--gold));
+  border-radius:12px;color:var(--ink);transition:.22s}
+.si-item:hover{transform:translateY(-2px);background:var(--panel2);
+  box-shadow:0 6px 20px rgba(0,0,0,.28)}
+.si-glyph{font-size:1.7rem;line-height:1;color:var(--accent,var(--gold));width:1.4em;text-align:center}
+.si-text{display:flex;flex-direction:column;gap:.1rem}
+.si-cn{font-weight:700;font-size:1.05rem;letter-spacing:.14em;color:var(--ink)}
+.si-label{font-family:var(--latin);font-size:.9rem;letter-spacing:.1em;color:var(--ink2)}
+@media print{.series-index{background:#fff!important;break-inside:avoid}
+  .si-item{background:#fff!important;color:#111}}
+</style></head><body>
+<nav class="rail" aria-label="七曜"><a class="home" href="#top" title="回頂端">✦</a><a href="#series-moon" class="nav-planet np-moon" data-planet="moon"><span class="npg">☽</span><span class="npc">月</span></a><a href="#series-mercury" class="nav-planet np-mercury" data-planet="mercury"><span class="npg">☿</span><span class="npc">水</span></a><a href="#series-venus" class="nav-planet np-venus" data-planet="venus"><span class="npg">♀</span><span class="npc">金</span></a><a href="#series-sun" class="nav-planet np-sun" data-planet="sun"><span class="npg">☉</span><span class="npc">日</span></a><a href="#series-mars" class="nav-planet np-mars" data-planet="mars"><span class="npg">♂</span><span class="npc">火</span></a><a href="#series-jupiter" class="nav-planet np-jupiter" data-planet="jupiter"><span class="npg">♃</span><span class="npc">木</span></a><a href="#series-saturn" class="nav-planet np-saturn" data-planet="saturn"><span class="npg">♄</span><span class="npc">土</span></a></nav>
+<div class="wrap"><header class="hero" id="top"><div class="septwrap"><svg class="septagram" viewBox="0 0 340 340" role="img" aria-label="七角星"><circle cx="170" cy="170" r="138" class="ring"/><circle cx="170" cy="170" r="129" class="ring ring-thin"/><path d="M 170.0,32.0 L 304.5,200.7 L 110.1,294.3 L 62.1,84.0 L 277.9,84.0 L 229.9,294.3 L 35.5,200.7 Z" class="star" pathLength="1"/><circle cx="170.0" cy="32.0" r="4.2" class="node n-saturn"/><text x="170.0" y="10.0" class="gly g-saturn" text-anchor="middle" dominant-baseline="central">♄</text><circle cx="277.9" cy="84.0" r="4.2" class="node n-jupiter"/><text x="295.1" y="70.2" class="gly g-jupiter" text-anchor="middle" dominant-baseline="central">♃</text><circle cx="304.5" cy="200.7" r="4.2" class="node n-mars"/><text x="326.0" y="205.6" class="gly g-mars" text-anchor="middle" dominant-baseline="central">♂</text><circle cx="229.9" cy="294.3" r="4.2" class="node n-sun"/><text x="239.4" y="314.2" class="gly g-sun" text-anchor="middle" dominant-baseline="central">☉</text><circle cx="110.1" cy="294.3" r="4.2" class="node n-venus"/><text x="100.6" y="314.2" class="gly g-venus" text-anchor="middle" dominant-baseline="central">♀</text><circle cx="35.5" cy="200.7" r="4.2" class="node n-mercury"/><text x="14.0" y="205.6" class="gly g-mercury" text-anchor="middle" dominant-baseline="central">☿</text><circle cx="62.1" cy="84.0" r="4.2" class="node n-moon"/><text x="44.9" y="70.2" class="gly g-moon" text-anchor="middle" dominant-baseline="central">☽</text></svg></div>
+<p class="eyebrow">Seven Wanderers · Seven Vowels · Seven Seals</p>
+<h1>進階行星魔法</h1><p class="latin">Advanced Planetary Magic</p>
+<p class="byl">傑森·米勒（Jason Miller）著 · <b>夏至 2013</b><br>中譯 <b>四月老師</b> · 靈火巫境 hoodoo.pro</p>
+<div class="rule"></div></header>
+
+<!-- ===== 行星時刻查詢（合併插入） ===== -->
+<style>
+.ph-embed{max-width:680px;margin:2.4rem auto 2.8rem}
+.ph-app{
+  --bg:#0e0b16; --panel:#181226; --ink:#ece6f5; --dim:#9a8fb5;
+  --line:#2c2340; --accent:#d4a017; --now:#3a2d10;
+}
+.ph-app *{box-sizing:border-box;margin:0;padding:0}
+.ph-app{
+  background:radial-gradient(circle at 50% -10%,#241a3a,#0e0b16 60%);
+  color:var(--ink);font-family:"Iowan Old Style","Songti TC",Georgia,"Noto Serif TC",serif;
+  padding:1.6rem 1.1rem;line-height:1.5;border:1px solid var(--line);border-radius:18px;
+}
+.ph-app .wrap{max-width:680px;margin:0 auto}
+.ph-app h1{font-size:1.5rem;font-weight:600;letter-spacing:.04em;text-align:center;margin-bottom:.3rem}
+.ph-app .sub{text-align:center;color:var(--dim);font-size:.85rem;margin-bottom:1.4rem}
+.ph-app .controls{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;margin-bottom:1.2rem}
+.ph-app .field{display:flex;gap:.5rem;margin-bottom:.7rem}
+.ph-app .field:last-child{margin-bottom:0}
+.ph-app input[type=text],.ph-app input[type=date]{flex:1;padding:.65rem .8rem;border:1px solid var(--line);border-radius:10px;background:#100c1c;color:var(--ink);font:inherit;font-size:.95rem;min-width:0}
+.ph-app input::placeholder{color:#6b6285}
+.ph-app button{border:none;border-radius:10px;background:var(--accent);color:#1a1205;font:inherit;font-weight:600;cursor:pointer;padding:.65rem 1rem;letter-spacing:.03em;white-space:nowrap}
+.ph-app button.ghost{background:transparent;color:var(--accent);border:1px solid var(--line)}
+.ph-app button:active{transform:translateY(1px)}
+.ph-app .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.2rem}
+.ph-app .chip{font-size:.8rem;padding:.35rem .7rem;border:1px solid var(--line);border-radius:999px;background:#100c1c;color:var(--dim);cursor:pointer}
+.ph-app .chip:hover{color:var(--accent);border-color:var(--accent)}
+.ph-app .results{margin-top:.4rem;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.ph-app .results .opt{padding:.6rem .8rem;cursor:pointer;border-bottom:1px solid var(--line);font-size:.9rem}
+.ph-app .results .opt:last-child{border-bottom:none}
+.ph-app .results .opt:hover{background:var(--now)}
+.ph-app .results .opt small{color:var(--dim);margin-left:.4rem}
+.ph-app .nav{display:grid;grid-template-columns:auto 1fr auto;gap:.6rem;align-items:center;margin-bottom:1.2rem}
+.ph-app .nav .date{text-align:center;font-weight:600;letter-spacing:.04em}
+.ph-app .nav .date small{display:block;color:var(--dim);font-weight:400;font-size:.75rem}
+.ph-app .meta{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1rem 1.2rem;margin-bottom:1.4rem;font-size:.9rem;color:var(--dim)}
+.ph-app .meta b{color:var(--ink);font-weight:600}
+.ph-app .meta .ruler{color:var(--accent)}
+.ph-app .moon{display:flex;align-items:center;gap:1rem;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1rem 1.2rem;margin-bottom:1.4rem}
+.ph-app .moon svg{flex-shrink:0}
+.ph-app .moon .mtext{font-size:.9rem;color:var(--dim)}
+.ph-app .moon .mtext b{display:block;color:var(--ink);font-size:1.05rem;font-weight:600;margin-bottom:.15rem;letter-spacing:.03em}
+.ph-app .nextmoon{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1.4rem}
+.ph-app .nextmoon .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:.9rem 1rem;text-align:center}
+.ph-app .nextmoon .card .lbl{color:var(--dim);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.3rem}
+.ph-app .nextmoon .card .icon{font-size:1.4rem;margin-bottom:.2rem}
+.ph-app .nextmoon .card .d{font-weight:600;color:var(--ink);font-size:1rem;letter-spacing:.03em}
+.ph-app .nextmoon .card .dd{color:var(--accent);font-size:.85rem;margin-top:.15rem}
+.ph-app .row{display:grid;grid-template-columns:2.4rem 1fr auto 1.2rem;gap:.8rem;align-items:center;padding:.7rem .9rem;border:1px solid var(--line);border-radius:11px;margin-bottom:.5rem;background:var(--panel);color:inherit;text-decoration:none;transition:.18s}
+.ph-app a.row:hover{border-color:var(--accent);background:var(--now)}
+.ph-app .row.now{border-color:var(--accent);background:var(--now)}
+.ph-app .row.night{opacity:.78}
+.ph-app a.row:hover{opacity:1}
+.ph-app .glyph{font-size:1.5rem;text-align:center;color:var(--accent)}
+.ph-app .name{font-weight:600}
+.ph-app .name small{display:block;color:var(--dim);font-weight:400;font-size:.72rem;letter-spacing:.05em}
+.ph-app .time{font-variant-numeric:tabular-nums;color:var(--dim);font-size:.85rem;text-align:right}
+.ph-app .chev{color:var(--accent);opacity:.55;text-align:center;font-size:1.1rem}
+.ph-app a.row:hover .chev{opacity:1}
+.ph-app .sec{margin:1.4rem 0 .6rem;color:var(--dim);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.ph-app .err{color:#e88;text-align:center;font-size:.85rem;padding:.6rem;line-height:1.45}
+.ph-app .hint{text-align:center;color:var(--dim);font-size:.85rem;padding:1rem}
+.ph-app .goto{background:linear-gradient(135deg,#2a1f0a,#3a2d10);border:1px solid var(--accent);border-radius:14px;padding:1rem 1.2rem;margin-bottom:1.4rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.ph-app .goto .gglyph{font-size:2rem;color:var(--accent)}
+.ph-app .goto .gtext{flex:1;min-width:140px}
+.ph-app .goto .gtext .glab{color:var(--dim);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.ph-app .goto .gtext b{display:block;color:var(--ink);font-size:1.15rem;font-weight:600;letter-spacing:.03em;margin-top:.15rem}
+.ph-app a.gbtn{background:var(--accent);color:#1a1205;font-weight:600;text-decoration:none;border-radius:10px;padding:.6rem 1rem;letter-spacing:.03em;white-space:nowrap}
+.ph-app a.gbtn:hover{filter:brightness(1.08)}
+</style>
+
+<section class="ph-embed" id="hours">
+<div class="ph-app">
+<div class="wrap">
+  <h1>行星時刻查詢</h1>
+  <div class="sub">Planetary Hours · 迦勒底秩序 · 點選時刻即可跳至該行星祈禱文</div>
+  <div class="controls">
+    <div class="field">
+      <input type="text" id="ph-city" placeholder="搜尋城市，例如 台北 / Tokyo / London">
+      <button id="ph-search">搜尋</button>
+    </div>
+    <div id="ph-cityResults"></div>
+    <div class="chips" id="ph-chips"></div>
+    <div class="field" style="margin-top:.7rem">
+      <input type="date" id="ph-date">
+      <button class="ghost" id="ph-locBtn">用我的位置</button>
+    </div>
+  </div>
+  <div class="nav">
+    <button class="ghost" id="ph-prev">‹ 前一天</button>
+    <div class="date" id="ph-dateLabel"></div>
+    <button class="ghost" id="ph-next">後一天 ›</button>
+  </div>
+  <div id="ph-gotoBox"></div>
+  <div id="ph-moonBox"></div>
+  <div id="ph-nextMoonBox"></div>
+  <div id="ph-out"><div class="hint">先搜尋城市或點下方常用城市，即可顯示該日的行星時刻與月相。</div></div>
+</div>
+</div>
+</section>
+
+<script>
+/* === SunCalc 1.9.0 (c) 2011-2015 Vladimir Agafonkin, BSD License === */
+(function () { 'use strict';
+var PI=Math.PI,sin=Math.sin,cos=Math.cos,tan=Math.tan,asin=Math.asin,atan=Math.atan2,acos=Math.acos,rad=PI/180;
+var dayMs=1000*60*60*24,J1970=2440588,J2000=2451545;
+function toJulian(date){return date.valueOf()/dayMs-0.5+J1970;}
+function fromJulian(j){return new Date((j+0.5-J1970)*dayMs);}
+function toDays(date){return toJulian(date)-J2000;}
+var e=rad*23.4397;
+function rightAscension(l,b){return atan(sin(l)*cos(e)-tan(b)*sin(e),cos(l));}
+function declination(l,b){return asin(sin(b)*cos(e)+cos(b)*sin(e)*sin(l));}
+function azimuth(H,phi,dec){return atan(sin(H),cos(H)*sin(phi)-tan(dec)*cos(phi));}
+function altitude(H,phi,dec){return asin(sin(phi)*sin(dec)+cos(phi)*cos(dec)*cos(H));}
+function siderealTime(d,lw){return rad*(280.16+360.9856235*d)-lw;}
+function astroRefraction(h){if(h<0)h=0;return 0.0002967/Math.tan(h+0.00312536/(h+0.08901179));}
+function solarMeanAnomaly(d){return rad*(357.5291+0.98560028*d);}
+function eclipticLongitude(M){var C=rad*(1.9148*sin(M)+0.02*sin(2*M)+0.0003*sin(3*M)),P=rad*102.9372;return M+C+P+PI;}
+function sunCoords(d){var M=solarMeanAnomaly(d),L=eclipticLongitude(M);return{dec:declination(L,0),ra:rightAscension(L,0)};}
+var SunCalc={};
+SunCalc.getPosition=function(date,lat,lng){var lw=rad*-lng,phi=rad*lat,d=toDays(date),c=sunCoords(d),H=siderealTime(d,lw)-c.ra;return{azimuth:azimuth(H,phi,c.dec),altitude:altitude(H,phi,c.dec)};};
+var times=SunCalc.times=[[-0.833,'sunrise','sunset'],[-0.3,'sunriseEnd','sunsetStart'],[-6,'dawn','dusk'],[-12,'nauticalDawn','nauticalDusk'],[-18,'nightEnd','night'],[6,'goldenHourEnd','goldenHour']];
+SunCalc.addTime=function(angle,riseName,setName){times.push([angle,riseName,setName]);};
+var J0=0.0009;
+function julianCycle(d,lw){return Math.round(d-J0-lw/(2*PI));}
+function approxTransit(Ht,lw,n){return J0+(Ht+lw)/(2*PI)+n;}
+function solarTransitJ(ds,M,L){return J2000+ds+0.0053*sin(M)-0.0069*sin(2*L);}
+function hourAngle(h,phi,d){return acos((sin(h)-sin(phi)*sin(d))/(cos(phi)*cos(d)));}
+function observerAngle(height){return -2.076*Math.sqrt(height)/60;}
+function getSetJ(h,lw,phi,dec,n,M,L){var w=hourAngle(h,phi,dec),a=approxTransit(w,lw,n);return solarTransitJ(a,M,L);}
+SunCalc.getTimes=function(date,lat,lng,height){height=height||0;var lw=rad*-lng,phi=rad*lat,dh=observerAngle(height),d=toDays(date),n=julianCycle(d,lw),ds=approxTransit(0,lw,n),M=solarMeanAnomaly(ds),L=eclipticLongitude(M),dec=declination(L,0),Jnoon=solarTransitJ(ds,M,L),i,len,time,h0,Jset,Jrise;var result={solarNoon:fromJulian(Jnoon),nadir:fromJulian(Jnoon-0.5)};for(i=0,len=times.length;i<len;i+=1){time=times[i];h0=(time[0]+dh)*rad;Jset=getSetJ(h0,lw,phi,dec,n,M,L);Jrise=Jnoon-(Jset-Jnoon);result[time[1]]=fromJulian(Jrise);result[time[2]]=fromJulian(Jset);}return result;};
+function moonCoords(d){var L=rad*(218.316+13.176396*d),M=rad*(134.963+13.064993*d),F=rad*(93.272+13.229350*d),l=L+rad*6.289*sin(M),b=rad*5.128*sin(F),dt=385001-20905*cos(M);return{ra:rightAscension(l,b),dec:declination(l,b),dist:dt};}
+SunCalc.getMoonPosition=function(date,lat,lng){var lw=rad*-lng,phi=rad*lat,d=toDays(date),c=moonCoords(d),H=siderealTime(d,lw)-c.ra,h=altitude(H,phi,c.dec),pa=atan(sin(H),tan(phi)*cos(c.dec)-sin(c.dec)*cos(H));h=h+astroRefraction(h);return{azimuth:azimuth(H,phi,c.dec),altitude:h,distance:c.dist,parallacticAngle:pa};};
+SunCalc.getMoonIllumination=function(date){var d=toDays(date||new Date()),s=sunCoords(d),m=moonCoords(d),sdist=149598000,phi=acos(sin(s.dec)*sin(m.dec)+cos(s.dec)*cos(m.dec)*cos(s.ra-m.ra)),inc=atan(sdist*sin(phi),m.dist-sdist*cos(phi)),angle=atan(cos(s.dec)*sin(s.ra-m.ra),sin(s.dec)*cos(m.dec)-cos(s.dec)*sin(m.dec)*cos(s.ra-m.ra));return{fraction:(1+cos(inc))/2,phase:0.5+0.5*inc*(angle<0?-1:1)/Math.PI,angle:angle};};
+window.SunCalc=SunCalc;
+}());
+</script>
+
+<script>
+(function(){
+const CHALDEAN=["Saturn","Jupiter","Mars","Sun","Venus","Mercury","Moon"];
+const INFO={Sun:{zh:"太陽",glyph:"☉"},Moon:{zh:"月亮",glyph:"☽"},Mars:{zh:"火星",glyph:"♂"},Mercury:{zh:"水星",glyph:"☿"},Jupiter:{zh:"木星",glyph:"♃"},Venus:{zh:"金星",glyph:"♀"},Saturn:{zh:"土星",glyph:"♄"}};
+const DAY_RULER=["Sun","Moon","Mars","Mercury","Jupiter","Venus","Saturn"];
+const WD=["週日","週一","週二","週三","週四","週五","週六"];
+const PRESETS=[{zh:"台北",lat:25.033,lng:121.565},{zh:"高雄",lat:22.627,lng:120.302},{zh:"台中",lat:24.147,lng:120.673},{zh:"香港",lat:22.319,lng:114.169},{zh:"東京",lat:35.690,lng:139.692},{zh:"倫敦",lat:51.507,lng:-0.128},{zh:"紐約",lat:40.713,lng:-74.006}];
+let state={lat:null,lng:null,place:"",date:new Date()};
+const fmt=d=>d.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"});
+const $=id=>document.getElementById(id);
+
+function sunTimes(date,lat,lng){
+  const noon=new Date(date.getFullYear(),date.getMonth(),date.getDate(),12,0,0);
+  const t=SunCalc.getTimes(noon,lat,lng);
+  if(isNaN(t.sunrise)||isNaN(t.sunset)){const pos=SunCalc.getPosition(noon,lat,lng);return{polar:pos.altitude>0?"day":"night"};}
+  return{sunrise:t.sunrise,sunset:t.sunset,polar:null};
+}
+function moonPhase(date){
+  const noon=new Date(date.getFullYear(),date.getMonth(),date.getDate(),12,0,0);
+  const m=SunCalc.getMoonIllumination(noon);const phase=m.phase;const illum=Math.round(m.fraction*100);const waxing=phase<0.5;const age=phase*29.530588853;let name;
+  if(phase<0.0345||phase>=0.9655)name="新月";else if(phase<0.2155)name="眉月（蛾眉月）";else if(phase<0.2845)name="上弦月";else if(phase<0.4655)name="盈凸月";else if(phase<0.5345)name="滿月";else if(phase<0.7155)name="虧凸月";else if(phase<0.7845)name="下弦月";else name="殘月";
+  return{phase,illum,waxing,age,name};
+}
+function moonSVG(phase){
+  const R=34,cx=40,cy=40;const dark="#221a36",lit="#f4ecd0",stroke="#3a2f52";
+  const cosA=Math.cos(phase*2*Math.PI);const rx=R*cosA;const litRight=phase<0.5;
+  const innerSweep=rx>0?(litRight?1:0):(litRight?0:1);
+  const path=`M ${cx} ${cy-R} A ${R} ${R} 0 0 ${litRight?1:0} ${cx} ${cy+R} A ${Math.abs(rx)} ${R} 0 0 ${innerSweep} ${cx} ${cy-R} Z`;
+  return `<svg width="80" height="80" viewBox="0 0 80 80"><circle cx="${cx}" cy="${cy}" r="${R}" fill="${dark}" stroke="${stroke}" stroke-width="1.5"/><path d="${path}" fill="${lit}"/><circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="${stroke}" stroke-width="1.5"/></svg>`;
+}
+function findNextPhaseDay(startDate,target){
+  let prev=null;
+  for(let i=0;i<=35;i++){
+    const d=new Date(startDate.getFullYear(),startDate.getMonth(),startDate.getDate()+i,12,0,0);
+    const p=SunCalc.getMoonIllumination(d).phase;
+    if(prev){
+      if(target==='full'&&prev.p<0.5&&p>=0.5)return Math.abs(prev.p-0.5)<Math.abs(p-0.5)?prev.d:d;
+      if(target==='new'&&prev.p>p){const fa=(1-Math.cos(prev.p*2*Math.PI))/2;const fb=(1-Math.cos(p*2*Math.PI))/2;return fa<fb?prev.d:d;}
+    }
+    prev={d,p};
+  }
+  return null;
+}
+function daysBetween(a,b){const da=new Date(a.getFullYear(),a.getMonth(),a.getDate());const db=new Date(b.getFullYear(),b.getMonth(),b.getDate());return Math.round((db-da)/86400000);}
+function nextMoonCards(today){
+  const full=findNextPhaseDay(today,'full');const newm=findNextPhaseDay(today,'new');
+  const fmtDay=d=>`${d.getFullYear()}/${String(d.getMonth()+1).padStart(2,"0")}/${String(d.getDate()).padStart(2,"0")}`;
+  const tag=n=>n===0?"就是今天":n===1?"明天":`還有 ${n} 天`;
+  const fd=daysBetween(today,full),nd=daysBetween(today,newm);
+  return `<div class="nextmoon"><div class="card"><div class="lbl">下次滿月</div><div class="icon">🌕</div><div class="d">${fmtDay(full)} ${WD[full.getDay()]}</div><div class="dd">${tag(fd)}</div></div><div class="card"><div class="lbl">下次新月</div><div class="icon">🌑</div><div class="d">${fmtDay(newm)} ${WD[newm.getDay()]}</div><div class="dd">${tag(nd)}</div></div></div>`;
+}
+function pick(lat,lng,place){state.lat=lat;state.lng=lng;state.place=place;$("ph-cityResults").innerHTML="";$("ph-city").value="";render();}
+
+function render(){
+  const out=$("ph-out");const moonBox=$("ph-moonBox");const sel=state.date;
+  $("ph-dateLabel").innerHTML=`${sel.getFullYear()}/${String(sel.getMonth()+1).padStart(2,"0")}/${String(sel.getDate()).padStart(2,"0")}<small>${WD[sel.getDay()]} · ${state.place||"未選位置"}</small>`;
+  const mp=moonPhase(sel);
+  moonBox.innerHTML=`<div class="moon">${moonSVG(mp.phase)}<div class="mtext"><b>${mp.name}</b>照度 ${mp.illum}% · 月齡 ${mp.age.toFixed(1)} 天 · ${mp.waxing?"漸盈":"漸虧"}</div></div>`;
+  $("ph-nextMoonBox").innerHTML=nextMoonCards(sel);
+  $("ph-gotoBox").innerHTML="";
+  if(state.lat===null){out.innerHTML=`<div class="hint">先搜尋城市或點下方常用城市，即可顯示行星時刻。</div>`;return;}
+  const today=sunTimes(sel,state.lat,state.lng);
+  if(today.polar){out.innerHTML=`<div class="err">該日此地為${today.polar==="day"?"極晝":"極夜"}，無法以標準日出日落法計算行星時。</div>`;return;}
+  const tmr=new Date(sel);tmr.setDate(tmr.getDate()+1);
+  const t=sunTimes(tmr,state.lat,state.lng);
+  if(t.polar){out.innerHTML=`<div class="err">隔日為極晝/極夜，夜間時無法計算。</div>`;return;}
+  const dayStart=today.sunrise,dayEnd=today.sunset,nightStart=today.sunset,nightEnd=t.sunrise;
+  const dayLen=(dayEnd-dayStart)/12,nightLen=(nightEnd-nightStart)/12;
+  const ruler=DAY_RULER[sel.getDay()];let idx=CHALDEAN.indexOf(ruler);const hours=[];
+  for(let i=0;i<12;i++){hours.push({planet:CHALDEAN[idx%7],n:i+1,night:false,start:new Date(dayStart.getTime()+i*dayLen),end:new Date(dayStart.getTime()+(i+1)*dayLen)});idx++;}
+  for(let i=0;i<12;i++){hours.push({planet:CHALDEAN[idx%7],n:i+1,night:true,start:new Date(nightStart.getTime()+i*nightLen),end:new Date(nightStart.getTime()+(i+1)*nightLen)});idx++;}
+  const now=new Date();const ri=INFO[ruler];
+  let liveHour=null;
+  hours.forEach(h=>{if(now>=h.start&&now<h.end)liveHour=h;});
+  // 當前時星橫幅：可直接跳到該行星祈禱文
+  if(liveHour){
+    const li=INFO[liveHour.planet];const anchor=`series-${liveHour.planet.toLowerCase()}`;
+    $("ph-gotoBox").innerHTML=`<div class="goto"><div class="gglyph">${li.glyph}</div><div class="gtext"><div class="glab">此刻的時星 · Now</div><b>${li.zh}時（${liveHour.planet}）</b></div><a class="gbtn" href="#${anchor}">前往${li.zh}祈禱文 ↓</a></div>`;
+  }
+  let html=`<div class="meta">位置：<b>${state.place}</b> (${state.lat.toFixed(3)}, ${state.lng.toFixed(3)})<br>日出：<b>${fmt(dayStart)}</b> &nbsp; 日落：<b>${fmt(dayEnd)}</b><br>主管行星：<span class="ruler">${ri.glyph} ${ri.zh}日 (${ruler})</span></div>`;
+  let lastNight=null;
+  hours.forEach(h=>{
+    const live=now>=h.start&&now<h.end;
+    if(h.night!==lastNight){html+=`<div class="sec">${h.night?"夜間時 · Hours of Night":"白晝時 · Hours of Day"}</div>`;lastNight=h.night;}
+    const ii=INFO[h.planet];const anchor=`series-${h.planet.toLowerCase()}`;
+    html+=`<a href="#${anchor}" class="row ${live?"now":""} ${h.night?"night":""}" title="前往${ii.zh}祈禱文"><div class="glyph">${ii.glyph}</div><div class="name">${ii.zh}<small>${h.planet} · 第 ${h.n} 時${live?" · 現在":""}</small></div><div class="time">${fmt(h.start)}<br>${fmt(h.end)}</div><div class="chev">›</div></a>`;
+  });
+  out.innerHTML=html;
+}
+function setDateInput(){const d=state.date;$("ph-date").value=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;}
+function renderChips(){
+  $("ph-chips").innerHTML=PRESETS.map(c=>`<span class="chip" data-lat="${c.lat}" data-lng="${c.lng}" data-zh="${c.zh}">${c.zh}</span>`).join("");
+  document.querySelectorAll("#hours .chip").forEach(c=>c.onclick=()=>pick(parseFloat(c.dataset.lat),parseFloat(c.dataset.lng),c.dataset.zh));
+}
+async function searchCity(){
+  let q=$("ph-city").value.trim();const box=$("ph-cityResults");
+  if(!q){box.innerHTML="";return;}
+  box.innerHTML=`<div class="hint">搜尋中…</div>`;
+  const cleaned=q.replace(/[市縣区區県都府]$/,"");const tries=[q];if(cleaned!==q)tries.push(cleaned);
+  for(const term of tries){
+    try{
+      const url=`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(term)}&count=6&language=zh`;
+      const r=await fetch(url);const j=await r.json();
+      if(j.results&&j.results.length){
+        box.innerHTML=`<div class="results">`+j.results.map(c=>{const label=[c.name,c.admin1,c.country].filter(Boolean).join(", ");return `<div class="opt" data-lat="${c.latitude}" data-lng="${c.longitude}" data-label="${label.replace(/"/g,"")}">${c.name}<small>${[c.admin1,c.country].filter(Boolean).join(" · ")}</small></div>`;}).join("")+`</div>`;
+        box.querySelectorAll(".opt").forEach(o=>o.onclick=()=>pick(parseFloat(o.dataset.lat),parseFloat(o.dataset.lng),o.dataset.label));
+        return;
+      }
+    }catch(e){}
+  }
+  const hit=PRESETS.find(p=>p.zh.includes(cleaned)||cleaned.includes(p.zh));
+  if(hit){pick(hit.lat,hit.lng,hit.zh);return;}
+  box.innerHTML=`<div class="err">找不到「${q}」，或此環境網路受限。<br>請改用下方常用城市。</div>`;
+}
+$("ph-search").onclick=searchCity;
+$("ph-city").addEventListener("keydown",e=>{if(e.key==="Enter")searchCity();});
+$("ph-date").onchange=e=>{const p=e.target.value.split("-").map(Number);if(p[0]){state.date=new Date(p[0],p[1]-1,p[2]);render();}};
+$("ph-prev").onclick=()=>{state.date.setDate(state.date.getDate()-1);setDateInput();render();};
+$("ph-next").onclick=()=>{state.date.setDate(state.date.getDate()+1);setDateInput();render();};
+$("ph-locBtn").onclick=()=>{
+  const box=$("ph-cityResults");
+  if(!navigator.geolocation){box.innerHTML=`<div class="err">此瀏覽器不支援定位。</div>`;return;}
+  box.innerHTML=`<div class="hint">定位中…</div>`;
+  navigator.geolocation.getCurrentPosition(p=>{pick(p.coords.latitude,p.coords.longitude,"我的位置");},e=>{box.innerHTML=`<div class="err">無法取得位置：${e.message}</div>`;},{enableHighAccuracy:false,timeout:10000});
+};
+renderChips();setDateInput();render();
+})();
+</script>
+<!-- ===== 行星時刻查詢 結束 ===== -->
+
+<main class="doc">
+
+<h2 id="chap-0">目錄</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>章節</th>
+<th>頁</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前言 Introduction</td>
+<td>1</td>
+</tr>
+<tr>
+<td>第一章：七遊星 The Seven Wanderers</td>
+<td>3</td>
+</tr>
+<tr>
+<td>第二章：七母音 The Seven Vowels</td>
+<td>10</td>
+</tr>
+<tr>
+<td>第三章：七符印 The Seven Seals</td>
+<td>14</td>
+</tr>
+<tr>
+<td>第四章：四十九召請 The Forty Nine Calls</td>
+<td>34</td>
+</tr>
+<tr>
+<td>臨別贈言 Parting Words</td>
+<td>60</td>
+</tr>
+<tr>
+<td>附錄 Appendix</td>
+<td>61</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="chap-1">前言 Introduction</h2>
+<p>若你有辦法找到這本小冊子，那麼你大概對魔法——包括行星魔法——已經懂得不少。</p>
+<p>你知道赫密士主義（Hermetics）如何把行星安置在環繞地球的同心天球之中，構成一層層的「殼」，魔法師須逐層上升、追求那帶來智慧與力量的入門啟蒙。你知道卡巴拉家（Khabalists）如何把行星對應到生命之樹上、各自歸屬哪一個薩弗洛（Sephirah／輝耀）。你知道有「行星時」與「行星日」。這些不必再講一遍。</p>
+<p>你也知道每顆行星各司何職：需要錢就召請木星（Jupiter），需要求歡就找金星（Venus），要痛扁對手就上火星（Mars）。你也知道，每逢水星（Mercury）逆行，整個 Facebook 上的人就全體崩潰、什麼都不敢做。解釋這些的書汗牛充棟，無須贅述，我不會浪費你的時間。</p>
+<p>這本書不一樣。</p>
+<p>我的修習中有三個特定面向匯聚在一起，使我想寫這本書：</p>
+<ol>
+<li>
+<p><strong>在行星魔法中運用希臘母音（Greek Vowels）。</strong> 無論是單獨使用，或與神祇、靈體的召請結合，這都是行星魔法中一種未被充分運用的技術。</p>
+</li>
+<li>
+<p><strong>一組七枚特別的行星符印。</strong> 它們在我的「策略巫術學院」（Strategic Sorcery School）成員手中發揮了極大效力，但在此之前從未對外公開。</p>
+</li>
+<li>
+<p><strong>行星影響力的組合</strong>，以達成單一行星所無法企及、更細膩的效果。這項工作的成果，就是構成本書最後一章的 49 篇「跨行星召請」。這 49 道咒語，也是首度於任何地方公開。</p>
+</li>
+</ol>
+<p>聚焦於這三項因素，遂發展出一套超越基礎、進入更進階、且但願更有效之領域的行星魔法。</p>
+<p><strong>傑森·米勒</strong>
+<strong>夏至，2013 年</strong></p>
+<hr/>
+<h2 id="chap-2">第一章：七遊星 The Seven Wanderers</h2>
+<p>月、金星、水星、太陽、火星、木星、土星——這七顆古典行星，一直是東西方魔法最重要的支柱之一。依歷史上的時地不同，這七星曾被視為：向地球灑下影響的<strong>仁慈衛星</strong>；作為我們的物質存在與至高諸天榮光之間屏障的<strong>惡意執政官（archons）</strong>；或是通往終極神聖臨在之「光之階梯」的<strong>門戶</strong>。</p>
+<p>雖然你大概已熟悉行星魔法的基本原理，但古迦勒底人（Chaldeans）所建立的行星基本結構與意義，是理解本書其餘部分所必需的。因此，稍作幾點基礎的複習，似乎是慎重之舉。</p>
+<h3>行星次序 PLANETARY ORDER</h3>
+<p>古人相信地球是太陽系的中心，因而把月與日也當作行星。拜伽利略（Galileo）之賜，我們如今知道就宇宙論而言這是錯的；但就魔法而言，宇宙的中心永遠是<strong>魔法施行之處</strong>，無論何者繞何者旋轉。迦勒底人所立的行星次序，以<strong>上升</strong>方向排列如下：</p>
+<blockquote class="quote">
+<p><strong>月（Luna）→ 水星（Mercury）→ 金星（Venus）→ 日（Sol）→ 火星（Mars）→ 木星（Jupiter）→ 土星（Saturn）</strong></p>
+</blockquote>
+<p>此次序對理解本書至關重要。</p>
+<div class="note"><p><strong>【譯註 1・史實】</strong> 日心說之提出者為哥白尼（Copernicus），伽利略是其觀測與辯護者；文中將「知地球非中心」歸於伽利略，係作者行文的概略說法，保留原意。</p></div>
+<h3>行星時 PLANETARY HOURS</h3>
+<p>如同一般的鐘點，每日也有 24 個行星時。但因占星上的「晝」與「夜」須與當日實際的日照與黑暗長度相符，行星時並非固定 60 分鐘，而是以<strong>日出到日落</strong>（及其反向）的時間除以十二來計算。除了春秋分那兩天之外，每一天的晝時與夜時長度都彼此不同，因此它們也被稱為<strong>「不等時」（The Uneven Hours）</strong>。</p>
+<p>所幸如今網路上有網站、手機上也有可購買的 App 為你計算行星時。不是要像個牢騷滿腹的老頭子，但想當年我還是個見習巫師時，得翻報紙查日出日落時刻，再拿計算機算出每一時的確切長度與起訖。（而且我們甘之如飴！你們這些年輕人真是被寵壞了……）</p>
+<p>白晝第一時所屬的行星，<strong>永遠</strong>與當日所屬的行星相同。如下表所示，其餘各時依迦勒底次序<strong>遞降</strong>、周而復始，並自這一天無縫接續到下一天。</p>
+<p><strong>行星時・晝 Planetary Hours of the Day</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>時</th>
+<th>日 Sun</th>
+<th>一 Mon</th>
+<th>二 Tue</th>
+<th>三 Wed</th>
+<th>四 Thu</th>
+<th>五 Fri</th>
+<th>六 Sat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+</tr>
+<tr>
+<td>2</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+</tr>
+<tr>
+<td>3</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+</tr>
+<tr>
+<td>4</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+</tr>
+<tr>
+<td>5</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+</tr>
+<tr>
+<td>6</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+</tr>
+<tr>
+<td>7</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+</tr>
+<tr>
+<td>8</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+</tr>
+<tr>
+<td>9</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+</tr>
+<tr>
+<td>10</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+</tr>
+<tr>
+<td>11</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+</tr>
+<tr>
+<td>12</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>行星時・夜 Planetary Hours of the Night</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>時</th>
+<th>日 Sun</th>
+<th>一 Mon</th>
+<th>二 Tue</th>
+<th>三 Wed</th>
+<th>四 Thu</th>
+<th>五 Fri</th>
+<th>六 Sat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+</tr>
+<tr>
+<td>2</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+</tr>
+<tr>
+<td>3</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+</tr>
+<tr>
+<td>4</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+</tr>
+<tr>
+<td>5</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+</tr>
+<tr>
+<td>6</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+</tr>
+<tr>
+<td>7</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+</tr>
+<tr>
+<td>8</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+</tr>
+<tr>
+<td>9</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+</tr>
+<tr>
+<td>10</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+</tr>
+<tr>
+<td>11</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+<td>水</td>
+<td>木</td>
+</tr>
+<tr>
+<td>12</td>
+<td>水</td>
+<td>木</td>
+<td>金</td>
+<td>土</td>
+<td>日</td>
+<td>月</td>
+<td>火</td>
+</tr>
+</tbody>
+</table></div>
+<h3>行星日 PLANETARY DAYS</h3>
+<p>每個小孩都學過，一週裡有些日子以行星命名，如 Saturday（土曜）、Sunday（日曜）、Monday（月曜）。在西班牙語、法語等羅曼語族中，所有日名都保留了行星的指涉。以西班牙語為例，週二是 <strong>Martes</strong>、週三是 <strong>Miércoles</strong>、週四是 <strong>Jueves</strong>、週五是 <strong>Viernes</strong>。在英語裡有四天保留了對北歐諸神的條頓（Teutonic）對應：Tuesday（Tyr 提爾之日）、Wednesday（Woden 沃登之日）、Thursday（Thor 索爾之日）、Friday（Freyja 芙蕾雅之日）。其行星對應自然維持不變。</p>
+<div class="note"><p><strong>【譯註 2・原文訛誤】</strong> 原稿西班牙語作 "Maries"（週二）、"Miercoles"（週三），應更正為 <strong>Martes</strong>、<strong>Miércoles</strong>（後者需重音符）。</p></div>
+<p>乍看之下，一週日名的排序似乎忽略了迦勒底次序，但實際上該排列仍在，只是以更隱微的方式存在。</p>
+<p>日名之所以無法完全遵循迦勒底次序，是因為那會打斷「時」的推進。反之，<strong>保持每日日出第一時在序列中不斷裂</strong>，我們就得到大家所熟知、所依循的週一到週日之序。這種安排也揭示出對實修行星巫師有用的其他規律。</p>
+<p>例如，若把迦勒底次序延展到<strong>兩週</strong>的日程上，該次序在日與日的推進中仍得以維持；只不過「時」是<strong>遞降</strong>推進，而這個次序卻是<strong>遞升</strong>推進。所以，若你在週一開始一項工作、想依迦勒底次序推進，你可以<strong>每隔一天</strong>做一次工作，兩週內完成全程：</p>
+<blockquote class="quote">
+<p><strong>週一—週三—週五—週日—週二—週四—週六</strong>
+Mon–Wed–Fri–Sun–Tue–Thur–Sat</p>
+</blockquote>
+<p>在策略巫術中，我們稱此安排為<strong>「兩週挑戰」（Two Week Challenge）</strong>，用它來為任何一個問題安排全部七顆行星的影響。</p>
+<p>一週日名還揭示了另一個與<strong>諧波（harmonics）</strong>有關的重要規律，但我們得先鋪陳幾個要點才能談它。</p>
+<h3>智慧體與靈體 THE INTELLIGENCES AND SPIRITS</h3>
+<p>在介紹那組特別的符印之前，我得先談談阿格里帕（Agrippa）的<strong>智慧體（Intelligences）與靈體（Spirits）</strong>體系，因為正是這些由我召喚出的靈體，把符印的異象傳達給了馬修·布朗利（Matthew Brownlee）。</p>
+<p>在諾斯底宇宙論中，行星諸天球之上還有兩層界域。因它們太過接近神，被認為除最深邃的密契者外無人可及。在卡巴拉裡，這是生命之樹上最初的兩個薩弗洛：<strong>科帖爾（Kether）</strong>與<strong>侯克瑪（Chokmah，原文作 Hochma，為希伯來文 חכמה 之異體轉寫）</strong>。在赫密士宇宙論中，它們被簡稱為「第八」與「第九」，赫密士·特里斯墨吉斯忒斯（Hermes Trismegistus）曾在其《論第八與第九》（Treatise on the 8th and 9th）中對此有極優美的書寫。後來天文學家於 1781 年發現天王星（Uranus）、於 1846 年發現海王星（Neptune），若你願意，恰可對應這兩層天球——這暗示了那些早期密契者所擁有的洞見何其深邃。</p>
+<div class="note"><p><strong>【譯註 3・原文訛誤】</strong> 原稿作「Neptune in 1842」有誤：海王星於 <strong>1846 年</strong>（由伽勒 Galle 依勒維耶 Le Verrier 之推算）發現。天王星 1781 年（赫歇爾）正確。</p></div>
+<p>過了這最初兩層天球，才進入古人實際可見、可觀測的行星。既然向下遭遇的第一層行星天球是土星，而它位於那兩層不可見的更高天球之下，便被賦予數字 <strong>三</strong>——物質顯化所能得到的最低數字（想想三維空間之類）。木星得四、火星得五，依序而下。</p>
+<p>波斯人為每顆行星指派了稱作<strong>卡美亞（Kameas，魔方）</strong>的魔法方陣。每個方陣的格數是該行星數字的平方：故土星為 3×3＝9 格，月為 9×9＝81 格。每格再填入方陣中所有的數字，使任一橫行或縱列相加皆得同一數。仍以此二例：土星方陣任一行相加得 <strong>15</strong>，較複雜的月方陣任一行相加得 <strong>369</strong>。這些方陣本身即是頗具力量的魔法護符，但它們還另有用途。</p>
+<p>亨利·科尼利厄斯·阿格里帕（Henry Cornelius Agrippa）以卡美亞為一種密契的「描摹板」，發展出諸行星、其智慧體與靈體的印記。他運用蓋瑪特里亞（Gematria，希伯來字母數值換算），抽取各名稱字母的數值並化簡，直到它們全都是該行星卡美亞上出現的數字；再從一數連線到另一數，得出智慧體與靈體的印記（sigil）。他從卡美亞推導<strong>行星本身</strong>印記的過程更為複雜，此處請讀者參閱唐納·泰森（Donald Tyson）在其《三重奧秘哲學》（Three Books of Occult Philosophy）譯本附錄中的說明。</p>
+<p>在此體系中，智慧體有時被視為善、靈體被視為惡；但我採取另一種看法，認為<strong>智慧體是整體的引導者，靈體則是變化的主動施行者</strong>。此組合已多次為我奏效——即使是其中最令人畏懼的靈體（Sorath，索拉特），也曾賜予我有用的恩惠。</p>
+<h3>其他行星屬性 OTHER PLANETARY ATTRIBUTES</h3>
+<p>在往下講之前應提及：行星身上被層層堆疊了無數的對應。例如哈蘭（Harran）的薩比教徒（Sabeans）為七行星配以金屬：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>金屬</th>
+<th>行星</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>鉛 Lead</td>
+<td>土星 Saturn</td>
+</tr>
+<tr>
+<td>錫 Tin</td>
+<td>木星 Jupiter</td>
+</tr>
+<tr>
+<td>鐵 Iron</td>
+<td>火星 Mars</td>
+</tr>
+<tr>
+<td>金 Gold</td>
+<td>太陽 Sun</td>
+</tr>
+<tr>
+<td>銅 Copper</td>
+<td>金星 Venus</td>
+</tr>
+<tr>
+<td>汞 Mercury</td>
+<td>水星 Mercury</td>
+</tr>
+<tr>
+<td>銀 Silver</td>
+<td>月 Moon</td>
+</tr>
+</tbody>
+</table></div>
+<p>其中有些是因<strong>顏色</strong>而選（如日、月配金、銀）；有些因<strong>價值</strong>（如錫，曾一度比黃金更貴，故配木星）；其餘則因<strong>物理性質</strong>（鐵用於戰爭配火星；永遠可延展的銅配金星；全然流動多變的汞配水星）。</p>
+<p>顏色也被配予行星。但這些依不同體系與文化而異，最普遍接受的配法如下：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>顏色</th>
+<th>行星</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>黑 Black</td>
+<td>土星 Saturn</td>
+</tr>
+<tr>
+<td>藍 Blue</td>
+<td>木星 Jupiter</td>
+</tr>
+<tr>
+<td>紅 Red</td>
+<td>火星 Mars</td>
+</tr>
+<tr>
+<td>黃 Yellow</td>
+<td>太陽 Sun</td>
+</tr>
+<tr>
+<td>綠 Green</td>
+<td>金星 Venus</td>
+</tr>
+<tr>
+<td>橙 Orange</td>
+<td>水星 Mercury</td>
+</tr>
+<tr>
+<td>銀／灰 Silver / Gray</td>
+<td>月 Moon</td>
+</tr>
+</tbody>
+</table></div>
+<p>大天使、蘇美諸神、香料、形狀等等，也都各有行星對應。有興趣的讀者可參閱如 Skinner 的《魔法師大全表》（<em>Complete Magician's Tables</em>）等書，以及 Christopher Warnock 於文藝復興占星（Renaissance Astrology）所開設的行星課程。</p>
+<hr/>
+<h2 id="chap-3">第二章：七母音 THE SEVEN VOWELS</h2>
+<p>多年前，智慧體們指示我去研究並運用希臘母音，以其直接連接諸行星。</p>
+<p>母音如下（作者原標音）：</p>
+<ul>
+<li><strong>Alpha（Α）＝ A</strong>（如 father 中的 a）</li>
+<li><strong>Epsilon（Ε）＝ Eh</strong>（如 bed）</li>
+<li><strong>Eta（Η）＝ AY</strong>（如 Day）</li>
+<li><strong>Iota（Ι）＝ EE</strong>（如 tree）</li>
+<li><strong>Omicron（Ο）＝ OH</strong>（如 Old）</li>
+<li><strong>Upsilon（Υ）＝ UE</strong>（如 Glue）</li>
+<li><strong>Omega（Ω）＝ OHW 或 AW</strong>（如 Old 或 Law）</li>
+</ul>
+<h3>◆ 七母音對照表（IPA ＋ 中文音譯）</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>希臘字母</th>
+<th>名稱</th>
+<th>作者轉寫</th>
+<th>作者標音(英)</th>
+<th>IPA（古典/伊拉斯謨）</th>
+<th>中文音譯（注音）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Α α</td>
+<td>Alpha</td>
+<td>A</td>
+<td>AH（father）</td>
+<td>[aː]／[a]</td>
+<td>阿（ㄚ）</td>
+</tr>
+<tr>
+<td>Ε ε</td>
+<td>Epsilon</td>
+<td>E</td>
+<td>Eh（bed）</td>
+<td>[e]</td>
+<td>欸（ㄝ）</td>
+</tr>
+<tr>
+<td>Η η</td>
+<td>Eta</td>
+<td><strong>H</strong></td>
+<td>AY（day）</td>
+<td>[ɛː]（伊拉斯謨多作 [eː]）</td>
+<td>欸—長（ㄟ）</td>
+</tr>
+<tr>
+<td>Ι ι</td>
+<td>Iota</td>
+<td>I</td>
+<td>EE（tree）</td>
+<td>[i]／[iː]</td>
+<td>伊（ㄧ）</td>
+</tr>
+<tr>
+<td>Ο ο</td>
+<td>Omicron</td>
+<td>O</td>
+<td>OH（old）</td>
+<td>[o]（短）</td>
+<td>喔—短（ㄛ）</td>
+</tr>
+<tr>
+<td>Υ υ</td>
+<td>Upsilon</td>
+<td><strong>Y</strong></td>
+<td>UE（glue）</td>
+<td>[y]／[yː]（圓唇前元音，近法語 u／德語 ü）</td>
+<td>淤（ㄩ）</td>
+</tr>
+<tr>
+<td>Ω ω</td>
+<td>Omega</td>
+<td><strong>W</strong></td>
+<td>OHW/AW（old/law）</td>
+<td>[ɔː]（或 [oː]，長）</td>
+<td>喔—長（ㄛː）</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note"><p><strong>【譯註 4・轉寫與音值】</strong>
+① 作者以拉丁 <strong>H＝Eta（Η）、Y＝Upsilon（Υ）、W＝Omega（Ω）</strong>，此為其個人轉寫慣例，非國際通行（通行作 Ē／Y·U／Ō）。全書母音代號皆須依此對照解讀。
+② <strong>Upsilon</strong> 作者標「UE as in glue」不夠精確：古典希臘 Upsilon 為<strong>圓唇前元音 [y]</strong>（如法語 u、德語 ü），而非英語 glue 的 [uː]。中文近「淤（ㄩ）」。
+③ 依附錄鄧恩博士之說明，<strong>Omicron 與 Omega</strong> 在古典阿提卡語主要差別在<strong>長短</strong>而非音質，兩者皆近西班牙語的 o；唯伊拉斯謨式發音才把 Omega 讀成近「aw／boat」。</p></div>
+<p>這七母音被視為<strong>行星本身的振動</strong>。整部《希臘魔法紙草書》（Papyri Graecae Magicae, PGM）中，這七個字母都用以代表行星力量——或單獨、或全體並列。重要的畢達哥拉斯派數學家尼科馬庫斯（Nicomachus）在其《和聲學手冊》（原文 "Manual of Harmony"，通行英譯多作 <em>Manual of Harmonics</em>）中寫道：</p>
+<blockquote class="quote">
+<p>「七天球之音，各依其本性發出一種特定的聲響，正是母音命名的來源。」
+<em>"The tones of the seven spheres, each of which by nature produces a particular sound, are the sources of the nomenclature of the vowels."</em></p>
+</blockquote>
+<p>母音與行星相連是無可爭議的。問題在於：<strong>哪個母音代表哪顆行星？</strong> 若古人曾有一套確定的對應系統，我們如今並不掌握它。</p>
+<p>多數人假定：無論母音如何排列，行星的排列都應遵循迦勒底次序。若再假定母音依字母順序排列，那就只剩下要選<strong>上行</strong>還是<strong>下行</strong>的問題。</p>
+<p><strong>上行</strong>排列——以 Alpha 為月、Omega 為土星——是古典著作中最常見者。例如波菲利（Porphyry，非那位著名的新柏拉圖派）在其對色雷斯的狄奧尼修斯（Dionysius Thrax）之註疏中即予此序；諾斯底派的馬庫斯（Marcus，見於愛任紐 Irenaeus《駁異端》<em>Against Heresies</em>）亦然。曼利·P·霍爾（Manly P. Hall）在《歷代秘教》（<em>The Secret Teachings of All Ages</em>）中重複了此說，影響了許多現代神秘學思維。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>母音</th>
+<th>行星（上行）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alpha（Α）</td>
+<td>月 Moon</td>
+</tr>
+<tr>
+<td>Epsilon（Ε）</td>
+<td>水星 Mercury</td>
+</tr>
+<tr>
+<td>Eta（Η）</td>
+<td>金星 Venus</td>
+</tr>
+<tr>
+<td>Iota（Ι）</td>
+<td>太陽 Sun</td>
+</tr>
+<tr>
+<td>Omicron（Ο）</td>
+<td>火星 Mars</td>
+</tr>
+<tr>
+<td>Upsilon（Υ）</td>
+<td>木星 Jupiter</td>
+</tr>
+<tr>
+<td>Omega（Ω）</td>
+<td>土星 Saturn</td>
+</tr>
+</tbody>
+</table></div>
+<p>亨利·科尼利厄斯·阿格里帕——大概是受《形塑之書》（<em>Sepher Yetzirah</em>）中希伯來「雙字母」對應行星的影響——採用了<strong>下行</strong>排列：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>母音</th>
+<th>行星（下行）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alpha（Α）</td>
+<td>土星 Saturn</td>
+</tr>
+<tr>
+<td>Epsilon（Ε）</td>
+<td>木星 Jupiter</td>
+</tr>
+<tr>
+<td>Eta（Η）</td>
+<td>火星 Mars</td>
+</tr>
+<tr>
+<td>Iota（Ι）</td>
+<td>太陽 Sun</td>
+</tr>
+<tr>
+<td>Omicron（Ο）</td>
+<td>金星 Venus</td>
+</tr>
+<tr>
+<td>Upsilon（Υ）</td>
+<td>水星 Mercury</td>
+</tr>
+<tr>
+<td>Omega（Ω）</td>
+<td>月 Moon</td>
+</tr>
+</tbody>
+</table></div>
+<p>值得注意的是：<strong>太陽對應 Iota，在兩種排法中都不變。</strong> 有人認為，太陽的這種居中性，暗示了神秘學派早已具備日心說的知識。</p>
+<p>「母音依字母順序排列」不過是一種假定而已。鑑於希臘神秘學派對諧波的重視，他們也可能是<strong>依音高</strong>來排列母音，讓聲音本身決定其序。這種排列可能如下：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>母音</th>
+<th>音</th>
+<th>上行(Alpha=月)</th>
+<th>下行(Alpha=土)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Iota（Ι）</td>
+<td>EE 伊</td>
+<td>月 Moon</td>
+<td>土星 Saturn</td>
+</tr>
+<tr>
+<td>Eta（Η）</td>
+<td>AY 欸</td>
+<td>水星 Mercury</td>
+<td>木星 Jupiter</td>
+</tr>
+<tr>
+<td>Epsilon（Ε）</td>
+<td>EH 欸</td>
+<td>金星 Venus</td>
+<td>火星 Mars</td>
+</tr>
+<tr>
+<td>Alpha（Α）</td>
+<td>AH 阿</td>
+<td>太陽 Sun</td>
+<td>太陽 Sun</td>
+</tr>
+<tr>
+<td>Omicron（Ο）</td>
+<td>OH 喔</td>
+<td>火星 Mars</td>
+<td>金星 Venus</td>
+</tr>
+<tr>
+<td>Omega（Ω）</td>
+<td>OHW 喔</td>
+<td>木星 Jupiter</td>
+<td>水星 Mercury</td>
+</tr>
+<tr>
+<td>Upsilon（Υ）</td>
+<td>EUW 淤</td>
+<td>土星 Saturn</td>
+<td>月 Moon</td>
+</tr>
+</tbody>
+</table></div>
+<p>此排列也帶來一些有趣的可能。常做身體能量中樞工作的人，大概能在依此序發這些母音時，立即感到諸中樞<strong>自頭頂到海底</strong>依次被啟動。</p>
+<p>當我們開始玩弄不同的和聲時，更多奇趣顯現。例如，若我們依<strong>完全五度音階</strong>（跨五音）來發音，又會回到一週日名之序：</p>
+<blockquote class="quote">
+<p>Iota／週一、Omicron／週二、Eta／週三、Omega／週四、Epsilon／週五、<strong>Upsilon／週六</strong>、Alpha／週日。
+Iota/Mon, Omicron/Tue, Eta/Wed, Omega/Thu, Epsilon/Fri, <strong>Upsilon/Sat</strong>, Alpha/Sun.</p>
+</blockquote>
+<p>下行排列同樣可行，只是日序反轉。</p>
+<div class="note"><p><strong>【譯註 5・原文訛誤】</strong> 原稿此處作「…Epsilon/Friday, <strong>Iota</strong> Saturday, and Alpha Sunday」，其中「Iota／週六」有誤。依 Alpha＝月之上行排列，週六（土星）對應之母音應為 <strong>Upsilon（Υ）</strong>；Iota 已配週一（月）。上表已更正為 <strong>Upsilon／週六</strong>。（另原稿全書多處把 Omicron 誤拼為 "Omnicon／Omnicron"，一併更正。）</p></div>
+<p>若你把行星依迦勒底次序排在一個魔法圓上，再依「完全五度」的順序在它們之間連線，就得到一個完美的七角星（Septagram）。</p>
+<div class="plate">
+<p><strong>【七角星圖：待補】</strong>
+<em>原書圖說：一圓內含一完美七角星。圓外緣依星芒各點標有 1–7 之數字與行星占星符號。自頂端（1）順時針起，依序為土星、木星、火星、日、金星、水星、月。七角星各邊上以箭頭標示連接各點之順序。</em></p>
+</div>
+<p>因此，運用這套諧波排列，可以：<strong>依迦勒底次序發母音以充能「圓」，依完全五度排列發母音以充能圓內之「星」。</strong></p>
+<p>那麼哪一種排列才是「對」的？我不知道。我為不同目的用過全部這些排法，也不排除<strong>從未存在單一系統、而是多套音階並用</strong>的可能。例如：當要顯化巫術結果時，很誘人採用 Alpha＝土星的排法；當志在「行走諸門、上升諸天」時，Alpha＝月的排法或許更好；若在處理身體能量，或許某一種諧波排列會有更佳效果。</p>
+<p>就本書其餘部分而言，我將固守 <strong>Alpha＝月</strong> 的排法——對於一般用途，它有著恰到好處的聲響質感。不過符印對其他排列同樣有回應；由於《巫者的秘密》（<em>The Sorcerer's Secrets</em>）中的召請直接召喚阿格里帕的行星靈體，故使用的是 Alpha＝土星 的排法。讀者可以、也應該為不同目的實驗不同排列。</p>
+<hr/>
+<h2 id="chap-4">第三章：七符印 THE SEVEN SEALS</h2>
+<p>2007 年夏天，我與我的老友兼長年共犯馬修·布朗利（Matthew Brownlee）著手一項計畫：生成一組新的行星符印，能以極其直接而有力的方式取用諸行星的巫術力量。我們要這些符印不僅能引導所召力量，更要<strong>能克服逆行、日月食及其他不利的行星相位</strong>。此外，我們不要它們繫屬於任何特定天使或神祇，而要它們如此直接地代表行星本身，以致能與蘇美諸神、科普特大天使、奧林帕斯諸神並肩運作，或單獨運作。</p>
+<p>每一枚符印都意在呈現該行星運作時<strong>實際的能量圖式</strong>。召請由我進行，而成為圖畫靈感來源的異象則傳送給馬修·布朗利；透過他自身的能力與藝術才華，他得以描繪出這組既優美又有效的符印。</p>
+<p>在拙著《巫者的秘密》中已公開其中三枚行星符印：金星、火星、土星。在《財富巫術》（<em>Financial Sorcery</em>）中另公開了木星符印。除此之外，我只把整套符印公開給我「策略巫術課程」的學生。這是首度將全部七枚符印公諸於眾。</p>
+<p>我希望它們對你，能如對我一般，是莫大的助益。</p>
+<hr/>
+<div class="plate">
+<p><strong>【月 LUNA 符印圖：待補】</strong>
+<em>原書圖說：一枚手繪行星符印，由交錯的、揮灑掃掠的黑色曲線構成。線條粗厚而富表情，形成抽象、動感、略帶漩渦的形狀，部分曲線末端收成尖點，予人流動之感。</em></p>
+</div>
+<h3>月 LUNA</h3>
+<p>我初見此印時，線條橫掠新月的方式，立即令我想起浮雲掠過月面那種詭譎的動態。接著吸引我的，是印中央的螺旋，令人聯想到亂心幻術之力，或一場旋入瘋狂（lunacy）的下降漩渦。再細看那螺旋，發現它其實並非真正的螺旋，而是一道<strong>碎裂的浪</strong>，令人想起月對潮汐與水域的影響。</p>
+<p>月之力甚多：深沉的直覺、幻象、時間、愛、夢、性、女性特質、通靈之力、旅行、水、血——僅舉數例。</p>
+<p>不僅如此，正是月<strong>反射</strong>了太陽——乃至其他行星——之光。這反射之能，道出了心智本身的性質：心智確確實實地依其所接收的感官輸入，來映照周遭世界。</p>
+<p>月因最貼近地球，也是通往更高界域的門戶，故是學習星光體投射、靈視（scry）或發展任何一種通靈能力時極佳的合作行星。</p>
+<p>為展示諸行星能量的多面性，我將以五個關鍵領域為每顆行星舉例：</p>
+<ul>
+<li><strong>啟明（ILLUMINATION）：</strong> 星光旅行、靈視。</li>
+<li><strong>財務（FINANCIAL）：</strong> 揭露背後捅刀的上司與同事之欺瞞；時間管理。</li>
+<li><strong>愛（LOVE）：</strong> 激發性吸引力；影響夢境。</li>
+<li><strong>憤怒／攻擊（WRATH）：</strong> 致人瘋狂；攻擊其夢境。</li>
+<li><strong>療癒（HEALING）：</strong> 療癒心智疾患；揭示壞習慣的根本原因。</li>
+</ul>
+<hr/>
+<div class="plate">
+<p><strong>【水星 MERCURY 符印圖：待補】</strong>
+<em>原書圖說：一枚手繪抽象行星符印，由流動彎曲的黑線構成。頂部有成對、對稱的環曲，如觸角或角；下覆一中央圓形段，內含環圈。下半由交錯掃掠的線條構成開放的、近似「8」字的底座。線條粗細不一，暗示動態。</em></p>
+</div>
+<h3>水星 MERCURY</h3>
+<p>在我們設計出的所有符印中，水星最為難以捉摸。馬修至少嘗試了三次才真正捕捉到被揭示之物：有的太過鋸齒、太像閃電；有的又太流動，缺乏水星該有的速度與扭轉。揭示這些印記的異象，呈現出在三、四維以上發生的圖式——這一枚要轉譯為二維尤其困難。但成果不負所望。近日一位使用此印的學生寫信給我，說這枚印「像一枚高功率、技術先進的微晶片，讓宇宙運行得更有效率」。</p>
+<p>水星之力包括：思想、智性、商業、行銷、移動、情報蒐集、科學、竊盜、書寫、遊戲、雄辯。</p>
+<ul>
+<li><strong>啟明：</strong> 自我分析與智性敏銳。</li>
+<li><strong>財務：</strong> 金錢的流動、支票帳戶、科技。</li>
+<li><strong>愛：</strong> 助你機智／自信／風趣。外貌或許是引起初步注意之物，但機智、自信與幽默每次都勝過外貌——只是別過頭。</li>
+<li><strong>憤怒／攻擊：</strong> 致人愚鈍、竊盜、混亂。</li>
+<li><strong>療癒：</strong> 療癒心智疾患；理解健康與飲食資訊。</li>
+</ul>
+<hr/>
+<div class="plate">
+<p><strong>【金星 VENUS 符印圖：待補】</strong>
+<em>原書圖說：一枚手繪抽象行星符印，由粗細不一的黑線構成。頂端有一大而空的圓，內含一小點；自該點向下延一曲線，穿過一橫桿與一豎線，形成十字狀結構。其下一較小的圓與 S 形漩曲交融，末端收成略微外張的裝飾。</em></p>
+</div>
+<h3>金星 VENUS</h3>
+<p>是馬修最先指出：此印的手臂令人聯想到一名女子，一手撫髮、一手叉腰。除此之外我說不出更多——這枚印帶有女子的曲線。另有一種「魅惑」的元素，在那自中央圓延伸而出、纏繞蜿蜒於全印其餘部分的線條裡——幾乎像是能<strong>字面上「拼」出束縛的咒語（spell bind）</strong>。</p>
+<p>金星自然主掌：情緒、愛、友誼、浪漫、魅惑、美、藝術、宴會，以及幾乎一切形式的吸引與影響。</p>
+<ul>
+<li><strong>啟明：</strong> 理解情緒、同理心；性魔法。</li>
+<li><strong>財務：</strong> 影響力。很多時候，真正造就一份事業差別的，是「你認識誰」而非「你懂什麼」。</li>
+<li><strong>愛：</strong> 金星大致涵蓋愛的所有面向。</li>
+<li><strong>憤怒／攻擊：</strong> 可祈求金星從某人身上撤離，使其戀人與友人反目。金星也能成為諸多紛爭之因——別忘了有多少戰爭是阿芙蘿黛蒂（Aphrodite）的作為所引發的。</li>
+<li><strong>療癒：</strong> 各類情緒療癒；性方面的疾患。</li>
+</ul>
+<hr/>
+<div class="plate">
+<p><strong>【太陽 SOL 符印圖：待補】</strong>
+<em>原書圖說：一枚手繪抽象行星符印，由粗厚彎曲的黑線構成。核心母題是一條連續漩曲的線，形似變體的卐字或風格化的太陽輪，中心為開放的圓形。自中心向外輻射四道尖銳、如新月／太陽焰／刀刃的形狀，賦予符號旋轉之動感。</em></p>
+</div>
+<h3>太陽 SOL</h3>
+<p>此印帶有卐字（Swastika）的元素，因而連結到太陽的旋轉與自旋。自其上延伸的尖銳邊緣，令人想起太陽焰（solar flares）。印的右側略顯空白，索拉特（Sorath）告訴我這是「為顯化的發生留下空間」。中央是一道向外順時針放射的力之螺旋；此螺旋也令人聯想到數字 <strong>6</strong>，即太陽之數。</p>
+<p>太陽之力包括：自我（Ego）、靈感、真意志（True Will）、大收穫、健康、和平、青春、復活、晉升——以及，若你來自氪星，還有飛行、超級力量與熱視線。</p>
+<ul>
+<li><strong>啟明：</strong> 與神聖守護天使的知識與交談（K&amp;C of HGA）；尋得個人的真意志。</li>
+<li><strong>財務：</strong> 新事業的點子與靈感。沒有點子，就沒有產品。</li>
+<li><strong>愛：</strong> 為你的氣場添上太陽的光輝——一道魅光（glamour），讓你在目標眼中比任何人都更醒目。</li>
+<li><strong>憤怒／攻擊：</strong> 失衡地施用太陽，可以熾烈的怒火燒盡你的敵人。</li>
+<li><strong>療癒：</strong> 此行星應是任何整體療癒工作的核心。</li>
+</ul>
+<hr/>
+<div class="plate">
+<p><strong>【火星 MARS 符印圖：待補】</strong>
+<em>原書圖說：一枚手繪抽象行星符印，由粗厚掃掠的黑色曲線構成。醒目之處是一巨大中央圓形，向內漩旋，如浪或輪。一條銳利的尖線向右上延伸，形成箭狀，貫穿頂端附近一環套如套索的曲線。線條粗細不一，傳達出強力與動態之感。</em></p>
+</div>
+<h3>火星 MARS</h3>
+<p>這枚印是一具戰神力量的引擎。初見時，我立即把中央看作某具龐大戰爭機器的輪，或一具產生電流的反應爐。圓所生成之力，如傳統印記那般以一道尖銳的箭刺向外爆發；但在此印中，那力也放出一條環繞的套索，把所纏之物拉向箭頭。</p>
+<p>火星之力包括：戰爭、衝突、防禦、侵略、力量、競爭、慾、勇氣與自信。</p>
+<p>近日我有機會在珊迪颶風（Hurricane Sandy）期間進行一次火星召請——那場風暴重創了我所居之地。正是在那次經驗中，我體會到火星<strong>確立平靜</strong>之力。這看似與火星本性矛盾，除非你想想士兵與警察在緊張情勢中必須如何保持冷靜。當事情一團糟、你需要沉住氣、靜候出手的時機時，召請火星。</p>
+<ul>
+<li><strong>啟明：</strong> 制伏那些造成阻礙與停滯的惡魔與其他存有及力量；培養自信與「戰士之靜」。</li>
+<li><strong>財務：</strong> 無論是應付競爭、推動強勢行銷策略，或建立領導與管理之能，火星於商業不可或缺。</li>
+<li><strong>愛：</strong> 自信與帶點傲氣（不過頭時）可以是強力的吸引子。征服你自身對被拒與軟弱的恐懼。</li>
+<li><strong>憤怒／攻擊：</strong> 這正是幾乎任何一種戰爭或憤怒之行星。</li>
+<li><strong>療癒：</strong> 攻擊疾病、對抗感染——這類用語其來有自。在這方面，火星或許正是助你「為活命而戰」的方式！</li>
+</ul>
+<hr/>
+<div class="plate">
+<p><strong>【木星 JUPITER 符印圖：待補】</strong>
+<em>原書圖說：一枚複雜的手繪符印，由粗厚流動的黑線構成。整體縱向、直立取向，有眾多相互交疊纏繞的環與曲線，帶有一種略具有機、近乎植物的質感：中央結構彷彿向上生長，底部以一道寬闊掃掠的曲線為錨，上下邊緣皆收成較小的裝飾捲曲。</em></p>
+</div>
+<h3>木星 JUPITER</h3>
+<p>我最愛的一枚。這枚印大致是關於<strong>聚集與累積（accretion）</strong>：力之線條吸引並匯聚一切與之接觸之物。此印也有某種向上提升之感，幾乎像一株生長中的植物。</p>
+<p>木星之力包括：恩典、累積、財富、豐盛、成功、健康、榮譽、物質，及隨之而來的一切。</p>
+<p>而最重要的是，木星關乎<strong>主權（sovereignty）</strong>。無論是為了金錢、榮譽或其他，這一切都是為了過一種你是「自己與自己領域之主宰」的人生。正因這一元素，木星最常與萬神殿的<strong>主神</strong>相連：宙斯（Zeus）、恩利爾（Enlil）、達格達（Dagda）、佩倫（Perun）、馬爾杜克（Marduk），當然還有耶和華（Jehovah）！</p>
+<ul>
+<li><strong>啟明：</strong> 成為如亨利（Henley）《不可征服》（Invictus）所言：「我是我命運的主人，我是我靈魂的統帥。」</li>
+<li><strong>財務：</strong> 這幾乎在各方面都是掌管財務事務的「那顆」行星。</li>
+<li><strong>愛：</strong> 木星式的自信與威儀是強力的吸引子。就這點而言，金錢亦然。</li>
+<li><strong>憤怒／攻擊：</strong> 木星是戰時可召的強大力量，賜你統御戰神諸力所需的指揮權，也在那些欲擊垮你的力量面前，增強你的運勢與臨在。</li>
+<li><strong>療癒：</strong> 無法掌控自身身體或外貌者，稱不上握有主權。大吉星（greater benefic）對一切健康皆有正面影響。</li>
+</ul>
+<hr/>
+<div class="plate">
+<p><strong>【土星 SATURN 符印圖：待補】</strong>
+<em>原書圖說：一枚精細的手繪抽象符印，由粗厚黑線構成。醒目之處是右上象限的一個清晰十字。其餘由一條連續流動、如緞帶般的線構成，於左側與下方掃出大而環抱的圈，終於底部收成緊小的捲曲。粗厚的曲線與十字的直線形成對比。</em></p>
+</div>
+<h3>土星 SATURN</h3>
+<p>關於此印首先要注意：土星的鐮刀（scythe）弧線，位於與傳統土星符號<strong>相反</strong>的一側。馬修與我都不完全確定為何如此，但它就是這麼顯現的，而且以此形對眾人運作良好。第二個要提請注意的特徵，是那纏繞整枚印的緞帶——那是<strong>束縛之繫（the ties that bind）</strong>。</p>
+<p>土星之力包括：死亡、束縛、時間、冥界、地底、黑暗、減損、年長者、睡眠、孤獨、熵、終結、紀律。</p>
+<p>許多人害怕與土星共事，它確實是沉重的行星。但無論我們與它共事與否，土星的影響都將加諸我們身上——與其盲目而行，不如識得其道。</p>
+<ul>
+<li><strong>啟明：</strong> 在赫密士主義中，土星是通往第八、第九天球之門；土星也是「死亡」，是心靈的原初力量之一。在土星式的閉關獨處中，可揭示許多。</li>
+<li><strong>財務：</strong> 紀律、削去冗贅、完成週期。土星應是任何財富巫術之行星工作不可或缺的一環。</li>
+<li><strong>愛：</strong> 土星可用以結束糟糕的關係，或協助面對痛苦與失落。更陰險的巫者或會在愛咒中召請土星，強力束縛某人、或詛咒其非愛你不可。此類咒法在許多圈子裡是傳統，但那仍不代表它是個好主意。</li>
+<li><strong>憤怒／攻擊：</strong> 若說火星屬於戰士，土星則屬於刺客。它關乎束縛並殺死你的目標。<strong>土星與火星分別司「縛」與「擊」，是強大的組合。</strong></li>
+<li><strong>療癒：</strong> 若極為謹慎地使用，土星能協助殺滅感染與腫瘤，也能在情況步入絕境時協助面對。</li>
+</ul>
+<hr/>
+<h3>符印的運用 THE SEALS IN USE</h3>
+<p>這些符印的用法近乎無窮。對民俗魔法（folk magic）的愛好者，我曾把它們用於幸運袋（mojo bags）、蠟燭上，以及作為羊皮紙護符（parchment talismans）。</p>
+<p>在我家中的神龕裡，我有一組七枚黑色的盤子，上頭以相應顏色鑲著這些印記。每天日出時我起身，把當日行星的盤子置於祭壇中央，並向當日行星做一段簡短禱告。</p>
+<p>我近日做的一個有趣實驗，是把它們依比魯尼（Al-Biruni，原文 Al-Biruni）所提示的位置，以星光「刺青」的方式印入頭部。作法是：觀想該印半透明地在恰當之處發光，帶來其祝福；同時誦念以下禱文：</p>
+<div class="pair-wrap"><div class="pair-cap">祈禱文・星光刺印</div><div class="verse-pair"><div class="verse verse-en"><p>
+May the powers of Luna bless my left eye.
+May the powers of the Sun bless my right.
+That I may see true and clear all that is before me.
+May the powers of Venus bless my left nostril
+May the powers of Mars bless my right
+That my breath may be balanced and the body be cleansed
+May the powers of Saturn bless my left ear
+May the powers of Jupiter bless my right
+That I may hear truly without attachment or aversion
+May the powers of Mercury bless my tongue
+That my speech may be swift and convincing
+And bear the message of the Gods.</p></div><div class="verse verse-zh"><p>願月之力祝福我的左眼，
+願太陽之力祝福我的右眼，
+使我能真切而清明地看見眼前的一切。
+願金星之力祝福我的左鼻孔，
+願火星之力祝福我的右鼻孔，
+使我的呼吸得以平衡，身體得以潔淨。
+願土星之力祝福我的左耳，
+願木星之力祝福我的右耳，
+使我能如實聆聽，不執著，亦不厭惡。
+願水星之力祝福我的舌，
+使我的言語敏捷而令人信服，
+並承載諸神的訊息。</p></div></div></div>
+<p>在一場重要會議、演講，或任何極重要的場合之前，這是為自己充能的極強法門。熟悉印度與西藏「脈（nadis）」系統的人，會立刻認出：讓陰性脈道經由金星與月來過濾、陽性脈道經由太陽與火星來過濾，對精微體所產生的效果。水星在舌上增強言語，而木星與土星分別作為大吉星與大凶星，不僅在你「如何詮釋所聽」上、也在你「如何思考」上，創造出驚人的平衡。</p>
+<p>我也實驗過以這些符號來療癒與強化身體。例如若你腎臟有問題，可觀想金星的符號於腎臟之中，並振動相應的希臘母音——此例中即 <strong>Eta（發音 AY／欸）</strong>。</p>
+<p>這一切之中存在著彼此競爭的對應系統。你應<strong>沉浸於其中一套、以之為家</strong>來運作。例如依比魯尼，木星主掌心臟；但若我們採道家系統，木星主掌肝。<strong>擇一而固守之。</strong> 對這類對應有興趣者，應熟悉 Christopher Warnock 之著作與 renaissanceastrology.com。</p>
+<hr/>
+<h3>七曜球 THE HEPTASPHERE</h3>
+<p><strong>七曜球（Heptasphere）</strong>是一套用以<strong>管理行星能量</strong>的儀式，鬆散地依據 PGM XIII 824 的指示。其版本曾見於 Stephen Flowers 的《赫密士魔法》（<em>Hermetic Magic</em>）與 Mike Cecchetelli 的《阿布拉克薩斯之書》（<em>The Book of Abraxas</em>）。本版本略有不同，它運用行星符印，並透過「動作」來為它們<strong>調頻（tuning）</strong>。</p>
+<p>設想：在任何一天，都有各式各樣正面與負面的行星屬性。這些<strong>宏觀</strong>的行星能量，透過精微體上的受器，與個人<strong>微觀</strong>的身心互動。七曜球充當兩者之間的<strong>屏障</strong>：無論當下有何行星相位，都先擊中此球、在此被重新平衡與調節，再傳遞給個人。</p>
+<p>我以我稱之為<strong>「驅逐手勢」（Gesture of Eviction）</strong>為此儀開端。作法：左手握拳置於心口，右手覆其上，施約 5 磅之壓力於該處，並觀想你從中柱（column）召起之力開始匯聚於心。觀想此力受這物理壓力與意志之力所引，凝成一個約棒球大小的灰色球體。持續觀想，直到腦中極為清晰。</p>
+<p>鬆開壓力，同時<strong>跨前一步、雙臂向外拋出</strong>，球中之能隨之爆發而出。當此球增長蔓延，它把一切凶惡之力與有害之靈往外推。它越過你的身體、持續向外綿延數哩又數哩。</p>
+<p>以某句強化你能量工作的話語相伴，例如那句古典希臘語：</p>
+<blockquote class="quote">
+<p><strong>HEKAS HEKAS ESTE BEBELOI！</strong>
+（意為「退去，退去，一切凡俗之人！」／"Away away all profane!"）</p>
+</blockquote>
+<p>當此力清空你的球域之後，收回諸能，把它們塑成環繞你的一個球。</p>
+<ul>
+<li>
+<p><strong>面向東方</strong>，伸出手，觀想月的符號以微光的銀色烙印於球上，並振動音節 <strong>A</strong>（希臘字母 Alpha，發音「Ah／阿」）。邊做邊移動你的手，看那符號隨手沿球面移動。你會感到所傳遞的能量發生變化，最終感到一個「喀」（click），標示出該印的最佳位置——這就是<strong>調頻（tuning）</strong>。</p>
+<blockquote class="quote">
+<p><strong>調頻附註：</strong> 雖然我通常在起始方向附近就找到此位置，但我也曾把符號移到球的不同部位以尋那「喀」聲。別怕讓符號重疊、全部置於同一處，或做任何你直覺指示之事。就實驗、就看你得到什麼。讓直覺與靈為你的嚮導。用不了多少練習，你調頻時就會立即知道每個符號該去哪裡。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>轉向北方</strong>，伸手，觀想水星的符號烙於球上，發音節 <strong>E</strong>（Epsilon，發音「eh／欸」）。如上調頻。</p>
+</li>
+<li><strong>轉向西方</strong>，伸手，觀想金星的符號烙於球上，發音節 <strong>H</strong>（希臘字 Ita／Eta，發長音「a／ay／欸」如 fate）。如上調頻。</li>
+<li><strong>轉向南方</strong>，伸手，觀想太陽的符號，發音節 <strong>I</strong>（希臘字 Iota，發長 e，如 tree／伊）。如上調頻。<div class="note"><p><strong>【譯註 6・原文訛誤・方位】</strong> 原稿此段作「Turn <strong>North</strong>」（轉向北方），但北方已於水星段使用。依七曜球邏輯（六方＋中心＋天頂），太陽應置於<strong>南方</strong>；原文疑為方位誤植，此處更正為「南方」。</p></div>
+</li>
+<li><strong>觸地</strong>，於球的天底（nadir，可能在你所站地板之下）觀想火星的符號，振動音節 <strong>O</strong>（希臘字 Omicron，發音如 old 的 oh／喔）。</li>
+<li><strong>觸自己的心</strong>，觀想阿格里帕的木星符號燃印於其上，振動聲音 <strong>Y</strong>（希臘母音 Upsilon，發音 eu——如法語 du，即 ee 音配圓唇／淤）。此符的調頻不易，因你正處於球的中心。我能告訴你的是，你可把它移到身體不同的點，如頭或雙足；這代表你對球的<strong>主權</strong>，故召請木星。我自己從未需要為此符調頻。</li>
+<li>最後<strong>向上伸手</strong>，於頭頂觀想土星的符號，振動聲音 <strong>Ω</strong>（希臘字 Omega，發長 o，如 home／喔——長）。</li>
+</ul>
+<p>完成後可做以下禱告：</p>
+<div class="pair-wrap"><div class="pair-cap">祈禱文・七曜球</div><div class="verse-pair"><div class="verse verse-en"><p>
+I call upon the eternal and unbegotten Aeon
+who holds together the creation of all things
+whom none understand
+and whom the gods worship.
+Empower the sphere that surrounds me
+that the seven rays be a balanced and beautiful blessing
+That dignify my and my work.
+AMEN.</p></div><div class="verse verse-zh"><p>我召請那永恆、非由任何存在所生的永世者（Aeon），
+祂維繫著萬物的創生，
+無人能理解祂，
+諸神亦向祂敬拜。
+請賦予環繞我的此一球體力量，
+使七道光芒成為平衡而美好的祝福，
+使我與我的工作同蒙尊榮。
+阿們。</p></div></div></div>
+<p>儀式中行星與音節的次序忠於《紙草書》中的順序。你若覺有需要，可更動起始方位。例如你可把火星置於東、木星於南、金星於西、水星於北、月於天底、太陽於心、土星於天頂——這樣更接近生命之樹上諸天球的呈現方式，對某些人在能量上更說得通。</p>
+<p>某些占星家對「一套儀式竟能影響行星對個人的占星影響」這個想法頗有微詞。我實在不想爭辯此點。<strong>你自己試了便知。</strong></p>
+<hr/>
+<h2 id="chap-5">第四章：四十九召請 THE 49 CALLS</h2><nav aria-label="七曜索引" class="series-index"><p class="si-cap">七曜索引 · 依行星日跳轉（每日系列各七篇）</p><div class="si-grid"><a class="si-item" data-planet="moon" href="#series-moon"><span class="si-glyph">☽</span><span class="si-text"><span class="si-cn">月</span><span class="si-label">月之日 · Luna</span></span></a><a class="si-item" data-planet="mercury" href="#series-mercury"><span class="si-glyph">☿</span><span class="si-text"><span class="si-cn">水</span><span class="si-label">水星之日 · Mercury</span></span></a><a class="si-item" data-planet="venus" href="#series-venus"><span class="si-glyph">♀</span><span class="si-text"><span class="si-cn">金</span><span class="si-label">金星之日 · Venus</span></span></a><a class="si-item" data-planet="sun" href="#series-sun"><span class="si-glyph">☉</span><span class="si-text"><span class="si-cn">日</span><span class="si-label">太陽之日 · Sol</span></span></a><a class="si-item" data-planet="mars" href="#series-mars"><span class="si-glyph">♂</span><span class="si-text"><span class="si-cn">火</span><span class="si-label">火星之日 · Mars</span></span></a><a class="si-item" data-planet="jupiter" href="#series-jupiter"><span class="si-glyph">♃</span><span class="si-text"><span class="si-cn">木</span><span class="si-label">木星之日 · Jupiter</span></span></a><a class="si-item" data-planet="saturn" href="#series-saturn"><span class="si-glyph">♄</span><span class="si-text"><span class="si-cn">土</span><span class="si-label">土星之日 · Saturn</span></span></a></div></nav>
+<p>我們已談過「時」與「日」及其計算。一般而言，<strong>時比日更重要</strong>。你可以把「時」想成來自該行星源頭的一道直射光束——強而直接；而「日」則較幽微，提供一面透鏡、或一層瀰漫浸潤的氛圍，滲入該光束。</p>
+<p>當專注於單一行星時，瞄準該行星的日與時是顯而易見的（如木星的日與時）——這是最基礎、最簡單的路徑。但若你更細膩些，便可運用不同的<strong>時與日之組合</strong>，讓日的幽微影響去左右「時」如何顯化。如此，每一種行星力量，實則內含<strong>七種面向</strong>。</p>
+<p>例如，若你在尋找新事業的靈感，可在<strong>週四（木星日）的太陽時</strong>進行，把太陽的靈感帶進你的財富工作——我稱之為運作「<strong>木星之太陽（Sol of Jupiter）</strong>」。主影響仍是太陽之光束，但那光束在某種意義上被木星的透鏡所濾。若在尋找性伴侶，於<strong>週五（金星日）的月亮時</strong>進行，會為你帶來「<strong>金星之月（Luna of Venus）</strong>」。</p>
+<p>下列 49 篇召請，即是探索每一種力量之七面向潛能而寫的咒語。你會注意到每篇皆以相應的母音開頭。單行星的七篇召請，你只需發一個母音；其餘各篇，你將<strong>先誦「日」之母音、後誦「時」之母音</strong>——日母音時長較短，隨後以較長的振動誦「時」之母音。它們皆以音譯拼寫，便於使用。</p>
+<div class="note"><p><strong>【全章通則・譯註 7】</strong>
+① 標題採「<strong>（時行星）· （日行星）</strong> —— 英文原名」格式，並於「行使時機」明列日與時。
+② 母音行格式：<strong>希臘字母／作者轉寫｜中文音譯（作者英標）｜IPA</strong>。
+③ 原稿部分召請之「時機說明」與「母音音標」有誤植或漏字，逐篇以【勘】標出並更正。</p></div>
+<hr/>
+<h3 id="series-moon">一、月之日 · Luna 系列</h3>
+<h4 data-planet="moon">月（時）· 月（日）—— LUNA OF LUNA</h4>
+<p class="rubric-when" data-planet="moon"><strong>行使時機：</strong> 月之日、月之時。
+</p><p class="rubric-vowel" data-planet="moon"><strong>母音：</strong> Α｜阿（AH）｜[aː]</p>
+<div class="pair-wrap" data-planet="moon"><div class="verse-pair"><div class="verse verse-en"><p data-planet="moon">Softly Shining Selene, light of night
+Awaken within me the waters of thy wisdom
+and let me not be lost amidst your maze
+Reflect rightly the rays of the seven spheres.
+That I may cross the chasm of confusion
+And enter into your silver sanctuary.</p></div><div class="verse verse-zh"><p data-planet="moon">柔和閃耀的塞勒涅（Selene），夜之光，
+在我之內喚醒祢智慧的水流，
+莫使我迷失於祢的迷宮之中。
+請如實映照七重天球的光芒，
+使我得以跨越迷惑的鴻溝，
+進入祢銀白的聖所。</p></div></div></div>
+<p class="commentary" data-planet="moon"><em>此咒是對月——星光界域守門者——的召請。星光界大體是一個由鏡子構成的世界，能生出種種分心與幻象，讓你多年多年偏離真正的工作。以此咒守住正道。</em></p>
+<hr/>
+<h4 data-planet="moon">水星（時）· 月（日）—— MERCURY OF LUNA</h4>
+<p class="rubric-when" data-planet="moon"><strong>行使時機：</strong> 月之日、水星之時。
+</p><p class="rubric-vowel" data-planet="moon"><strong>母音：</strong> Α–Ε｜阿-欸（AH-Eh）｜[a]–[e]</p>
+<div class="pair-wrap" data-planet="moon"><div class="verse-pair"><div class="verse verse-en"><p data-planet="moon">Holy Hermes and Shining Selene
+Safeguard my sanity and illuminate my intellect
+Help me plunge the depths of my hidden mind
+unbalanced, unnerving, and unrefined
+The urges, emotions, and veiled drives
+And bridge the gap, between conscious and unconscious psyche</p></div><div class="verse verse-zh"><p data-planet="moon">神聖的赫密士（Hermes）與閃耀的塞勒涅，
+守護我的神智，照亮我的理智。
+助我深入隱藏心靈的最深處——
+那些失衡、令人不安、尚未馴化的部分，
+那些衝動、情緒與隱蔽的驅力，
+並為意識與無意識心靈之間架起橋樑。</p></div></div></div>
+<p class="commentary" data-planet="moon"><em>我們都有陰影面：那些藏於世人之外的衝動與驅力，若放任不管，可能在最不合時宜之際爆發，或以可怕而暴烈的方式顯現。這是一篇以清醒之道把那些衝動帶到表面的咒。「認識你自己」並不總是舒服的事。</em></p>
+<hr/>
+<h4 data-planet="moon">金星（時）· 月（日）—— VENUS OF LUNA</h4>
+<p class="rubric-when" data-planet="moon"><strong>行使時機：</strong> 月之日、金星之時。
+</p><p class="rubric-vowel" data-planet="moon"><strong>母音：</strong> Α–Η｜阿-欸（AH-AY）｜[a]–[ɛː]</p>
+<div class="pair-wrap" data-planet="moon"><div class="verse-pair"><div class="verse verse-en"><p data-planet="moon">Oh thou Damsels of delicious delight
+Arouse within me the lights of love and lust
+Stir and sanctify, the sacrament of sex.
+Attract to me, all to whom I aspire.
+Mesmerize and magnetize those who gaze upon me
+And ensorcell all who hear my spell.</p></div><div class="verse verse-zh"><p data-planet="moon">哦，帶來甜美歡愉的少女們，
+在我之內喚起愛與情慾之光。
+激發並聖化性的聖禮。
+把一切我所渴望之人吸引到我身邊。
+使凝視我的人為我著迷、受我吸引，
+並以我的咒語魅惑所有聽見它的人。</p></div></div></div>
+<p class="commentary" data-planet="moon"><em>一篇相當直白的愛／慾之咒。可用來尋覓新伴侶，或為結縭多年的配偶重燃慾火。</em></p>
+<hr/>
+<h4 data-planet="moon">太陽（時）· 月（日）—— SOL OF LUNA</h4>
+<p class="rubric-when" data-planet="moon"><strong>行使時機：</strong> 月之日、太陽之時。
+</p><p class="rubric-vowel" data-planet="moon"><strong>母音：</strong> Α–Ι｜阿-伊（AH-EE）｜[a]–[i]</p>
+<div class="pair-wrap" data-planet="moon"><div class="verse-pair"><div class="verse verse-en"><p data-planet="moon">Hail to the sacred Selene and holy Helios
+You are the reflection and the source.
+Which reveals the self to the self
+Oh markers of the middle path
+Orient me to the cycles of the month and the year.
+And bring balance between the polarities.</p></div><div class="verse verse-zh"><p data-planet="moon">向神聖的塞勒涅與神聖的赫利俄斯（Helios）致敬。
+祢們一為映照，一為源頭，
+使自我得以照見自身。
+哦，中道的標誌，
+使我與月之循環、年之循環重新對準，
+並使兩極之間恢復平衡。</p></div></div></div>
+<p class="commentary" data-planet="moon"><em>有時我們會感到與世界整體格格不入、內在失衡。這是一篇「定向」之咒，召請天空中最顯眼的兩顆天球，以及那無所不在的陰陽二象徵。</em></p>
+<hr/>
+<h4 data-planet="moon">火星（時）· 月（日）—— MARS OF LUNA</h4>
+<p class="rubric-when" data-planet="moon"><strong>行使時機：</strong> 月之日、火星之時。
+</p><p class="rubric-vowel" data-planet="moon"><strong>母音：</strong> Α–Ο｜阿-喔（AH-OH）｜[a]–[o]</p>
+<div class="pair-wrap" data-planet="moon"><div class="verse-pair"><div class="verse verse-en"><p data-planet="moon">Hail to the powers of Sex and War
+Drives both deep and dangerous
+I harness thee under my true will!
+Illusion, Discipline, and Destruction
+Safeguard my sanity and summon my strength
+Impel my enemies into lunacy and defeat.</p></div><div class="verse verse-zh"><p data-planet="moon">向性與戰爭之力致敬，
+那兩股深沉而危險的驅力。
+我以我的真實意志駕馭祢們！
+幻象、紀律與毀滅，
+守護我的神智，喚起我的力量，
+驅使我的敵人陷入瘋狂與敗亡。</p></div></div></div>
+<p class="commentary" data-planet="moon"><em>無論你的敵人在戰場、在董事會、在街對面的競爭商家，抑或是施暴的丈夫，這篇咒助你收攏心神、反擊回去。</em></p>
+<hr/>
+<h4 data-planet="moon">木星（時）· 月（日）—— JUPITER OF LUNA</h4>
+<p class="rubric-when" data-planet="moon"><strong>行使時機：</strong> 月之日、木星之時。
+</p><p class="rubric-vowel" data-planet="moon"><strong>母音：</strong> Α–Υ｜阿-淤（AH-EUW）｜[a]–[y]</p>
+<div class="pair-wrap" data-planet="moon"><div class="verse-pair"><div class="verse verse-en"><p data-planet="moon">Grand Zeus and Gracious Selene
+Magnanimity and Magnetism united.
+As thy union produced Pandeia-
+Produce within me Dew of the All-Divine
+Let the waxing tides bring the gifts of gravity and grace
+And the waning expel the dross of disease, and doubt.</p></div><div class="verse verse-zh"><p data-planet="moon">偉大的宙斯與仁慈的塞勒涅，
+寬宏與吸引之力合而為一。
+正如祢們的結合誕生了潘狄亞（Pandeia），
+也請在我之內生出「全然神聖」之露。
+願月盈之潮帶來莊重與恩典的賜予，
+願月虧之潮排除疾病與疑惑的渣滓。</p></div></div></div>
+<p class="commentary" data-planet="moon"><em>女神潘狄亞意為「全然光明」；她的另一個名字是厄爾莎（Ersa），即「露（Dew）」。此咒召請月與木星，同時產生外顯的魅光與內在的恩典之境。最好在滿月時進行。</em></p>
+<hr/>
+<h4 data-planet="moon">土星（時）· 月（日）—— SATURN OF LUNA</h4>
+<p class="rubric-when" data-planet="moon"><strong>行使時機：</strong> 月之日、土星之時。
+</p><p class="rubric-vowel" data-planet="moon"><strong>母音：</strong> Α–Ω｜阿-喔（AH-OHW）｜[a]–[ɔː]</p>
+<div class="pair-wrap" data-planet="moon"><div class="verse-pair"><div class="verse verse-en"><p data-planet="moon">The Alpha and the Omega
+Lord and Lady of the Cycles of Chronos,
+You who move the moments of manifest reality
+Stand behind me and before me,
+Bless me with discipline and depth of insight
+And unsurpassed understanding of the tactics of time.</p></div><div class="verse verse-zh"><p data-planet="moon">阿爾法與歐米茄（The Alpha and the Omega），
+柯羅諾斯（Chronos）循環之主與女主，
+祢們推動顯現世界中的每一刻。
+請立於我之前，也立於我之後，
+以紀律與深刻的洞見祝福我，
+並賜我無可比擬的時間運用之智。</p></div></div></div>
+<p class="commentary" data-planet="moon"><em>你是否總是遲到？總是差一步錯過見某人、或錯過某件要事？月與土星都與時間的運行相連。此咒旨在讓你與時間之流本身達到最佳的定向。</em></p>
+<hr/>
+<h3 id="series-mercury">二、水星之日 · Mercury 系列</h3>
+<h4 data-planet="mercury">月（時）· 水星（日）—— LUNA OF MERCURY</h4>
+<p class="rubric-when" data-planet="mercury"><strong>行使時機：</strong> 水星之日、月之時。
+</p><p class="rubric-vowel" data-planet="mercury"><strong>母音：</strong> Ε–Α｜欸-阿（EH-AH）｜[e]–[a]</p>
+<div class="pair-wrap" data-planet="mercury"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mercury">Light of Night and Mercury Mind
+Grant me silver speech, swift and swaying
+May my illusions influence and induce trust
+May my movements and machinations go undetected
+Whether my words are deception, doubt or unvarnished truth
+Let them breed confidence and conviction in all who hear them</p></div><div class="verse verse-zh"><p data-planet="mercury">夜之光與水星之心，
+賜我如銀般明亮的言語，敏捷而足以撼動人心。
+願我的幻象足以影響他人，並引發信任；
+願我的行動與謀略不被察覺。
+無論我的話語是欺瞞、疑惑，或毫無修飾的真相，
+都願它們在所有聽者心中生出信任與確信。</p></div></div></div>
+<p class="commentary" data-planet="mercury"><em>給政客、業務員，以及一切須靠口才與偶爾一點欺瞞來闖蕩之人的咒。你知道你是誰。</em></p>
+<hr/>
+<h4 data-planet="mercury">水星（時）· 水星（日）—— MERCURY OF MERCURY</h4>
+<p class="rubric-when" data-planet="mercury"><strong>行使時機：</strong> 水星之日、水星之時。
+</p><p class="rubric-vowel" data-planet="mercury"><strong>母音：</strong> Ε｜欸（Eh）｜[e]</p>
+<div class="pair-wrap" data-planet="mercury"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mercury">Holy and Honorable Hermes
+Illuminate and Instruct my Intellect
+Sow Sagacity and a Scientific mind
+Make movement swift and elegant speech
+That I may Grasp the Gnosis you Grant
+And communicate my message to multitudes</p></div><div class="verse verse-zh"><p data-planet="mercury">神聖而尊貴的赫密士，
+照亮並教導我的理智。
+在我之內播下睿智與科學的心智。
+使我的行動迅捷，使我的言辭優雅，
+使我能領會祢所賜予的靈知（Gnosis），
+並將我的訊息傳達給眾人。</p></div></div></div>
+<p class="commentary" data-planet="mercury"><em>用以增強智性與言語。</em></p>
+<hr/>
+<h4 data-planet="mercury">金星（時）· 水星（日）—— VENUS OF MERCURY</h4>
+<p class="rubric-when" data-planet="mercury"><strong>行使時機：</strong> 水星之日、金星之時。
+</p><p class="rubric-vowel" data-planet="mercury"><strong>母音：</strong> Ε–Η｜欸-欸（EH-AY）｜[e]–[ɛː]</p>
+<div class="pair-wrap" data-planet="mercury"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mercury">Lord of Learning and Lady of Love
+Bring to Balance the feeling and thinking minds
+May my instincts inform my ideas
+and imagine ingenious innovations
+May the heart and head and loins be aligned
+And may victory and glory be mine.</p></div><div class="verse verse-zh"><p data-planet="mercury">學識之主與愛之女主，
+使感受之心與思考之心恢復平衡。
+願我的本能滋養我的思想，
+使我構想出巧妙而創新的事物。
+願我的心、頭腦與情慾之源彼此一致，
+願勝利與榮耀歸於我。</p></div></div></div>
+<p class="commentary" data-planet="mercury"><em>給那些難以調和理智與情感的人；或給那些讓「小頭」替「大頭」思考的男人——這是一篇駕馭情感與慾望之力、並讓智性把它導向有用目的之咒。</em></p>
+<hr/>
+<h4 data-planet="mercury">太陽（時）· 水星（日）—— SOL OF MERCURY</h4>
+<p class="rubric-when" data-planet="mercury"><strong>行使時機：</strong> 水星之日、太陽之時。
+</p><p class="rubric-vowel" data-planet="mercury"><strong>母音：</strong> Ε–Ι｜欸-伊（EH-EE）｜[e]–[i]</p>
+<div class="pair-wrap" data-planet="mercury"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mercury">Hermes and Helios Honorable and Holy
+May my intelligence be illuminated
+by the Living Light of Life
+May my contemplations bring comprehension
+of the Cosmic center of all consciousness
+And initiate me into the inner adytum.</p></div><div class="verse verse-zh"><p data-planet="mercury">赫密士與赫利俄斯，尊貴而神聖，
+願我的理智受到生命之活光照耀。
+願我的沉思使我理解
+一切意識的宇宙中心，
+並引領我接受啟蒙，
+進入內在的至聖所（adytum）。</p></div></div></div>
+<p class="commentary" data-planet="mercury"><em>一篇為智性祝福、並理解邏各斯（logos）本性的簡短禱告。</em></p>
+<hr/>
+<h4 data-planet="mercury">火星（時）· 水星（日）—— MARS OF MERCURY</h4>
+<p class="rubric-when" data-planet="mercury"><strong>行使時機：</strong> 水星之日、火星之時。
+</p><p class="rubric-vowel" data-planet="mercury"><strong>母音：</strong> Ε–Ο｜欸-喔（EH-OH）｜[e]–[o]</p>
+<div class="note" data-planet="mercury"><p data-planet="mercury"><strong>【勘】</strong> 原稿音標作「( -OH)」，漏植日母音（水星＝Eh）；應為（EH-OH），已補。</p></div><div class="pair-wrap" data-planet="mercury"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mercury">Clever Mind and Conquering Might
+Combine and bring triumph in conflict
+May tactical thinking assist my offence
+May intellect and invention inform my defense
+Severity and Strength shall serve as my sword
+Strategy and Skill shall serve as my shield</p></div><div class="verse verse-zh"><p data-planet="mercury">敏銳的心智與征服的力量，
+結合起來，使我在衝突中獲得勝利。
+願戰術思維輔助我的進攻，
+願理智與創意指引我的防禦。
+嚴厲與力量將成為我的劍，
+策略與技藝將成為我的盾。</p></div></div></div>
+<p class="commentary" data-planet="mercury"><em>有時我們的智性必須轉而用於克服障礙與敵手。這是一篇於此時求機敏的咒。</em></p>
+<hr/>
+<h4 data-planet="mercury">木星（時）· 水星（日）—— JUPITER OF MERCURY</h4>
+<p class="rubric-when" data-planet="mercury"><strong>行使時機：</strong> 水星之日、木星之時。
+</p><p class="rubric-vowel" data-planet="mercury"><strong>母音：</strong> Ε–Υ｜欸-淤（EH-EU）｜[e]–[y]</p>
+<div class="pair-wrap" data-planet="mercury"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mercury">Powers of Intelligence and Increase
+Movement and Magnanimity
+Sovereignty and sagacity
+Draw wealth out of wealth through skilled circulation
+Assist me in managing my kingdom with wisdom and honor
+That I may become a true Philosopher King</p></div><div class="verse verse-zh"><p data-planet="mercury">智慧與增長之力，
+行動與寬宏之力，
+主權與睿智之力，
+藉由高明的流通，使財富再生財富。
+協助我以智慧與榮譽治理我的國度，
+使我成為真正的哲人王（Philosopher King）。</p></div></div></div>
+<p class="commentary" data-planet="mercury"><em>「以錢生錢、靠金錢本身的流動賺錢」的生意，遠遠是這星球上最賺錢的生意。無論你是避險基金經理人，或只是為自己退休做規劃的人，此咒助你從金錢的流動中生出金錢。</em></p>
+<hr/>
+<h4 data-planet="mercury">土星（時）· 水星（日）—— SATURN OF MERCURY</h4>
+<p class="rubric-when" data-planet="mercury"><strong>行使時機：</strong> 水星之日、土星之時。
+</p><p class="rubric-vowel" data-planet="mercury"><strong>母音：</strong> Ε–Ω｜欸-喔（EH-OHW）｜[e]–[ɔː]</p>
+<div class="pair-wrap" data-planet="mercury"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mercury">I call the powers of motion and inertia.
+Counterbalance my speech with silence.
+Discipline my thought and defend me from distraction.
+Restrict my movements that I may keep to the task
+And regulate my actions rightly
+That I may work harmoniously with time itself.</p></div><div class="verse verse-zh"><p data-planet="mercury">我召請運動與慣性之力。
+以沉默平衡我的言語。
+約束我的思緒，使我不受分心所擾。
+限制我的行動，使我能專注於眼前之事，
+並使我的一切作為皆有正確的節度，
+好讓我能與時間本身和諧共事。</p></div></div></div>
+<p class="commentary" data-planet="mercury"><em>給那些偶爾需要「閉嘴、傾聽」，而非只顧著說與做的人。</em></p>
+<hr/>
+<h3 id="series-venus">三、金星之日 · Venus 系列</h3>
+<h4 data-planet="venus">月（時）· 金星（日）—— LUNA OF VENUS</h4>
+<p class="rubric-when" data-planet="venus"><strong>行使時機：</strong> 金星之日、月之時。
+</p><p class="rubric-vowel" data-planet="venus"><strong>母音：</strong> Η–Α｜欸-阿（AY-AH）｜[ɛː]–[a]</p>
+<div class="pair-wrap" data-planet="venus"><div class="verse-pair"><div class="verse verse-en"><p data-planet="venus">Ladies of Depth and Desire
+Give to me the sacrament of sensuality
+Unfold in me the mysteries of love and lust
+Let potent passion power my psyche
+And may the tides of emotion lift me higher
+That I may master the fullness of mind and body.</p></div><div class="verse verse-zh"><p data-planet="venus">深度與慾望的女主人們，
+賜予我感官歡愉的聖禮。
+在我之內展開愛與情慾的奧秘。
+讓強烈的激情成為我心靈的動力，
+願情緒的潮汐將我托向更高之處，
+使我能掌握身心完整的力量。</p></div></div></div>
+<p class="commentary" data-planet="venus"><em>一篇給那些藉「神聖之性」追求開悟者的咒。</em></p>
+<hr/>
+<h4 data-planet="venus">水星（時）· 金星（日）—— MERCURY OF VENUS</h4>
+<p class="rubric-when" data-planet="venus"><strong>行使時機：</strong> 金星之日、水星之時。
+</p><p class="rubric-vowel" data-planet="venus"><strong>母音：</strong> Η–Ε｜欸-欸（AY-EH）｜[ɛː]–[e]</p>
+<div class="pair-wrap" data-planet="venus"><div class="verse-pair"><div class="verse verse-en"><p data-planet="venus">May Aphrodite attend to me on my left.
+May the hand of Hermes hold my right
+May my words be blessed and bold
+May I be focused and Fascinating
+And may my communications charm minds
+And stir the passions of all who hear them.</p></div><div class="verse verse-zh"><p data-planet="venus">願阿芙蘿黛蒂侍立於我的左側，
+願赫密士之手扶持我的右側。
+願我的言語蒙福而勇敢，
+願我專注而富有魅力。
+願我的言談能迷住人心，
+並激起所有聽者心中的激情。</p></div></div></div>
+<p class="commentary" data-planet="venus"><em>一篇相當直白的魅光（glamour）咒。</em></p>
+<hr/>
+<h4 data-planet="venus">金星（時）· 金星（日）—— VENUS OF VENUS</h4>
+<p class="rubric-when" data-planet="venus"><strong>行使時機：</strong> 金星之日、金星之時。
+</p><p class="rubric-vowel" data-planet="venus"><strong>母音：</strong> Η｜欸（AY）｜[ɛː]</p>
+<div class="pair-wrap" data-planet="venus"><div class="verse-pair"><div class="verse verse-en"><p data-planet="venus">Oh Mother of Love, Oh maiden of beauty
+Bathe me in your golden green grace
+and allow me the aura of Aphroditic attraction.
+May the star of morning guide my journey
+May the emerald illuminate my secret heart
+And may the fire of formative force be my strength.</p></div><div class="verse verse-zh"><p data-planet="venus">哦，愛之母；哦，美之少女，
+以祢金綠色的恩典沐浴我，
+賜我阿芙蘿黛蒂般吸引眾人的光采。
+願晨星引領我的旅程，
+願翡翠之光照亮我隱秘的心，
+願那塑形創生之力的火焰成為我的力量。</p></div></div></div>
+<p class="commentary" data-planet="venus"><em>一篇對美、愛與激情之女神的獻禱，祈求她的恩惠。</em></p>
+<hr/>
+<h4 data-planet="venus">太陽（時）· 金星（日）—— SOL OF VENUS</h4>
+<p class="rubric-when" data-planet="venus"><strong>行使時機：</strong> 金星之日、太陽之時。
+</p><p class="rubric-vowel" data-planet="venus"><strong>母音：</strong> Η–Ι｜欸-伊（AY-EE）｜[ɛː]–[i]</p>
+<div class="pair-wrap" data-planet="venus"><div class="verse-pair"><div class="verse verse-en"><p data-planet="venus">Lord of Life and Lady of Love
+Kindle within me the fire of favor
+Let my visage shine forth as the Sun
+And my voice vibrate with Venus
+That I may lead others with my light
+And that they may follow me with faith.</p></div><div class="verse verse-zh"><p data-planet="venus">生命之主與愛之女主，
+在我之內點燃受人喜愛的火焰。
+使我的容貌如太陽般放射光輝，
+使我的聲音充滿金星的振動。
+讓我能以自身之光引領他人，
+也使他們懷著信任追隨我。</p></div></div></div>
+<p class="commentary" data-planet="venus"><em>給管理者與領導者。</em></p>
+<hr/>
+<h4 data-planet="venus">火星（時）· 金星（日）—— MARS OF VENUS</h4>
+<p class="rubric-when" data-planet="venus"><strong>行使時機：</strong> 金星之日、火星之時。
+</p><p class="rubric-vowel" data-planet="venus"><strong>母音：</strong> Η–Ο｜欸-喔（AY-OH）｜[ɛː]–[o]</p>
+<div class="pair-wrap" data-planet="venus"><div class="verse-pair"><div class="verse verse-en"><p data-planet="venus">Archful Ares and Artful Aprhodite
+Let the Passionate Power Play
+That drives the drama of desire
+Grow ever more hot and heady.
+Let supremacy and submission
+Spiral and spark the sacred fire.</p></div><div class="verse verse-zh"><p data-planet="venus">足智多謀的阿瑞斯（Ares）與巧妙善誘的阿芙蘿黛蒂，
+讓那驅動慾望戲劇的
+激情與權力遊戲盡情展開，
+並變得愈發炙熱、令人陶醉。
+讓支配與臣服
+彼此旋繞，點燃神聖之火。</p></div></div></div>
+<p class="commentary" data-planet="venus"><em>這是一篇利用「支配—臣服」之互動來製造火花的咒。可作深層解讀——即主動的陽與被動的陰之互動——或作外顯的性層面解讀。此未必與 BDSM 有關；這種動態或多或少存在於每一次性行為之中。</em></p>
+<hr/>
+<h4 data-planet="venus">木星（時）· 金星（日）—— JUPITER OF VENUS</h4>
+<p class="rubric-when" data-planet="venus"><strong>行使時機：</strong> 金星之日、木星之時。
+</p><p class="rubric-vowel" data-planet="venus"><strong>母音：</strong> Η–Υ｜欸-淤（AY-EU）｜[ɛː]–[y]</p>
+<div class="pair-wrap" data-planet="venus"><div class="verse-pair"><div class="verse verse-en"><p data-planet="venus">Lovely Aphrodite and Potent Zeus
+May love ever expand wealth
+May wealth ever expand love
+May these two quests be realized as one
+Potent powers of production, affluence, and influence
+May wealth shower on those I love</p></div><div class="verse verse-zh"><p data-planet="venus">可愛的阿芙蘿黛蒂與強盛的宙斯，
+願愛不斷擴展財富，
+願財富也不斷擴展愛。
+願這兩項追求最終成為同一件事。
+生產、富足與影響力的強大力量啊，
+願財富如雨般降在我所愛的人身上。</p></div></div></div>
+<p class="commentary" data-planet="venus"><em>一篇探索愛與財富之連結的咒：既是把「財富」當作吸引潛在伴侶的特質，也是用財富去照顧他人。認為宙斯不是求愛時該召的好神？看看他那串性伴侶名單吧——他簡直是「玩咖的主保聖人」。</em></p>
+<hr/>
+<h4 data-planet="venus">土星（時）· 金星（日）—— SATURN OF VENUS</h4>
+<p class="rubric-when" data-planet="venus"><strong>行使時機：</strong> 金星之日、土星之時。
+</p><p class="rubric-vowel" data-planet="venus"><strong>母音：</strong> Η–Ω｜欸-喔（AY-OHW）｜[ɛː]–[ɔː]</p>
+<div class="pair-wrap" data-planet="venus"><div class="verse-pair"><div class="verse verse-en"><p data-planet="venus">As Aphrodite arose from Cronus's phallus
+May Death always give rise to love
+May Saturn's bindings hold love firm
+May Saturn's firmness make love strong
+May Saturn's strength make love deep
+And may love and death dance with me kindly.</p></div><div class="verse verse-zh"><p data-planet="venus">正如阿芙蘿黛蒂自克洛諾斯（Cronus）的陽具而生，
+願死亡永遠孕生出愛。
+願土星的束縛使愛穩固，
+願土星的堅定使愛強韌，
+願土星的力量使愛深沉，
+願愛與死亡都以善意與我共舞。</p></div></div></div>
+<p class="commentary" data-planet="venus"><em>愛與死，是人類心智中最強的兩股驅力。更新之力有賴於毀滅之力。此咒更進一步召請土星的收束之力，助愛更強、更好。</em></p>
+<hr/>
+<h3 id="series-sun">四、太陽之日 · Sol 系列</h3>
+<h4 data-planet="sun">月（時）· 太陽（日）—— LUNA OF SOL</h4>
+<p class="rubric-when" data-planet="sun"><strong>行使時機：</strong> 太陽之日、月之時。
+</p><p class="rubric-vowel" data-planet="sun"><strong>母音：</strong> Ι–Α｜伊-阿（EE-AH）｜[i]–[a]</p>
+<div class="pair-wrap" data-planet="sun"><div class="verse-pair"><div class="verse verse-en"><p data-planet="sun">Light of Sol through lunar lens
+Powers of ruling and reflection
+As your visible spheres transmit
+the light of the logos downward to man
+May you transmit my light upward
+To the starry powers and celestial realms.</p></div><div class="verse verse-zh"><p data-planet="sun">太陽之光，穿過月亮的透鏡；
+統治與映照之力。
+正如祢們可見的天球
+將邏各斯（Logos）之光向下傳遞給人類，
+也願祢們將我的光向上傳遞，
+送往群星之力與諸天領域。</p></div></div></div>
+<p class="commentary" data-planet="sun"><em>一篇把你的祈願與抱負「快速上呈」到更高界域的咒。</em></p>
+<hr/>
+<h4 data-planet="sun">水星（時）· 太陽（日）—— MERCURY OF SOL</h4>
+<p class="rubric-when" data-planet="sun"><strong>行使時機：</strong> 太陽之日、水星之時。
+</p><p class="rubric-vowel" data-planet="sun"><strong>母音：</strong> Ι–Ε｜伊-欸（EE-EH）｜[i]–[e]</p>
+<div class="pair-wrap" data-planet="sun"><div class="verse-pair"><div class="verse verse-en"><p data-planet="sun">May the holy light of Helios
+Illuminate the inner inconnu
+May the hermetic mind
+Instruct and initiate my intellect
+So the paths revealed by the light of day
+May be mastered by the Mercurial mind.</p></div><div class="verse verse-zh"><p data-planet="sun">願赫利俄斯的神聖之光
+照亮內在那未知之境（inconnu）。
+願赫密士的心智
+教導並啟蒙我的理智，
+使白晝之光所揭示的道路
+都能被水星般的心智所掌握。</p></div></div></div>
+<p class="commentary" data-planet="sun"><em>更高的界域與心智狀態，不易被智性所把握。這是一篇讓智性得以把握、並與那些更高狀態相接的咒。</em></p>
+<hr/>
+<h4 data-planet="sun">金星（時）· 太陽（日）—— VENUS OF SOL</h4>
+<p class="rubric-when" data-planet="sun"><strong>行使時機：</strong> 太陽之日、金星之時。
+</p><p class="rubric-vowel" data-planet="sun"><strong>母音：</strong> Ι–Η｜伊-欸（EE-AY）｜[i]–[ɛː]</p>
+<div class="pair-wrap" data-planet="sun"><div class="verse-pair"><div class="verse verse-en"><p data-planet="sun">May Light of Life divine
+Pass through the Lens of Love
+That we may delight in divine desire
+And rejoice in the radiance
+That explodes eternally
+In every atom of existence</p></div><div class="verse verse-zh"><p data-planet="sun">願神聖的生命之光
+穿過愛的透鏡，
+使我們在神聖的渴望中歡欣，
+並因那光輝而喜悅——
+那光輝永恆地迸發於
+存在的每一個原子之中。</p></div></div></div>
+<p class="commentary" data-planet="sun"><em>一篇對愛與生命的禮讚。並非針對性目標的咒，而是一段美好的祝福。用它，看看會發生什麼。</em></p>
+<hr/>
+<h4 data-planet="sun">太陽 —— SOL</h4>
+<p class="rubric-when" data-planet="sun"><strong>行使時機：</strong> 太陽之日、太陽之時。
+</p><p class="rubric-vowel" data-planet="sun"><strong>母音：</strong> Ι｜伊（EE）｜[i]</p>
+<div class="pair-wrap" data-planet="sun"><div class="verse-pair"><div class="verse verse-en"><p data-planet="sun">Oh father of force and fire.
+The Lord of Living Light
+Illuminate me from within and from above
+Inspire me to achieve my full measure.
+Ignite in me the Invictus Spirit
+Make your magnificence manifest!</p></div><div class="verse verse-zh"><p data-planet="sun">哦，力量與火焰之父，
+生命活光之主，
+從我內在、也從高處照亮我。
+激勵我成就自身全部的潛能。
+在我之內點燃不可征服的精神（Invictus Spirit），
+使祢的偉大顯現出來！</p></div></div></div>
+<p class="commentary" data-planet="sun"><em>用以召請太陽之光。</em></p>
+<hr/>
+<h4 data-planet="sun">火星（時）· 太陽（日）—— MARS OF SOL</h4>
+<p class="rubric-when" data-planet="sun"><strong>行使時機：</strong> 太陽之日、火星之時。
+</p><p class="rubric-vowel" data-planet="sun"><strong>母音：</strong> Ι–Ο｜伊-喔（EE-OH）｜[i]–[o]</p>
+<div class="pair-wrap" data-planet="sun"><div class="verse-pair"><div class="verse verse-en"><p data-planet="sun">Hail to the powers of Might and Majesty
+May my weakness and ignorance
+Be burned away in your Brilliance
+May the solar sword of severity
+Surgically strike at the darkness of delusion
+And reveal Cosmic Consciousness Unconquered</p></div><div class="verse verse-zh"><p data-planet="sun">向威能與威嚴之力致敬。
+願我的軟弱與無知
+在祢們的燦爛光輝中被焚盡。
+願太陽那嚴厲之劍
+如外科手術般精準斬除迷妄的黑暗，
+揭露那不可征服的宇宙意識。</p></div></div></div>
+<p class="commentary" data-planet="sun"><em>一篇「昇華」之咒：把粗鈍化為精微。可泛用，或針對那些阻礙你的特定習慣與模式。</em></p>
+<hr/>
+<h4 data-planet="sun">木星（時）· 太陽（日）—— JUPITER OF SOL</h4>
+<p class="rubric-when" data-planet="sun"><strong>行使時機：</strong> 太陽之日、木星之時。
+</p><p class="rubric-vowel" data-planet="sun"><strong>母音：</strong> Ι–Υ｜伊-淤（EE-EUW）｜[i]–[y]</p>
+<div class="pair-wrap" data-planet="sun"><div class="verse-pair"><div class="verse verse-en"><p data-planet="sun">Fill me with Joy and Jovial Grace
+Lift me up with your Benevolent Blessings
+Crown me with Majesty and Magnanimity
+Kindly Kings and Majestic Mediators
+Augment my awareness, my assets, and my vigor
+That I may assist others in finding their joy.</p></div><div class="verse verse-zh"><p data-planet="sun">以喜悅與木星的欣悅恩典充滿我。
+以祢們仁慈的祝福將我提升，
+以威嚴與寬宏為我加冕。
+慈仁的諸王、威嚴的調停者，
+增長我的覺知、資產與活力，
+使我也能協助他人尋得自己的喜悅。</p></div></div></div>
+<p class="commentary" data-planet="sun"><em>一篇明亮的「王權與財富」之祝福。</em></p>
+<hr/>
+<h4 data-planet="sun">土星（時）· 太陽（日）—— SATURN OF SOL</h4>
+<p class="rubric-when" data-planet="sun"><strong>行使時機：</strong> 太陽之日、土星之時。
+</p><p class="rubric-vowel" data-planet="sun"><strong>母音：</strong> Ι–Ω｜伊-喔（EE-OHW）｜[i]–[ɔː]</p>
+<div class="pair-wrap" data-planet="sun"><div class="verse-pair"><div class="verse verse-en"><p data-planet="sun">Energies of expanse and entropy
+Come to balance within me.
+In the crucible of the sun
+I realize the fullness of self
+In Saturn's secret center I shall seek
+The sword bridge that leads self beyond the self.</p></div><div class="verse verse-zh"><p data-planet="sun">擴張與熵之能量，
+請在我之內達成平衡。
+在太陽的坩堝之中，
+我體悟自我的完整。
+在土星隱秘的中心，我將尋找
+那座如劍鋒般狹窄、引領自我超越自我的橋。</p></div></div></div>
+<p class="commentary" data-planet="sun"><em>一篇用以為「跨越深淵、了悟超個人（transpersonal）」作準備的咒。</em></p>
+<hr/>
+<h3 id="series-mars">五、火星之日 · Mars 系列</h3>
+<h4 data-planet="mars">月（時）· 火星（日）—— LUNA OF MARS</h4>
+<p class="rubric-when" data-planet="mars"><strong>行使時機：</strong> 火星之日、月之時。
+</p><p class="rubric-vowel" data-planet="mars"><strong>母音：</strong> Ο–Α｜喔-阿（OH-AH）｜[o]–[a]</p>
+<div class="pair-wrap" data-planet="mars"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mars">Oh Silver Selene and Scarlet Ares
+Prime my passions for the battle ahead
+Let my emotion lend me strength and power
+Sharpen my soldiers instinct
+Increase my warriors intuition
+That I may emerge ever victorious</p></div><div class="verse verse-zh"><p data-planet="mars">哦，銀白的塞勒涅與猩紅的阿瑞斯，
+使我的激情準備好迎接前方的戰鬥。
+讓我的情感賦予我力量與威能。
+磨利我如士兵般的本能，
+增強我如戰士般的直覺，
+使我每一次都能以勝利者之姿走出戰場。</p></div></div></div>
+<p class="commentary" data-planet="mars"><em>一篇於戰前引導激情、並增強直覺與本能的咒。</em></p>
+<hr/>
+<h4 data-planet="mars">水星（時）· 火星（日）—— MERCURY OF MARS</h4>
+<p class="rubric-when" data-planet="mars"><strong>行使時機：</strong> 火星之日、水星之時。
+</p><p class="rubric-vowel" data-planet="mars"><strong>母音：</strong> Ο–Ε｜喔-欸（OH-EH）｜[o]–[e]</p>
+<div class="pair-wrap" data-planet="mars"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mars">Master of Mercurial Martial Arts
+Make me clever in combat
+Cunning in Conflict
+And Wiley in War.
+That through speed and slyness
+My enemies shall be overthrown</p></div><div class="verse verse-zh"><p data-planet="mars">水星式戰鬥技藝的大師，
+使我在戰鬥中機敏，
+在衝突中善用謀略，
+在戰爭中足智多謀。
+使我憑藉速度與巧計，
+將我的敵人擊敗。</p></div></div></div>
+<p class="commentary" data-planet="mars"><em>無論何種戰役，你手中最強的武器都是人的心智。</em></p>
+<hr/>
+<h4 data-planet="mars">金星（時）· 火星（日）—— VENUS OF MARS</h4>
+<p class="rubric-when" data-planet="mars"><strong>行使時機：</strong> 火星之日、金星之時。
+</p><p class="rubric-vowel" data-planet="mars"><strong>母音：</strong> Ο–Η｜喔-欸（OH-AY）｜[o]–[ɛː]</p>
+<div class="pair-wrap" data-planet="mars"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mars">I call upon Ares and Aphrodite United
+Lady of Love and Lord of War
+May my voice and visage enchant my enemies
+May my charm and charisma enchain them
+May loves lasso lure them in
+And turn passion to poison in service of war</p></div><div class="verse verse-zh"><p data-planet="mars">我召請合而為一的阿瑞斯與阿芙蘿黛蒂，
+愛之女主與戰爭之主。
+願我的聲音與容貌迷惑我的敵人，
+願我的魅力與個人氣場將他們束縛。
+願愛的套索引誘他們靠近，
+並為戰爭之用，將激情轉化為毒藥。</p></div></div></div>
+<p class="commentary" data-planet="mars"><em>阿芙蘿黛蒂大概比希臘萬神殿中任何一位神都引發過更多戰爭。只是說說而已。此咒把吸引與魅惑之術，化為真正的武器。</em></p>
+<hr/>
+<h4 data-planet="mars">太陽（時）· 火星（日）—— SOL OF MARS</h4>
+<p class="rubric-when" data-planet="mars"><strong>行使時機：</strong> 火星之日、太陽之時。
+</p><p class="rubric-vowel" data-planet="mars"><strong>母音：</strong> Ο–Ι｜喔-伊（OH-EE）｜[o]–[i]</p>
+<div class="note" data-planet="mars"><p data-planet="mars"><strong>【勘】</strong> 原稿母音作「-Ι」，漏植日母音（火星＝Ο/OH）；應為 Ο–Ι（OH-EE），已補。</p></div><div class="pair-wrap" data-planet="mars"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mars">Explosive force of fire and fury
+Cultivate my champions courage
+That I may burn bright
+With righteous wrath and rage
+Commanding, Unconquered
+And totally triumphant</p></div><div class="verse verse-zh"><p data-planet="mars">火焰與狂怒的爆發之力，
+培養我身為鬥士的勇氣，
+使我得以熊熊燃燒，
+充滿正當的憤怒與盛怒。
+使我威勢逼人、不可征服，
+並獲得徹底的勝利。</p></div></div></div>
+<p class="commentary" data-planet="mars"><em>一篇給正義戰士的「力與火」之咒。</em></p>
+<hr/>
+<h4 data-planet="mars">火星 —— MARS</h4>
+<p class="rubric-when" data-planet="mars"><strong>行使時機：</strong> <strong>火星之日、火星之時。</strong>
+</p><p class="rubric-vowel" data-planet="mars"><strong>母音：</strong> Ο｜喔（OH）｜[o]</p>
+<div class="note" data-planet="mars"><p data-planet="mars"><strong>【勘】</strong> 原稿時機作「day of Mars at the hour of Mercury」有誤。此為單一行星（火星）召請，應為<strong>火星之日與火星之時</strong>；母音 Ο 亦證明為純火星。已更正。</p></div><div class="pair-wrap" data-planet="mars"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mars">Ares, boisterous and brave in battle!
+Father of Fear and Dread
+Strict and Severe Sovereign Soldier
+Fill me with ruthless resolve
+Ignite in me your Imprecatory Power
+Cry ALALA! Aloud against my adversaries</p></div><div class="verse verse-zh"><p data-planet="mars">阿瑞斯，戰場上喧騰而勇猛者！
+恐懼與驚駭之父，
+嚴格、冷峻而至高的戰士，
+以毫不留情的決心充滿我。
+在我之內點燃祢施咒降禍的力量，
+向我的敵手高聲呼喊：ALALA！</p></div></div></div>
+<p class="commentary" data-planet="mars"><em>ALALA 是阿瑞斯戰吼之聲，據說能在敵軍士兵中激起恐懼。它也是阿瑞斯侍從女神之一的名字——波勒摩斯（Polemos，戰爭之魔）之女。此詞本身字面即意為「戰吼」，據說源自貓頭鷹所發出的那種可怖聲響。</em></p>
+<hr/>
+<h4 data-planet="mars">木星（時）· 火星（日）—— JUPITER OF MARS</h4>
+<p class="rubric-when" data-planet="mars"><strong>行使時機：</strong> 火星之日、木星之時。
+</p><p class="rubric-vowel" data-planet="mars"><strong>母音：</strong> Ο–Υ｜喔-淤（OH-EW）｜[o]–[y]</p>
+<div class="pair-wrap" data-planet="mars"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mars">Zeus Areios, Arch Authority
+Just ruler and righteous protector
+Lend thy lightning and lance
+That I may expand my empire
+Defend the comforts of my kingdom
+and ensure the safety of my sanctuary.</p></div><div class="verse verse-zh"><p data-planet="mars">宙斯・阿瑞歐斯（Zeus Areios），至高的權威，
+公正的統治者、正義的守護者，
+將祢的閃電與長矛借予我，
+使我得以擴展自己的國度，
+守護我王國中的安穩與福祉，
+並確保我聖所的安全。</p></div></div></div>
+<p class="commentary" data-planet="mars"><em>擁有任何事物的代價，就是必須保護它免遭那些欲奪、欲毀、欲壞之人。我們每個人都有自己的王國——無論是我們身為元首的真正國度，或僅是我們的家與所愛之人。</em></p>
+<hr/>
+<h4 data-planet="mars">土星（時）· 火星（日）—— SATURN OF MARS</h4>
+<p class="rubric-when" data-planet="mars"><strong>行使時機：</strong> <strong>火星之日、土星之時。</strong>
+</p><p class="rubric-vowel" data-planet="mars"><strong>母音：</strong> Ο–Ω｜喔-喔（OH-OHW）｜[o]–[ɔː]</p>
+<div class="note" data-planet="mars"><p data-planet="mars"><strong>【勘】</strong> 原稿時機作「at the hour of Mercury」有誤，應為<strong>土星之時</strong>；母音 Ο–Ω（OW，火星日、土星時）亦可證。已更正。</p></div><div class="pair-wrap" data-planet="mars"><div class="verse-pair"><div class="verse verse-en"><p data-planet="mars">May the chains of Cronus and attacks of Ares
+Provide Protection from difficulty and danger
+May Saturnian Strictness reveal my weakness
+May Martial swords surgically remove it
+May death not deter me in my duties
+May aggression not avert me from my ascent</p></div><div class="verse verse-zh"><p data-planet="mars">願克洛諾斯的鎖鏈與阿瑞斯的攻勢
+保護我免受艱難與危險。
+願土星的嚴格使我看見自己的弱點，
+願火星之劍如手術般精準地將它切除。
+願死亡不能使我放棄我的職責，
+願攻擊性也不能使我偏離向上的道路。</p></div></div></div>
+<p class="commentary" data-planet="mars"><em>土星「束縛」之能與火星「打擊」之能結合，是戰鬥的完美組合。此咒認清這點的同時，也不忘：有時我們必須與之交戰的，正是我們自身的弱點與缺失。</em></p>
+<hr/>
+<h3 id="series-jupiter">六、木星之日 · Jupiter 系列</h3>
+<h4 data-planet="jupiter">月（時）· 木星（日）—— LUNA OF JUPITER</h4>
+<p class="rubric-when" data-planet="jupiter"><strong>行使時機：</strong> 木星之日、月之時。
+</p><p class="rubric-vowel" data-planet="jupiter"><strong>母音：</strong> Υ–Α｜淤-阿（EUW-AH）｜[y]–[a]</p>
+<div class="pair-wrap" data-planet="jupiter"><div class="verse-pair"><div class="verse verse-en"><p data-planet="jupiter">Mother of Mood and Memory
+Father of Fortune and Sovereignty
+Bring the deep and higher minds together
+So that instinct supports improvement
+So that intuition supports increase
+And my emotion enhance my empire</p></div><div class="verse verse-zh"><p data-planet="jupiter">情緒與記憶之母，
+幸運與主權之父，
+使深層心智與高層心智彼此結合，
+使本能能支持我的改善，
+使直覺能支持我的增長，
+也使我的情感壯大我的國度。</p></div></div></div>
+<p class="commentary" data-planet="jupiter"><em>無論我們的活動是什麼，深層心智與情感都必須支持我們的努力，否則一切都將白費。</em></p>
+<hr/>
+<h4 data-planet="jupiter">水星（時）· 木星（日）—— MERCURY OF JUPITER</h4>
+<p class="rubric-when" data-planet="jupiter"><strong>行使時機：</strong> 木星之日、水星之時。
+</p><p class="rubric-vowel" data-planet="jupiter"><strong>母音：</strong> Υ–Ε｜淤-欸（EUW-EH）｜[y]–[e]</p>
+<div class="pair-wrap" data-planet="jupiter"><div class="verse-pair"><div class="verse verse-en"><p data-planet="jupiter">Hail Zeus King of the Gods
+Hail to Hermes his son and Messenger
+May information flow to me
+That I may rule with intelligence
+May my message be heard
+And carried as far as the winds can take it</p></div><div class="verse verse-zh"><p data-planet="jupiter">向宙斯致敬，眾神之王；
+向赫密士致敬，祂的兒子與使者。
+願資訊向我流來，
+使我能以智慧治理。
+願我的訊息被人聽見，
+並傳到風所能帶往的最遠之處。</p></div></div></div>
+<p class="commentary" data-planet="jupiter"><em>帝國的興衰繫於「通訊」。在資訊時代，這比以往任何時候都更為重要。此咒以水星的移動與情報，支援你的木星事務。</em></p>
+<hr/>
+<h4 data-planet="jupiter">金星（時）· 木星（日）—— VENUS OF JUPITER</h4>
+<p class="rubric-when" data-planet="jupiter"><strong>行使時機：</strong> 木星之日、金星之時。
+</p><p class="rubric-vowel" data-planet="jupiter"><strong>母音：</strong> Υ–Η｜淤-欸（EUW-AY）｜[y]–[ɛː]</p>
+<div class="pair-wrap" data-planet="jupiter"><div class="verse-pair"><div class="verse verse-en"><p data-planet="jupiter">I pray to Aphrodite and Zeus
+For boons of benevolence and beauty
+May music fill my ears
+May splendor delight my eyes
+May prosperity serve to provide for my passions
+May my art serve to extend my affluence</p></div><div class="verse verse-zh"><p data-planet="jupiter">我向阿芙蘿黛蒂與宙斯祈禱，
+祈求仁慈與美麗的恩賜。
+願音樂充滿我的雙耳，
+願華美使我的雙眼欣喜。
+願繁榮供養我的熱情與所愛，
+願我的藝術使我的富足更加增長。</p></div></div></div>
+<p class="commentary" data-planet="jupiter"><em>給那些需要金錢來支撐其熱情與藝術、以便其熱情與藝術能為其賺錢的人。這是每一位在財務上成功的藝術工作者都熟悉的一支舞。你不必挨餓，也能當藝術家。</em></p>
+<hr/>
+<h4 data-planet="jupiter">太陽（時）· 木星（日）—— SOL OF JUPITER</h4>
+<p class="rubric-when" data-planet="jupiter"><strong>行使時機：</strong> 木星之日、太陽之時。
+</p><p class="rubric-vowel" data-planet="jupiter"><strong>母音：</strong> Υ–Ι｜淤-伊（EUW-EE）｜[y]–[i]</p>
+<div class="pair-wrap" data-planet="jupiter"><div class="verse-pair"><div class="verse verse-en"><p data-planet="jupiter">Shining Spirit of Sovereign Strength
+Explode forth with enthusiasm
+Invigorate and inspire me with new ideas
+Ignite me with inexhaustible energy
+To expand my empire
+And Illuminate my Spirit.</p></div><div class="verse verse-zh"><p data-planet="jupiter">主權之力的閃耀之靈，
+帶著熱忱迸發而出。
+以嶄新的想法振奮我、啟發我，
+以取之不盡的能量點燃我，
+使我得以擴展我的國度，
+並照亮我的精神。</p></div></div></div>
+<p class="commentary" data-planet="jupiter"><em>每一門生意都始於一個點子。有時，找到那個點子，正是創業中最難的一件事。此咒助你生出靈感，以及貫徹到底的能量。</em></p>
+<hr/>
+<h4 data-planet="jupiter">火星（時）· 木星（日）—— MARS OF JUPITER</h4>
+<p class="rubric-when" data-planet="jupiter"><strong>行使時機：</strong> 木星之日、火星之時。
+</p><p class="rubric-vowel" data-planet="jupiter"><strong>母音：</strong> Υ–Ο｜淤-喔（EUW-OH）｜[y]–[o]</p>
+<div class="note" data-planet="jupiter"><p data-planet="jupiter"><strong>【勘】</strong> 原稿標題作「MARS OFJUPITER」，係「MARS OF JUPITER」漏空格之誤植。</p></div><div class="pair-wrap" data-planet="jupiter"><div class="verse-pair"><div class="verse verse-en"><p data-planet="jupiter">Ares! Agitate me into action
+I shall not succumb to sloth and slumber
+Zeus! Direct my deeds
+Into energized and enthusiastic expansion
+Drive me aggressively into adventure
+And reward my risks with Riches and glory</p></div><div class="verse verse-zh"><p data-planet="jupiter">阿瑞斯！激起我，使我採取行動。
+我不會屈服於懶散與昏睡。
+宙斯！引導我的一切作為，
+使其化為充滿活力與熱忱的擴張。
+強力地驅使我踏上冒險，
+並以財富與榮耀回報我所承擔的風險。</p></div></div></div>
+<p class="commentary" data-planet="jupiter"><em>無風險則無回報，無行動則無豐盛。此咒旨在把你的屁股踹上檔、實現你的夢想；它意在策動你去承擔合理的風險，並助那些風險有所回報。</em></p>
+<hr/>
+<h4 data-planet="jupiter">木星 —— JUPITER</h4>
+<p class="rubric-when" data-planet="jupiter"><strong>行使時機：</strong> 木星之日、木星之時。
+</p><p class="rubric-vowel" data-planet="jupiter"><strong>母音：</strong> Υ｜淤（EAW）｜[y]</p>
+<div class="pair-wrap" data-planet="jupiter"><div class="verse-pair"><div class="verse verse-en"><p data-planet="jupiter">Gracious Governor of Gods
+Who's Laughter is life and lightning
+Who remains Merciful in Magnanimity
+Bestowing Bounty Boundless and Blessed
+Help me to follow you in your ways
+and Honor you with my actions</p></div><div class="verse verse-zh"><p data-planet="jupiter">仁慈的眾神統御者，
+祢的笑聲即是生命，也是閃電。
+祢在寬宏之中仍保有慈悲，
+賜下無邊而蒙福的豐盛。
+幫助我循著祢的道路而行，
+並以我的行動向祢致敬。</p></div></div></div>
+<p class="commentary" data-planet="jupiter"><em>一篇對一切木星事物的召請。</em></p>
+<hr/>
+<h4 data-planet="jupiter">土星（時）· 木星（日）—— SATURN AND JUPITER〔木之日、土之時〕</h4>
+<p class="rubric-when" data-planet="jupiter"><strong>行使時機：</strong> 木星之日、土星之時。
+</p><p class="rubric-vowel" data-planet="jupiter"><strong>母音：</strong> Υ–Ω｜淤-喔（EUW-OHW）｜[y]–[ɔː]</p>
+<div class="pair-wrap" data-planet="jupiter"><div class="verse-pair"><div class="verse verse-en"><p data-planet="jupiter">May Zeus's blessings of expansion
+Be met by the contraction of Chronos.
+May my dreams be matched by my discipline
+May my aspirations be matched by stability
+And may the excited energy within my temple
+Be well supported by its strong walls.</p></div><div class="verse verse-zh"><p data-planet="jupiter">願宙斯所賜擴張的祝福
+與柯羅諾斯（Chronos）的收縮之力相衡。
+願我的夢想有紀律與之相配，
+願我的抱負有穩定與之相配。
+願我殿堂之內那激昂奔放的能量
+有堅固的牆垣將它妥善承載。</p></div></div></div>
+<p class="commentary" data-planet="jupiter"><em>擴張若無節制，可導致毀滅；能量若無收容，便無用處；偉大的點子若無紀律，終將無法實現。此咒召請木星與土星這對看似矛盾的力量，把事情做成。</em></p>
+<hr/>
+<h3 id="series-saturn">七、土星之日 · Saturn 系列</h3>
+<h4 data-planet="saturn">月（時）· 土星（日）—— LUNA OF SATURN</h4>
+<p class="rubric-when" data-planet="saturn"><strong>行使時機：</strong> 土星之日、月之時。
+</p><p class="rubric-vowel" data-planet="saturn"><strong>母音：</strong> Ω–Α｜喔-阿（OHW-AH）｜[ɔː]–[a]</p>
+<div class="pair-wrap" data-planet="saturn"><div class="verse-pair"><div class="verse verse-en"><p data-planet="saturn">Lady of Lunacy and Lord of Lead
+Bind my enemies and move them to madness
+Severity and Sex, Necros and Night
+Initiate Illusions that instigate insanity
+Hear my call and cast thy curses
+That my enemy becomes wounded by his own works.</p></div><div class="verse verse-zh"><p data-planet="saturn">瘋狂之女主與鉛之主，
+束縛我的敵人，驅使他們陷入瘋狂。
+嚴厲與性，死亡（Necros）與黑夜，
+啟動足以煽起癲狂的幻象。
+聽見我的召請，降下祢們的詛咒，
+使我的敵人反受自己所作所為的傷害。</p></div></div></div>
+<p class="commentary" data-planet="saturn"><em>一篇「混亂與束縛」之咒。不可輕用。</em></p>
+<hr/>
+<h4 data-planet="saturn">水星（時）· 土星（日）—— MERCURY OF SATURN</h4>
+<p class="rubric-when" data-planet="saturn"><strong>行使時機：</strong> 土星之日、水星之時。
+</p><p class="rubric-vowel" data-planet="saturn"><strong>母音：</strong> Ω–Ε｜喔-欸（OHW-EH）｜[ɔː]–[e]</p>
+<div class="pair-wrap" data-planet="saturn"><div class="verse-pair"><div class="verse verse-en"><p data-planet="saturn">Masters of Malifica and Motion
+Restrict and Restrain my Rivals
+Bind their intelligence with inertia
+End their expressiveness with entropy
+Cut their connections and communications
+Until they no longer pose a threat to our plans.</p></div><div class="verse verse-zh"><p data-planet="saturn">惡術（Malifica）與運動之主宰們，
+限制並拘束我的競爭者。
+以慣性束縛他們的智慧，
+以熵使他們失去表達的能力。
+切斷他們的連結與通信，
+直到他們再也無法威脅我們的計畫。</p></div></div></div>
+<p class="commentary" data-planet="saturn"><em>一篇用以擾亂通訊、束縛移動的咒（curse）。</em></p>
+<hr/>
+<h4 data-planet="saturn">金星（時）· 土星（日）—— VENUS OF SATURN</h4>
+<p class="rubric-when" data-planet="saturn"><strong>行使時機：</strong> 土星之日、金星之時。
+</p><p class="rubric-vowel" data-planet="saturn"><strong>母音：</strong> Ω–Η｜喔-欸（OHW-AY）｜[ɔː]–[ɛː]</p>
+<div class="pair-wrap" data-planet="saturn"><div class="verse-pair"><div class="verse verse-en"><p data-planet="saturn">I call to Cronus and Aphrodite
+Cause contraction and corrosion
+Attack amorous affections
+Leaving my target lonely and lost
+Change attraction to apathy
+That entropy may be their his/her only embrace.</p></div><div class="verse verse-zh"><p data-planet="saturn">我召請克洛諾斯與阿芙蘿黛蒂。
+帶來收縮與腐蝕，
+侵蝕愛戀與情感，
+使我的目標孤獨而迷失。
+將吸引轉化為冷漠，
+使熵成為他／她唯一能得到的擁抱。</p></div></div></div>
+<p class="commentary" data-planet="saturn"><em>一篇使某人所愛之人與其反目的咒。同樣是相當黑暗的東西。不過，這道咒法本身曾被用來拆散一段施暴的關係、讓受虐的一方看清：她若留下將有真正的危險。它是與其他各類祝福併用的——以達成我認為非常正面的效果。</em></p>
+<hr/>
+<h4 data-planet="saturn">太陽（時）· 土星（日）—— SOL OF SATURN</h4>
+<p class="rubric-when" data-planet="saturn"><strong>行使時機：</strong> 土星之日、太陽之時。
+</p><p class="rubric-vowel" data-planet="saturn"><strong>母音：</strong> Ω–Ι｜喔-伊（OHW-EE）｜[ɔː]–[i]</p>
+<div class="pair-wrap" data-planet="saturn"><div class="verse-pair"><div class="verse verse-en"><p data-planet="saturn">As walls and pillars are needed to create a temple
+May I make use of necessary boundaries.
+As all things which live must eventually die
+May I accept endings with style and skill.
+May restriction focus my radiance
+May severity support my shining spirit</p></div><div class="verse verse-zh"><p data-planet="saturn">正如建造神殿需要牆壁與柱石，
+願我也能善用必要的界限。
+正如一切有生命之物終將死亡，
+願我能以從容與技巧接納終結。
+願限制使我的光芒更加集中，
+願嚴峻之力支撐我閃耀的精神。</p></div></div></div>
+<p class="commentary" data-planet="saturn"><em>對「無常」的體認，是開悟的關鍵。築牆，是搭建庇護所所必需。</em></p>
+<hr/>
+<h4 data-planet="saturn">火星（時）· 土星（日）—— MARS OF SATURN</h4>
+<p class="rubric-when" data-planet="saturn"><strong>行使時機：</strong> 土星之日、火星之時。
+</p><p class="rubric-vowel" data-planet="saturn"><strong>母音：</strong> Ω–Ο｜喔-喔（OHW-OH）｜[ɔː]–[o]</p>
+<div class="pair-wrap" data-planet="saturn"><div class="verse-pair"><div class="verse verse-en"><p data-planet="saturn">Powers of severity and strictness
+Aggressively aid me this very hour
+Bind my enemies in baneful bands of lead
+Slaughter them with swords of iron
+May thy terrible thaumaturgy
+Insure my eventual victory</p></div><div class="verse verse-zh"><p data-planet="saturn">嚴厲與嚴格之力，
+就在此刻，以強烈之勢援助我。
+以帶來災禍的鉛之鎖鏈束縛我的敵人，
+以鐵劍將他們斬殺。
+願祢們那可怖的奇術（thaumaturgy）
+確保我終將獲得勝利。</p></div></div></div>
+<p class="commentary" data-planet="saturn"><em>那種「先使人動彈不得、再上前收割」的可怕組合。</em></p>
+<hr/>
+<h4 data-planet="saturn">木星（時）· 土星（日）—— JUPITER OF SATURN</h4>
+<p class="rubric-when" data-planet="saturn"><strong>行使時機：</strong> 土星之日、木星之時。
+</p><p class="rubric-vowel" data-planet="saturn"><strong>母音：</strong> Ω–Υ｜喔-淤（OHW-EUW）｜[ɔː]–[y]</p>
+<div class="pair-wrap" data-planet="saturn"><div class="verse-pair"><div class="verse verse-en"><p data-planet="saturn">May Zeus bless me with boons
+Regardless of recession
+Grant me growth and gain
+Amongst austerity and contraction
+Let opportunity arise from oppression
+And be loss lead to benevolence.</p></div><div class="verse verse-zh"><p data-planet="saturn">願宙斯以種種恩惠祝福我，
+即使身處經濟衰退之中。
+在緊縮與收縮之時，
+仍賜予我成長與收益。
+使機會能從壓迫之中生起，
+並使損失最終導向善意與慷慨。</p></div></div></div>
+<p class="commentary" data-planet="saturn"><em>每一場災難中都有機會。在市場價低時進場，正是千萬財富的鍛造之道；經營調整房貸與處理法拍屋的生意，是一項可觀回報的必要服務。無論土星的收束為何，其中都藏著木星擴張的機會。</em></p>
+<hr/>
+<h4 data-planet="saturn">土星 —— SATURN</h4>
+<p class="rubric-when" data-planet="saturn"><strong>行使時機：</strong> 土星之日、土星之時。
+</p><p class="rubric-vowel" data-planet="saturn"><strong>母音：</strong> Ω｜喔（OHW）｜[ɔː]</p>
+<div class="pair-wrap" data-planet="saturn"><div class="verse-pair"><div class="verse verse-en"><p data-planet="saturn">Great Guardian of the Abyss
+Titan who controls the Tempests of Time
+Emperor of entropy and endings
+Let mortality be my mentor
+Sanctify me by thy scythe
+That I may behold mysteries beyond manifestation itself!</p></div><div class="verse verse-zh"><p data-planet="saturn">深淵的偉大守護者，
+掌控時間風暴的泰坦，
+熵與終結的皇帝，
+讓必死之身成為我的導師。
+以祢的鐮刀使我成聖，
+使我得以看見超越一切顯化本身的奧秘！</p></div></div></div>
+<p class="commentary" data-planet="saturn"><em>這是一篇「超越存在之幻」的召請。進入深淵，識得那「自我之外」者。</em></p>
+<hr/>
+<h2 id="chap-6">臨別贈言 PARTING WORDS</h2>
+<p>我曾猶豫是否該把這本書取名為《進階行星魔法》。對某些人而言，這本小書裡沒有任何東西稱得上「進階」；但對大多數一次只用一顆行星、或不習慣運用母音的人來說，我想這套進路可以是他們精進路上的下一階。</p>
+<blockquote class="quote">
+<p>May the Seven Wanderers Bless you
+May the Seven Sounds Resonate within you
+May the Seven Gates Open for you.
+May the Seven times Seven Rays Shine Favorably upon you.</p>
+<p>願七遊星祝福你，
+願七音在你之內共鳴，
+願七門為你開啟，
+願那七乘七道光芒，善照於你。</p>
+</blockquote>
+<p><strong>傑森·米勒</strong>
+<strong>夏至，2013 年</strong></p>
+<hr/>
+<h2 id="chap-7">附錄：希臘母音的發音 APPENDIX: PRONUNCIATION OF GREEK VOWELS</h2>
+<p>你或已注意到：Omicron 與 Omega 的發音非常相近。我一直用書中所給的發音、且效果良好。這些年來我請教過數位教授，卻從未得到一把清晰而決斷的發音之鑰。</p>
+<p>派翠克·鄧恩（Patrick Dunn）——《魔法、力量、語言、符號：一位魔法師的語言學探索》（<em>Magic, Power, Language, Symbol</em>）作者，恰好也擁有現代文學與語言的博士學位——慷慨地為那些希望在工作中極為精確的讀者提供了一些指引：</p>
+<blockquote class="quote">
+<p><strong>【鄧恩博士說明・原文摘譯】</strong></p>
+<p>「若你想按——比方說——柏拉圖的方式來發希臘語，那你談的是<strong>阿提卡希臘語（Attic Greek）</strong>。在那種情況下，這兩個音（Omicron 與 Omega）的差別純粹在<strong>長度</strong>：在 IPA 中是 /o/ 與 /oː/。阿提卡語裡 Omicron 與 Omega 都發得像西班牙語的 o，只是 Omega 拉得比 Omicron 長一點。（這對 Epsilon 與 Eta，以及長短 Alpha、長短 Iota、長短 Upsilon 也同樣成立。）與此同時，你還有<strong>聲調重音（tonal accent）</strong>與<strong>送氣子音（aspirated consonants）</strong>。實際上除了炫技，幾乎沒人用這種發音。</p>
+<p>若你想按<strong>古代晚期（Late Antiquity）</strong>的說法來發——這對多數魔法文獻其實最為道地——你就會開始碰上問題。因為古代晚期的希臘語（稱作<strong>通用希臘語 Koine</strong>），對非常非常多的人而言其實是<strong>第二語言</strong>，而非母語——這意味著各地口音都在對母音做各種奇怪的處理。於是就有人開始爭論了。</p>
+<p>在某些地區，Omicron 與 Omega 合流為同一個音——就只是普通的 /o/。在其他地區，它保留了母音長度的區別，發音如阿提卡語：只是較長或較短而已。</p>
+<p>你也會看到有人提到<strong>伊拉斯謨式（Erasmian）</strong>發音，那是我傾向使用的一種，儘管它不如那些重建的發音來得符合史實。對多數人而言，差別同樣在於母音拉多長；但人們有時會把 Epsilon 發成「eh」、Eta 發成「ey」，Omicron 如「pot」中的 o、Omega 如「boat」甚至「saw」。這裡的目的不是道地，而是讓拼寫更容易。我常抓到自己這麼做，因為我最初就是這樣學的。</p>
+<p>要區分短 o 與長 o 很難，因為在英語裡我們用「long／short」這兩個詞指的是別的東西（其實是鬆／緊 lax/tense，而非長／短）。它真的就只是你把那個音拖多久。把 Omicron 想成「photo」裡的其中一個 o。現在想像你是個 Cockney（倫敦東區腔），把它唸成「pho'o」。再把兩個 o 之間那個「uh」音去掉：「pho o」。那差不多就是長 o 了。<strong>差一點點</strong>——你還有最後一件事要做，因為你有「母語是英語」這個劣勢：你講的每一個 o 的結尾，都會黏上一個小小的 w 音。要去掉它，最簡單的辦法就是盡你所能地模仿義大利語或西班牙語者來唸這個字。</p>
+<p>所以，長話短說：<strong>Omega 就和 Omicron 一模一樣，只是拖得比較長。</strong> 除非你用的是某種伊拉斯謨式發音。而且你不必費什麼力，就能找到不只不同意上述一切、還會為我竟寫下這些而氣得口吐白沫的人。」</p>
+</blockquote>
+<hr/>
+<hr/>
+<h4>附：本譯稿勘誤／譯註彙整</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>編號</th>
+<th>位置</th>
+<th>原稿</th>
+<th>更正／說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>前言後・行星次序</td>
+<td>伽利略使人知地球非中心</td>
+<td>日心說提出者為哥白尼；伽利略為觀測辯護者（史實補註，保留原意）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>第一章・行星日</td>
+<td>Maries／Miercoles</td>
+<td>應為 Martes／Miércoles（西班牙語週二、週三）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>第一章・智慧體與靈體</td>
+<td>Neptune in 1842</td>
+<td>海王星 1846 年發現</td>
+</tr>
+<tr>
+<td>4</td>
+<td>第二章・母音轉寫</td>
+<td>H=Eta、Y=Upsilon、W=Omega；Upsilon「UE as glue」</td>
+<td>作者個人轉寫慣例；Upsilon 實為 [y]（法語 u／德語 ü）</td>
+</tr>
+<tr>
+<td>5</td>
+<td>第二章・完全五度配日</td>
+<td>Iota／Saturday</td>
+<td>應為 Upsilon／週六（土星）</td>
+</tr>
+<tr>
+<td>—</td>
+<td>全書</td>
+<td>Omnicon／Omnicron</td>
+<td>Omicron（奧密克戎）拼寫誤植</td>
+</tr>
+<tr>
+<td>6</td>
+<td>第三章・七曜球</td>
+<td>太陽段「Turn North」</td>
+<td>北方已用於水星；太陽應置南方</td>
+</tr>
+<tr>
+<td>7</td>
+<td>第四章・MARS（單）</td>
+<td>day of Mars at hour of Mercury</td>
+<td>應為火星之日與火星之時</td>
+</tr>
+<tr>
+<td>8</td>
+<td>第四章・SATURN OF MARS</td>
+<td>at the hour of Mercury</td>
+<td>應為土星之時（母音 Ο–Ω 佐證）</td>
+</tr>
+<tr>
+<td>9</td>
+<td>第四章・SOL OF MARS</td>
+<td>母音「-Ι」</td>
+<td>應為 Ο–Ι（漏植日母音）</td>
+</tr>
+<tr>
+<td>10</td>
+<td>第四章・MARS OF MERCURY</td>
+<td>音標「( -OH)」</td>
+<td>應為（EH–OH）（漏植日母音）</td>
+</tr>
+<tr>
+<td>11</td>
+<td>第四章・MARS OF JUPITER</td>
+<td>「MARS OFJUPITER」</td>
+<td>漏空格</td>
+</tr>
+<tr>
+<td>—</td>
+<td>第二章</td>
+<td>Nicomachus "Manual of Harmony"</td>
+<td>通行英譯多作 <em>Manual of Harmonics</em>（《和聲學手冊》）</td>
+</tr>
+<tr>
+<td>—</td>
+<td>第二章</td>
+<td>Irenaeus "Against Heresy"</td>
+<td>通行作 <em>Against Heresies</em>（《駁異端》，複數）</td>
+</tr>
+</tbody>
+</table></div></main>
+<footer class="foot">靈火巫境 · 內部譯稿 · 願七門為你開啟</footer></div></body></html>
