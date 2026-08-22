@@ -18,6 +18,7 @@ category: [magic]
 <p>如果只是為自己祈福，自己的姓名往往已經足夠；如果工作本身要求針對特定的、難以接觸到的人，傳統才會更重視這些關聯物。</p>
 ## 仔細分析，這其實是很單純的邏輯
 <p>魔法裡很多看起來神祕的東西，仔細分析，這其實是很單純的邏輯：<strong>我要對誰工作，就需要一個能代表「誰」的東西。</strong>剩下的，才是不同傳統對這個連結如何解釋。</p>
+<!--ADSTOP-->
 <div style="background-color:#f2efe9; padding:22px 24px; margin:2rem 0; border-radius:10px;">
     <p style="margin:0 0 .8rem; font-weight:bold; color:#1a5f5f; font-size:1.1rem;">關於四月老師</p>
     <p style="margin:0 0 1rem;">我是四月老師，長期研究與實踐西方民俗魔法、胡督（Hoodoo）、混沌魔法、符印魔法、行星魔法、藥草魔法，以及不同文化中的宗教與靈性實踐。</p>
