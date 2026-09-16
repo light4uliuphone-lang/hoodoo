@@ -1,0 +1,309 @@
+---
+layout: default
+title: 靈魂中軸團體療癒 | 四月老師 - 靈火巫境
+description: 以「靈魂中軸」理論為架構的團體能量療癒。從天地雙星與七脈輪出發，看見團體共同的能量狀態與生命課題，讓停滯的能量重新流動，轉化為支持生活的力量。參加加贈幾何精素－中心。2026/09/29，日間夜間兩場次。
+permalink: /rituals/soul-axis/
+image: /assets/images/rituals/soul-axis/og-soul-axis.jpg
+---
+
+<style>
+  .sa { --sa-ink:#211a2b; --sa-paper:#f3eff7; --sa-paper2:#e7dff0; --sa-dark:#120c1a; --sa-dark2:#1d1528;
+        --sa-gold:#c9973f; --sa-gold-soft:#e6cfa0; --sa-violet:#6a4a9c; --sa-violet-deep:#463067; --sa-violet-soft:#b6a3d6;
+        color:var(--sa-ink); line-height:1.85; }
+  .sa * { box-sizing:border-box; }
+  .sa .wrap { max-width:900px; margin:0 auto; padding:0 1.5rem; }
+  .sa .eyebrow { display:inline-block; font-size:.82rem; letter-spacing:.35em; color:var(--sa-violet);
+                 border-bottom:1px solid var(--sa-violet); padding-bottom:.3rem; margin-bottom:1rem; }
+  .sa .cta { display:inline-block; text-decoration:none; font-weight:700; letter-spacing:.1em;
+             padding:.95rem 2.6rem; border-radius:4px; transition:transform .15s ease; }
+  .sa .cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .sa .cta{transition:none} .sa .cta:hover{transform:none} }
+  .sa .gold-btn { background:var(--sa-gold); color:#1a1109 !important; box-shadow:0 4px 16px rgba(201,151,63,.4); }
+
+  /* Hero */
+  .sa-hero { position:relative; background:var(--sa-dark); color:var(--sa-paper); padding:5rem 1.5rem 4rem; overflow:hidden; text-align:center; }
+  .sa-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .sa-hero::after { content:""; position:absolute; inset:0;
+                    background:radial-gradient(ellipse at 50% 35%, rgba(18,12,26,.5) 0%, rgba(18,12,26,.88) 70%, rgba(18,12,26,.97) 100%); }
+  .sa-hero-in { position:relative; z-index:2; max-width:680px; margin:0 auto; }
+  .sa-glyph { font-size:2.2rem; color:var(--sa-gold); margin-bottom:1rem; text-shadow:0 2px 12px rgba(0,0,0,.6); }
+  .sa-hero .back { display:inline-block; color:var(--sa-gold-soft); font-size:.9rem; margin-bottom:1.8rem; text-decoration:none; }
+  .sa-tag { display:inline-block; font-size:.78rem; letter-spacing:.2em; color:var(--sa-gold);
+            border:1px solid var(--sa-gold); border-radius:999px; padding:.28rem 1.2rem; margin-bottom:1.4rem; }
+  .sa-hero h1 { font-size:clamp(1.9rem,5vw,2.7rem); color:#fff; letter-spacing:.06em; margin:.2rem 0 1rem; text-shadow:0 2px 14px rgba(0,0,0,.55); }
+  .sa-hero .lede { color:var(--sa-gold-soft); font-size:1.1rem; max-width:28em; margin:0 auto 1.8rem; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .sa-keyinfo { display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem 1.8rem; font-size:.98rem; color:#efe9f4;
+                margin-bottom:2rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .sa-keyinfo b { color:var(--sa-gold); }
+
+  .sa-sec { padding:4.2rem 0; }
+  .sa-sec h2.sec { font-size:clamp(1.4rem,3.2vw,1.9rem); letter-spacing:.05em; margin:.8rem 0 1.6rem; text-align:center; }
+
+  /* 開場 */
+  .sa-intro { background:var(--sa-paper); }
+  .sa-intro p { max-width:40em; margin:0 auto 1.3rem; color:#3d3349; }
+  .sa-intro strong { color:var(--sa-violet-deep); }
+  .sa-intro blockquote { border-left:3px solid var(--sa-gold); background:var(--sa-paper2); padding:1.2rem 1.6rem;
+                         margin:2rem auto 0; max-width:40em; border-radius:0 8px 8px 0; font-size:1.1rem; color:#332845; }
+
+  /* 集體課題 */
+  .sa-collective { background:var(--sa-dark2); color:var(--sa-paper); }
+  .sa-collective h2.sec { color:#fff; }
+  .sa-collective p { color:#d6cce6; max-width:40em; margin:0 auto 1.3rem; text-align:center; }
+  .sa-collective strong { color:#fff; }
+  .sa-themes { display:flex; flex-wrap:wrap; justify-content:center; gap:.6rem; max-width:44em; margin:2rem auto 0; }
+  .sa-themes span { background:rgba(182,163,214,.12); border:1px solid rgba(182,163,214,.3); border-radius:999px;
+                    padding:.4rem 1.2rem; font-size:.92rem; color:#d6cce6; }
+
+  /* 轉化 */
+  .sa-transform { background:var(--sa-paper); }
+  .sa-transform p { max-width:40em; margin:0 auto 1.3rem; color:#3d3349; }
+  .sa-transform strong { color:var(--sa-violet-deep); }
+  .sa-safe { background:var(--sa-paper2); border-radius:10px; padding:1.6rem 1.8rem; max-width:40em; margin:2rem auto 0; }
+  .sa-safe h3 { color:var(--sa-violet); font-size:1.1rem; margin:0 0 .7rem; letter-spacing:.03em; }
+  .sa-safe p { color:#4a3f57; margin:0; font-size:.96rem; }
+
+  /* 精素贈品 */
+  .sa-gift { background:var(--sa-paper2); }
+  .sa-gift-box { max-width:680px; margin:0 auto; background:linear-gradient(150deg,#fbf8fe,#ece2f6);
+                 border:1px solid var(--sa-violet); border-radius:14px; padding:2.4rem 2.2rem; text-align:center;
+                 box-shadow:0 8px 26px rgba(106,74,156,.12); }
+  .sa-gift-box .ribbon { display:inline-block; background:var(--sa-violet); color:#fff; font-size:.78rem;
+                         letter-spacing:.18em; padding:.28rem 1.2rem; border-radius:999px; margin-bottom:1.2rem; }
+  .sa-gift-box h3 { font-size:1.5rem; color:var(--sa-violet-deep); margin:0 0 .8rem; letter-spacing:.04em; }
+  .sa-gift-box p { color:#4a3f57; margin:0 auto; max-width:32em; }
+
+  /* 適合誰 */
+  .sa-who { background:var(--sa-paper); }
+  .sa-who ul { list-style:none; padding:0; max-width:600px; margin:1.2rem auto 0; }
+  .sa-who li { padding:.7rem 0 .7rem 2.4rem; position:relative; border-bottom:1px dashed #d3c7e4; color:#3d3349; }
+  .sa-who li::before { content:"✦"; position:absolute; left:.5rem; color:var(--sa-violet); }
+
+  /* 施作者 */
+  .sa-teacher { background:var(--sa-dark2); color:var(--sa-paper); }
+  .sa-teacher h2.sec { color:#fff; }
+  .sa-teacher-flex { display:flex; gap:2.2rem; align-items:center; max-width:760px; margin:0 auto; }
+  .sa-teacher-flex img { width:200px; height:auto; border-radius:10px; flex:0 0 auto; border:1px solid rgba(182,163,214,.4); }
+  .sa-teacher h3 { font-size:1.4rem; color:#fff; margin:0 0 .3rem; letter-spacing:.04em; }
+  .sa-teacher .role { color:var(--sa-gold); font-size:.92rem; margin:0 0 1rem; letter-spacing:.05em; }
+  .sa-teacher p { color:#d6cce6; margin:0 0 .8rem; font-size:.96rem; }
+
+  /* 報名 */
+  .sa-signup { background:var(--sa-dark); color:var(--sa-paper); text-align:center; }
+  .sa-signup h2.sec { color:#fff; }
+  .sa-price-card { background:var(--sa-dark2); border:1px solid rgba(201,151,63,.5); border-radius:12px;
+                   padding:2.2rem; max-width:520px; margin:1.4rem auto; }
+  .sa-price-now { font-size:2.6rem; color:var(--sa-gold); font-weight:700; margin:.2rem 0; }
+  .sa-price-unit { font-size:1rem; color:#b6a3d6; }
+  .sa-sessions { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.6rem 0 0; }
+  .sa-session { background:rgba(182,163,214,.1); border:1px solid rgba(182,163,214,.3); border-radius:8px; padding:1.1rem; }
+  .sa-session .t { color:var(--sa-gold-soft); font-size:.82rem; letter-spacing:.1em; margin-bottom:.3rem; }
+  .sa-session .h { color:#fff; font-size:1.15rem; font-weight:700; }
+  .sa-deadline { color:var(--sa-gold-soft); font-size:.95rem; letter-spacing:.06em; margin:1.4rem 0; }
+  .sa-form-wrap { background:#fff; padding:10px; border-radius:8px; margin:2rem auto 0; max-width:660px; }
+  .sa-alt { margin-top:1.6rem; font-size:.95rem; color:#b6a3d6; }
+  .sa-alt a { color:var(--sa-gold); }
+
+  /* FAQ */
+  .sa-faq { background:var(--sa-paper); }
+  .sa-faq details { border-bottom:1px solid #d3c7e4; padding:1rem 0; }
+  .sa-faq summary { cursor:pointer; font-weight:700; list-style:none; color:var(--sa-violet-deep); }
+  .sa-faq summary::before { content:"＋ "; color:var(--sa-violet); }
+  .sa-faq details[open] summary::before { content:"－ "; }
+  .sa-faq details p { margin:.7rem 0 0; color:#4a3f57; }
+
+  @media (max-width:768px){
+    .sa-sessions { grid-template-columns:1fr; }
+    .sa-teacher-flex { flex-direction:column; text-align:center; }
+    .sa-teacher-flex img { width:60%; max-width:200px; }
+    .sa-sec { padding:3rem 0; }
+  }
+</style>
+
+<div class="sa">
+
+  <!-- Hero -->
+  <header class="sa-hero">
+    <img class="sa-hero-bg" src="/assets/images/rituals/soul-axis/hero-soul-axis.webp" alt="" width="2400" height="1350" fetchpriority="high">
+    <div class="sa-hero-in">
+      <a href="/rituals/" class="back">← 返回團體儀式</a>
+      <div class="sa-glyph">✦</div>
+      <span class="sa-tag">團 體 能 量 療 癒・限 額</span>
+      <h1>靈魂中軸團體療癒</h1>
+      <p class="lede">從天地雙星與七個脈輪出發，看見團體當下共同的能量狀態，讓停滯的力量重新流動，轉化為支持生活的動力。</p>
+      <div class="sa-keyinfo">
+        <span>🗓 <b>2026/09/29</b></span>
+        <span>🕑 日間 / 夜間兩場</span>
+        <span>💰 <b>NT$ 600</b></span>
+        <span>🔮 贈幾何精素－中心</span>
+      </div>
+      <a href="#signup" class="cta gold-btn">立即報名</a>
+    </div>
+  </header>
+
+  <!-- 開場：靈魂中軸 -->
+  <section class="sa-sec sa-intro">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">關 於 這 場 療 癒</p>
+      <h2 class="sec">以「靈魂中軸」為架構</h2>
+      <p>本次團體療癒將以<strong>「靈魂中軸」理論</strong>作為主要架構，從天地雙星與七個脈輪出發，觀察團體當下共同呈現出的能量狀態與生命課題。透過對不同能量中心的探索，我們會辨識哪些位置累積了較多壓力、情緒、限制或停滯，以及這些狀態背後所反映的集體主題。</p>
+      <blockquote>透過天地雙星與七個脈輪的層層探索，讓原本較模糊、難以察覺的狀態，逐漸被看見與整理。</blockquote>
+    </div>
+  </section>
+
+  <!-- 集體課題 -->
+  <section class="sa-sec sa-collective">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">什 麼 是 集 體 課 題</p>
+      <h2 class="sec">相似的內在模式</h2>
+      <p>所謂集體課題，並不代表每個人都經歷相同的事情，而是參與者可能在不同的人生情境中，呈現出<strong>相似的內在模式</strong>。</p>
+      <p>這些模式，可能圍繞著這些主題：</p>
+      <div class="sa-themes">
+        <span>安全感</span>
+        <span>自我價值</span>
+        <span>關係界線</span>
+        <span>表達</span>
+        <span>行動力</span>
+        <span>信任</span>
+        <span>生命方向</span>
+        <span>與現實生活的連結</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 轉化 + 安心 -->
+  <section class="sa-sec sa-transform">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">不 只 清 理，更 是 轉 化</p>
+      <h2 class="sec">讓卡住的力量，重新回到自己身上</h2>
+      <p>這次療癒的重點不只是清理與釋放，也會進一步把原本卡住的能量，重新轉化為可以支持生活的動力。當一些長期累積的情緒、限制與內在拉扯開始鬆動，原本消耗在抗拒、壓抑或停滯中的力量，也有機會重新回到自身，轉化成較清楚的<strong>方向感、行動力與內在穩定</strong>。</p>
+      <div class="sa-safe">
+        <h3>🛡 不需要公開個人經歷</h3>
+        <p>整個過程以團體共同形成的場域為基礎，因此不需要公開自己的個人經歷，也不需要逐一說明目前遇到的問題。我們會從當下真正浮現的內容開始，透過靈魂中軸的架構，看見能量目前停留在哪裡、為什麼停留，以及如何讓它重新流動。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精素贈品 -->
+  <section class="sa-sec sa-gift">
+    <div class="wrap">
+      <div class="sa-gift-box">
+        <span class="ribbon">參 加 者 加 贈</span>
+        <h3>🔮 幾何精素－中心</h3>
+        <p>本次參加者將獲贈「幾何精素－中心」，作為療癒後續的支持。這款精素以<strong>回歸中心</strong>為核心概念，協助你在外在環境、情緒與各種人際能量的拉扯之中，重新對準自己的靈魂中心，找回內在的定位與穩定感，也讓本次靈魂中軸療癒的整合，延續到日常生活之中。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 適合誰 -->
+  <section class="sa-sec sa-who">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">適 合 誰</p>
+      <h2 class="sec">這場團體療癒，適合——</h2>
+      <ul>
+        <li>感覺被長期累積的情緒或壓力卡住，想要鬆動它</li>
+        <li>覺得力量消耗在抗拒、壓抑或停滯中，想找回自己</li>
+        <li>想釐清內在的方向感與行動力</li>
+        <li>希望在不需公開個人經歷的安全場域中，進行內在整理</li>
+        <li>想為自己重新對準中心、找回內在穩定</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 施作者 -->
+  <section class="sa-sec sa-teacher">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1.6rem;">帶 領 者</p>
+      <div class="sa-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <h3>四月老師</h3>
+          <p class="role">靈火巫境創辦人</p>
+          <p>深耕身心靈領域數十年，專研西方魔法與多種能量療癒體系，長年帶領個案與團體進行內在探索與整理。台灣、香港、馬來西亞皆有眾多學員與客戶。</p>
+          <p>這場靈魂中軸團體療癒，由四月老師親自帶領。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 報名 -->
+  <section class="sa-sec sa-signup" id="signup">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">立 即 報 名</p>
+      <h2 class="sec">報名資訊</h2>
+      <div class="sa-price-card">
+        <div class="sa-price-unit">靈魂中軸團體療癒</div>
+        <div class="sa-price-now">NT$ 600</div>
+        <div class="sa-sessions">
+          <div class="sa-session">
+            <div class="t">☀ 日間場</div>
+            <div class="h">14:00–15:00</div>
+          </div>
+          <div class="sa-session">
+            <div class="t">🌙 夜間場</div>
+            <div class="h">19:30–20:30</div>
+          </div>
+        </div>
+        <p style="color:#b6a3d6; font-size:.85rem; margin:1rem 0 0;">兩場擇一參加，報名時選擇時段</p>
+      </div>
+      <p class="sa-deadline">🗓 活動日 2026/09/29　｜　⏳ 報名截止 2026/09/24</p>
+
+      <div class="sa-form-wrap">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdgYyVF41JwKzQ-xNXcUKRl9fut3eitOsCqJY9fuUf7dhLzoA/viewform?embedded=true"
+          width="100%" height="1500" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="靈魂中軸團體療癒報名表單">載入中…</iframe>
+      </div>
+
+      <p class="sa-alt">
+        或來信 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-靈魂中軸團體療癒">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，
+        標題註明「靈魂中軸團體療癒」，附上姓名、聯絡電話與希望的時段。
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sa-sec sa-faq">
+    <div class="wrap">
+      <p class="eyebrow">常 見 問 題</p>
+      <h2 class="sec">報名前，你可能想知道</h2>
+      <details>
+        <summary>我需要公開自己的問題或經歷嗎？</summary>
+        <p>不需要。整個過程以團體共同形成的場域為基礎，你不需要公開個人經歷，也不需要逐一說明目前遇到的狀況。我們會從團體當下真正浮現的內容開始。</p>
+      </details>
+      <details>
+        <summary>日間場和夜間場有什麼不同？</summary>
+        <p>兩場內容同樣以靈魂中軸為架構，差別在時段。每一次團體呈現的課題都不同，會依當下實際浮現的內容進行。依你方便的時間擇一報名即可。</p>
+      </details>
+      <details>
+        <summary>需要有相關基礎或經驗嗎？</summary>
+        <p>不需要。這是開放參加的團體療癒，沒有先修條件，第一次接觸能量療癒也能參與。</p>
+      </details>
+      <details>
+        <summary>「幾何精素－中心」是什麼？怎麼拿到？</summary>
+        <p>這是本次參加者的贈品，以「回歸中心」為概念，作為療癒後續的日常支持。領取與使用方式會在報名後告知。</p>
+      </details>
+      <details>
+        <summary>參加療癒需要注意什麼？</summary>
+        <p>能量療癒著重於情緒與內在狀態的探索與整理，並非醫療行為，也不能取代任何醫療診斷或治療。若你正在接受身心相關的醫療照護，請以專業醫療建議為主，療癒可作為額外的自我照顧與陪伴。</p>
+      </details>
+    </div>
+  </section>
+
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "靈魂中軸團體療癒",
+  "startDate": "2026-09-29T14:00",
+  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": { "@type": "VirtualLocation", "url": "https://hoodoo.pro/rituals/soul-axis/" },
+  "description": "以靈魂中軸理論為架構的團體能量療癒，從天地雙星與七脈輪探索集體課題，讓停滯能量重新流動。參加加贈幾何精素－中心。",
+  "organizer": { "@type": "Person", "name": "四月老師" },
+  "offers": { "@type": "Offer", "price": "600", "priceCurrency": "TWD", "url": "https://hoodoo.pro/rituals/soul-axis/", "availabilityEnds": "2026-09-24" }
+}
+</script>
