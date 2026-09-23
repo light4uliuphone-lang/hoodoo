@@ -1,51 +1,45 @@
-<style>
-  .promo-bar { display:block; text-decoration:none; background:linear-gradient(100deg,#1f1810 0%,#2f2317 55%,#1a1109 100%);
-               border-bottom:1px solid rgba(201,151,63,.4); padding:.9rem 1.5rem; text-align:center;
-               transition:filter .15s ease; }
-  .promo-bar:hover { filter:brightness(1.15); }
-  .promo-bar-in { max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:center;
-                  gap:.6rem 1.2rem; flex-wrap:wrap; }
-  .promo-bar .tag { background:#8c3b2e; color:#fff; font-size:.72rem; font-weight:700; letter-spacing:.15em;
-                    padding:.2rem .9rem; border-radius:999px; white-space:nowrap; }
-  .promo-bar .promo-ad-img { height:30px; width:auto; max-width:72px; border-radius:6px; object-fit:cover; vertical-align:middle; }
-  .promo-bar .msg { color:#f4ecdd; font-size:.98rem; letter-spacing:.03em; }
-  .promo-bar .msg b { color:#c9973f; font-size:1.1rem; }
-  .promo-bar .go { color:#c9973f; font-size:.9rem; font-weight:700; letter-spacing:.08em; white-space:nowrap; }
-  @media (max-width:600px){
-    .promo-bar { padding:.8rem 1rem; }
-    .promo-bar .msg { font-size:.9rem; }
-  }
-</style>
- 
-<a class="promo-bar" data-ad-bar href="#" target="_blank" rel="noopener noreferrer" style="display:none;">
-  <span class="promo-bar-in">
-    <span class="tag">精 選 推 薦</span>
-    <img class="promo-ad-img" src="" alt="精選推薦" loading="lazy">
-    <span class="msg promo-ad-text">立即前往了解更多 →</span>
-    <span class="go">→</span>
-  </span>
-</a>
+<div class="custom-random-ad" style="margin-top: 3rem; text-align: center; border-top: 1px solid #eee; padding-top: 2rem; margin-bottom: 3rem; display: none;">
+
+    <p style="font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; letter-spacing: 1px;">- 精選推薦 -</p>
+
+    <a class="ad-link" href="#" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: inline-block; max-width: 100%; margin-bottom: 2rem;">
+        <div class="ad-card" style="position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background: #fff; transition: transform 0.3s ease;">
+
+            <img class="ad-img" src="" alt="精選商品推薦" style="display: block; max-width: 100%; height: auto; border-radius: 12px;">
+
+            <div class="ad-text" style="padding: 15px; background: #1a5f5f; color: white; font-weight: bold; font-size: 1rem; border-radius: 0 0 12px 12px;">
+                立即前往了解更多 →
+            </div>
+        </div>
+    </a>
+
+</div>
 
 <script>
-(function () {
-  // 【設定區：廣告清單】與 google-ad-bottom.html 相同
-  var adData = [
-    { link: "https://go98.me/soul-axis", img: "https://go98.me/img-soul-axis", text: "立即前往了解更多 →" },
-    { link: "https://go98.me/shop01", img: "https://go98.me/shopimg01", text: "立即前往了解更多 →" },
-    { link: "https://go98.me/shop02", img: "https://go98.me/shopimg02", text: "限時優惠實施中 →" }
-  ];
+(function() {
+    // 廣告清單來自 _data/ads.yml（唯一來源）
+    var adData = {{ site.data.ads | jsonify }};
+    if (!adData || !adData.length) return;
 
-  var pick = adData[Math.floor(Math.random() * adData.length)];
+    var containers = document.querySelectorAll('.custom-random-ad');
 
-  document.querySelectorAll('a.promo-bar[data-ad-bar]').forEach(function (bar) {
-    if (bar.getAttribute('data-filled') === '1') return;
-    bar.href = pick.link;
-    var img = bar.querySelector('.promo-ad-img');
-    if (img) { img.src = pick.img; img.alt = "精選推薦"; }
-    var txt = bar.querySelector('.promo-ad-text');
-    if (txt) txt.textContent = pick.text;
-    bar.setAttribute('data-filled', '1');
-    bar.style.display = 'block';
-  });
+    containers.forEach(function(container) {
+        if (container.getAttribute('data-filled') === '1') return;
+        var selected = adData[Math.floor(Math.random() * adData.length)];  // 每個位置各自隨機
+        var link = container.querySelector('.ad-link');
+        var img = container.querySelector('.ad-img');
+        var text = container.querySelector('.ad-text');
+        var card = container.querySelector('.ad-card');
+
+        link.href = selected.link;
+        img.src = selected.img;
+        text.innerText = selected.text;
+
+        container.setAttribute('data-filled', '1');
+        container.style.display = 'block';
+
+        card.onmouseover = function() { this.style.transform = 'translateY(-5px)'; };
+        card.onmouseout = function() { this.style.transform = 'translateY(0)'; };
+    });
 })();
 </script>
