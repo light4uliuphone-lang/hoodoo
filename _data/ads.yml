@@ -1,0 +1,17 @@
+# ────────────────────────────────────────────────
+# 推薦廣告商品清單（唯一來源）
+# 新增／修改／刪除廣告，只要改這個檔即可，全站三個廣告區塊同步：
+#   - _includes/promo-banner.html      （文章中段・首頁橫幅）
+#   - _includes/google-ad-bottom.html  （文章最下方）
+#   - _includes/my-self-ad.html        （細長橫幅）
+# 每一則需要三個欄位：link（連結）、img（圖片網址）、text（按鈕文字）
+# ────────────────────────────────────────────────
+- link: "https://go98.me/soul-axis"
+  img:  "https://go98.me/img-soul-axis"
+  text: "立即前往了解更多 →"
+- link: "https://go98.me/shop01"
+  img:  "https://go98.me/shopimg01"
+  text: "立即前往了解更多 →"
+- link: "https://go98.me/shop02"
+  img:  "https://go98.me/shopimg02"
+  text: "限時優惠實施中 →"
