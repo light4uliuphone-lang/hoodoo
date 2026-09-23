@@ -2,10 +2,10 @@
   推薦廣告橫幅（可重複使用）— 隨機播放・圖片卡片版
   用法：{% include promo-banner.html %}
   建議放在 index.html 與 course-latest.html 的最上方（Hero 之前或之後）
-  行為：從下方 adData 隨機抽選一則推薦廣告，以圖片卡片形式顯示（與 google-ad-bottom 相同版型與廣告）。
-  ※ 廣告清單（adData）同時存在於本檔、my-self-ad.html 與 google-ad-bottom.html，
-    要新增／修改廣告時，三處都要一起更新（或日後改為共用一份資料）。
-  停用：把引用這個 include 的那一行刪掉即可，不需改動其他內容。
+  行為：從 _data/ads.yml 隨機抽選一則推薦廣告，以圖片卡片形式顯示。
+  ※ 廣告清單現在集中在 _data/ads.yml（唯一來源），三個廣告檔共用。
+    要新增／修改廣告，只改 _data/ads.yml 即可，不必動這個檔。
+  停用：把引用這個 include 的那一行刪掉即可。
 {% endcomment %}
 
 <div class="promo-ad" style="max-width:640px; margin:1.5rem auto; padding:0 1rem; text-align:center; display:none;">
@@ -20,16 +20,13 @@
 
 <script>
 (function () {
-  // 【設定區：廣告清單】與 google-ad-bottom.html 相同
-  var adData = [
-    { link: "https://go98.me/shop01", img: "https://go98.me/shopimg01", text: "立即前往了解更多 →" },
-    { link: "https://go98.me/shop02", img: "https://go98.me/shopimg02", text: "限時優惠實施中 →" }
-  ];
-
-  var pick = adData[Math.floor(Math.random() * adData.length)];
+  // 廣告清單來自 _data/ads.yml（唯一來源）
+  var adData = {{ site.data.ads | jsonify }};
+  if (!adData || !adData.length) return;
 
   document.querySelectorAll('.promo-ad').forEach(function (box) {
     if (box.getAttribute('data-filled') === '1') return;
+    var pick = adData[Math.floor(Math.random() * adData.length)];  // 每個位置各自隨機
     var link = box.querySelector('.promo-ad-link');
     var img  = box.querySelector('.promo-ad-img');
     var text = box.querySelector('.promo-ad-text');
