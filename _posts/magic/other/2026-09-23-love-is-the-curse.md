@@ -11,7 +11,7 @@ category: [magic]
 
 <div style="background:#1c1a24; color:#e8e2d0; border-left:4px solid #8c3b2e; padding:1.5rem 1.7rem; margin:2rem 0; border-radius:6px; font-family:'Noto Serif TC','Songti TC',serif; line-height:2;">
 你們，無人呼喚、無人愛著，而我需要你們。我愛你們，也呼喚你們。聽見我，仔細聽我說。<br>
-我等待著你們去佔據 <strong>［姓名］</strong> 的五感，使他不得安寧，並支配他。<br>
+我等待著你們去佔據 <span style="color:#c9973f; font-weight:700;">［姓名］</span> 的五感，使他不得安寧，並支配他。<br>
 不要讓他得到平靜。不要讓他安坐在椅子上。不要讓他進食。不要讓他與任何其他人同眠。<br>
 讓他奔走，並且不讓任何人幫助他，直到他來到我的腳前請求寬恕。
 </div>
