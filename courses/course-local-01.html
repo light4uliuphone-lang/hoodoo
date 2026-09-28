@@ -1,81 +1,335 @@
 ---
 layout: default
 title: "台灣本土藥草魔法 - 歐比路老師"
+description: "50 支台灣本土藥草，不再依賴進口。學會藥草魔性研究推論，從此能獨立思考、自己判讀配方。11/07 台北實體開課，早鳥 10/25 截止。"
+image: /assets/images/courses/local-01/og-local-herb.jpg
 ---
 
-<div class="container" style="padding: 3rem 0;">
-    <a href="/course/" class="back-link">← 返回課程中心</a>
+<style>
+  /* ===== 台灣本土藥草魔法 銷售頁（lc- 前綴）===== */
+  .lc-page { --lc-ink:#22271f; --lc-paper:#f2f0e6; --lc-paper-deep:#e4e2d1;
+             --lc-dark:#161d16; --lc-dark2:#1f2a20; --lc-gold:#c9973f;
+             --lc-gold-soft:#e6cfa0; --lc-green:#3e5c48; --lc-green-deep:#2f4a38;
+             --lc-terra:#a8532a; --lc-terra-soft:#d99b6a;
+             font-size:1rem; color:var(--lc-ink); line-height:1.85; }
+  .lc-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--lc-ink); letter-spacing:.05em; }
+  .lc-section { padding:3.5rem 1.25rem; }
+  .lc-inner { max-width:860px; margin:0 auto; }
+  .lc-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--lc-terra);
+                border-bottom:1px solid var(--lc-terra); padding-bottom:.3rem; margin-bottom:1rem; }
+  .lc-cta { display:inline-block; background:var(--lc-terra); color:#fff !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(168,83,42,.35); transition:transform .15s ease, box-shadow .15s ease; }
+  .lc-cta:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(168,83,42,.45); }
+  @media (prefers-reduced-motion: reduce){ .lc-cta{ transition:none } .lc-cta:hover{ transform:none } }
 
-    <div class="course-detail-header">
-        <h1>{{ page.title | split: " - " | first }}</h1>
-        <div class="meta">
-            <span>🇹🇼 台灣本土藥草</span>
-            <span>🔬 藥草魔性研究</span>
-            <span>📊 核心必修</span>
-            <span>👨‍🏫 歐比路老師</span>
-        </div>
+  /* Hero */
+  .lc-hero { position:relative; background:var(--lc-dark); color:var(--lc-paper);
+             padding:5rem 1.25rem 4rem; overflow:hidden; }
+  .lc-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .lc-hero::after { content:""; position:absolute; inset:0;
+                    background:linear-gradient(100deg, rgba(22,29,22,.95) 0%, rgba(22,29,22,.8) 45%, rgba(22,29,22,.35) 72%, rgba(22,29,22,.15) 100%); }
+  .lc-hero-inner { position:relative; z-index:2; max-width:860px; margin:0 auto; }
+  .lc-hero h1 { font-size:clamp(1.7rem, 4.5vw, 2.6rem); line-height:1.4; margin:.5rem 0 1rem; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .lc-hero .lc-sub { font-size:1.05rem; color:var(--lc-gold-soft); max-width:34em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .lc-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem; color:#eef2e6; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .lc-hero-note { font-size:.85rem; color:var(--lc-gold-soft); margin-top:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+
+  /* 痛點 */
+  .lc-pain { background:var(--lc-paper); }
+  .lc-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .lc-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #ccc9b4; }
+  .lc-pain li::before { content:"✓"; position:absolute; left:.4rem; color:var(--lc-green); font-weight:700; }
+  .lc-punch { background:var(--lc-paper-deep); border-left:4px solid var(--lc-gold);
+              padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  /* 敘事 */
+  .lc-story { background:var(--lc-dark2); color:#e8ecdf; }
+  .lc-story h2 { color:#fff; }
+  .lc-story blockquote { border-left:3px solid var(--lc-gold); padding:.6rem 0 .6rem 1.2rem; margin:1.4rem 0; font-size:1.12rem; color:#fff; }
+
+  /* 成果 */
+  .lc-gain { background:var(--lc-paper); }
+  .lc-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .lc-gain-card { background:#fff; border:1px solid #d7d3bd; border-radius:8px; padding:1.2rem 1.3rem; }
+  .lc-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--lc-green); letter-spacing:.08em; }
+  .lc-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+
+  /* 大綱 */
+  .lc-syllabus { background:var(--lc-paper-deep); }
+  .lc-syl-grid { display:grid; grid-template-columns:1fr 1fr; gap:.4rem 2rem; margin-top:1rem; }
+  .lc-syl-grid ul { margin:0; padding-left:0; list-style:none; }
+  .lc-syl-grid li { padding:.55rem 0 .55rem 2rem; position:relative; border-bottom:1px solid #d5d1ba; font-size:.96rem; }
+  .lc-syl-grid li b { color:var(--lc-terra); position:absolute; left:0; }
+
+  /* 見證 */
+  .lc-proof { background:var(--lc-paper); }
+  .lc-trustbar { display:flex; flex-wrap:wrap; gap:.6rem 1.8rem; justify-content:center;
+                 font-size:.92rem; color:var(--lc-green); border-top:1px solid #d5d1ba;
+                 padding-top:1.2rem; margin-top:.6rem; }
+
+  /* 老師 */
+  .lc-teacher { background:var(--lc-dark2); color:#e8ecdf; }
+  .lc-teacher h2 { color:#fff; }
+  .lc-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .lc-teacher-flex img { width:240px; height:auto; border-radius:8px; flex:0 0 auto; border:1px solid rgba(201,151,63,.4); }
+
+  /* 系列導覽 */
+  .lc-series { background:var(--lc-paper); }
+  .lc-series-box { background:var(--lc-paper-deep); border-left:4px solid var(--lc-green); border-radius:0 8px 8px 0; padding:1.5rem 1.7rem; }
+  .lc-series-box ul { list-style:none; padding:0; margin:.6rem 0 0; line-height:2; }
+  .lc-series-box a { color:var(--lc-green); }
+
+  /* 價格 */
+  .lc-price { background:var(--lc-dark); color:var(--lc-paper); }
+  .lc-price h2 { color:#fff; }
+  .lc-price-card { background:var(--lc-dark2); border:1px solid rgba(201,151,63,.5); border-radius:10px;
+                   padding:2rem 1.8rem; max-width:520px; margin:1.4rem auto; text-align:center; }
+  .lc-plan-tag { display:inline-block; font-size:.85rem; letter-spacing:.2em; color:var(--lc-gold);
+                 border:1px solid var(--lc-gold); border-radius:999px; padding:.2rem 1rem; margin-bottom:1rem; }
+  .lc-price-old { text-decoration:line-through; color:#8f9683; font-size:1.05rem; }
+  .lc-price-now { font-size:2rem; color:var(--lc-gold); font-weight:700; margin:.3rem 0; }
+  .lc-price-save { color:var(--lc-gold-soft); font-size:.95rem; }
+  .lc-combo { background:rgba(201,151,63,.1); border:1px solid rgba(201,151,63,.4); border-radius:8px;
+              padding:.9rem 1.2rem; margin:1.2rem auto 0; font-size:.92rem; color:var(--lc-gold-soft); }
+  .lc-includes { text-align:left; margin:1.4rem auto; padding-left:1.3rem; font-size:.95rem; max-width:380px; }
+  .lc-deadline { text-align:center; font-size:.95rem; color:var(--lc-gold-soft); letter-spacing:.08em; margin-bottom:1.6rem; }
+  .lc-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:2rem; }
+  .lc-alt-signup { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#e7ecdc; }
+  .lc-alt-signup a { color:var(--lc-gold); }
+
+  /* FAQ */
+  .lc-faq { background:var(--lc-paper); }
+  .lc-faq details { border-bottom:1px solid #d5d1ba; padding:.9rem 0; }
+  .lc-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .lc-faq summary::before { content:"＋ "; color:var(--lc-terra); }
+  .lc-faq details[open] summary::before { content:"－ "; }
+  .lc-faq details p { margin:.6rem 0 0; }
+
+  @media (max-width: 768px) {
+    .lc-section { padding:2.6rem 1.1rem; }
+    .lc-gain-grid, .lc-syl-grid { grid-template-columns:1fr; }
+    .lc-teacher-flex { flex-direction:column; }
+    .lc-teacher-flex img { width:100%; max-width:320px; }
+    .lc-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="lc-page">
+
+  <!-- ① Hero -->
+  <header class="lc-hero">
+    <img class="lc-hero-bg" src="/assets/images/courses/local-01/hero-local-herb.webp"
+         alt="" width="2400" height="1350" fetchpriority="high">
+    <div class="lc-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#e6cfa0; font-size:.9rem; opacity:.85; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="lc-eyebrow" style="display:block; width:fit-content; color:#e6cfa0; border-color:#e6cfa0;">台灣本土藥草系列・核心必修</p>
+      <h1>不必再等進口藥草，<br>你腳下的土地就有魔法</h1>
+      <p class="lc-sub">50 支台灣本土藥草，加上一套「藥草魔性研究推論」的方法。學完之後，你不再問「這支可以嗎」，而是自己就能判讀、推演、替換。</p>
+      <div class="lc-hero-meta">
+        <span>📅 2026/11/07（六）10:00–16:00</span>
+        <span>🏛 台北實體班・全日課程</span>
+        <span>🌏 貼近胡督原始精神</span>
+      </div>
+      <a class="lc-cta" href="#signup">搶早鳥價，立即報名</a>
+      <p class="lc-hero-note">早鳥優惠 10/25 截止，現省 1,000 元</p>
     </div>
+  </header>
 
-    
-    <div class="course-detail-content">
-        <h2>課程介紹</h2>
-        <p>胡督(Hoodoo)是西方的民間咒術、民俗方法。在各家上，都有著自己的一套方法。每位工作者用的藥草、方式完全不同。</p>
-        <p>最原始的胡督傳統工作者，根本沒有所謂的標準配方，僅靠著自身經驗的累積，利用周遭可以利用的物品進行咒術工作。胡督魔法深耕台灣超過十年的時間，我們是否該回過頭來思考，最早期的胡督工作者是利用，周遭可取得的物品進行咒術工作，那我們是不是該開始，就台灣現有的本土藥草進行研究呢？</p>
-        <p>加上國外藥草的不易取得，往往是許多人初入藥草魔法領域的一大阻礙。為此，便有了這門課的誕生。這門課我們除了要來介紹，易取得的 <strong>50 支本土藥草</strong>，幫助大家順利進入本土藥草魔法，貼近胡督的原始精神。</p>
-        <p>本課程還有另個核心重點：<strong>藥草魔性研究推論</strong>。藉著實際操作藥草魔性區辨，讓大家能夠開始學習如何獨立思考，不再落於「這配方可以嗎？」、「換這支藥草好不好？」、「這支藥草功能是什麼？」，進而累積藥草魔法的實作能力，開啟藥草魔法領域的視野。</p>
-
-        <h2>課程大綱</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <ul style="line-height: 1.8; list-style-type: none; padding-left: 0;">
-                <li>1. 台灣本土藥草魔法概論</li>
-                <li>2. 本土藥草魔性研究法</li>
-                <li>3. 本土藥草魔性特殊研究法</li>
-                <li>4. 本土藥草魔法未來發展</li>
-                <li>5. 名望商譽的本土藥草</li>
-                <li>6. 開啟道路的本土藥草</li>
-            </ul>
-            <ul style="line-height: 1.8; list-style-type: none; padding-left: 0;">
-                <li>7. 擺脫金錢困境的本土藥草</li>
-                <li>8. 吸引金錢財富的本土藥草</li>
-                <li>9. 人緣魅力的本土藥草</li>
-                <li>10. 愛情關係的本土藥草</li>
-                <li>11. 保護淨化的本土藥草</li>
-                <li>12. 基礎本土藥草配方解析(金錢、愛情、淨化)</li>
-            </ul>
-        </div>
-
-        <h2>課程資訊</h2>
-        <div class="course-info-box">
-            <p><strong>⏰ 上課時間：</strong>2026/11/07（六）10:00–16:00</p>
-            <p><strong>💰 課程價格：</strong>特價 11,000元 (原價 12,000元)</p>
-            <p><strong>🐣 早鳥優惠：</strong><strong>10,000元</strong> (2026/10/25 前完成報名繳費)</p>
-            <p><strong>🎁 合報優惠：</strong>如與台灣本土藥草魔法實作課兩課合報，可享特價 13,000元</p>
-            <p><strong>⌛ 報名截止：</strong>2026/11/02</p>
-        </div>
-
-        <h2>📜 系列課程導覽</h2>
-        <div class="series-nav" style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #1a5f5f;">
-            <p style="margin-bottom: 1rem; font-weight: bold; color: #1a5f5f;">🌿 台灣本土藥草系列：</p>
-            <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-                <li><strong>▶ 1. 【核心】台灣本土藥草魔法理論（目前所在）</strong></li>
-                <li><a href="/courses/course-local-02/">2. 【進階】七行星藥草課程</a></li>
-                <li><a href="/courses/course-local-03/">3. 【實作】好運成雙實作課</a></li>
-                <li><a href="/courses/course-local-04/">4. 【實作】日進斗金藥草小祭壇</a></li>
-                <li><a href="/courses/course-local-05/">5. 【核心】配方解析與魔法油實作</a></li>
-            </ul>
-        </div>
-
-        <h2>老師介紹</h2>
-        <div class="teacher-info">
-            <h3>歐比路老師</h3>
-            <p>研究兒童青少年精神醫學領域時，接觸靈性領域。並在與祖靈相遇的過程中，獲得靈性啟發，開始學習魔法咒術。早上是位熱愛統計學的工程師，晚上則變成鑽研咒術的魔法工作者。喜愛以心理動力觀點詮釋魔法，擅長策略性整合有限資源，獲得最佳化魔法效益。認為現實策略與魔法策略，皆是構成魔法的重要因素。粉絲專頁：歐比路藥草魔法實驗室</p>
-        </div>
-
-        <h2>報名方式</h2>
-        <div class="registration-info">
-            <p><strong>方式一：</strong>請點擊 <a href="https://www.hoodoo.me/obilu-msa01" target="_blank">官方報名頁面</a> 直接進行報名。</p>
-            <p><strong>方式二：</strong>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
-            <p>郵件標題請註明：<strong>「報名 {{ page.title | split: " - " | first }}」</strong>，並告知您的姓名與聯絡電話。</p>
-        </div>
+  <!-- ② 適合誰 -->
+  <section class="lc-section lc-pain">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">適合誰</p>
+      <h2>你是不是也卡在這些地方？</h2>
+      <ul>
+        <li>想學藥草魔法，卻總卡在「國外藥草買不到、太貴、來路不明」</li>
+        <li>照著配方做，但只要少一支藥草就不知道能不能換、怎麼換</li>
+        <li>看了很多資料，還是只會「背配方」，不會「讀配方」</li>
+        <li>想知道台灣本地的植物，到底能不能拿來做魔法工作</li>
+      </ul>
+      <p class="lc-punch">最原始的胡督工作者，根本沒有標準配方——他們靠的是判斷力，用周遭可取得的東西完成工作。這門課要還你的，就是這份判斷力。</p>
     </div>
+  </section>
+
+  <!-- ③ 敘事 -->
+  <section class="lc-section lc-story">
+    <div class="lc-inner">
+      <p class="lc-eyebrow" style="color:#c9973f; border-color:#c9973f;">緣起</p>
+      <h2>回到胡督最原始的精神</h2>
+      <p>胡督（Hoodoo）是西方的民間咒術。在各家傳承裡，每位工作者用的藥草與方法都不一樣——因為最原始的胡督，本來就沒有標準配方，僅靠自身經驗的累積，利用周遭可取得的物品進行咒術工作。</p>
+      <blockquote>胡督在台灣深耕超過十年，我們是否該回過頭來，就台灣現有的本土藥草進行研究？</blockquote>
+      <p>國外藥草不易取得，往往是許多人踏入藥草魔法的第一道阻礙。這門課因此而生——介紹 50 支容易取得的本土藥草，幫你順利進入本土藥草魔法，貼近胡督的原始精神。</p>
+    </div>
+  </section>
+
+  <!-- ④ 成果 -->
+  <section class="lc-section lc-gain">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">學習成果</p>
+      <h2>一堂課之後，你將能夠——</h2>
+      <div class="lc-gain-grid">
+        <div class="lc-gain-card">
+          <h3>認識本土藥草</h3>
+          <ul>
+            <li>掌握 50 支易取得的台灣本土藥草</li>
+            <li>對應金錢、愛情、淨化、人緣、保護等各類目的</li>
+          </ul>
+        </div>
+        <div class="lc-gain-card">
+          <h3>魔性研究推論</h3>
+          <ul>
+            <li>學會本土藥草魔性研究法與特殊研究法</li>
+            <li>實際操作藥草魔性區辨，訓練獨立判斷</li>
+          </ul>
+        </div>
+        <div class="lc-gain-card">
+          <h3>獨立思考的能力</h3>
+          <ul>
+            <li>不再落入「這配方可以嗎」的依賴</li>
+            <li>能自行推演、替換、調配，開闊藥草魔法視野</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 大綱 -->
+  <section class="lc-section lc-syllabus">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">課程大綱</p>
+      <h2>十二個單元，從理論到實用配方</h2>
+      <div class="lc-syl-grid">
+        <ul>
+          <li><b>1</b>台灣本土藥草魔法概論</li>
+          <li><b>2</b>本土藥草魔性研究法</li>
+          <li><b>3</b>本土藥草魔性特殊研究法</li>
+          <li><b>4</b>本土藥草魔法未來發展</li>
+          <li><b>5</b>名望商譽的本土藥草</li>
+          <li><b>6</b>開啟道路的本土藥草</li>
+        </ul>
+        <ul>
+          <li><b>7</b>擺脫金錢困境的本土藥草</li>
+          <li><b>8</b>吸引金錢財富的本土藥草</li>
+          <li><b>9</b>人緣魅力的本土藥草</li>
+          <li><b>10</b>愛情關係的本土藥草</li>
+          <li><b>11</b>保護淨化的本土藥草</li>
+          <li><b>12</b>基礎配方解析（金錢、愛情、淨化）</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 見證 -->
+  <section class="lc-section lc-proof">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">學員回饋</p>
+      <h2>學員怎麼說</h2>
+      {% include testimonials.html tag="local-01" limit=4 %}
+      <p style="text-align:center; margin-top:.5rem;">
+        <a href="/testimonials/" style="color:var(--lc-terra);">看更多學員回饋 →</a>
+      </p>
+      <div class="lc-trustbar">
+        <span>🌏 台灣・香港・馬來西亞學員遍布</span>
+        <span>🔬 藥草魔性研究獨門教學</span>
+        <span>🌿 貼近胡督原始精神</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ 老師 -->
+  <section class="lc-section lc-teacher">
+    <div class="lc-inner">
+      <p class="lc-eyebrow" style="color:#c9973f; border-color:#c9973f;">授課老師</p>
+      <h2>歐比路老師</h2>
+      <div class="lc-teacher-flex">
+        <img src="/assets/images/shared/teacher-obiluo.webp"
+             alt="歐比路老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>研究兒童青少年精神醫學領域時接觸靈性領域，並在與祖靈相遇的過程中獲得啟發，開始學習魔法咒術。早上是熱愛統計學的工程師，晚上則是鑽研咒術的魔法工作者。</p>
+          <p>擅長以心理動力觀點詮釋魔法，策略性整合有限資源以獲得最佳化的魔法效益。認為現實策略與魔法策略，皆是構成魔法的重要因素。</p>
+          <p style="color:var(--lc-gold-soft); font-size:.9rem;">粉絲專頁：歐比路藥草魔法實驗室</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧ 系列導覽 -->
+  <section class="lc-section lc-series">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">學習路徑</p>
+      <h2>台灣本土藥草系列</h2>
+      <div class="lc-series-box">
+        <p style="margin:0; font-weight:bold; color:var(--lc-green);">🌿 循序漸進，建立完整的本土藥草體系：</p>
+        <ul>
+          <li><strong>▶ 1.【核心】台灣本土藥草魔法理論（目前所在）</strong></li>
+          <li><a href="/courses/course-local-02/">2.【進階】七行星藥草課程</a></li>
+          <li><a href="/courses/course-local-03/">3.【實作】好運成雙實作課</a></li>
+          <li><a href="/courses/course-local-04/">4.【實作】日進斗金藥草小祭壇</a></li>
+          <li><a href="/courses/course-local-05/">5.【核心】配方解析與魔法油實作</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ 價格與報名 -->
+  <section class="lc-section lc-price" id="signup">
+    <div class="lc-inner">
+      <p class="lc-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程費用</p>
+      <h2 style="text-align:center;">報名資訊</h2>
+      <div class="lc-price-card">
+        <span class="lc-plan-tag">🏛 台北實體班・全日課程</span>
+        <p style="margin:.2rem 0; font-size:1.05rem;">2026/11/07（六）10:00–16:00</p>
+        <p class="lc-price-old">原價 12,000 元</p>
+        <p class="lc-price-now">早鳥價 10,000 元</p>
+        <p class="lc-price-save">2026/10/25 前完成報名繳費（特價 11,000 元）</p>
+        <ul class="lc-includes">
+          <li>50 支本土藥草屬性講義</li>
+          <li>藥草實物現場觸摸、辨識與體驗</li>
+          <li>藥草魔性研究推論實作</li>
+          <li>金錢、愛情、淨化基礎配方解析</li>
+        </ul>
+        <div class="lc-combo">🎁 與「台灣本土藥草魔法實作課」兩課合報，享特價 <strong>13,000 元</strong></div>
+      </div>
+      <p class="lc-deadline">⏳ 早鳥截止 10/25｜報名截止 11/02｜上課時間 11/07（六）10:00–16:00</p>
+
+      <div class="lc-form-wrap" id="lc-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdykFYxwP2Y9SALoi1tHNo4K_jGEdCuSWI8ci01V8-aiBxeig/viewform?embedded=true"
+          width="100%" height="1280" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="台灣本土藥草魔法報名表單">載入中…</iframe>
+      </div>
+
+      <p class="lc-alt-signup">
+        或來信 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-台灣本土藥草魔法">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名台灣本土藥草魔法」，附上姓名與聯絡電話。送出後三日內回信確認。
+      </p>
+    </div>
+  </section>
+
+  <!-- ⑩ FAQ -->
+  <section class="lc-section lc-faq">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>我完全沒有藥草魔法基礎，可以上嗎？</summary>
+        <p>可以。這門課從本土藥草的概論與魔性研究法教起，重點是建立「獨立判斷」的能力，零基礎也能跟上。</p>
+      </details>
+      <details>
+        <summary>這門課和胡督的藥草基礎課有什麼不同？</summary>
+        <p>胡督藥草基礎聚焦在通用的藥草魔法入門；這門課專攻「台灣本土藥草」，解決國外藥草不易取得的問題，並教你藥草魔性研究推論，兩者可互相搭配。</p>
+      </details>
+      <details>
+        <summary>合報優惠怎麼算？</summary>
+        <p>本課與「台灣本土藥草魔法實作課」兩門合報，享特價 13,000 元。報名時在表單或來信中註明想合報即可。</p>
+      </details>
+      <details>
+        <summary>上完之後還有其他課嗎？</summary>
+        <p>有。你可以接續七行星藥草、好運成雙、日進斗金、配方解析與魔法油實作，完成整個本土藥草系列。</p>
+      </details>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#a8532a" bg="#e4e2d1" %}
+
 </div>
