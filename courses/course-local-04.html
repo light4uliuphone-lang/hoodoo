@@ -1,58 +1,271 @@
 ---
 layout: default
 title: "台灣本土藥草實作課程：日進斗金 - 歐比路老師"
+description: "以聚寶陶甕製作專屬的日進斗金藥草小祭壇，引財也守財。加碼三支未收錄的本土藥草，練習藥草魔性辨認。11/07 台北實體，與本土藥草核心課合報 13,000 元。"
+image: /assets/images/courses/local-01/og-local-herb.jpg
 ---
 
-<div class="container" style="padding: 3rem 0;">
-    <a href="/course/" class="back-link">← 返回課程中心</a>
+<style>
+  /* ===== 日進斗金實作課 銷售頁（lc- 前綴，與本土藥草系列共用視覺）===== */
+  .lc-page { --lc-ink:#22271f; --lc-paper:#f2f0e6; --lc-paper-deep:#e4e2d1;
+             --lc-dark:#161d16; --lc-dark2:#1f2a20; --lc-gold:#c9973f;
+             --lc-gold-soft:#e6cfa0; --lc-green:#3e5c48; --lc-green-deep:#2f4a38;
+             --lc-terra:#a8532a; --lc-terra-soft:#d99b6a;
+             font-size:1rem; color:var(--lc-ink); line-height:1.85; }
+  .lc-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--lc-ink); letter-spacing:.05em; }
+  .lc-section { padding:3.5rem 1.25rem; }
+  .lc-inner { max-width:860px; margin:0 auto; }
+  .lc-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--lc-terra);
+                border-bottom:1px solid var(--lc-terra); padding-bottom:.3rem; margin-bottom:1rem; }
+  .lc-cta { display:inline-block; background:var(--lc-terra); color:#fff !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(168,83,42,.35); transition:transform .15s ease, box-shadow .15s ease; }
+  .lc-cta:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(168,83,42,.45); }
+  @media (prefers-reduced-motion: reduce){ .lc-cta{ transition:none } .lc-cta:hover{ transform:none } }
 
-    <div class="course-detail-header">
-        <h1>{{ page.title | split: " - " | first }}</h1>
-        <div class="meta">
-            <span>💰 金錢魔法</span>
-            <span>🏺 祭壇實作</span>
-            <span>📊 中級實作</span>
-            <span>👨‍🏫 歐比路老師</span>
-        </div>
+  .lc-hero { position:relative; background:var(--lc-dark); color:var(--lc-paper);
+             padding:5rem 1.25rem 4rem; overflow:hidden; }
+  .lc-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .lc-hero::after { content:""; position:absolute; inset:0;
+                    background:linear-gradient(100deg, rgba(22,29,22,.95) 0%, rgba(22,29,22,.8) 45%, rgba(22,29,22,.35) 72%, rgba(22,29,22,.15) 100%); }
+  .lc-hero-inner { position:relative; z-index:2; max-width:860px; margin:0 auto; }
+  .lc-hero h1 { font-size:clamp(1.7rem, 4.5vw, 2.6rem); line-height:1.4; margin:.5rem 0 1rem; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .lc-hero .lc-sub { font-size:1.05rem; color:var(--lc-gold-soft); max-width:34em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .lc-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem; color:#eef2e6; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .lc-hero-note { font-size:.85rem; color:var(--lc-gold-soft); margin-top:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+
+  .lc-pain { background:var(--lc-paper); }
+  .lc-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .lc-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #ccc9b4; }
+  .lc-pain li::before { content:"✓"; position:absolute; left:.4rem; color:var(--lc-green); font-weight:700; }
+  .lc-punch { background:var(--lc-paper-deep); border-left:4px solid var(--lc-gold);
+              padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  .lc-story { background:var(--lc-dark2); color:#e8ecdf; }
+  .lc-story h2 { color:#fff; }
+  .lc-story blockquote { border-left:3px solid var(--lc-gold); padding:.6rem 0 .6rem 1.2rem; margin:1.4rem 0; font-size:1.12rem; color:#fff; }
+
+  .lc-gain { background:var(--lc-paper); }
+  .lc-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .lc-gain-card { background:#fff; border:1px solid #d7d3bd; border-radius:8px; padding:1.2rem 1.3rem; }
+  .lc-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--lc-green); letter-spacing:.08em; }
+  .lc-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+
+  .lc-teacher { background:var(--lc-dark2); color:#e8ecdf; }
+  .lc-teacher h2 { color:#fff; }
+  .lc-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .lc-teacher-flex img { width:240px; height:auto; border-radius:8px; flex:0 0 auto; border:1px solid rgba(201,151,63,.4); }
+
+  .lc-series { background:var(--lc-paper); }
+  .lc-series-box { background:var(--lc-paper-deep); border-left:4px solid var(--lc-green); border-radius:0 8px 8px 0; padding:1.5rem 1.7rem; }
+  .lc-series-box ul { list-style:none; padding:0; margin:.6rem 0 0; line-height:2; }
+  .lc-series-box a { color:var(--lc-green); }
+
+  .lc-price { background:var(--lc-dark); color:var(--lc-paper); }
+  .lc-price h2 { color:#fff; }
+  .lc-price-card { background:var(--lc-dark2); border:1px solid rgba(201,151,63,.5); border-radius:10px;
+                   padding:2rem 1.8rem; max-width:520px; margin:1.4rem auto; text-align:center; }
+  .lc-plan-tag { display:inline-block; font-size:.85rem; letter-spacing:.2em; color:var(--lc-gold);
+                 border:1px solid var(--lc-gold); border-radius:999px; padding:.2rem 1rem; margin-bottom:1rem; }
+  .lc-price-old { text-decoration:line-through; color:#8f9683; font-size:1.05rem; }
+  .lc-price-now { font-size:2rem; color:var(--lc-gold); font-weight:700; margin:.3rem 0; }
+  .lc-price-save { color:var(--lc-gold-soft); font-size:.95rem; }
+  .lc-combo { background:rgba(201,151,63,.1); border:1px solid rgba(201,151,63,.4); border-radius:8px;
+              padding:.9rem 1.2rem; margin:1.2rem auto 0; font-size:.92rem; color:var(--lc-gold-soft); }
+  .lc-includes { text-align:left; margin:1.4rem auto; padding-left:1.3rem; font-size:.95rem; max-width:380px; }
+  .lc-deadline { text-align:center; font-size:.95rem; color:var(--lc-gold-soft); letter-spacing:.08em; margin-bottom:1.6rem; }
+  .lc-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:2rem; }
+  .lc-alt-signup { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#e7ecdc; }
+  .lc-alt-signup a { color:var(--lc-gold); }
+
+  .lc-faq { background:var(--lc-paper); }
+  .lc-faq details { border-bottom:1px solid #d5d1ba; padding:.9rem 0; }
+  .lc-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .lc-faq summary::before { content:"＋ "; color:var(--lc-terra); }
+  .lc-faq details[open] summary::before { content:"－ "; }
+  .lc-faq details p { margin:.6rem 0 0; }
+
+  @media (max-width: 768px) {
+    .lc-section { padding:2.6rem 1.1rem; }
+    .lc-gain-grid { grid-template-columns:1fr; }
+    .lc-teacher-flex { flex-direction:column; }
+    .lc-teacher-flex img { width:100%; max-width:320px; }
+    .lc-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="lc-page">
+
+  <!-- ① Hero（共用本土藥草系列主圖） -->
+  <header class="lc-hero">
+    <img class="lc-hero-bg" src="/assets/images/courses/local-01/hero-local-herb.webp"
+         alt="" width="2400" height="1350" fetchpriority="high">
+    <div class="lc-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#e6cfa0; font-size:.9rem; opacity:.85; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="lc-eyebrow" style="display:block; width:fit-content; color:#e6cfa0; border-color:#e6cfa0;">台灣本土藥草系列・實作課</p>
+      <h1>親手做一座聚寶陶甕，<br>把賺錢的機會請進門</h1>
+      <p class="lc-sub">日進斗金——用聚寶陶甕與本土藥草，做一座屬於你的招財小祭壇。引財，也守財。加碼三支未收錄的本土藥草，練習藥草魔性辨認。</p>
+      <div class="lc-hero-meta">
+        <span>📅 2026/11/07（六）17:00–18:00</span>
+        <span>🏛 台北實體班</span>
+        <span>📘 需修畢本土藥草核心課</span>
+      </div>
+      <a class="lc-cta" href="#signup">立即報名</a>
+      <p class="lc-hero-note">與本土藥草核心課合報，兩門合計 13,000 元</p>
     </div>
+  </header>
 
-    <div class="course-detail-content">
-        <h2>課程概述</h2>
-        <p>台灣本土藥草魔法是一個新的里程碑，在過去雖然民間也有使用藥草、水果、在地植物等使用咒法，但卻都非常零散而無系統化，並且許多本土藥草的魔法屬性也仍未探究出來。當我們理解了藥草的魔性，我們將更進一步的去研究如何實際應用。在實作課程當中老師以自身的操作經驗，分享如何以程序化的方式去執行台灣本土藥草魔法，更能大幅度減少摸索的時間進而實際運用。</p>
-        <p>日進斗金常用來比喻生意興隆，在台灣民間信仰中，時常會有祭祀財神，請求財神給予賺取金錢上的協助，甚至在紙錢中，也有專屬的財神金。</p>
-        <p>但您是否有思考過一點，假若我一直陷於停滯狀態，不去思考願望的可行性？現實條件的限制？個人的意願與行動？時間因素？即使財神的祝福到了，是否也是愛莫能助呢？為此，這堂實作課將要來介紹本土藥草魔法配方：日進斗金。提供未收錄於課程中的三支本土藥草，讓學員練習藥草魔性如何辨認藉以累積實戰經驗，同時搭配民間招財象徵物常見的聚寶陶甕，製作成屬於自身的日進斗金藥草魔法小祭壇，讓我們可以吸引賺取金錢的機會，同時也能守護住自身的錢財。</p>
-
-        <h2>課程資訊</h2>
-        <div class="course-info-box">
-            <p><strong>⏰ 上課時間：</strong>10/04(六) 17:00-18:00</p>
-            <p><strong>講師：</strong>歐比路老師</p>
-            <p><strong>課程價格：</strong>原價：3800元 | <span style="color: #e67e22; font-weight: bold;">特價：2800元</span></p>
-            <p style="font-size: 0.9rem; color: #666;">※ 建議可與「台灣本土藥草魔法」核心課程合報。</p>
-        </div>
-
-        <h2>📜 系列課程導覽</h2>
-        <div class="series-nav" style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #1a5f5f;">
-            <p style="margin-bottom: 1rem; font-weight: bold; color: #1a5f5f;">🌿 台灣本土藥草系列：</p>
-            <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-                <li><a href="/courses/course-local-01/">1. 【核心】台灣本土藥草魔法理論</a></li>
-                <li><a href="/courses/course-local-02/">2. 【進階】七行星藥草課程</a></li>
-                <li><a href="/courses/course-local-03/">3. 【實作】好運成雙實作課</a></li>
-                <li><strong>▶ 4. 【實作】日進斗金藥草小祭壇（目前所在）</strong></li>
-                <li><a href="/courses/course-local-05/">5. 【核心】配方解析與魔法油實作</a></li>
-            </ul>
-        </div>
-
-        <h2>老師介紹</h2>
-        <div class="teacher-info">
-            <h3>歐比路老師</h3>
-            <p>研究兒童青少年精神醫學領域時，接觸靈性領域。並在與祖靈相遇的過程中，獲得靈性啟發，開始學習魔法咒術。早上是位熱愛統計學的工程師，晚上則變成鑽研咒術的魔法工作者。喜愛以心理動力觀點詮釋魔法，擅長策略性整合有限資源，獲得最佳化魔法效益。認為現實策略與魔法策略，皆是構成魔法的重要因素。粉絲專頁:歐比路藥草魔法實驗室</p>
-        </div>
-
-        <h2>報名方式</h2>
-        <div class="registration-info">
-            <p><strong>方式一：</strong>請填寫官方報名表單，完成後將於三日內回信給您。</p>
-            <p><strong>方式二：</strong>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
-            <p>郵件標題請註明：<strong>「報名 {{ page.title | split: " - " | first }}」</strong>，並告知您的姓名與聯絡電話。</p>
-        </div>
+  <!-- ② 適合誰 -->
+  <section class="lc-section lc-pain">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">適合誰</p>
+      <h2>你是不是也想過這些？</h2>
+      <ul>
+        <li>學了本土藥草的理論，想要一個能立刻動手做的實作</li>
+        <li>拜過財神、求過財運，卻覺得「祝福到了，自己卻接不住」</li>
+        <li>想要一個看得見、放得住、能天天照顧的招財物件</li>
+        <li>希望不只是引財進來，也能把賺到的錢守住</li>
+      </ul>
+      <p class="lc-punch">財神的祝福再強，若你停在原地、不去行動，也是愛莫能助。這堂課給你的，是一座能天天提醒自己「動起來」的招財祭壇。</p>
     </div>
+  </section>
+
+  <!-- ③ 這堂課在做什麼 -->
+  <section class="lc-section lc-story">
+    <div class="lc-inner">
+      <p class="lc-eyebrow" style="color:#c9973f; border-color:#c9973f;">關於這堂課</p>
+      <h2>從理解藥草魔性，到實際應用</h2>
+      <p>台灣本土藥草魔法是一個新的里程碑。過去民間雖然也用藥草、水果、在地植物施行咒法，但零散而無系統，許多本土藥草的魔法屬性也還沒被探究出來。當我們理解了藥草的魔性，下一步就是研究如何實際應用。</p>
+      <blockquote>日進斗金，常用來比喻生意興隆。這堂課要把這四個字，做成一座你摸得到的祭壇。</blockquote>
+      <p>老師以自身操作經驗，用程序化的方式帶你執行本土藥草魔法，大幅減少摸索時間。搭配民間招財象徵的聚寶陶甕，製作屬於你自己的日進斗金藥草小祭壇——吸引賺錢的機會，同時守護住自身的錢財。</p>
+    </div>
+  </section>
+
+  <!-- ④ 你會帶走什麼 -->
+  <section class="lc-section lc-gain">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">學習成果</p>
+      <h2>這堂課，你會帶走——</h2>
+      <div class="lc-gain-grid">
+        <div class="lc-gain-card">
+          <h3>一座招財祭壇</h3>
+          <ul>
+            <li>親手完成專屬的聚寶陶甕日進斗金小祭壇</li>
+            <li>學會引財與守財的擺設邏輯</li>
+          </ul>
+        </div>
+        <div class="lc-gain-card">
+          <h3>三支加碼藥草</h3>
+          <ul>
+            <li>三支未收錄於核心課的本土藥草</li>
+            <li>實際練習藥草魔性辨認，累積實戰經驗</li>
+          </ul>
+        </div>
+        <div class="lc-gain-card">
+          <h3>程序化的方法</h3>
+          <ul>
+            <li>老師實戰經驗整理的操作程序</li>
+            <li>減少自行摸索的時間，回家就能維護運用</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 老師 -->
+  <section class="lc-section lc-teacher">
+    <div class="lc-inner">
+      <p class="lc-eyebrow" style="color:#c9973f; border-color:#c9973f;">授課老師</p>
+      <h2>歐比路老師</h2>
+      <div class="lc-teacher-flex">
+        <img src="/assets/images/shared/teacher-obiluo.webp"
+             alt="歐比路老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>研究兒童青少年精神醫學領域時接觸靈性領域，並在與祖靈相遇的過程中獲得啟發，開始學習魔法咒術。早上是熱愛統計學的工程師，晚上則是鑽研咒術的魔法工作者。</p>
+          <p>擅長以心理動力觀點詮釋魔法，策略性整合有限資源以獲得最佳化的魔法效益。認為現實策略與魔法策略，皆是構成魔法的重要因素。</p>
+          <p style="color:var(--lc-gold-soft); font-size:.9rem;">粉絲專頁：歐比路藥草魔法實驗室</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 系列導覽 -->
+  <section class="lc-section lc-series">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">學習路徑</p>
+      <h2>台灣本土藥草系列</h2>
+      <div class="lc-series-box">
+        <p style="margin:0; font-weight:bold; color:var(--lc-green);">🌿 循序漸進，建立完整的本土藥草體系：</p>
+        <ul>
+          <li><a href="/courses/course-local-01/">1.【核心】台灣本土藥草魔法理論</a></li>
+          <li><a href="/courses/course-local-02/">2.【進階】七行星藥草課程</a></li>
+          <li><a href="/courses/course-local-03/">3.【實作】好運成雙實作課</a></li>
+          <li><strong>▶ 4.【實作】日進斗金藥草小祭壇（目前所在）</strong></li>
+          <li><a href="/courses/course-local-05/">5.【核心】配方解析與魔法油實作</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ 價格與報名 -->
+  <section class="lc-section lc-price" id="signup">
+    <div class="lc-inner">
+      <p class="lc-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程費用</p>
+      <h2 style="text-align:center;">報名資訊</h2>
+      <div class="lc-price-card">
+        <span class="lc-plan-tag">🏛 台北實體班・實作</span>
+        <p style="margin:.2rem 0; font-size:1.05rem;">2026/11/07（六）17:00–18:00</p>
+        <p class="lc-price-old">原價 3,800 元</p>
+        <p class="lc-price-now">特價 2,800 元</p>
+        <p class="lc-price-save">需修畢「台灣本土藥草魔法」核心課</p>
+        <ul class="lc-includes">
+          <li>聚寶陶甕日進斗金小祭壇（成品帶回）</li>
+          <li>三支未收錄的本土藥草</li>
+          <li>藥草魔性辨認實作</li>
+          <li>引財與守財的擺設程序</li>
+        </ul>
+        <div class="lc-combo">🎁 與「台灣本土藥草魔法」核心課合報，兩門合計 <strong>13,000 元</strong></div>
+      </div>
+      <p class="lc-deadline">⏳ 報名截止 11/02｜上課時間 11/07（六）17:00–18:00</p>
+
+      <div class="lc-form-wrap" id="lc-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfwKbrsoWyc2tl3lueZ3QfgtUYfF0is5OGCcV8zxh43ThL-zA/viewform?embedded=true"
+          width="100%" height="1500" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="日進斗金實作課報名表單">載入中…</iframe>
+      </div>
+
+      <p class="lc-alt-signup">
+        或來信 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-日進斗金實作課">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名日進斗金」，附上姓名與聯絡電話。送出後三日內回信確認。
+      </p>
+    </div>
+  </section>
+
+  <!-- ⑧ FAQ -->
+  <section class="lc-section lc-faq">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>沒上過本土藥草核心課，可以直接報這門嗎？</summary>
+        <p>這門是實作延伸課，需先修畢「台灣本土藥草魔法」核心課。兩門可合報，合計 13,000 元，一次完成理論與實作。</p>
+      </details>
+      <details>
+        <summary>材料需要自己準備嗎？</summary>
+        <p>不用，聚寶陶甕與所需藥草材料課堂提供，現場動手完成，成品直接帶回。</p>
+      </details>
+      <details>
+        <summary>合報優惠怎麼算？</summary>
+        <p>與「台灣本土藥草魔法」核心課兩門合報，優惠價合計 13,000 元。報名時在表單或來信中註明想合報即可。</p>
+      </details>
+      <details>
+        <summary>這門和好運成雙有什麼不同？</summary>
+        <p>兩門都是本土藥草的實作課。日進斗金聚焦「招財與守財」，用聚寶陶甕做金錢小祭壇；好運成雙則是另一個主題，可依需求選修或都上。</p>
+      </details>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#a8532a" bg="#e4e2d1" %}
+
 </div>
