@@ -1,83 +1,327 @@
 ---
 layout: default
 title: "台灣本土藥草魔法：七行星藥草 - 歐比路老師"
+description: "把台灣本土藥草，接上西方七行星魔法。學會實驗辨識技巧、自力判斷植物的行星屬性，並親手製作七行星魔術盒。11/08 台北實體，須修畢本土藥草核心課，早鳥 10/25 截止。"
+image: /assets/images/courses/local-01/og-local-herb.jpg
 ---
 
-<div class="container" style="padding: 3rem 0;">
-    <a href="/course/" class="back-link">← 返回課程中心</a>
+<style>
+  /* ===== 七行星藥草 銷售頁（lc- 前綴，與本土藥草系列共用視覺）===== */
+  .lc-page { --lc-ink:#22271f; --lc-paper:#f2f0e6; --lc-paper-deep:#e4e2d1;
+             --lc-dark:#161d16; --lc-dark2:#1f2a20; --lc-gold:#c9973f;
+             --lc-gold-soft:#e6cfa0; --lc-green:#3e5c48; --lc-green-deep:#2f4a38;
+             --lc-terra:#a8532a; --lc-terra-soft:#d99b6a;
+             font-size:1rem; color:var(--lc-ink); line-height:1.85; }
+  .lc-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--lc-ink); letter-spacing:.05em; }
+  .lc-section { padding:3.5rem 1.25rem; }
+  .lc-inner { max-width:860px; margin:0 auto; }
+  .lc-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--lc-terra);
+                border-bottom:1px solid var(--lc-terra); padding-bottom:.3rem; margin-bottom:1rem; }
+  .lc-cta { display:inline-block; background:var(--lc-terra); color:#fff !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(168,83,42,.35); transition:transform .15s ease, box-shadow .15s ease; }
+  .lc-cta:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(168,83,42,.45); }
+  @media (prefers-reduced-motion: reduce){ .lc-cta{ transition:none } .lc-cta:hover{ transform:none } }
 
-    <div class="course-detail-header">
-        <h1>{{ page.title | split: " - " | first }}</h1>
-        <div class="meta">
-            <span>🇹🇼 台灣本土藥草</span>
-            <span>🪐 行星魔法</span>
-            <span>📊 進階單元</span>
-            <span>👨‍🏫 歐比路老師</span>
-        </div>
+  .lc-hero { position:relative; background:var(--lc-dark); color:var(--lc-paper);
+             padding:5rem 1.25rem 4rem; overflow:hidden; }
+  .lc-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .lc-hero::after { content:""; position:absolute; inset:0;
+                    background:linear-gradient(100deg, rgba(22,29,22,.95) 0%, rgba(22,29,22,.8) 45%, rgba(22,29,22,.35) 72%, rgba(22,29,22,.15) 100%); }
+  .lc-hero-inner { position:relative; z-index:2; max-width:860px; margin:0 auto; }
+  .lc-hero h1 { font-size:clamp(1.7rem, 4.5vw, 2.6rem); line-height:1.4; margin:.5rem 0 1rem; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .lc-hero .lc-sub { font-size:1.05rem; color:var(--lc-gold-soft); max-width:34em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .lc-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem; color:#eef2e6; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .lc-hero-note { font-size:.85rem; color:var(--lc-gold-soft); margin-top:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+
+  .lc-pain { background:var(--lc-paper); }
+  .lc-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .lc-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #ccc9b4; }
+  .lc-pain li::before { content:"✓"; position:absolute; left:.4rem; color:var(--lc-green); font-weight:700; }
+  .lc-punch { background:var(--lc-paper-deep); border-left:4px solid var(--lc-gold);
+              padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  .lc-story { background:var(--lc-dark2); color:#e8ecdf; }
+  .lc-story h2 { color:#fff; }
+  .lc-story blockquote { border-left:3px solid var(--lc-gold); padding:.6rem 0 .6rem 1.2rem; margin:1.4rem 0; font-size:1.12rem; color:#fff; }
+
+  .lc-gain { background:var(--lc-paper); }
+  .lc-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .lc-gain-card { background:#fff; border:1px solid #d7d3bd; border-radius:8px; padding:1.2rem 1.3rem; }
+  .lc-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--lc-green); letter-spacing:.08em; }
+  .lc-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+
+  /* 七行星表格 */
+  .lc-planets { background:var(--lc-paper-deep); }
+  .lc-planet-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:.7rem; margin-top:1.4rem; }
+  .lc-planet { background:#fff; border:1px solid #d7d3bd; border-radius:8px; padding:.9rem 1.1rem; display:flex; gap:.8rem; align-items:baseline; }
+  .lc-planet .sym { font-size:1.3rem; color:var(--lc-terra); flex:0 0 auto; }
+  .lc-planet b { color:var(--lc-green-deep); }
+  .lc-planet span { color:#5a5442; font-size:.93rem; }
+
+  .lc-syllabus { background:var(--lc-paper); }
+  .lc-syl-part { margin-bottom:1.6rem; }
+  .lc-syl-part h3 { font-size:1.05rem; color:var(--lc-terra); letter-spacing:.1em; margin:0 0 .5rem; }
+  .lc-syl-part ul { margin:0; padding-left:1.3rem; }
+
+  .lc-teacher { background:var(--lc-dark2); color:#e8ecdf; }
+  .lc-teacher h2 { color:#fff; }
+  .lc-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .lc-teacher-flex img { width:240px; height:auto; border-radius:8px; flex:0 0 auto; border:1px solid rgba(201,151,63,.4); }
+
+  .lc-series { background:var(--lc-paper); }
+  .lc-series-box { background:var(--lc-paper-deep); border-left:4px solid var(--lc-green); border-radius:0 8px 8px 0; padding:1.5rem 1.7rem; }
+  .lc-series-box ul { list-style:none; padding:0; margin:.6rem 0 0; line-height:2; }
+  .lc-series-box a { color:var(--lc-green); }
+
+  .lc-price { background:var(--lc-dark); color:var(--lc-paper); }
+  .lc-price h2 { color:#fff; }
+  .lc-price-card { background:var(--lc-dark2); border:1px solid rgba(201,151,63,.5); border-radius:10px;
+                   padding:2rem 1.8rem; max-width:520px; margin:1.4rem auto; text-align:center; }
+  .lc-plan-tag { display:inline-block; font-size:.85rem; letter-spacing:.2em; color:var(--lc-gold);
+                 border:1px solid var(--lc-gold); border-radius:999px; padding:.2rem 1rem; margin-bottom:1rem; }
+  .lc-price-old { text-decoration:line-through; color:#8f9683; font-size:1.05rem; }
+  .lc-price-now { font-size:2rem; color:var(--lc-gold); font-weight:700; margin:.3rem 0; }
+  .lc-price-save { color:var(--lc-gold-soft); font-size:.95rem; }
+  .lc-includes { text-align:left; margin:1.4rem auto; padding-left:1.3rem; font-size:.95rem; max-width:380px; }
+  .lc-deadline { text-align:center; font-size:.95rem; color:var(--lc-gold-soft); letter-spacing:.08em; margin-bottom:1.6rem; }
+  .lc-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:2rem; }
+  .lc-alt-signup { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#e7ecdc; }
+  .lc-alt-signup a { color:var(--lc-gold); }
+
+  .lc-faq { background:var(--lc-paper); }
+  .lc-faq details { border-bottom:1px solid #d5d1ba; padding:.9rem 0; }
+  .lc-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .lc-faq summary::before { content:"＋ "; color:var(--lc-terra); }
+  .lc-faq details[open] summary::before { content:"－ "; }
+  .lc-faq details p { margin:.6rem 0 0; }
+
+  @media (max-width: 768px) {
+    .lc-section { padding:2.6rem 1.1rem; }
+    .lc-gain-grid, .lc-planet-grid { grid-template-columns:1fr; }
+    .lc-teacher-flex { flex-direction:column; }
+    .lc-teacher-flex img { width:100%; max-width:320px; }
+    .lc-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="lc-page">
+
+  <!-- ① Hero（共用本土藥草系列主圖） -->
+  <header class="lc-hero">
+    <img class="lc-hero-bg" src="/assets/images/courses/local-01/hero-local-herb.webp"
+         alt="" width="2400" height="1350" fetchpriority="high">
+    <div class="lc-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#e6cfa0; font-size:.9rem; opacity:.85; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="lc-eyebrow" style="display:block; width:fit-content; color:#e6cfa0; border-color:#e6cfa0;">台灣本土藥草系列・進階二</p>
+      <h1>把腳下的台灣植物，<br>接上西方七行星的力量</h1>
+      <p class="lc-sub">實用的魔法系統，要能「搭接其他系統」。這門課教你用七行星的觀點重新定義身邊的本土藥草，學會自力判斷植物屬性，最後親手做出七行星魔術盒。</p>
+      <div class="lc-hero-meta">
+        <span>📅 2026/11/08（日）10:00–16:00</span>
+        <span>🏛 台北實體班・全日課程</span>
+        <span>📘 需修畢本土藥草核心課</span>
+      </div>
+      <a class="lc-cta" href="#signup">搶早鳥價，立即報名</a>
+      <p class="lc-hero-note">早鳥優惠 10/25 截止，現省 1,100 元</p>
     </div>
+  </header>
 
-    
-    <div class="course-detail-content">
-        <h2>課程概述</h2>
-        <p>台灣本土藥草魔法只能侷限在自身的領域中嗎？我想並不是這樣的！一個實用取向的魔法系統必須具備<strong>「搭接其他魔法系統的能力」</strong>。</p>
-        <p>在本課程中，我們將學習如何以西方的<strong>七行星魔法觀點</strong>，從台灣本土藥草中挑選出適合的素材，讓在地藥草與古典魔法系統接軌，碰撞出屬於您自己的本土化魔法系統。</p>
-
-        <h2>課程詳情</h2>
-        <p>我們將從「區分本土藥草行星屬性」的實驗辨識技巧談起，教導如何將特定的本土藥草連結至適當的行星職權。您將認識分屬七行星的數種本土藥草及其魔法功能，並學習如何利用藥草特性來增強行星能量在現實生活中的體現。</p>
-        
-        <p>課程最後將教導如何利用本土藥草搭配行星魔法，製作出專屬於七顆行星的<strong>「魔術盒」</strong>。這不僅是技術的接軌，更是跨系統的整合實踐，讓您的藥草工作不再侷限於本土，職位具備更廣闊的策略視野。</p>
-
-        <h2>課程大綱</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <ul style="line-height: 1.8;">
-                <li>1. 七行星藥草魔法概論</li>
-                <li>2. 七行星藥草實驗區辨技巧</li>
-                <li>3. 藥草增強七行星職權技巧</li>
-                <li>4. 太陽屬性本土藥草介紹</li>
-                <li>5. 月亮屬性本土藥草介紹</li>
-                <li>6. 火星屬性本土藥草介紹</li>
-            </ul>
-            <ul style="line-height: 1.8;">
-                <li>7. 水星屬性本土藥草介紹</li>
-                <li>8. 木星屬性本土藥草介紹</li>
-                <li>9. 金星屬性本土藥草介紹</li>
-                <li>10. 土星屬性本土藥草介紹</li>
-                <li>11. 七行星魔術盒製作方式</li>
-            </ul>
-        </div>
-
-        <h2>課程資訊</h2>
-        <div class="course-info-box">
-            <p><strong>📍 上課形式：</strong>實體課程 / 遠距課程（請洽詢）</p>
-            <p><strong>⏰ 上課時間：</strong>請來信洽詢最新課表</p>
-            <p><strong>⚠️ 報名資格：</strong>需修畢「台灣本土藥草魔法」核心課程</p>
-            <p><strong>💰 課程價格：</strong>早鳥優惠價 8,500元 (原價 9,500元)</p>
-            <p><strong>👨‍🏫 講師：</strong>歐比路老師</p>
-        </div>
-
-        <h2>📜 系列課程導覽</h2>
-        <div class="series-nav" style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #1a5f5f;">
-            <p style="margin-bottom: 1rem; font-weight: bold; color: #1a5f5f;">🌿 台灣本土藥草系列：</p>
-            <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-                <li><a href="/courses/course-local-01/">1. 【核心】台灣本土藥草魔法理論</a></li>
-                <li><strong>▶ 2. 【進階】七行星藥草課程（目前所在）</strong></li>
-                <li><a href="/courses/course-local-03/">3. 【實作】好運成雙實作課</a></li>
-                <li><a href="/courses/course-local-04/">4. 【實作】日進斗金藥草小祭壇</a></li>
-                <li><a href="/courses/course-local-05/">5. 【核心】配方解析與魔法油實作</a></li>
-            </ul>
-        </div>
-
-        <h2>老師介紹</h2>
-        <div class="teacher-info">
-            <h3>歐比路老師</h3>
-            <p>研究兒童青少年精神醫學領域時，接觸靈性領域。並在與祖靈相遇的過程中，獲得靈性啟發，開始學習魔法咒術。早上是位熱愛統計學的工程師，晚上則變成鑽研咒術的魔法工作者。喜愛以心理動力觀點詮釋魔法，擅長策略性整合有限資源，獲得最佳化魔法效益。認為現實策略與魔法策略，皆是構成魔法的重要因素。粉絲專頁:歐比路藥草魔法實驗室</p>
-        </div>
-
-        <h2>報名方式</h2>
-        <div class="registration-info">
-            <p><strong>方式一：</strong>請填寫官方報名表單，完成後將於三日內回信給您。</p>
-            <p><strong>方式二：</strong>請來信至 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a></p>
-            <p>郵件標題請註明：<strong>「報名 {{ page.title | split: " - " | first }}」</strong>，並告知您的姓名與聯絡電話。</p>
-        </div>
+  <!-- ② 適合誰 -->
+  <section class="lc-section lc-pain">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">適合誰</p>
+      <h2>你是不是走到了這一步？</h2>
+      <ul>
+        <li>學過本土藥草，想把它接上西方古典魔法的系統</li>
+        <li>會查行星對應表，但換一支沒收錄的藥草就卡住</li>
+        <li>想自己判斷「這支植物是哪顆行星」，不再只靠死背</li>
+        <li>想做一套完整、對應七顆行星的招運工具</li>
+      </ul>
+      <p class="lc-punch">一個實用的魔法系統，不該侷限在單一領域。這門課給你的，是「搭接系統」的能力——把本土藥草，接進七行星魔法的框架裡。</p>
     </div>
+  </section>
+
+  <!-- ③ 敘事 -->
+  <section class="lc-section lc-story">
+    <div class="lc-inner">
+      <p class="lc-eyebrow" style="color:#c9973f; border-color:#c9973f;">關於這堂課</p>
+      <h2>跨越東西方系統的門檻</h2>
+      <p>台灣本土藥草魔法不該侷限於單一領域。這是本土藥草的進階單元二，我們要跨越東西方系統的門檻——歐比路老師會分享一套<strong>實驗辨識技巧</strong>，讓你不再只是死背書本，而是能親自區分出本土藥草的行星屬性。</p>
+      <blockquote>既然身在台灣，為什麼不讓腳下的植物，也承接高天七顆行星的力量？</blockquote>
+      <p>課程最後，你會用本土藥草搭配行星魔法，製作出專屬於七顆行星的「行星魔術盒」——一套能實際運用在生活裡的招運工具。</p>
+    </div>
+  </section>
+
+  <!-- ④ 成果 -->
+  <section class="lc-section lc-gain">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">學習成果</p>
+      <h2>一堂課之後，你將能夠——</h2>
+      <div class="lc-gain-grid">
+        <div class="lc-gain-card">
+          <h3>跨系統整合</h3>
+          <ul>
+            <li>把本土藥草精準連結到七大行星屬性</li>
+            <li>理解藥草物質特性與行星職權的連動</li>
+          </ul>
+        </div>
+        <div class="lc-gain-card">
+          <h3>實驗辨識</h3>
+          <ul>
+            <li>學會自力判斷一支植物的行星屬性</li>
+            <li>不再受限於書本收錄與否</li>
+          </ul>
+        </div>
+        <div class="lc-gain-card">
+          <h3>實體轉化</h3>
+          <ul>
+            <li>親手製作七行星魔術盒</li>
+            <li>強化行星能量在現實生活的顯化效益</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 七行星對應 -->
+  <section class="lc-section lc-planets">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">課程核心</p>
+      <h2>七顆行星，七種力量</h2>
+      <div class="lc-planet-grid">
+        <div class="lc-planet"><span class="sym">☽</span><div><b>月亮</b>　<span>潛意識與守護</span></div></div>
+        <div class="lc-planet"><span class="sym">♂</span><div><b>火星</b>　<span>行動力與防禦</span></div></div>
+        <div class="lc-planet"><span class="sym">☿</span><div><b>水星</b>　<span>溝通與思維</span></div></div>
+        <div class="lc-planet"><span class="sym">♃</span><div><b>木星</b>　<span>擴張與豐盛</span></div></div>
+        <div class="lc-planet"><span class="sym">♀</span><div><b>金星</b>　<span>吸引與美感</span></div></div>
+        <div class="lc-planet"><span class="sym">♄</span><div><b>土星</b>　<span>限制與紮根</span></div></div>
+        <div class="lc-planet"><span class="sym">☉</span><div><b>太陽</b>　<span>名望與成功</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 大綱 -->
+  <section class="lc-section lc-syllabus">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">課程大綱</p>
+      <h2>三階段，理論到實作一次完成</h2>
+      <div class="lc-syl-part">
+        <h3>Part 1｜理論與技術</h3>
+        <ul>
+          <li>七行星藥草魔法概論</li>
+          <li>屬性實驗區辨技巧：如何自力判斷植物屬性</li>
+          <li>能量強化技巧：藥草與行星職權的連動</li>
+        </ul>
+      </div>
+      <div class="lc-syl-part">
+        <h3>Part 2｜本土藥草行星分類誌</h3>
+        <ul>
+          <li>月亮、火星、水星、木星、金星、土星、太陽——七大屬性的本土藥草分類</li>
+        </ul>
+      </div>
+      <div class="lc-syl-part">
+        <h3>Part 3｜實作單元</h3>
+        <ul>
+          <li>七行星魔術盒（Planetary Magic Box）製作詳解</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ 老師 -->
+  <section class="lc-section lc-teacher">
+    <div class="lc-inner">
+      <p class="lc-eyebrow" style="color:#c9973f; border-color:#c9973f;">授課老師</p>
+      <h2>歐比路老師</h2>
+      <div class="lc-teacher-flex">
+        <img src="/assets/images/shared/teacher-obiluo.webp"
+             alt="歐比路老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>身兼統計學工程師與魔法工作者，擅長以邏輯嚴謹的「實驗觀點」來解析魔法。致力於研究藥草的魔性辨識，並開發出一套能讓在地植物接軌西方古典魔法系統的實踐方法。</p>
+          <p>認為現實策略與魔法策略並重，主張以策略性的角度整合有限資源。</p>
+          <p style="color:var(--lc-gold-soft); font-size:.9rem;">粉絲專頁：歐比路藥草魔法實驗室</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧ 系列導覽 -->
+  <section class="lc-section lc-series">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">學習路徑</p>
+      <h2>台灣本土藥草系列</h2>
+      <div class="lc-series-box">
+        <p style="margin:0; font-weight:bold; color:var(--lc-green);">🌿 循序漸進，建立完整的本土藥草體系：</p>
+        <ul>
+          <li><a href="/courses/course-local-01/">1.【核心】台灣本土藥草魔法理論</a></li>
+          <li><strong>▶ 2.【進階】七行星藥草課程（目前所在）</strong></li>
+          <li><a href="/courses/course-local-03/">3.【實作】好運成雙實作課</a></li>
+          <li><a href="/courses/course-local-04/">4.【實作】日進斗金藥草小祭壇</a></li>
+          <li><a href="/courses/course-local-05/">5.【核心】配方解析與魔法油實作</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ 價格與報名 -->
+  <section class="lc-section lc-price" id="signup">
+    <div class="lc-inner">
+      <p class="lc-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程費用</p>
+      <h2 style="text-align:center;">報名資訊</h2>
+      <div class="lc-price-card">
+        <span class="lc-plan-tag">🏛 台北實體班・全日課程</span>
+        <p style="margin:.2rem 0; font-size:1.05rem;">2026/11/08（日）10:00–16:00</p>
+        <p class="lc-price-old">原價 9,900 元</p>
+        <p class="lc-price-now">早鳥價 8,800 元</p>
+        <p class="lc-price-save">2026/10/25 前完成報名繳費，現省 1,100 元</p>
+        <ul class="lc-includes">
+          <li>七行星藥草屬性完整講義</li>
+          <li>屬性實驗區辨技巧教學</li>
+          <li>本土藥草行星分類誌</li>
+          <li>七行星魔術盒實作（成品帶回）</li>
+        </ul>
+      </div>
+      <p class="lc-deadline">⏳ 早鳥截止 10/25｜報名截止 11/02｜上課時間 11/08（日）10:00–16:00</p>
+      <p style="text-align:center; font-size:.9rem; color:#b0a98f; margin-top:-1rem; margin-bottom:1.4rem;">📘 需先修畢「台灣本土藥草魔法」核心課</p>
+
+      <div class="lc-form-wrap" id="lc-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScxPUnKM8JdXlEKuJfRIYGOsRWYzVMdain6NzENybWZ0OeTbw/viewform?embedded=true"
+          width="100%" height="1280" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="七行星藥草報名表單">載入中…</iframe>
+      </div>
+
+      <p class="lc-alt-signup">
+        或來信 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-七行星藥草">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名七行星藥草」，附上姓名與聯絡電話。送出後三日內回信確認。
+      </p>
+    </div>
+  </section>
+
+  <!-- ⑩ FAQ -->
+  <section class="lc-section lc-faq">
+    <div class="lc-inner">
+      <p class="lc-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>沒上過本土藥草核心課，可以報這門嗎？</summary>
+        <p>這門是進階單元，需先修畢「台灣本土藥草魔法」核心課，才能銜接七行星的屬性辨識與應用。</p>
+      </details>
+      <details>
+        <summary>我不懂占星，可以上七行星藥草嗎？</summary>
+        <p>可以。課程會從七行星的職能與屬性教起，重點在「藥草與行星的對應與辨識」，不需要占星基礎。</p>
+      </details>
+      <details>
+        <summary>「行星魔術盒」是什麼？要自備材料嗎？</summary>
+        <p>行星魔術盒是對應七顆行星、用本土藥草搭配製作的招運工具。材料課堂提供，現場完成、成品帶回。</p>
+      </details>
+      <details>
+        <summary>上完之後還有其他課嗎？</summary>
+        <p>有。你可以接續好運成雙、日進斗金等實作課，或往配方解析與魔法油實作深化，完成整個本土藥草系列。</p>
+      </details>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#a8532a" bg="#e4e2d1" %}
+
 </div>
