@@ -1,0 +1,228 @@
+---
+layout: default
+title: "驅魔聖牌與驅魔詩篇 - 四月老師"
+description: "撇開電影的驚悚想像，民間與新教其實有一般人能操作的驅魔方式。學習聖本篤驅魔聖牌、聖本篤禱文、驅魔詩篇，以及詩篇護符、藥劑與魔法油的製作。11/28 線上開課。"
+image: /assets/images/courses/exorcism/og-exorcism.jpg
+---
+
+<style>
+  /* ===== 驅魔聖牌與驅魔詩篇 銷售頁（ex- 前綴）===== */
+  .ex-page { --ex-ink:#231a1c; --ex-paper:#f3ede6; --ex-paper-deep:#e6dccd;
+             --ex-dark:#0e0b0c; --ex-dark2:#1c1416; --ex-wine:#6e2c3a;
+             --ex-wine-soft:#b07a86; --ex-gold:#c9973f; --ex-gold-soft:#e6cfa0; --ex-cream:#f4ecdd;
+             font-size:1rem; color:var(--ex-ink); line-height:1.85; }
+  .ex-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--ex-ink); letter-spacing:.05em; }
+  .ex-section { padding:3.5rem 1.25rem; }
+  .ex-inner { max-width:860px; margin:0 auto; }
+  .ex-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--ex-wine);
+                border-bottom:1px solid var(--ex-wine); padding-bottom:.3rem; margin-bottom:1rem; }
+  .ex-cta { display:inline-block; background:var(--ex-wine); color:#fff !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(110,44,58,.35); transition:transform .15s ease; }
+  .ex-cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .ex-cta{transition:none} .ex-cta:hover{transform:none} }
+
+  .ex-hero { position:relative; background:var(--ex-dark); color:var(--ex-cream); padding:5rem 1.25rem 4rem; overflow:hidden; }
+  .ex-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .ex-hero::after { content:""; position:absolute; inset:0;
+                    background:linear-gradient(100deg, rgba(14,11,12,.95) 0%, rgba(14,11,12,.82) 42%, rgba(14,11,12,.35) 70%, rgba(14,11,12,.15) 100%); }
+  .ex-hero-inner { position:relative; z-index:2; max-width:860px; margin:0 auto; }
+  .ex-hero h1 { font-size:clamp(1.7rem,4.5vw,2.6rem); line-height:1.45; margin:.5rem 0 1rem; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .ex-hero h1 .kicker { display:block; font-size:1.05rem; font-weight:400; letter-spacing:.25em; color:var(--ex-wine-soft); margin-bottom:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.5); }
+  .ex-hero .ex-sub { font-size:1.05rem; color:#efe4d3; max-width:34em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .ex-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem; color:#f4ebdd; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .ex-hero-note { font-size:.85rem; color:#d3b3ba; margin-top:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+
+  .ex-pain { background:var(--ex-paper); }
+  .ex-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .ex-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #cdbca7; }
+  .ex-pain li::before { content:"✝"; position:absolute; left:.4rem; color:var(--ex-wine); }
+  .ex-punch { background:var(--ex-paper-deep); border-left:4px solid var(--ex-gold); padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  .ex-story { background:var(--ex-dark2); color:#ecdfd6; }
+  .ex-story h2 { color:#fff; }
+  .ex-story blockquote { border-left:3px solid var(--ex-gold); padding:.6rem 0 .6rem 1.2rem; margin:1.4rem 0; font-size:1.15rem; color:#fff; }
+
+  .ex-syllabus { background:var(--ex-paper-deep); }
+  .ex-syl-item { background:#fff; border-radius:8px; padding:1.1rem 1.3rem; margin:.8rem 0; border-left:3px solid var(--ex-wine); }
+  .ex-syl-item strong { color:var(--ex-wine); }
+
+  .ex-teacher { background:var(--ex-dark2); color:#ecdfd6; }
+  .ex-teacher h2 { color:#fff; }
+  .ex-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .ex-teacher-flex img { width:220px; height:auto; border-radius:8px; flex:0 0 auto; border:1px solid rgba(176,122,134,.4); }
+
+  .ex-price { background:var(--ex-dark); color:var(--ex-cream); }
+  .ex-price h2 { color:#fff; }
+  .ex-price-card { background:var(--ex-dark2); border:1px solid rgba(201,151,63,.5); border-radius:10px; padding:2rem 1.6rem; max-width:520px; margin:1.4rem auto; text-align:center; }
+  .ex-price-old { text-decoration:line-through; color:#9c8079; font-size:1.05rem; }
+  .ex-price-now { font-size:2.2rem; color:var(--ex-gold); font-weight:700; margin:.3rem 0; }
+  .ex-price-save { color:var(--ex-wine-soft); font-size:.95rem; }
+  .ex-alumni { background:rgba(176,122,134,.14); border:1px solid rgba(176,122,134,.4); border-radius:6px;
+               padding:.7rem 1rem; margin:1rem auto 0; max-width:440px; font-size:.88rem; color:#e6cdd3; }
+  .ex-includes { text-align:left; max-width:420px; margin:1.4rem auto; padding-left:1.3rem; font-size:.95rem; }
+  .ex-deadline { text-align:center; font-size:.95rem; color:var(--ex-wine-soft); letter-spacing:.08em; margin-bottom:1.6rem; }
+  .ex-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:2rem; }
+  .ex-alt { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#efe4d3; }
+  .ex-alt a { color:var(--ex-gold); }
+
+  .ex-faq { background:var(--ex-paper); }
+  .ex-faq details { border-bottom:1px solid #d3c2a4; padding:.9rem 0; }
+  .ex-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .ex-faq summary::before { content:"＋ "; color:var(--ex-wine); }
+  .ex-faq details[open] summary::before { content:"－ "; }
+  .ex-faq details p { margin:.6rem 0 0; }
+
+  @media (max-width:768px){
+    .ex-section { padding:2.6rem 1.1rem; }
+    .ex-teacher-flex { flex-direction:column; }
+    .ex-teacher-flex img { width:100%; max-width:320px; }
+    .ex-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="ex-page">
+
+  <!-- Hero -->
+  <header class="ex-hero">
+    <img class="ex-hero-bg" src="/assets/images/courses/exorcism/hero-exorcism.webp" alt="" width="2400" height="1350" fetchpriority="high">
+    <div class="ex-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#b07a86; font-size:.9rem; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="ex-eyebrow" style="display:block; width:fit-content; color:#b07a86; border-color:#b07a86;">防禦保護・基督教民間魔法</p>
+      <h1>
+        <span class="kicker">驅魔聖牌與驅魔詩篇</span>
+        真正的驅魔，<br>不是電影裡那個樣子
+      </h1>
+      <p class="ex-sub">撇開梵諦岡的戲劇化想像，民間與新教其實有一套一般人也能完成的驅魔方式。從聖本篤驅魔聖牌到驅魔詩篇，學會為自己與他人進行日常的檢疫與清理。</p>
+      <div class="ex-hero-meta">
+        <span>📅 2026/11/28（六）19:00–21:00</span>
+        <span>🌐 線上遠距</span>
+        <span>✝ 聖牌・詩篇・護符</span>
+      </div>
+      <a class="ex-cta" href="#signup">搶特價，立即報名</a>
+      <p class="ex-hero-note">報名截止 11/21｜舊生另有優惠</p>
+    </div>
+  </header>
+
+  <!-- 適合誰 -->
+  <section class="ex-section ex-pain">
+    <div class="ex-inner">
+      <p class="ex-eyebrow">適合誰</p>
+      <h2>你是不是好奇，或者正需要？</h2>
+      <ul>
+        <li>對「驅魔」很好奇，但只知道電影演的那一套</li>
+        <li>覺得自己或環境沾染了不好的東西，想學會自己清理</li>
+        <li>已經在做魔法工作，想補上「檢疫與驅除」這塊防護技術</li>
+        <li>對聖本篤聖牌、詩篇魔法這類基督教民間傳統有興趣</li>
+      </ul>
+      <p class="ex-punch">在民間，惡魔附身並沒有那麼戲劇化，驅魔也沒有電影裡那麼驚悚。它其實是一套可以理解、可以操作、一般人也能完成的保護技術。</p>
+    </div>
+  </section>
+
+  <!-- 敘事 -->
+  <section class="ex-section ex-story">
+    <div class="ex-inner">
+      <p class="ex-eyebrow" style="color:#c9973f; border-color:#c9973f;">關於這門課</p>
+      <h2>撇開梵諦岡，回到民間</h2>
+      <p>大家對驅魔的印象，就是神父撒著聖水、念誦經文，逼迫被附身的人說出秘名。但事實上在民間，惡魔附身並沒有那麼戲劇化。</p>
+      <p>撇去梵諦岡的驅魔儀式，民間與新教也有著專屬的方式。在天主教裡，平信徒唯一被允許的方式就是<strong>聖本篤驅魔聖牌</strong>，而這個方式也擴散到胡督與民間咒術使用；在新教裡，則有大量手稿記錄著透過地占、天使、詩篇來進行驅魔。</p>
+      <blockquote>我們將討論驅魔的真正意義，以及一般人可以完成的「檢疫式」驅魔方式。</blockquote>
+      <p>課程中也會分享四月老師個人的經驗與案例，讓你理解這套技術在真實生活裡怎麼運作。</p>
+    </div>
+  </section>
+
+  <!-- 課程大綱 -->
+  <section class="ex-section ex-syllabus">
+    <div class="ex-inner">
+      <p class="ex-eyebrow">課程大綱</p>
+      <h2>這堂課會教你</h2>
+      <div class="ex-syl-item"><strong>什麼是驅魔，以及驅魔的目的</strong></div>
+      <div class="ex-syl-item">個人經驗談</div>
+      <div class="ex-syl-item"><strong>聖本篤驅魔聖牌與使用方式</strong></div>
+      <div class="ex-syl-item">聖本篤禱文</div>
+      <div class="ex-syl-item"><strong>驅魔的詩篇</strong></div>
+      <div class="ex-syl-item">詩篇護符、藥劑、魔法油的製作</div>
+    </div>
+  </section>
+
+  <!-- 老師 -->
+  <section class="ex-section ex-teacher">
+    <div class="ex-inner">
+      <p class="ex-eyebrow" style="color:#c9973f; border-color:#c9973f;">授課老師</p>
+      <h2>四月老師</h2>
+      <div class="ex-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>深耕身心靈領域數十年，台灣、香港、馬來西亞皆有眾多學員。曾獨自引進諸多身心靈技術與技巧，現今專研胡督魔法與混沌魔法體系，深入理解中國古代哲學思想與西方魔法傳統。</p>
+          <p>擅長將繁瑣的傳統術法整理為系統化、可實作的現代教學。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 報名 -->
+  <section class="ex-section ex-price" id="signup">
+    <div class="ex-inner">
+      <p class="ex-eyebrow" style="color:#c9973f; border-color:#c9973f;">課程費用</p>
+      <h2 style="text-align:center;">報名資訊</h2>
+      <div class="ex-price-card">
+        <p class="ex-price-old">原價 3,500 元</p>
+        <p class="ex-price-now">特價 2,000 元</p>
+        <p class="ex-price-save">線上遠距課程</p>
+        <div class="ex-alumni">🎓 <strong>舊生優惠 1,800 元</strong><br>完成「藥草魔法初階」「天使符印」「胡督魔法神靈系列」「星光魔法系列」以上任一課程的學員適用</div>
+        <ul class="ex-includes">
+          <li>線上直播課程</li>
+          <li>聖本篤驅魔聖牌與禱文教學</li>
+          <li>驅魔詩篇完整講義</li>
+          <li>詩篇護符、藥劑、魔法油製作</li>
+          <li>課後提問管道</li>
+        </ul>
+        <a class="ex-cta" href="#ex-form">立即填寫報名表單</a>
+      </div>
+      <p class="ex-deadline">🗓 上課時間 11/28（六）19:00–21:00｜報名截止 11/21</p>
+
+      <div class="ex-form-wrap" id="ex-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScPC-cE-jb-nOxE62D59hW1gG-8AWLd20Nrfliet3TcCdNN2Q/viewform?embedded=true"
+          width="100%" height="1280" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="驅魔聖牌與驅魔詩篇報名表單">載入中…</iframe>
+      </div>
+
+      <p class="ex-alt">
+        或來信 <a href="mailto:{{ site.email | default: 'herbmagic@hotmail.com.tw' }}?subject=報名-驅魔聖牌與驅魔詩篇">{{ site.email | default: 'herbmagic@hotmail.com.tw' }}</a>，標題註明「報名驅魔聖牌與驅魔詩篇」，附上姓名與聯絡電話，並註明你上過的課程（申請舊生優惠）。送出後三日內回信確認。
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ex-section ex-faq">
+    <div class="ex-inner">
+      <p class="ex-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>我沒有魔法基礎，可以上嗎？</summary>
+        <p>可以。這門課從「什麼是驅魔、驅魔的目的」講起，會教一般人就能完成的檢疫式方法。若你上過藥草初階、天使符印、胡督神靈系列或星光魔法系列任一，還能享舊生優惠 1,800 元。</p>
+      </details>
+      <details>
+        <summary>需要有宗教信仰嗎？</summary>
+        <p>不需要特定信仰。聖本篤聖牌與詩篇是基督教民間傳統，課程以魔法工作的角度教學，會說明其原理與操作方式，尊重地使用即可。</p>
+      </details>
+      <details>
+        <summary>需要準備什麼材料？</summary>
+        <p>報名後會提供材料清單，包含聖牌、詩篇護符與藥劑、魔法油所需的品項，開課前備妥即可跟著實作。</p>
+      </details>
+      <details>
+        <summary>如果懷疑自己或家人真的「被附身」，這門課能處理嗎？</summary>
+        <p>這門課教的是民俗與魔法傳統中的驅除與清理技術，屬於靈性層面的自我照顧，並不能取代醫療或身心科的專業診斷。若當事人有明顯的身心狀況，請務必同時尋求專業醫療協助。</p>
+      </details>
+      <details>
+        <summary>當天有事無法出席，有回放嗎？</summary>
+        <p>本課程會有回放，但要求學員當天至少一定要上線。如果當天完全無法上線，請告知我們辦理延期或退費。</p>
+      </details>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#6e2c3a" bg="#e6dccd" %}
+
+</div>
