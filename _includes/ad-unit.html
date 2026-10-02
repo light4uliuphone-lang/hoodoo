@@ -1,23 +1,23 @@
 <!--
   工具頁廣告版位 — 四月老師自家輪播推薦卡片（promo-card）
   ──────────────────────────────────────────────
-  從下方 adData 清單隨機挑一則顯示（大圖＋文案＋按鈕）。
-  要增減／修改廣告：改 adData 陣列裡的 link（連結）、img（圖片網址）、text（文案）即可。
+  從下方 adData 清單隨機挑一則顯示：完整橫幅圖（不裁切）＋ 精選推薦標籤 ＋ 按鈕。
+  圖片請用設計好的橫幅圖（本身含文案即可）；卡片會完整顯示整張圖、不裁切。
+  要增減／修改廣告：改 adData 陣列裡的 link（連結）、img（圖片網址）即可。
   這一個檔案改了，所有工具頁的廣告會一起更新。
 -->
 <style>
-  .promo-card { display:block; max-width:480px; margin:28px auto 0; text-decoration:none; overflow:hidden;
+  .promo-card { display:block; max-width:520px; margin:28px auto 0; text-decoration:none; overflow:hidden;
                 background:linear-gradient(135deg,#1f1810,#2f2317 60%,#1a1109);
                 border:1px solid rgba(201,151,63,.45); border-radius:16px;
                 box-shadow:0 6px 24px rgba(0,0,0,.25); transition:transform .15s ease,filter .15s ease; }
   .promo-card:hover { transform:translateY(-2px); filter:brightness(1.08); }
-  .promo-card .pc-img { display:block; width:100%; height:auto; max-height:220px; object-fit:cover; background:#120c06; }
-  .promo-card .pc-body { padding:1rem 1.25rem 1.2rem; text-align:center; }
-  .promo-card .pc-tag { display:inline-block; background:#8c3b2e; color:#fff; font-size:.7rem; font-weight:700;
-                        letter-spacing:.18em; padding:.25rem 1rem; border-radius:999px; margin-bottom:.7rem; }
-  .promo-card .pc-text { display:block; color:#f4ecdd; font-size:1.08rem; line-height:1.6; margin-bottom:1rem; letter-spacing:.02em; }
-  .promo-card .pc-btn { display:inline-block; background:#c9973f; color:#1a1109; font-size:.95rem; font-weight:700;
-                        letter-spacing:.05em; padding:.6rem 1.8rem; border-radius:999px; }
+  .promo-card .pc-img { display:block; width:100%; height:auto; }        /* 完整顯示、不裁切 */
+  .promo-card .pc-body { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.75rem 1.1rem; }
+  .promo-card .pc-tag { background:#8c3b2e; color:#fff; font-size:.72rem; font-weight:700;
+                        letter-spacing:.15em; padding:.25rem .9rem; border-radius:999px; white-space:nowrap; }
+  .promo-card .pc-btn { background:#c9973f; color:#1a1109; font-size:.92rem; font-weight:700;
+                        letter-spacing:.05em; padding:.5rem 1.5rem; border-radius:999px; white-space:nowrap; }
   .promo-card:hover .pc-btn { background:#d8aa52; }
 </style>
 
@@ -25,7 +25,6 @@
   <img class="pc-img" src="" alt="精選推薦" loading="lazy">
   <span class="pc-body">
     <span class="pc-tag">精 選 推 薦</span>
-    <span class="pc-text">立即前往了解更多</span>
     <span class="pc-btn">前往了解 →</span>
   </span>
 </a>
@@ -34,9 +33,9 @@
 (function () {
   // 【設定區：廣告清單】
   var adData = [
-    { link: "https://go98.me/soul-axis", img: "https://go98.me/img-soul-axis", text: "立即前往了解更多" },
-    { link: "https://go98.me/shop01", img: "https://go98.me/shopimg01", text: "立即前往了解更多" },
-    { link: "https://go98.me/shop02", img: "https://go98.me/shopimg02", text: "限時優惠實施中" }
+    { link: "https://go98.me/soul-axis", img: "https://go98.me/img-soul-axis" },
+    { link: "https://go98.me/shop01", img: "https://go98.me/shopimg01" },
+    { link: "https://go98.me/shop02", img: "https://go98.me/shopimg02" }
   ];
 
   var pick = adData[Math.floor(Math.random() * adData.length)];
@@ -45,7 +44,6 @@
     if (card.getAttribute('data-filled') === '1') return;
     card.href = pick.link;
     var img = card.querySelector('.pc-img'); if (img) { img.src = pick.img; img.alt = "精選推薦"; }
-    var txt = card.querySelector('.pc-text'); if (txt) txt.textContent = (pick.text || "").replace(/\s*→\s*$/, "");
     card.setAttribute('data-filled', '1');
     card.style.display = 'block';
   });
