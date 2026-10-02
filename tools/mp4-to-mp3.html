@@ -1,1 +1,285 @@
+---
+layout: tool
+title: "MP4 轉 MP3"
+description: "把影片裡的聲音抽出來存成 MP3。全程在你的瀏覽器完成，檔案不會上傳到任何地方。支援 MP4、MOV、M4A、WebM、WAV。"
+---
+<style>
+/* 版面：單欄置中工作區 — 設定列、拖放區、檔案佇列。只作用於本工具。 */
+:root{
+  --bg:#f3f4f7; --surface:#ffffff; --fg:#1b1e27; --muted:#5d6475; --line:#d9dce5;
+  --accent:#c9973f; --accent-soft:#f5ead5; --ok:#1f7a4d; --err:#b3261e;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12141b; --surface:#1b1e28; --fg:#e7e9f0; --muted:#9aa1b4; --line:#2e3242;
+  --accent:#dcae5a; --accent-soft:#3a2f1c; --ok:#5fcf95; --err:#ff8a80; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12141b; --surface:#1b1e28; --fg:#e7e9f0; --muted:#9aa1b4; --line:#2e3242;
+  --accent:#dcae5a; --accent-soft:#3a2f1c; --ok:#5fcf95; --err:#ff8a80; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.6;margin:0}
+.wrap{max-width:720px;margin:0 auto;padding-block:32px 8px;padding-inline:16px;display:flex;flex-direction:column;gap:24px}
+header h1{font-size:28px;font-weight:700;margin:0;text-wrap:balance;letter-spacing:.02em}
+header p{margin:6px 0 0;color:var(--muted);max-width:60ch}
+.settings{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:end}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12px;color:var(--muted);letter-spacing:.06em}
+select{font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg);min-width:150px}
+select:focus-visible,button:focus-visible,.drop:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.drop{border:2px dashed var(--line);border-radius:14px;background:var(--surface);padding:40px 20px;text-align:center;cursor:pointer;transition:border-color .15s,background .15s;display:flex;flex-direction:column;align-items:center;gap:8px}
+.drop:hover,.drop.over{border-color:var(--accent);background:var(--accent-soft)}
+.drop strong{font-size:17px}
+.drop span{color:var(--muted);font-size:13px}
+.drop svg{width:40px;height:40px;color:var(--accent)}
+.queue{display:flex;flex-direction:column;gap:12px;list-style:none;margin:0;padding:0}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.row{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between}
+.name{font-weight:500;min-width:0;overflow-wrap:anywhere;flex:1 1 240px}
+.meta{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.status{font-size:13px;color:var(--muted)}
+.status.ok{color:var(--ok)} .status.err{color:var(--err)}
+.bar{height:6px;border-radius:3px;background:var(--accent-soft);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .2s}
+audio{width:100%;height:36px}
+button{font:inherit;font-size:14px;border-radius:8px;padding:8px 16px;cursor:pointer;border:1px solid var(--accent);background:var(--accent);color:#fff;font-weight:500}
+button.ghost{background:transparent;color:var(--accent)}
+button:disabled{opacity:.45;cursor:default}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.notes{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:4px}
+.notes p{margin:0}
+.toast{font-size:13px;min-height:1.2em}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>MP4 轉 MP3</h1>
+    <p>把影片裡的聲音抽出來，存成 MP3。轉檔全部在你的瀏覽器裡完成，檔案不會上傳到任何地方。</p>
+  </header>
+
+  <div class="settings">
+    <div class="field">
+      <label for="kbps">音質（位元率）</label>
+      <select id="kbps">
+        <option value="128">128 kbps．一般語音</option>
+        <option value="192" selected>192 kbps．標準音樂</option>
+        <option value="256">256 kbps．高音質</option>
+        <option value="320">320 kbps．最高音質</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="ch">聲道</label>
+      <select id="ch">
+        <option value="2" selected>立體聲</option>
+        <option value="1">單聲道（檔案較小）</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="drop" id="drop" tabindex="0" role="button" aria-label="選擇影片檔">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+    <strong>把 MP4 拖到這裡，或點一下選檔</strong>
+    <span>可一次選多個檔案．也支援 MOV、M4A、WebM、WAV</span>
+    <input type="file" id="file" accept="video/*,audio/*,.mp4,.m4a,.mov" multiple hidden>
+  </div>
+
+  <ul class="queue" id="queue"></ul>
+
+  <div class="actions" id="bulk" hidden>
+    <button id="zipAll" class="ghost">全部打包下載（ZIP）</button>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+
+  {% include ad-unit.html %}
+
+  <div class="notes">
+    <p>建議單檔 1 小時以內。檔案太大時，瀏覽器可能記憶體不足而轉檔失敗。</p>
+    <p>手機上也能用，但速度比電腦慢。</p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const drop = $("#drop"), input = $("#file"), queue = $("#queue"), toast = $("#toast");
+  const results = []; // {name, blob}
+  let busy = Promise.resolve();
+
+  const fmtSize = b => b > 1048576 ? (b/1048576).toFixed(1) + " MB" : Math.max(1, Math.round(b/1024)) + " KB";
+  const fmtTime = s => { s = Math.round(s); const m = Math.floor(s/60), r = s%60; return m + ":" + String(r).padStart(2,"0"); };
+  const baseName = n => n.replace(/\.[^.]+$/, "") || "audio";
+
+  drop.addEventListener("click", () => input.click());
+  drop.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); input.click(); } });
+  ["dragenter","dragover"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
+  ["dragleave","drop"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove("over"); }));
+  drop.addEventListener("drop", e => addFiles(e.dataTransfer.files));
+  input.addEventListener("change", () => { addFiles(input.files); input.value = ""; });
+
+  function addFiles(list) {
+    for (const f of list) {
+      const ui = makeItem(f);
+      busy = busy.then(() => convert(f, ui));
+    }
+  }
+
+  function makeItem(f) {
+    const li = document.createElement("li");
+    li.className = "item";
+    li.innerHTML = `<div class="row"><div class="name"></div><div class="meta"></div></div>
+      <div class="bar"><i></i></div>
+      <div class="row"><div class="status">排隊中…</div><div class="actions"></div></div>`;
+    li.querySelector(".name").textContent = f.name;
+    li.querySelector(".meta").textContent = fmtSize(f.size);
+    queue.prepend(li);
+    return {
+      li,
+      bar: li.querySelector(".bar i"),
+      status: li.querySelector(".status"),
+      meta: li.querySelector(".meta"),
+      actions: li.querySelector(".actions"),
+    };
+  }
+
+  const tick = () => new Promise(r => setTimeout(r, 0));
+
+  function decode(buf) {
+    const Ctx = window.OfflineAudioContext || window.webkitOfflineAudioContext;
+    const ctx = new Ctx(2, 1, 44100);
+    return new Promise((res, rej) => {
+      const p = ctx.decodeAudioData(buf, res, rej);
+      if (p && p.then) p.then(res, rej);
+    });
+  }
+
+  function toInt16(f32) {
+    const out = new Int16Array(f32.length);
+    for (let i = 0; i < f32.length; i++) {
+      const s = Math.max(-1, Math.min(1, f32[i]));
+      out[i] = s < 0 ? s * 0x8000 : s * 0x7fff;
+    }
+    return out;
+  }
+
+  async function convert(file, ui) {
+    const kbps = +$("#kbps").value, channels = +$("#ch").value;
+    try {
+      if (typeof lamejs === "undefined") throw new Error("編碼元件沒載入，請確認網路連線後重新整理頁面。");
+      ui.status.textContent = "讀取檔案中…";
+      const buf = await file.arrayBuffer();
+      ui.status.textContent = "解析音訊中…";
+      ui.bar.style.width = "5%";
+      let audio;
+      try { audio = await decode(buf); }
+      catch { throw new Error("讀不到這個檔案的聲音。可能沒有音軌，或是瀏覽器不支援它的音訊格式。"); }
+
+      const rate = audio.sampleRate;
+      const L = audio.getChannelData(0);
+      const R = audio.numberOfChannels > 1 ? audio.getChannelData(1) : L;
+      let left, right;
+      if (channels === 1) {
+        const mix = new Float32Array(L.length);
+        for (let i = 0; i < L.length; i++) mix[i] = (L[i] + R[i]) / 2;
+        left = toInt16(mix);
+      } else {
+        left = toInt16(L); right = toInt16(R);
+      }
+
+      const enc = new lamejs.Mp3Encoder(channels, rate, kbps);
+      const block = 1152 * 20, parts = [];
+      let last = performance.now();
+      ui.status.textContent = "轉檔中…";
+      for (let i = 0; i < left.length; i += block) {
+        const l = left.subarray(i, i + block);
+        const out = channels === 1 ? enc.encodeBuffer(l) : enc.encodeBuffer(l, right.subarray(i, i + block));
+        if (out.length) parts.push(new Uint8Array(out));
+        if (performance.now() - last > 60) {
+          const pct = 5 + 95 * i / left.length;
+          ui.bar.style.width = pct.toFixed(1) + "%";
+          ui.status.textContent = "轉檔中… " + Math.floor(pct) + "%";
+          await tick(); last = performance.now();
+        }
+      }
+      const end = enc.flush();
+      if (end.length) parts.push(new Uint8Array(end));
+
+      const blob = new Blob(parts, { type: "audio/mpeg" });
+      const name = baseName(file.name) + ".mp3";
+      results.push({ name, blob });
+      ui.bar.style.width = "100%";
+      ui.meta.textContent = fmtTime(audio.duration) + "．" + fmtSize(file.size) + " → " + fmtSize(blob.size);
+      ui.status.textContent = "完成";
+      ui.status.classList.add("ok");
+
+      const url = URL.createObjectURL(blob);
+      const player = document.createElement("audio");
+      player.controls = true; player.preload = "metadata"; player.src = url;
+      ui.li.insertBefore(player, ui.li.lastElementChild);
+
+      const btn = document.createElement("button");
+      btn.textContent = "下載 MP3";
+      btn.addEventListener("click", () => save([{ name, blob }]));
+      ui.actions.append(btn);
+      $("#bulk").hidden = results.length < 2;
+    } catch (e) {
+      ui.status.textContent = e.message || "轉檔失敗";
+      ui.status.classList.add("err");
+      ui.bar.style.width = "0";
+    }
+  }
+
+  // ---- 下載 ----
+  async function save(files) {
+    toast.textContent = "";
+    for (const f of files) {
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(f.blob); a.download = f.name;
+      document.body.append(a); a.click(); a.remove();
+      await new Promise(r => setTimeout(r, 300));
+    }
+  }
+  $("#zipAll").addEventListener("click", async () => {
+    const zip = await makeZip(results);
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(zip); a.download = "mp3-檔案.zip";
+    document.body.append(a); a.click(); a.remove();
+  });
+
+  // 極簡 ZIP 產生器（store，不壓縮 — MP3 本身已壓縮）。
+  const CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+  function crc32(u8) { let c = 0xffffffff; for (let i = 0; i < u8.length; i++) c = CRC[(c ^ u8[i]) & 0xff] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; }
+  async function makeZip(files) {
+    const enc = new TextEncoder(), chunks = [], central = [];
+    let offset = 0;
+    const used = new Set();
+    for (const f of files) {
+      let name = f.name, n = 2;
+      while (used.has(name)) name = baseName(f.name) + " (" + n++ + ").mp3";
+      used.add(name);
+      const data = new Uint8Array(await f.blob.arrayBuffer());
+      const nameB = enc.encode(name), crc = crc32(data);
+      const h = new DataView(new ArrayBuffer(30));
+      h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint16(6, 0x0800, true);
+      h.setUint16(8, 0, true); h.setUint32(14, crc, true);
+      h.setUint32(18, data.length, true); h.setUint32(22, data.length, true);
+      h.setUint16(26, nameB.length, true);
+      chunks.push(h.buffer, nameB, data);
+      const c = new DataView(new ArrayBuffer(46));
+      c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true);
+      c.setUint16(8, 0x0800, true); c.setUint32(16, crc, true);
+      c.setUint32(20, data.length, true); c.setUint32(24, data.length, true);
+      c.setUint16(28, nameB.length, true); c.setUint32(42, offset, true);
+      central.push(c.buffer, nameB);
+      offset += 30 + nameB.length + data.length;
+    }
+    const cdSize = central.reduce((s, b) => s + b.byteLength, 0);
+    const e = new DataView(new ArrayBuffer(22));
+    e.setUint32(0, 0x06054b50, true); e.setUint16(8, files.length, true); e.setUint16(10, files.length, true);
+    e.setUint32(12, cdSize, true); e.setUint32(16, offset, true);
+    return new Blob([...chunks, ...central, e.buffer], { type: "application/zip" });
+  }
+})();
+</script>
 
