@@ -1,13 +1,58 @@
 <!--
-  廣告版位（全站工具頁共用）
+  工具頁廣告版位 — 四月老師自家輪播推薦橫幅（promo-bar）
   ──────────────────────────────────────────────
-  把你的廣告代碼貼在下面 <div class="tool-ad"> 裡面即可，
-  例如 Google AdSense 的 <ins class="adsbygoogle" ...></ins> 整段，
-  或自家課程／商品的輪播／橫幅 HTML。
-  改這一個檔，所有工具頁的廣告會一起更新。
-  版位沒有填代碼時，這個區塊不會佔版面（空的）。
+  從下方 adData 清單隨機挑一則顯示，與部落格、google-ad-bottom 用的是同一套。
+  要增減／修改廣告：改 adData 陣列裡的 link（連結）、img（圖片網址）、text（文案）即可。
+  這一個檔案改了，所有工具頁（layout: tool）的廣告會一起更新。
 -->
-<div class="tool-ad" style="max-width:720px;margin:28px auto 0;padding:0 16px;">
-  <!-- 廣告代碼請貼在這一行下方 -->
+<style>
+  .promo-bar { display:block; text-decoration:none; background:linear-gradient(100deg,#1f1810 0%,#2f2317 55%,#1a1109 100%);
+               border-top:1px solid rgba(201,151,63,.4); border-bottom:1px solid rgba(201,151,63,.4); padding:.9rem 1.5rem; text-align:center;
+               margin:28px 0 0; transition:filter .15s ease; }
+  .promo-bar:hover { filter:brightness(1.15); }
+  .promo-bar-in { max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:center;
+                  gap:.6rem 1.2rem; flex-wrap:wrap; }
+  .promo-bar .tag { background:#8c3b2e; color:#fff; font-size:.72rem; font-weight:700; letter-spacing:.15em;
+                    padding:.2rem .9rem; border-radius:999px; white-space:nowrap; }
+  .promo-bar .promo-ad-img { height:30px; width:auto; max-width:72px; border-radius:6px; object-fit:cover; vertical-align:middle; }
+  .promo-bar .msg { color:#f4ecdd; font-size:.98rem; letter-spacing:.03em; }
+  .promo-bar .msg b { color:#c9973f; font-size:1.1rem; }
+  .promo-bar .go { color:#c9973f; font-size:.9rem; font-weight:700; letter-spacing:.08em; white-space:nowrap; }
+  @media (max-width:600px){
+    .promo-bar { padding:.8rem 1rem; }
+    .promo-bar .msg { font-size:.9rem; }
+  }
+</style>
 
-</div>
+<a class="promo-bar" data-ad-bar href="#" target="_blank" rel="noopener noreferrer" style="display:none;">
+  <span class="promo-bar-in">
+    <span class="tag">精 選 推 薦</span>
+    <img class="promo-ad-img" src="" alt="精選推薦" loading="lazy">
+    <span class="msg promo-ad-text">立即前往了解更多 →</span>
+    <span class="go">→</span>
+  </span>
+</a>
+
+<script>
+(function () {
+  // 【設定區：廣告清單】與 google-ad-bottom.html 相同
+  var adData = [
+    { link: "https://go98.me/soul-axis", img: "https://go98.me/img-soul-axis", text: "立即前往了解更多 →" },
+    { link: "https://go98.me/shop01", img: "https://go98.me/shopimg01", text: "立即前往了解更多 →" },
+    { link: "https://go98.me/shop02", img: "https://go98.me/shopimg02", text: "限時優惠實施中 →" }
+  ];
+
+  var pick = adData[Math.floor(Math.random() * adData.length)];
+
+  document.querySelectorAll('a.promo-bar[data-ad-bar]').forEach(function (bar) {
+    if (bar.getAttribute('data-filled') === '1') return;
+    bar.href = pick.link;
+    var img = bar.querySelector('.promo-ad-img');
+    if (img) { img.src = pick.img; img.alt = "精選推薦"; }
+    var txt = bar.querySelector('.promo-ad-text');
+    if (txt) txt.textContent = pick.text;
+    bar.setAttribute('data-filled', '1');
+    bar.style.display = 'block';
+  });
+})();
+</script>
