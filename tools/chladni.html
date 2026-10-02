@@ -65,10 +65,16 @@ permalink: /tools/chladni/
 </head>
 <body>
 <a href="/tools/" style="position:fixed;top:12px;left:16px;z-index:50;font:13px/1 'Noto Sans TC',system-ui,sans-serif;color:#8a86a0;text-decoration:none;opacity:.7;transition:color .2s,opacity .2s" onmouseover="this.style.color='#fff';this.style.opacity='1'" onmouseout="this.style.color='#8a86a0';this.style.opacity='.7'">← 工具箱</a>
-<div id="adtop" style="position:fixed;top:0;left:0;right:0;z-index:40;">
+<div id="adtop" style="position:fixed;left:50%;top:56px;transform:translateX(-50%);z-index:40;width:min(440px,92vw);">
 {% include ad-unit.html %}
 </div>
-<style>#adtop .promo-bar{margin:0}</style>
+<style>#adtop .promo-card{margin:0}#adtop .pc-img{max-height:150px}</style>
+<script>
+(function(){var ad=document.getElementById('adtop');if(!ad)return;
+var hide=function(){ad.style.transition='opacity .4s';ad.style.opacity='0';setTimeout(function(){ad.style.display='none';},400);};
+var f=document.getElementById('file');if(f)f.addEventListener('change',hide);
+var m=document.getElementById('mic');if(m)m.addEventListener('click',hide);})();
+</script>
 
 <canvas id="c"></canvas>
 <div id="hint">載入一首曲子,畫面會跟著聲音變形<br><b>載入音樂</b> ‧ 或按 <b>麥克風</b> 聽環境聲</div>
