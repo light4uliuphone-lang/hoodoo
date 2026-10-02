@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}｜靈火巫境 工具箱</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+{% if page.image %}<meta property="og:image" content="{{ page.image }}">{% endif %}
+<meta property="og:title" content="{{ page.title }}｜靈火巫境">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* 版型外殼樣式 — 一律用 tbar-/tfoot- 前綴，避免和各工具自己的 CSS 撞名 */
+  .tbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 20px;
+        max-width:960px;margin:0 auto;padding:16px;font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif}
+  .tbar a{text-decoration:none}
+  .tbar-brand{font-size:18px;font-weight:700;color:#c9973f;letter-spacing:.04em}
+  .tbar-nav{display:flex;gap:18px;font-size:14px}
+  .tbar-nav a{color:#5d6475}
+  .tbar-nav a:hover{color:#c9973f}
+  .tfoot{border-top:1px solid #e0e0e0;max-width:960px;margin:48px auto 0;padding:20px 16px 40px;
+         font-family:"Noto Sans TC","PingFang TC",system-ui,sans-serif;font-size:13px;color:#8a8f9c;text-align:center}
+  .tfoot a{color:#c9973f;text-decoration:none}
+  @media (prefers-color-scheme:dark){
+    .tbar-nav a{color:#9aa1b4} .tfoot{border-color:#2e3242;color:#777d8c}
+  }
+</style>
+</head>
+<body>
+  <header class="tbar">
+    <a href="/" class="tbar-brand">靈火巫境</a>
+    <nav class="tbar-nav">
+      <a href="/course.html">課程</a>
+      <a href="/tools/">工具箱</a>
+      <a href="/blog/">部落格</a>
+      <a href="/">回首頁</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include ad-unit.html %}
+
+  <footer class="tfoot">
+    © 靈火巫境 hoodoo.pro　·　此工具在你的瀏覽器本機執行，檔案不會上傳　·　<a href="/tools/">更多工具</a>
+  </footer>
+</body>
+</html>
