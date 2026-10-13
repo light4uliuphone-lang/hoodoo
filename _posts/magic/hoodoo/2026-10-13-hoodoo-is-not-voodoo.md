@@ -6,6 +6,7 @@ author: 靈火巫境
 categories: [magic]
 image: /assets/images/blog/hoodoo-not-voodoo.webp
 description: "胡督常被翻成巫毒，但胡督、海地巫毒、路易斯安那巫毒各有不同的歷史脈絡。名稱一混，後面整套歷史也跟著混掉。"
+excerpt: "胡督常常被翻成巫毒，但兩者其實不是同一回事。甜蜜罐、魔法袋、根術、海地巫毒、路易斯安那巫毒，全被塞進「巫毒」兩個字裡，差的其實是一整段歷史。"
 ---
 
 <img src="/assets/images/blog/hoodoo-not-voodoo.webp" alt="胡督、海地巫毒與路易斯安那巫毒：三條相關卻不同的傳統" style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto 1.5rem;border-radius:8px;">
