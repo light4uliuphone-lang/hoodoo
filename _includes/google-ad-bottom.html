@@ -14,49 +14,32 @@
     </a>
 
 </div>
-　
+
 <script>
 (function() {
-    // 【設定區：商品清單】
-    var adData = [
-       
-        {
-            link: "https://go98.me/shop01",
-            img: "https://go98.me/shopimg01",
-            text: "立即前往了解更多 →"
-        },
-        {
-            link: "https://go98.me/shop02",
-            img: "https://go98.me/shopimg02",
-            text: "限時優惠實施中 →"
-        }
-    ];
+    // 廣告清單來自 _data/ads.yml（唯一來源，換廣告只改那個檔）
+    var adData = {{ site.data.ads | jsonify }};
+    if (!adData || !adData.length) return;
 
-    // 隨機抽選
-    var selected = adData[Math.floor(Math.random() * adData.length)];
-
-    // 取得頁面上所有引用此檔案的區塊
     var containers = document.querySelectorAll('.custom-random-ad');
-    
+
     containers.forEach(function(container) {
-        // 只處理尚未顯示的區塊
-        if (container.style.display === 'none') {
-            var link = container.querySelector('.ad-link');
-            var img = container.querySelector('.ad-img');
-            var text = container.querySelector('.ad-text');
-            var card = container.querySelector('.ad-card');
+        if (container.getAttribute('data-filled') === '1') return;
+        var selected = adData[Math.floor(Math.random() * adData.length)];
+        var link = container.querySelector('.ad-link');
+        var img = container.querySelector('.ad-img');
+        var text = container.querySelector('.ad-text');
+        var card = container.querySelector('.ad-card');
 
-            link.href = selected.link;
-            img.src = selected.img;
-            text.innerText = selected.text;
-            
-            // 填入資料後顯示
-            container.style.display = 'block';
+        link.href = selected.link;
+        img.src = selected.img;
+        text.innerText = selected.text || '立即前往了解更多 →';
 
-            // 懸浮上升效果
-            card.onmouseover = function() { this.style.transform = 'translateY(-5px)'; };
-            card.onmouseout = function() { this.style.transform = 'translateY(0)'; };
-        }
+        container.setAttribute('data-filled', '1');
+        container.style.display = 'block';
+
+        card.onmouseover = function() { this.style.transform = 'translateY(-5px)'; };
+        card.onmouseout = function() { this.style.transform = 'translateY(0)'; };
     });
 })();
 </script>

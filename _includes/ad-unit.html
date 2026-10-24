@@ -3,9 +3,9 @@
   ──────────────────────────────────────────────
   從下方 adData 清單隨機挑一則顯示：完整橫幅圖（不裁切）＋ 精選推薦標籤 ＋ 按鈕。
   圖片請用設計好的橫幅圖（本身含文案即可）；卡片會完整顯示整張圖、不裁切。
-  要增減／修改廣告：改 adData 陣列裡的 link（連結）、img（圖片網址）即可。
-  這一個檔案改了，所有工具頁的廣告會一起更新。
--->　
+  廣告清單來自 _data/ads.yml（全站唯一來源）。
+  要增減／修改廣告：只改 _data/ads.yml，部落格與工具頁會一起更新。
+-->
 <style>
   .promo-card { display:block; max-width:520px; margin:28px auto 0; text-decoration:none; overflow:hidden;
                 background:linear-gradient(135deg,#1f1810,#2f2317 60%,#1a1109);
@@ -31,12 +31,9 @@
 
 <script>
 (function () {
-  // 【設定區：廣告清單】
-  var adData = [
-   
-    { link: "https://go98.me/shop01", img: "https://go98.me/shopimg01" },
-    { link: "https://go98.me/shop02", img: "https://go98.me/shopimg02" }
-  ];
+  // 廣告清單來自 _data/ads.yml（唯一來源）
+  var adData = {{ site.data.ads | jsonify }};
+  if (!adData || !adData.length) return;
 
   var pick = adData[Math.floor(Math.random() * adData.length)];
 
