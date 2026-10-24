@@ -6,7 +6,7 @@
 #   - _includes/my-self-ad.html        （細長橫幅）
 # 每一則需要三個欄位：link（連結）、img（圖片網址）、text（按鈕文字）
 # ────────────────────────────────────────────────
-  text: "立即前往了解更多 →"
+
 - link: "https://go98.me/shop01"
   img:  "https://go98.me/shopimg01"
   text: "立即前往了解更多 →"
