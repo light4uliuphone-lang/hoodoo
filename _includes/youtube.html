@@ -1,0 +1,14 @@
+{%- comment -%}
+  YouTube 嵌入元件（點擊才載入，手機自動縮放）
+  用法：{% include youtube.html id="影片ID" title="影片標題" %}
+{%- endcomment -%}
+<div class="yt-embed" data-id="{{ include.id }}" role="button" tabindex="0" aria-label="播放影片：{{ include.title | default: 'YouTube 影片' | escape }}"
+     style="position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:10px;overflow:hidden;margin:1.6rem 0 .5rem;cursor:pointer;"
+     onclick="var d=this,i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+d.getAttribute('data-id')+'?autoplay=1&amp;rel=0';i.title=d.getAttribute('aria-label');i.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';i.allowFullscreen=true;i.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;border:0;';d.innerHTML='';d.appendChild(i);d.onclick=null;d.onkeydown=null;d.style.cursor='default';"
+     onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
+  <img src="https://i.ytimg.com/vi/{{ include.id }}/hqdefault.jpg" alt="{{ include.title | default: 'YouTube 影片' | escape }}" loading="lazy"
+       style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+  <span aria-hidden="true" style="position:absolute;top:50%;left:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:rgba(201,151,63,.92);box-shadow:0 4px 18px rgba(0,0,0,.45);"></span>
+  <span aria-hidden="true" style="position:absolute;top:50%;left:50%;margin:-14px 0 0 -8px;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #1a1109;"></span>
+</div>
+<p style="text-align:right;font-size:.85rem;margin:0 0 1.6rem;"><a href="https://youtu.be/{{ include.id }}" target="_blank" rel="noopener">在 YouTube 觀看 →</a></p>
