@@ -3,7 +3,7 @@ layout: post
 title: "朋友一直抱怨，你別急著給建議"
 date: 2026-10-24 16:30:00 +0800
 author: 靈火巫境
-categories: [psychology]
+categories: [life]
 tags: [心靈筆記, 影片]
 image: https://i.ytimg.com/vi/Ou7Kd3Bq43k/hqdefault.jpg
 description: "朋友跟你抱怨工作的時候，你可能很自然地想幫他解決問題：「那就換工作啊」、「跟主管講清楚」、「不要再理那個人」。"

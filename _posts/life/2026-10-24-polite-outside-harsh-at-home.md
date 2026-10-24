@@ -3,7 +3,7 @@ layout: post
 title: "為什麼對外人客氣，回到家什麼傷人的話都敢講？"
 date: 2026-10-24 16:50:00 +0800
 author: 靈火巫境
-categories: [psychology]
+categories: [life]
 tags: [心靈筆記, 影片]
 image: https://i.ytimg.com/vi/XZOtb38Pipg/hqdefault.jpg
 description: "很多人在外面很有禮貌，面對同事、朋友甚至陌生人，都知道什麼話不能亂說；可是回到家之後，卻可能把最不耐煩、最尖銳的一面留給伴侶或家人。"

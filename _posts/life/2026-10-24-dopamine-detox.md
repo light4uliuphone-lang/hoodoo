@@ -3,7 +3,7 @@ layout: post
 title: "改變自己最快的方法：多巴胺戒斷"
 date: 2026-10-24 17:10:00 +0800
 author: 靈火巫境
-categories: [psychology]
+categories: [life]
 tags: [心靈筆記, 影片]
 image: https://i.ytimg.com/vi/qogtfy9IVXc/hqdefault.jpg
 description: "我們每天接觸手機、短影音、社群通知、遊戲與各種即時娛樂，大腦幾乎隨時都能獲得快速刺激。久而久之，原本需要耐心、專注與等待回報的事情，反而變得愈來愈難開始。"

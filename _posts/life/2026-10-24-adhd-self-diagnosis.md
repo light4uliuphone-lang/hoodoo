@@ -3,7 +3,7 @@ layout: post
 title: "最近怎麼每個人都覺得自己有 ADHD？"
 date: 2026-10-24 16:10:00 +0800
 author: 靈火巫境
-categories: [psychology]
+categories: [life]
 tags: [心靈筆記, 影片]
 image: https://i.ytimg.com/vi/vd7SayEoF0s/hqdefault.jpg
 description: "短影音平台上常出現「如果你有這幾個特徵，你可能有 ADHD」的內容：容易拖延、房間很亂、聽人說話會分心、常常忘東忘西。"

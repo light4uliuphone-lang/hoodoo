@@ -3,7 +3,7 @@ layout: post
 title: "關係中的痛苦，總來自雞同鴨講"
 date: 2026-10-24 16:20:00 +0800
 author: 靈火巫境
-categories: [psychology]
+categories: [life]
 tags: [心靈筆記, 影片]
 image: https://i.ytimg.com/vi/iGugGNV64UA/hqdefault.jpg
 description: "關係裡很多衝突看起來是在吵一件小事，但兩個人真正爭執的，往往不是同一個問題。"

@@ -3,7 +3,7 @@ layout: post
 title: "明明沒做什麼，為什麼還是這麼累？真正消耗你的，可能是精神內耗"
 date: 2026-10-24 17:00:00 +0800
 author: 靈火巫境
-categories: [psychology]
+categories: [life]
 tags: [心靈筆記, 影片]
 image: https://i.ytimg.com/vi/vf8LnjbUO7Q/hqdefault.jpg
 description: "有些人明明一整天沒有跑來跑去，也沒有做大量體力工作，晚上卻累得什麼都不想做。這種疲憊，不一定來自身體。"
