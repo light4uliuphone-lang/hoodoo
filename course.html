@@ -15,6 +15,17 @@ description: "探索四月老師的課程中心，依學習路徑編排：藥草
 .tag-new { background: #fff3e0; color: #e65100; border: 1px solid #ffb74d; }
 .section-note { color: #607d8b; font-size: 0.9rem; margin: -0.5rem 0 1.25rem; }
 .unlock-divider { text-align: center; color: #00897b; font-weight: 600; letter-spacing: 2px; margin: 0 0 2rem; font-size: 0.9rem; }
+
+/* 課程搜尋框 */
+.cs-search { max-width: 640px; margin: 0 auto 2rem; position: relative; }
+.cs-search input { width: 100%; box-sizing: border-box; padding: 0.85rem 2.8rem 0.85rem 2.8rem; font-size: 1rem; font-family: inherit; border: 2px solid #cfd8dc; border-radius: 999px; background: #fff; color: #263238; outline: none; transition: border-color .15s ease, box-shadow .15s ease; }
+.cs-search input:focus { border-color: #1a5f5f; box-shadow: 0 0 0 3px rgba(26,95,95,.15); }
+.cs-search .cs-icon { position: absolute; left: 1.05rem; top: 50%; transform: translateY(-50%); font-size: 1.05rem; pointer-events: none; }
+.cs-search .cs-clear { position: absolute; right: .7rem; top: 50%; transform: translateY(-50%); border: 0; background: #eceff1; color: #546e7a; width: 1.9rem; height: 1.9rem; border-radius: 50%; cursor: pointer; font-size: 1rem; line-height: 1; display: none; }
+.cs-search .cs-clear:hover { background: #cfd8dc; }
+.cs-status { text-align: center; color: #546e7a; font-size: .92rem; margin: .7rem 0 0; min-height: 1.4rem; }
+.cs-empty { text-align: center; color: #607d8b; padding: 2.5rem 0; display: none; }
+.cs-hide { display: none !important; }
 </style>
 
 <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
@@ -23,6 +34,15 @@ description: "探索四月老師的課程中心，依學習路徑編排：藥草
         課程依<strong>學習路徑</strong>編排。最上方的 🌿<strong>藥草魔法師基礎</strong>是<strong>金錢・愛情・胡督</strong>三大策略體系的共同必修，修畢後即可進入三條主幹。<br>
         下方為<strong>獨立路線</strong>（防禦・本土藥草・混沌魔法・行星魔法・能量療癒）<strong>無需藥草基礎</strong>，可直接入門；最後為無先修的入門單堂與主題工作坊。
     </p>
+
+    <!-- 課程搜尋 -->
+    <div class="cs-search" role="search">
+        <span class="cs-icon">🔍</span>
+        <input type="search" id="cs-input" placeholder="搜尋課程：輸入關鍵字，例如 符印、金錢、遠距、歐比路" aria-label="搜尋課程" autocomplete="off">
+        <button type="button" class="cs-clear" id="cs-clear" aria-label="清除搜尋">×</button>
+        <p class="cs-status" id="cs-status" aria-live="polite"></p>
+    </div>
+    <p class="cs-empty" id="cs-empty">找不到符合的課程，換個關鍵字試試，例如「符印」「藥草」「遠距」。</p>
 
     <!-- 導覽錨點 -->
     <section class="course-categories" style="margin-bottom: 3.5rem;">
@@ -236,8 +256,8 @@ description: "探索四月老師的課程中心，依學習路徑編排：藥草
         </div>
     </section>
 
-    <hr style="border: none; border-top: 1px dashed #cfd8dc; margin: 0 0 2.5rem;">
-    <p style="text-align: center; color: #607d8b; margin-bottom: 2rem; font-size: 0.95rem;">以下為<strong>獨立路線</strong>，<strong>無需先修藥草基礎</strong>，可各自直接入門 ↓</p>
+    <hr class="cs-extra" style="border: none; border-top: 1px dashed #cfd8dc; margin: 0 0 2.5rem;">
+    <p class="cs-extra" style="text-align: center; color: #607d8b; margin-bottom: 2rem; font-size: 0.95rem;">以下為<strong>獨立路線</strong>，<strong>無需先修藥草基礎</strong>，可各自直接入門 ↓</p>
 
     <!-- 🛡️ 防禦策略 -->
     <section id="defense" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
@@ -474,7 +494,7 @@ description: "探索四月老師的課程中心，依學習路徑編排：藥草
         </div>
     </section>
 
-    <hr style="border: none; border-top: 1px dashed #cfd8dc; margin: 0 0 2.5rem;">
+    <hr class="cs-extra" style="border: none; border-top: 1px dashed #cfd8dc; margin: 0 0 2.5rem;">
 
     <!-- 🌱 入門單堂 -->
     <section id="intro" style="margin-bottom: 3rem; scroll-margin-top: 100px;">
@@ -576,6 +596,75 @@ description: "探索四月老師的課程中心，依學習路徑編排：藥草
         </div>
     </section>
 </div>
+
+<script>
+(function () {
+  var input = document.getElementById('cs-input');
+  if (!input) return;
+  var clearBtn = document.getElementById('cs-clear');
+  var statusEl = document.getElementById('cs-status');
+  var emptyEl = document.getElementById('cs-empty');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.course-card'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
+  var foundation = document.getElementById('foundation');
+  var extras = Array.prototype.slice.call(document.querySelectorAll('.course-categories, .path-strip, .section-note, .unlock-divider, .cs-extra'));
+  var composing = false;
+
+  function norm(s) { return (s || '').toLowerCase().replace(/臺/g, '台').replace(/\s+/g, ' '); }
+  cards.forEach(function (c) { c._t = norm(c.textContent); });
+  var foundationText = foundation ? norm(foundation.textContent) : '';
+
+  function match(text, words) {
+    for (var i = 0; i < words.length; i++) { if (text.indexOf(words[i]) === -1) return false; }
+    return true;
+  }
+
+  function run() {
+    var q = norm(input.value).trim();
+    clearBtn.style.display = q ? 'block' : 'none';
+    var searching = q.length > 0;
+    var words = q ? q.split(' ') : [];
+    var shown = 0;
+
+    cards.forEach(function (c) {
+      var ok = !searching || match(c._t, words);
+      c.classList.toggle('cs-hide', !ok);
+      if (ok) shown++;
+    });
+
+    var foundationOk = !searching || match(foundationText, words);
+    if (foundation) {
+      foundation.classList.toggle('cs-hide', !foundationOk);
+      if (searching && foundationOk) shown++;
+    }
+
+    sections.forEach(function (s) {
+      if (s === foundation) return;
+      if (!s.querySelector('.course-card')) return;
+      var any = s.querySelector('.course-card:not(.cs-hide)');
+      s.classList.toggle('cs-hide', searching && !any);
+    });
+
+    extras.forEach(function (e) { e.classList.toggle('cs-hide', searching); });
+
+    if (searching) {
+      statusEl.textContent = shown > 0 ? '找到 ' + shown + ' 門相關課程' : '';
+    } else {
+      statusEl.textContent = '';
+    }
+    emptyEl.style.display = (searching && shown === 0) ? 'block' : 'none';
+  }
+
+  input.addEventListener('compositionstart', function () { composing = true; });
+  input.addEventListener('compositionend', function () { composing = false; run(); });
+  input.addEventListener('input', function () { if (!composing) run(); });
+  input.addEventListener('keydown', function (e) { if (e.key === 'Escape') { input.value = ''; run(); } });
+  clearBtn.addEventListener('click', function () { input.value = ''; run(); input.focus(); });
+
+  var m = location.search.match(/[?&]q=([^&]*)/);
+  if (m) { try { input.value = decodeURIComponent(m[1].replace(/\+/g, ' ')); } catch (e) {} run(); }
+})();
+</script>
 
 <script type="application/ld+json">
 {
