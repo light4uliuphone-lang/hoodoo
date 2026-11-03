@@ -1,0 +1,316 @@
+---
+layout: default
+title: "現代魔法－行星符印課程（遠距）｜靈火巫境"
+description: "高階符印課。以玫瑰十字與魔方陣兩種設計方式，設計契合行星能量的專屬符印與護符。12/20 遠距開課，需修畢天使符印，可與天使符印合報。"
+image: /assets/images/courses/planetary-sigil/og-planetary-sigil.jpg
+---
+
+<style>
+  /* ===== 行星符印課 銷售頁（ps- 前綴）===== */
+  .ps-page { --ps-ink:#1f1b16; --ps-paper:#f3efe6; --ps-paper-deep:#e5dccb;
+             --ps-dark:#0d0e1a; --ps-dark2:#1a1b2e; --ps-bronze:#9a6a2a;
+             --ps-gold:#c9973f; --ps-gold-soft:#e6cf9a; --ps-steel:#7f8db8;
+             font-size:1rem; color:var(--ps-ink); line-height:1.85; }
+  .ps-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--ps-ink); letter-spacing:.05em; }
+  .ps-section { padding:3.5rem 1.25rem; }
+  .ps-inner { max-width:860px; margin:0 auto; }
+  .ps-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--ps-bronze);
+                border-bottom:1px solid var(--ps-bronze); padding-bottom:.3rem; margin-bottom:1rem; }
+  .ps-cta { display:inline-block; background:var(--ps-bronze); color:#fff !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(154,106,42,.4); transition:transform .15s ease; }
+  .ps-cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .ps-cta{transition:none} .ps-cta:hover{transform:none} }
+
+  /* Hero */
+  .ps-hero { position:relative; color:#f1ecdf; padding:5rem 1.25rem 4rem; overflow:hidden;
+             background:linear-gradient(160deg,#0d0e1a 0%,#23233d 60%,#0d0e1a 100%); }
+  .ps-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .ps-hero::after { content:""; position:absolute; inset:0;
+                    background:linear-gradient(100deg, rgba(13,14,26,.95) 0%, rgba(13,14,26,.82) 42%, rgba(13,14,26,.35) 70%, rgba(13,14,26,.15) 100%); }
+  .ps-hero-inner { position:relative; z-index:2; max-width:860px; margin:0 auto; }
+  .ps-hero h1 { font-size:clamp(1.7rem,4.5vw,2.6rem); line-height:1.45; margin:.5rem 0 1rem; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .ps-hero h1 .kicker { display:block; font-size:1.05rem; font-weight:400; letter-spacing:.25em; color:var(--ps-gold-soft); margin-bottom:.7rem; }
+  .ps-hero .ps-sub { font-size:1.05rem; color:#e8e4d8; max-width:34em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .ps-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem; color:#efe9da; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .ps-hero-note { font-size:.85rem; color:var(--ps-gold-soft); margin-top:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+
+  /* 先修＋適合誰 */
+  .ps-pain { background:var(--ps-paper); }
+  .ps-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .ps-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #cdbf9f; }
+  .ps-pain li::before { content:"☿"; position:absolute; left:.4rem; color:var(--ps-bronze); }
+  .ps-punch { background:var(--ps-paper-deep); border-left:4px solid var(--ps-bronze); padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+  .ps-prereq { background:#fff; border:1px solid #d7c9a8; border-left:4px solid var(--ps-gold); border-radius:6px; padding:1rem 1.3rem; margin:1.4rem 0 0; font-size:.98rem; }
+
+  /* 兩種設計方式 */
+  .ps-highlight { background:var(--ps-dark); color:#e8e4d8; }
+  .ps-highlight h2 { color:#fff; text-align:center; }
+  .ps-hl-box { background:linear-gradient(155deg,#1f2038,#0f1020); border:1px solid rgba(201,151,63,.3);
+               border-radius:12px; padding:2rem; max-width:680px; margin:1.4rem auto 0; }
+  .ps-hl-box h3 { color:var(--ps-gold-soft); font-size:1.2rem; margin:0 0 .7rem; letter-spacing:.05em; }
+  .ps-hl-box p { color:#cfcbe0; margin:0; font-size:.98rem; line-height:1.95; }
+  .ps-hl-box strong { color:#fff; }
+
+  /* 成果 */
+  .ps-gain { background:var(--ps-paper); }
+  .ps-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .ps-gain-card { background:#fff; border:1px solid #d7c9a8; border-radius:8px; padding:1.2rem 1.3rem; }
+  .ps-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--ps-bronze); letter-spacing:.08em; }
+  .ps-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+
+  /* 大綱 */
+  .ps-syllabus { background:var(--ps-paper-deep); }
+  .ps-syl-group { margin-bottom:1.4rem; }
+  .ps-syl-group > h3 { color:var(--ps-bronze); font-size:1.1rem; letter-spacing:.05em; margin:0 0 .6rem;
+                       padding-bottom:.4rem; border-bottom:2px solid var(--ps-bronze); }
+  .ps-syl-item { background:#fff; border-radius:8px; padding:.95rem 1.2rem; margin:.6rem 0; border-left:3px solid var(--ps-gold); font-size:.95rem; }
+  .ps-syl-item strong { color:var(--ps-bronze); }
+
+  /* 老師 */
+  .ps-teacher { background:var(--ps-dark2); color:#e8e4d8; }
+  .ps-teacher h2 { color:#fff; }
+  .ps-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .ps-teacher-flex img { width:220px; height:auto; border-radius:8px; flex:0 0 auto; border:1px solid rgba(201,151,63,.4); }
+
+  /* 價格 */
+  .ps-price { background:var(--ps-dark); color:#efe9da; }
+  .ps-price h2 { color:#fff; }
+  .ps-price-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.2rem; margin:1.4rem auto; }
+  .ps-price-card { background:var(--ps-dark2); border:1px solid rgba(201,151,63,.45); border-radius:10px; padding:1.8rem 1.3rem; text-align:center; }
+  .ps-price-card--hot { border:2px solid var(--ps-gold); box-shadow:0 0 0 3px rgba(201,151,63,.15); }
+  .ps-plan-tag { display:inline-block; font-size:.85rem; letter-spacing:.2em; color:var(--ps-gold); border:1px solid var(--ps-gold); border-radius:999px; padding:.2rem 1rem; margin-bottom:1rem; }
+  .ps-price-now { font-size:2rem; color:var(--ps-gold); font-weight:700; margin:.3rem 0; }
+  .ps-price-note { color:var(--ps-gold-soft); font-size:.9rem; margin:0; }
+  .ps-deadline { text-align:center; font-size:.95rem; color:var(--ps-gold-soft); letter-spacing:.08em; margin:1.4rem 0 .6rem; }
+  .ps-center { text-align:center; }
+
+  /* FAQ */
+  .ps-faq { background:var(--ps-paper); }
+  .ps-faq details { border-bottom:1px solid #cdbf9f; padding:.9rem 0; }
+  .ps-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .ps-faq summary::before { content:"＋ "; color:var(--ps-bronze); }
+  .ps-faq details[open] summary::before { content:"－ "; }
+  .ps-faq details p { margin:.6rem 0 0; }
+
+  /* 報名 */
+  .ps-signup { background:var(--ps-dark); color:#efe9da; }
+  .ps-signup h2 { color:#fff; }
+  .ps-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:1.6rem; }
+  .ps-alt { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#e6e0d0; }
+  .ps-alt a { color:var(--ps-gold); }
+  .ps-disclaimer { font-size:.82rem; color:#b3ad9b; text-align:center; margin-top:1.6rem; line-height:1.8; }
+
+  @media (max-width:768px){
+    .ps-section { padding:2.6rem 1.1rem; }
+    .ps-gain-grid, .ps-price-grid { grid-template-columns:1fr; }
+    .ps-teacher-flex { flex-direction:column; }
+    .ps-teacher-flex img { width:100%; max-width:320px; }
+    .ps-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="ps-page">
+
+  <!-- ① Hero -->
+  <header class="ps-hero">
+    <img class="ps-hero-bg" src="/assets/images/courses/planetary-sigil/hero-planetary-sigil.webp" alt="" width="2400" height="1350" fetchpriority="high">
+    <div class="ps-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#e6cf9a; font-size:.9rem; opacity:.9; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="ps-eyebrow" style="display:block; width:fit-content; color:var(--ps-gold-soft); border-color:var(--ps-gold-soft);">混沌魔法・符印魔法（高階）</p>
+      <h1>
+        <span class="kicker">行星符印</span>
+        用玫瑰十字與魔方陣，<br>設計契合行星能量的專屬符印
+      </h1>
+      <p class="ps-sub">天使符印課的進階。兩種極具威力的設計方式：以希伯來 22 字母為基礎的玫瑰十字，以及用各行星魔方陣製作的行星符印。</p>
+      <div class="ps-hero-meta">
+        <span>📅 2026/12/20（日）13:00–16:00</span>
+        <span>🌐 遠距課程</span>
+        <span>🔑 需修畢天使符印</span>
+      </div>
+      <a class="ps-cta" href="#price">了解費用與合報</a>
+      <p class="ps-hero-note">早鳥價 7,800 元，12/06 前完成報名繳費｜報名截止 12/13</p>
+    </div>
+  </header>
+
+  <!-- ② 適合誰＋先修 -->
+  <section class="ps-section ps-pain">
+    <div class="ps-inner">
+      <p class="ps-eyebrow">適合誰</p>
+      <h2>你是不是已經走到這一步？</h2>
+      <ul>
+        <li>已經學過天使符印，想進一步設計更完整的符印與護符</li>
+        <li>不想只是照抄現成的符印，想懂符印背後的邏輯</li>
+        <li>對希伯來字母、玫瑰十字、魔方陣有興趣，卻不知道怎麼用在符印上</li>
+        <li>想設計出和特定行星能量契合的專屬符印</li>
+      </ul>
+      <p class="ps-punch">符印看起來抽象，但設計背後有嚴謹的邏輯，並包含魔法師本身的強烈意圖。這門課要教你的，就是這套邏輯。</p>
+      <p class="ps-prereq"><strong>報名資格：</strong>需修畢「天使符印」課程。還沒上過的話，可以和 12/19（六）的天使符印一起合報，連續兩天上完。</p>
+    </div>
+  </section>
+
+  <!-- ③ 兩種設計方式 -->
+  <section class="ps-section ps-highlight">
+    <div class="ps-inner">
+      <p class="ps-eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem; color:var(--ps-gold); border-color:var(--ps-gold);">這門課的核心</p>
+      <h2>兩種符印設計方式</h2>
+      <div class="ps-hl-box">
+        <h3>🌹 玫瑰十字（Rose Cross）</h3>
+        <p>玫瑰十字是儀式魔法的重要標誌，代表<strong>希伯來文 22 個字母</strong>在地球上的力量，並包含四元素與黃道十二宮。透過玫瑰十字，你能輕易設計出專屬的符印與護符。</p>
+      </div>
+      <div class="ps-hl-box" style="margin-top:1.2rem;">
+        <h3>🪐 行星符印與魔方陣（Magic Squares）</h3>
+        <p>每顆行星都有固定排列的<strong>數字方陣</strong>，每個數字對應一個希伯來字母。透過數字的排列組合，你能設計出完全契合該行星能量的專屬符印。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 學習成果 -->
+  <section class="ps-section ps-gain">
+    <div class="ps-inner">
+      <p class="ps-eyebrow">學習成果</p>
+      <h2>上完這門課，你將學到——</h2>
+      <div class="ps-gain-grid">
+        <div class="ps-gain-card">
+          <h3>理解</h3>
+          <ul>
+            <li>玫瑰十字與 22 個希伯來字母、四元素、黃道十二宮的關係</li>
+            <li>各行星魔方陣的數字特性與排列意涵</li>
+          </ul>
+        </div>
+        <div class="ps-gain-card">
+          <h3>設計</h3>
+          <ul>
+            <li>用 22 字母系統繪製玫瑰十字符印</li>
+            <li>依魔方陣的數字與字母映射規則，製作七行星符印</li>
+          </ul>
+        </div>
+        <div class="ps-gain-card">
+          <h3>儀式</h3>
+          <ul>
+            <li>放鬆儀式、卡巴拉十字儀式</li>
+            <li>小五芒星放逐儀式（LBRP）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 課程大綱 -->
+  <section class="ps-section ps-syllabus">
+    <div class="ps-inner">
+      <p class="ps-eyebrow">課程大綱</p>
+      <h2>從儀式準備，到進階符印製作</h2>
+
+      <div class="ps-syl-group">
+        <h3>🧘 基礎儀式與準備</h3>
+        <div class="ps-syl-item"><strong>放鬆儀式：</strong>進入魔法工作前的身心頻率調整</div>
+        <div class="ps-syl-item"><strong>卡巴拉十字儀式：</strong>確立個人內在的能量軸線</div>
+        <div class="ps-syl-item"><strong>小五芒星放逐儀式（LBRP）：</strong>淨化場域，驅逐不適宜的能量干擾</div>
+      </div>
+
+      <div class="ps-syl-group">
+        <h3>🖋️ 進階符印製作技術</h3>
+        <div class="ps-syl-item"><strong>玫瑰十字符印製作：</strong>學習利用 22 字母系統繪製強效符印</div>
+        <div class="ps-syl-item"><strong>七行星符印製作：</strong>深入研究魔方陣數字與字母的映射規則</div>
+        <div class="ps-syl-item"><strong>魔方陣邏輯解析：</strong>理解各行星方陣的數字特性與排列意涵</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 老師介紹 -->
+  <section class="ps-section ps-teacher">
+    <div class="ps-inner">
+      <p class="ps-eyebrow" style="color:var(--ps-gold); border-color:var(--ps-gold);">授課老師</p>
+      <h2>四月老師</h2>
+      <div class="ps-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>深耕身心靈領域數十年，學員遍布台、港、馬。四月老師精通胡督魔法（Hoodoo）與混沌魔法（Chaos Magic），擅長將西方魔法傳統與東方哲學思想融合，引領學員透過系統化的儀式實踐，掌握現代魔法的顯化核心。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ 費用 -->
+  <section class="ps-section ps-price" id="price">
+    <div class="ps-inner">
+      <p class="ps-eyebrow" style="color:var(--ps-gold); border-color:var(--ps-gold);">課程費用</p>
+      <h2>費用與合報優惠</h2>
+      <p class="ps-center" style="margin-top:-.4rem;">🌐 遠距課程｜2026/12/20（日）13:00–16:00</p>
+      <div class="ps-price-grid">
+        <div class="ps-price-card">
+          <span class="ps-plan-tag">原價</span>
+          <p class="ps-price-now" style="color:#b3ad9b; text-decoration:line-through;">8,800</p>
+          <p class="ps-price-note">元</p>
+        </div>
+        <div class="ps-price-card ps-price-card--hot">
+          <span class="ps-plan-tag">早鳥價</span>
+          <p class="ps-price-now">7,800</p>
+          <p class="ps-price-note">元｜12/06 前完成報名繳費</p>
+        </div>
+        <div class="ps-price-card">
+          <span class="ps-plan-tag">合報優惠</span>
+          <p class="ps-price-now">12,000</p>
+          <p class="ps-price-note">元｜天使符印＋行星符印兩課合計</p>
+        </div>
+      </div>
+      <p class="ps-deadline">⏳ 早鳥截止 12/06｜報名截止 12/13｜上課 12/20（日）13:00–16:00</p>
+      <p class="ps-center"><a class="ps-cta" href="#faq">先看常見問題</a>　<a class="ps-cta" href="#signup" style="background:var(--ps-gold); color:#1a1109 !important; box-shadow:0 4px 14px rgba(201,151,63,.35);">直接報名</a></p>
+    </div>
+  </section>
+
+  <!-- ⑧ FAQ（在報名表之前） -->
+  <section class="ps-section ps-faq" id="faq">
+    <div class="ps-inner">
+      <p class="ps-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>需要先上過其他課程嗎？</summary>
+        <p>需要。報名資格是修畢「天使符印」課程。這門課是天使符印的進階，會直接用到天使符印學過的設計概念。</p>
+      </details>
+      <details>
+        <summary>我還沒上過天使符印，來得及嗎？</summary>
+        <p>可以。天使符印是 12/19（六）13:00–16:00，行星符印是隔天 12/20（日）13:00–16:00，兩門課可以合報，連續兩天上完。</p>
+      </details>
+      <details>
+        <summary>合報優惠怎麼算？</summary>
+        <p>天使符印與行星符印兩門課合報，優惠價合計 12,000 元。報名表單是兩門課共用同一份，請在表單中選擇你要報名的項目。</p>
+      </details>
+      <details>
+        <summary>早鳥價怎麼算？</summary>
+        <p>12/06（含）前完成報名並繳費，行星符印單報可享早鳥價 7,800 元。之後至 12/13 報名截止前，為原價 8,800 元。</p>
+      </details>
+      <details>
+        <summary>「魔方陣」和「玫瑰十字」是什麼？</summary>
+        <p>玫瑰十字是儀式魔法的重要標誌，代表希伯來文 22 個字母的力量。魔方陣則是每顆行星固定排列的數字方陣，數字對應希伯來字母。課程會從原理開始解說，並實際示範如何用它們設計符印。</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ⑨ 報名 -->
+  <section class="ps-section ps-signup" id="signup">
+    <div class="ps-inner">
+      <p class="ps-eyebrow" style="color:var(--ps-gold); border-color:var(--ps-gold);">立即報名</p>
+      <h2>填寫報名表單</h2>
+      <p class="ps-center">2026/12/20（日）13:00–16:00｜遠距課程<br>早鳥價 7,800 元（12/06 前報名繳費）｜報名截止 12/13<br>與天使符印合報：兩課合計 12,000 元</p>
+
+      <div class="ps-form-wrap" id="ps-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScdikob5s6o8d02dMQ51rIyFyf6afBkVb5T4QQL8fOWNxvYxg/viewform?embedded=true"
+          width="100%" height="1250" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="天使符印・行星符印報名表單">載入中…</iframe>
+      </div>
+
+      <p class="ps-alt">
+        也可以直接開啟 <a href="https://docs.google.com/forms/d/e/1FAIpQLScdikob5s6o8d02dMQ51rIyFyf6afBkVb5T4QQL8fOWNxvYxg/viewform" target="_blank" rel="noopener">官方報名表單</a>，
+        或來信 <a href="mailto:herbmagic@hotmail.com.tw?subject=報名 行星符印課程">herbmagic@hotmail.com.tw</a>，標題註明「報名 行星符印課程」，並告知姓名與聯絡電話。
+      </p>
+      <p class="ps-disclaimer">本課程屬心靈與魔法實踐用途，感受因人而異，不保證特定結果，亦不替代醫療、法律或財務等專業建議。</p>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#9a6a2a" bg="#e5dccb" %}
+
+</div>

@@ -1,92 +1,318 @@
 ---
 layout: default
-title: "星光魔法單元一 (實體) - 四月老師"
-permalink: /courses/course-modern-06/
+title: "星光魔法單元一（實體）｜靈火巫境"
+description: "12/12–13 實體開課。學習出神技巧與星光旅行，架設你的星界神殿，並以藥草與保護技術安全探索星界。早鳥 11/29 前報名繳費。"
+image: /assets/images/courses/modern-06/og-starlight.jpg
 ---
 
-<div class="container" style="padding: 3rem 0;">
-    <a href="/course/" class="back-link">← 返回課程中心</a>
+<style>
+  /* ===== 星光魔法單元一 銷售頁（sl- 前綴）===== */
+  .sl-page { --sl-ink:#231a33; --sl-paper:#f1ecf8; --sl-paper-deep:#e4dbf2;
+             --sl-dark:#150f21; --sl-dark2:#241a38; --sl-gold:#c9973f;
+             --sl-gold-soft:#e6cfa0; --sl-violet:#7c3aed; --sl-violet-soft:#c4b0f5;
+             --sl-red:#8c3b2e; font-size:1rem; color:var(--sl-ink); line-height:1.85; }
+  .sl-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--sl-ink); letter-spacing:.05em; }
+  .sl-section { padding:3.5rem 1.25rem; }
+  .sl-inner { max-width:860px; margin:0 auto; }
+  .sl-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--sl-violet);
+                border-bottom:1px solid var(--sl-violet); padding-bottom:.3rem; margin-bottom:1rem; }
+  .sl-cta { display:inline-block; background:var(--sl-violet); color:#fff !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(124,58,237,.4); transition:transform .15s ease, box-shadow .15s ease; }
+  .sl-cta:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(124,58,237,.5); }
+  @media (prefers-reduced-motion: reduce){ .sl-cta{ transition:none } .sl-cta:hover{ transform:none } }
 
-    <div class="course-detail-header">
-        <h1>星光魔法單元一 (實體)</h1>
-        <div class="meta">
-            <span>✨ 現代魔法系統</span>
-            <span>🌌 星光體投射</span>
-            <span>📊 初級實體</span>
-            <span>👨‍🏫 四月老師</span>
-        </div>
+  /* Hero */
+  .sl-hero { position:relative; color:#f1eafc; padding:5rem 1.25rem 4rem; overflow:hidden;
+             background:linear-gradient(160deg,#150f21 0%,#2a1d45 60%,#150f21 100%); }
+  .sl-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .sl-hero-inner { position:relative; max-width:860px; margin:0 auto; }
+  .sl-hero h1 { font-size:clamp(1.7rem, 4.5vw, 2.6rem); line-height:1.4; margin:.5rem 0 1rem; color:#fff; }
+  .sl-hero .sl-sub { font-size:1.05rem; color:var(--sl-gold-soft); max-width:34em; }
+  .sl-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem; color:#efe6fb; }
+  .sl-hero-note { font-size:.85rem; color:var(--sl-gold-soft); margin-top:.7rem; }
+
+  /* 適合誰 */
+  .sl-pain { background:var(--sl-paper); }
+  .sl-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .sl-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #c9bbe0; }
+  .sl-pain li::before { content:"✦"; position:absolute; left:.4rem; color:var(--sl-violet); font-weight:700; }
+  .sl-punch { background:var(--sl-paper-deep); border-left:4px solid var(--sl-gold);
+              padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  /* 敘事 */
+  .sl-story { background:var(--sl-dark2); color:#e9e0f7; }
+  .sl-story h2 { color:#fff; }
+
+  /* 成果 */
+  .sl-gain { background:var(--sl-paper); }
+  .sl-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .sl-gain-card { background:#fff; border:1px solid #d6c8ec; border-radius:8px; padding:1.2rem 1.3rem; }
+  .sl-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--sl-violet); letter-spacing:.08em; }
+  .sl-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+
+  /* 大綱 */
+  .sl-syllabus { background:var(--sl-paper-deep); }
+  .sl-syl-part { margin-bottom:1.6rem; }
+  .sl-syl-part h3 { font-size:1.05rem; color:var(--sl-violet); letter-spacing:.1em; margin:0 0 .5rem; }
+  .sl-syl-part ul { margin:0; padding-left:1.3rem; }
+
+  /* 老師 */
+  .sl-teacher { background:var(--sl-dark2); color:#e9e0f7; }
+  .sl-teacher h2 { color:#fff; }
+  .sl-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .sl-teacher-flex img { width:240px; height:auto; border-radius:8px; flex:0 0 auto;
+                         border:1px solid rgba(201,151,63,.4); }
+
+  /* 價格 */
+  .sl-price { background:var(--sl-dark); color:#efe6fb; }
+  .sl-price h2 { color:#fff; }
+  .sl-price-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.2rem; margin:1.4rem auto; }
+  .sl-price-card { background:var(--sl-dark2); border:1px solid rgba(201,151,63,.45); border-radius:10px;
+                   padding:1.8rem 1.3rem; text-align:center; }
+  .sl-price-card--hot { border:2px solid var(--sl-gold); box-shadow:0 0 0 3px rgba(201,151,63,.15); }
+  .sl-plan-tag { display:inline-block; font-size:.85rem; letter-spacing:.2em; color:var(--sl-gold);
+                 border:1px solid var(--sl-gold); border-radius:999px; padding:.2rem 1rem; margin-bottom:1rem; }
+  .sl-price-now { font-size:2rem; color:var(--sl-gold); font-weight:700; margin:.3rem 0; }
+  .sl-price-note { color:var(--sl-gold-soft); font-size:.9rem; margin:0; }
+  .sl-deadline { text-align:center; font-size:.95rem; color:var(--sl-gold-soft); letter-spacing:.08em; margin:1.4rem 0 .6rem; }
+  .sl-includes { max-width:560px; margin:1rem auto 1.6rem; padding-left:1.3rem; font-size:.95rem; }
+  .sl-center { text-align:center; }
+
+  /* FAQ */
+  .sl-faq { background:var(--sl-paper); }
+  .sl-faq details { border-bottom:1px solid #cfc0e6; padding:.9rem 0; }
+  .sl-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .sl-faq summary::before { content:"＋ "; color:var(--sl-violet); }
+  .sl-faq details[open] summary::before { content:"－ "; }
+  .sl-faq details p { margin:.6rem 0 0; }
+
+  /* 報名 */
+  .sl-signup { background:var(--sl-dark); color:#efe6fb; }
+  .sl-signup h2 { color:#fff; }
+  .sl-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:1.6rem; }
+  .sl-alt-signup { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#e3d8f6; }
+  .sl-alt-signup a { color:var(--sl-gold); }
+  .sl-disclaimer { font-size:.82rem; color:#b9a9d6; text-align:center; margin-top:1.6rem; line-height:1.8; }
+
+  @media (max-width: 768px) {
+    .sl-section { padding:2.6rem 1.1rem; }
+    .sl-gain-grid, .sl-price-grid { grid-template-columns:1fr; }
+    .sl-teacher-flex { flex-direction:column; }
+    .sl-teacher-flex img { width:100%; max-width:320px; }
+    .sl-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="sl-page">
+
+  <!-- ① Hero -->
+  <header class="sl-hero">
+    <img class="sl-hero-bg" src="/assets/images/courses/modern-06/hero-starlight.webp"
+         alt="" width="2400" height="1350" fetchpriority="high">
+    <div class="sl-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#e6cfa0; font-size:.9rem; opacity:.85; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="sl-eyebrow" style="display:block; width:fit-content; color:var(--sl-violet-soft); border-color:var(--sl-violet-soft);">混沌魔法・星光魔法</p>
+      <h1>星光魔法單元一<br>走進星界，架設你自己的神殿</h1>
+      <p class="sl-sub">用出神技巧展開星光旅行，建立專屬的星界神殿，並學會在探索中保護自己。不教條，尊重每個人的直覺感受。</p>
+      <div class="sl-hero-meta">
+        <span>📅 2026/12/12（六）–12/13（日）</span>
+        <span>🕙 10:00–15:30</span>
+        <span>🏛 實體課程</span>
+      </div>
+      <a class="sl-cta" href="#signup">了解費用與報名</a>
+      <p class="sl-hero-note">早鳥價 11,000 元，11/29 前完成報名繳費｜報名截止 12/07</p>
     </div>
+  </header>
 
-    <div class="course-detail-content">
-        <h2>課程介紹</h2>
-        <p>星光體在神祕主義中被視為將身體與精神靈性連結起來的媒介，而星界則是物質宇宙和純然靈性的世界的中間層。自古以來，不論東西方的神祕主義者，都有著極其相似的概念。</p>
-        
-        <p>在西方領域，人們透過星光體投射遨遊精神世界、與神靈連結；在東方則透過修練達到出陰/陽神、漫遊天宮。而在古老的薩滿體系中，這更是取回魂魄、安撫亡靈與取得神喻的重要手段。本課程整合了不同體系的共通點，以現代方式呈現，引領您探詢專屬的心靈地圖。</p>
-
-        <h2>課程核心</h2>
-        <p>在第一單元中，我們將聚焦於如何使用<strong>出神技巧（Trance Techniques）</strong>來進行星光旅行。我們不再教條式地接受特定信仰架構，而是尊重每位參與者的直覺感受。</p>
-        
-        <p>學員將學習如何架設個人的<strong>星界神殿（Astral Temple）</strong>，這將成為您未來進行星光魔法、與守護者溝通以及探索不同維度的穩固基地。透過藥草的輔助與正確的保護技術，確保在星界探索過程中的安全性與能量頻率的穩定。</p>
-
-        <h2>課程大綱</h2>
-        <div class="syllabus-grid">
-            <h3 style="color: #1a5f5f; border-bottom: 2px solid #1a5f5f; padding-bottom: 0.5rem;">🌌 理論與神殿建立</h3>
-            <ul>
-                <li><strong>星光魔法基本概念：</strong> 理解星光體與星界的中間層性質。</li>
-                <li><strong>不同體系中的星光魔法：</strong> 比較西方投射、東方出神與薩滿旅行。</li>
-                <li><strong>建立星光神殿：</strong> 在星界架設專屬的魔法工作空間。</li>
-                <li><strong>和守護者建立關係：</strong> 尋找並連結星界的引導力量。</li>
-            </ul>
-
-            <h3 style="color: #1a5f5f; border-bottom: 2px solid #1a5f5f; padding-bottom: 0.5rem; margin-top: 2rem;">🚀 星界漫遊與實踐</h3>
-            <ul>
-                <li><strong>星界漫遊技術：</strong> 掌握進入出神狀態並移動意識的技巧。</li>
-                <li><strong>藥草強化與保護：</strong> 運用特定藥草增進感官並建立防禦屏障。</li>
-                <li><strong>下部世界的探尋：</strong> 進入薩滿體系中的下部世界進行探索。</li>
-                <li><strong>天賦禮物：</strong> 在旅行中取回能量碎片或靈性啟示。</li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <h2>課程資訊</h2>
-        <div class="course-info-box">
-            <p><strong>⏰ 上課時間：</strong>06/13-14 (六、日) 10:00-15:30</p>
-            <p><strong>📍 授課方式：</strong>實體課程</p>
-            <p><strong>💰 課程費用：</strong>
-                <br>• 定價：15,000元 
-                <br>• 特惠價：12,000元
-                <br>• <span style="color: #e67e22; font-weight: bold;">早鳥價：9,900元</span> (06/01 前完成報名繳費)
-            </p>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">※ 報名截止日期：06/08</p>
-        </div>
-
-        <h2>老師介紹</h2>
-        <div class="teacher-info">
-            <h3>四月老師</h3>
-            <p>深耕身心靈領域數十年，學員遍布台、港、馬。四月老師精通胡督魔法（Hoodoo）與混沌魔法（Chaos Magic），擅長將西方魔法傳統與東方哲學思想融合，引領學員透過系統化的儀式實踐，掌握現代魔法的顯化核心。</p>
-        </div>
-
-        <h2>報名方式</h2>
-        <div class="registration-info" style="line-height: 1.8; margin-bottom: 2rem;">
-            <p><strong>方式一：請填寫官方報名表單（點擊下方連結或直接於下方填寫）</strong></p>
-            <p>👉 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRQzSLtA4DJ7jquAZqehVzEcZxvr65GkFGXtAvSU1LmdGGAQ/viewform" target="_blank" rel="noopener">點此開啟官方報名表單連結</a></p>
-            
-            <p style="margin-top: 1.5rem;"><strong>方式二：請來信至 <a href="mailto:herbmagic@hotmail.com.tw">herbmagic@hotmail.com.tw</a></strong></p>
-            <p>郵件標題請註明：<strong>「報名 星光魔法單元一」</strong>，並告知您的姓名與聯絡電話。</p>
-        </div>
-
-        <div class="registration-form" style="margin-top: 2rem; background: #fff; padding: 10px; border-radius: 8px;">
-            <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfRQzSLtA4DJ7jquAZqehVzEcZxvr65GkFGXtAvSU1LmdGGAQ/viewform?embedded=true" 
-                width="100%" 
-                height="1300" 
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0" 
-                style="display: block; margin: 0 auto; max-width: 640px;">
-                載入中…
-            </iframe>
-        </div>
+  <!-- ② 適合誰 -->
+  <section class="sl-section sl-pain">
+    <div class="sl-inner">
+      <p class="sl-eyebrow">適合誰</p>
+      <h2>你是不是也有這些想法？</h2>
+      <ul>
+        <li>對星光體、星光投射很好奇，但書和影片講法各異，不知道從哪裡開始</li>
+        <li>想系統地練習出神技巧，而不是只靠運氣或偶然的體驗</li>
+        <li>想擁有一個專屬的星界神殿，作為日後魔法工作的基地</li>
+        <li>對薩滿旅行、下部世界有興趣，希望有人帶著走第一趟</li>
+        <li>想探索星界，但也在意安全，想先學會保護自己</li>
+      </ul>
+      <p class="sl-punch">星光旅行靠的不是「相信」，而是方法與保護。這門課要給你的，是一套可以自己重複練習的起點。</p>
     </div>
+  </section>
+
+  <!-- ③ 敘事 -->
+  <section class="sl-section sl-story">
+    <div class="sl-inner">
+      <p class="sl-eyebrow" style="color:var(--sl-gold); border-color:var(--sl-gold);">為什麼學星光魔法</p>
+      <h2>東西方，都曾走過同一條路</h2>
+      <p>星光體在神祕主義中，被視為連結身體與精神靈性的媒介。星界，則是物質宇宙與純然靈性世界之間的中間層。自古以來，不論東西方的神祕主義者，都有非常相似的概念。</p>
+      <p>在西方，人們透過星光體投射遨遊精神世界、與神靈連結。在東方，則透過修練出陰神、出陽神，漫遊天宮。在古老的薩滿體系中，這更是取回魂魄、安撫亡靈、取得神喻的重要手段。</p>
+      <p>本課程整合不同體系的共通點，用現代方式呈現，帶你探詢屬於自己的心靈地圖。</p>
+    </div>
+  </section>
+
+  <!-- ④ 學習成果 -->
+  <section class="sl-section sl-gain">
+    <div class="sl-inner">
+      <p class="sl-eyebrow">學習成果</p>
+      <h2>兩天課程之後，你將學到——</h2>
+      <div class="sl-gain-grid">
+        <div class="sl-gain-card">
+          <h3>觀念</h3>
+          <ul>
+            <li>星光體與星界的中間層性質</li>
+            <li>西方投射、東方出神、薩滿旅行三種系統的共通點與差異</li>
+          </ul>
+        </div>
+        <div class="sl-gain-card">
+          <h3>技術</h3>
+          <ul>
+            <li>進入出神狀態、移動意識的技巧</li>
+            <li>用特定藥草增進感官，並建立防禦屏障</li>
+          </ul>
+        </div>
+        <div class="sl-gain-card">
+          <h3>實踐</h3>
+          <ul>
+            <li>建立你的星光神殿</li>
+            <li>尋找並連結守護者</li>
+            <li>探索下部世界，並在旅行中取回天賦禮物</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 課程大綱 -->
+  <section class="sl-section sl-syllabus">
+    <div class="sl-inner">
+      <p class="sl-eyebrow">課程大綱</p>
+      <h2>從理論到神殿，再到星界漫遊</h2>
+      <div class="sl-syl-part">
+        <h3>Part 1｜理論與神殿建立</h3>
+        <ul>
+          <li><strong>星光魔法基本概念：</strong>理解星光體與星界的中間層性質</li>
+          <li><strong>不同體系中的星光魔法：</strong>比較西方投射、東方出神與薩滿旅行</li>
+          <li><strong>建立星光神殿：</strong>在星界架設專屬的魔法工作空間</li>
+          <li><strong>和守護者建立關係：</strong>尋找並連結星界的引導力量</li>
+        </ul>
+      </div>
+      <div class="sl-syl-part">
+        <h3>Part 2｜星界漫遊與實踐</h3>
+        <ul>
+          <li><strong>星界漫遊技術：</strong>掌握進入出神狀態並移動意識的技巧</li>
+          <li><strong>藥草強化與保護：</strong>運用特定藥草增進感官並建立防禦屏障</li>
+          <li><strong>下部世界的探尋：</strong>進入薩滿體系中的下部世界進行探索</li>
+          <li><strong>天賦禮物：</strong>在旅行中取回能量碎片或靈性啟示</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 老師介紹 -->
+  <section class="sl-section sl-teacher">
+    <div class="sl-inner">
+      <p class="sl-eyebrow" style="color:var(--sl-gold); border-color:var(--sl-gold);">授課老師</p>
+      <h2>四月老師</h2>
+      <div class="sl-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>深耕身心靈領域數十年，台灣、香港、馬來西亞皆有眾多學員。四月老師精通胡督魔法（Hoodoo）與混沌魔法（Chaos Magic），擅長將西方魔法傳統與東方哲學思想融合，帶領學員透過系統化的儀式實踐，掌握現代魔法的核心。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ 費用與方案 -->
+  <section class="sl-section sl-price" id="price">
+    <div class="sl-inner">
+      <p class="sl-eyebrow" style="color:var(--sl-gold); border-color:var(--sl-gold);">課程費用</p>
+      <h2>費用與報名時程</h2>
+      <p class="sl-center" style="margin-top:-.4rem;">🏛 實體課程｜2026/12/12（六）–12/13（日）10:00–15:30</p>
+      <div class="sl-price-grid">
+        <div class="sl-price-card">
+          <span class="sl-plan-tag">原價</span>
+          <p class="sl-price-now" style="color:#b9a9d6; text-decoration:line-through;">15,000</p>
+          <p class="sl-price-note">元</p>
+        </div>
+        <div class="sl-price-card">
+          <span class="sl-plan-tag">特價</span>
+          <p class="sl-price-now">12,500</p>
+          <p class="sl-price-note">元｜報名截止 12/07 前</p>
+        </div>
+        <div class="sl-price-card sl-price-card--hot">
+          <span class="sl-plan-tag">早鳥價</span>
+          <p class="sl-price-now">11,000</p>
+          <p class="sl-price-note">元｜11/29 前完成報名繳費</p>
+        </div>
+      </div>
+      <p class="sl-deadline">⏳ 早鳥截止 11/29｜報名截止 12/07｜上課 12/12–13</p>
+      <p class="sl-center"><a class="sl-cta" href="#faq">先看常見問題</a>　<a class="sl-cta" href="#signup" style="background:var(--sl-gold); color:#1a1109 !important; box-shadow:0 4px 14px rgba(201,151,63,.35);">直接報名</a></p>
+    </div>
+  </section>
+
+  <!-- ⑧ FAQ（在報名表之前） -->
+  <section class="sl-section sl-faq" id="faq">
+    <div class="sl-inner">
+      <p class="sl-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>我沒有學過魔法，可以上嗎？</summary>
+        <p>可以。這是星光魔法的第一個單元，從基本概念與出神技巧開始，不要求事先修過其他課程。</p>
+      </details>
+      <details>
+        <summary>星光旅行和一般冥想有什麼不同？</summary>
+        <p>冥想通常是安靜觀察自己的身心。星光旅行則是在出神狀態下，有目的地移動意識，例如進入你自己的星光神殿、與守護者連結，或探索下部世界。課程會一步一步帶你練習。</p>
+      </details>
+      <details>
+        <summary>探索星界會不會不安全？</summary>
+        <p>這門課把「保護」當成學習重點之一，會教你運用特定藥草增進感官、建立防禦屏障，也會說明整個過程的注意事項。</p>
+      </details>
+      <details>
+        <summary>課程有宗教或信仰的限制嗎？</summary>
+        <p>沒有。課程不要求你接受特定的信仰架構，會尊重每位參與者的直覺感受，只是整理不同體系的共通做法，讓你找到適合自己的方式。</p>
+      </details>
+      <details>
+        <summary>早鳥價怎麼算？</summary>
+        <p>11/29（含）前完成報名並繳費，可享早鳥價 11,000 元。之後至 12/07 報名截止前，為特價 12,500 元。原價 15,000 元。</p>
+      </details>
+      <details>
+        <summary>身心有狀況的人，可以參加嗎？</summary>
+        <p>本課程屬於心靈與魔法實踐，不是醫療行為，也不能取代醫療、心理諮商或其他專業協助。如果你目前正在接受精神科或心理治療，或有相關病史，建議先與你的專業人員討論再決定是否報名。</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ⑨ 報名 -->
+  <section class="sl-section sl-signup" id="signup">
+    <div class="sl-inner">
+      <p class="sl-eyebrow" style="color:var(--sl-gold); border-color:var(--sl-gold);">立即報名</p>
+      <h2>填寫報名表單</h2>
+      <p class="sl-center">2026/12/12（六）–12/13（日）10:00–15:30｜實體課程<br>早鳥價 11,000 元（11/29 前完成報名繳費）｜報名截止 12/07</p>
+
+      <div class="sl-form-wrap" id="sl-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfRQzSLtA4DJ7jquAZqehVzEcZxvr65GkFGXtAvSU1LmdGGAQ/viewform?embedded=true"
+          width="100%"
+          height="1300"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="星光魔法單元一報名表單">
+          載入中…
+        </iframe>
+      </div>
+
+      <p class="sl-alt-signup">
+        也可以直接開啟 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRQzSLtA4DJ7jquAZqehVzEcZxvr65GkFGXtAvSU1LmdGGAQ/viewform" target="_blank" rel="noopener">官方報名表單</a>，
+        或來信 <a href="mailto:herbmagic@hotmail.com.tw?subject=報名 星光魔法單元一">herbmagic@hotmail.com.tw</a>，標題註明「報名 星光魔法單元一」，並告知姓名與聯絡電話。
+      </p>
+      <p class="sl-disclaimer">本課程屬心靈與魔法實踐用途，感受因人而異，不保證特定結果，亦不替代醫療、法律或財務等專業建議。</p>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#7c3aed" bg="#e4dbf2" %}
+
 </div>
