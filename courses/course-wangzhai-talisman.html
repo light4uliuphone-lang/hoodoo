@@ -1,0 +1,338 @@
+---
+layout: default
+title: "旺宅符術入門（實體）｜靈火巫境"
+description: "以旺宅為主的傳統東方符術入門。認識符與咒的基本原則，學習勅水、墨筆紙硯，並實作清淨符、除煞符與旺宅符。12/27 實體開課，不需先修。"
+image: /assets/images/courses/wangzhai-talisman/og-wangzhai.jpg
+---
+
+<style>
+  /* ===== 旺宅符術入門 銷售頁（wz- 前綴）===== */
+  .wz-page { --wz-ink:#1c1612; --wz-paper:#f4ecdc; --wz-paper-deep:#e8dcc2;
+             --wz-dark:#16100d; --wz-dark2:#261a14; --wz-red:#a8321f;
+             --wz-gold:#c9973f; --wz-gold-soft:#e6cf9a; --wz-ink-soft:#5a4a3c;
+             font-size:1rem; color:var(--wz-ink); line-height:1.85; }
+  .wz-page h2 { font-size:1.6rem; margin:0 0 1.2rem; color:var(--wz-ink); letter-spacing:.05em; }
+  .wz-section { padding:3.5rem 1.25rem; }
+  .wz-inner { max-width:860px; margin:0 auto; }
+  .wz-eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.35em; color:var(--wz-red);
+                border-bottom:1px solid var(--wz-red); padding-bottom:.3rem; margin-bottom:1rem; }
+  .wz-cta { display:inline-block; background:var(--wz-red); color:#fff !important; text-decoration:none;
+            padding:.95rem 2.4rem; border-radius:4px; font-weight:700; letter-spacing:.12em;
+            box-shadow:0 4px 14px rgba(168,50,31,.4); transition:transform .15s ease; }
+  .wz-cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .wz-cta{transition:none} .wz-cta:hover{transform:none} }
+
+  /* Hero */
+  .wz-hero { position:relative; color:#f6ecd8; padding:5rem 1.25rem 4rem; overflow:hidden;
+             background:linear-gradient(160deg,#16100d 0%,#3a1a12 60%,#16100d 100%); }
+  .wz-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+  .wz-hero::after { content:""; position:absolute; inset:0;
+                    background:linear-gradient(100deg, rgba(22,16,13,.95) 0%, rgba(22,16,13,.82) 42%, rgba(22,16,13,.35) 70%, rgba(22,16,13,.15) 100%); }
+  .wz-hero-inner { position:relative; z-index:2; max-width:860px; margin:0 auto; }
+  .wz-hero h1 { font-size:clamp(1.7rem,4.5vw,2.6rem); line-height:1.45; margin:.5rem 0 1rem; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .wz-hero h1 .kicker { display:block; font-size:1.05rem; font-weight:400; letter-spacing:.25em; color:var(--wz-gold-soft); margin-bottom:.7rem; }
+  .wz-hero .wz-sub { font-size:1.05rem; color:#eee3cc; max-width:34em; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .wz-hero-meta { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin:1.6rem 0; font-size:.95rem; color:#f3e9d3; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  .wz-hero-note { font-size:.85rem; color:var(--wz-gold-soft); margin-top:.7rem; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+
+  /* 適合誰 */
+  .wz-pain { background:var(--wz-paper); }
+  .wz-pain ul { list-style:none; padding:0; margin:0 0 1.4rem; }
+  .wz-pain li { padding:.6rem 0 .6rem 2.2rem; position:relative; border-bottom:1px dashed #cdb98f; }
+  .wz-pain li::before { content:"◆"; position:absolute; left:.4rem; color:var(--wz-red); font-size:.8rem; top:.9rem; }
+  .wz-punch { background:var(--wz-paper-deep); border-left:4px solid var(--wz-red); padding:1rem 1.3rem; border-radius:0 6px 6px 0; }
+
+  /* 符與咒 */
+  .wz-story { background:var(--wz-dark2); color:#eee3cc; }
+  .wz-story h2 { color:#fff; }
+  .wz-def { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin:1.4rem 0; }
+  .wz-def-box { background:linear-gradient(155deg,#33211a,#1c130f); border:1px solid rgba(201,151,63,.35); border-radius:10px; padding:1.4rem 1.5rem; }
+  .wz-def-box h3 { color:var(--wz-gold-soft); font-size:1.15rem; margin:0 0 .6rem; letter-spacing:.1em; }
+  .wz-def-box p { margin:0; font-size:.97rem; color:#e6dac2; line-height:1.9; }
+
+  /* 旺宅 */
+  .wz-highlight { background:var(--wz-dark); color:#eee3cc; }
+  .wz-highlight h2 { color:#fff; text-align:center; }
+  .wz-hl-box { background:linear-gradient(155deg,#2c1b14,#150e0b); border:1px solid rgba(201,151,63,.3);
+               border-radius:12px; padding:2rem; max-width:680px; margin:1.4rem auto 0; }
+  .wz-hl-box h3 { color:var(--wz-gold-soft); font-size:1.2rem; margin:0 0 .7rem; letter-spacing:.05em; }
+  .wz-hl-box p { color:#e0d3ba; margin:0; font-size:.98rem; line-height:1.95; }
+
+  /* 成果 */
+  .wz-gain { background:var(--wz-paper); }
+  .wz-gain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.6rem; }
+  .wz-gain-card { background:#fff; border:1px solid #d9c9a4; border-radius:8px; padding:1.2rem 1.3rem; }
+  .wz-gain-card h3 { font-size:1.05rem; margin:0 0 .6rem; color:var(--wz-red); letter-spacing:.08em; }
+  .wz-gain-card ul { margin:0; padding-left:1.2rem; font-size:.95rem; }
+
+  /* 大綱 */
+  .wz-syllabus { background:var(--wz-paper-deep); }
+  .wz-syl-group { margin-bottom:1.4rem; }
+  .wz-syl-group > h3 { color:var(--wz-red); font-size:1.1rem; letter-spacing:.05em; margin:0 0 .6rem;
+                       padding-bottom:.4rem; border-bottom:2px solid var(--wz-red); }
+  .wz-syl-item { background:#fff; border-radius:8px; padding:.95rem 1.2rem; margin:.6rem 0; border-left:3px solid var(--wz-gold); font-size:.95rem; }
+  .wz-syl-item strong { color:var(--wz-red); }
+
+  /* 老師 */
+  .wz-teacher { background:var(--wz-dark2); color:#eee3cc; }
+  .wz-teacher h2 { color:#fff; }
+  .wz-teacher-flex { display:flex; gap:2rem; align-items:flex-start; }
+  .wz-teacher-flex img { width:220px; height:auto; border-radius:8px; flex:0 0 auto; border:1px solid rgba(201,151,63,.4); }
+
+  /* 價格 */
+  .wz-price { background:var(--wz-dark); color:#f3e9d3; }
+  .wz-price h2 { color:#fff; }
+  .wz-price-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin:1.4rem auto; max-width:640px; }
+  .wz-price-card { background:var(--wz-dark2); border:1px solid rgba(201,151,63,.45); border-radius:10px; padding:1.8rem 1.3rem; text-align:center; }
+  .wz-price-card--hot { border:2px solid var(--wz-gold); box-shadow:0 0 0 3px rgba(201,151,63,.15); }
+  .wz-plan-tag { display:inline-block; font-size:.85rem; letter-spacing:.2em; color:var(--wz-gold); border:1px solid var(--wz-gold); border-radius:999px; padding:.2rem 1rem; margin-bottom:1rem; }
+  .wz-price-now { font-size:2rem; color:var(--wz-gold); font-weight:700; margin:.3rem 0; }
+  .wz-price-note { color:var(--wz-gold-soft); font-size:.9rem; margin:0; }
+  .wz-deadline { text-align:center; font-size:.95rem; color:var(--wz-gold-soft); letter-spacing:.08em; margin:1.4rem 0 .6rem; }
+  .wz-center { text-align:center; }
+
+  /* FAQ */
+  .wz-faq { background:var(--wz-paper); }
+  .wz-faq details { border-bottom:1px solid #cdb98f; padding:.9rem 0; }
+  .wz-faq summary { cursor:pointer; font-weight:700; list-style:none; }
+  .wz-faq summary::before { content:"＋ "; color:var(--wz-red); }
+  .wz-faq details[open] summary::before { content:"－ "; }
+  .wz-faq details p { margin:.6rem 0 0; }
+
+  /* 報名 */
+  .wz-signup { background:var(--wz-dark); color:#f3e9d3; }
+  .wz-signup h2 { color:#fff; }
+  .wz-form-wrap { background:#fff; padding:10px; border-radius:8px; margin-top:1.6rem; }
+  .wz-alt { text-align:center; margin-top:1.5rem; font-size:.95rem; color:#eadfc8; }
+  .wz-alt a { color:var(--wz-gold); }
+  .wz-disclaimer { font-size:.82rem; color:#b8aa90; text-align:center; margin-top:1.6rem; line-height:1.8; }
+
+  @media (max-width:768px){
+    .wz-section { padding:2.6rem 1.1rem; }
+    .wz-gain-grid, .wz-price-grid, .wz-def { grid-template-columns:1fr; }
+    .wz-teacher-flex { flex-direction:column; }
+    .wz-teacher-flex img { width:100%; max-width:320px; }
+    .wz-hero { padding:3.5rem 1.1rem 3rem; }
+  }
+</style>
+
+<div class="wz-page">
+
+  <!-- ① Hero -->
+  <header class="wz-hero">
+    <img class="wz-hero-bg" src="/assets/images/courses/wangzhai-talisman/hero-wangzhai.webp" alt="" width="2400" height="1350" fetchpriority="high">
+    <div class="wz-hero-inner">
+      <a href="/course/" class="back-link" style="display:inline-block; color:#e6cf9a; font-size:.9rem; opacity:.9; margin-bottom:2.2rem;">← 返回課程中心</a>
+      <p class="wz-eyebrow" style="display:block; width:fit-content; color:var(--wz-gold-soft); border-color:var(--wz-gold-soft);">傳統東方符術</p>
+      <h1>
+        <span class="kicker">旺宅符術入門</span>
+        除煞氣、引旺氣，<br>學一套能為家宅所用的符術
+      </h1>
+      <p class="wz-sub">傳統符咒自古是師徒秘傳，外人難窺堂奧。這堂入門課，從符與咒的基本原則開始，帶你認識並實作旺宅相關的符法。</p>
+      <div class="wz-hero-meta">
+        <span>📅 2026/12/27（日）10:00–16:00</span>
+        <span>🏛 實體課程</span>
+        <span>🌱 不需先修</span>
+      </div>
+      <a class="wz-cta" href="#price">了解費用與報名</a>
+      <p class="wz-hero-note">早鳥價 5,000 元，12/08 前完成報名繳費｜報名截止 12/21</p>
+    </div>
+  </header>
+
+  <!-- ② 適合誰 -->
+  <section class="wz-section wz-pain">
+    <div class="wz-inner">
+      <p class="wz-eyebrow">適合誰</p>
+      <h2>你是不是也有這些想法？</h2>
+      <ul>
+        <li>想讓自己的家宅更興旺，卻不知道傳統上有哪些做法</li>
+        <li>對符咒好奇，但師徒秘傳、派系紛雜，找不到入門的路</li>
+        <li>想知道「符」和「咒」到底差在哪裡</li>
+        <li>想學會清淨、除煞，為居住或使用的空間做基本處理</li>
+      </ul>
+      <p class="wz-punch">符咒因為秘傳，加上派系眾多、隨時代演變，顯得特別複雜。入門的第一步，是先把基本原則弄清楚。這堂課要做的就是這件事。</p>
+    </div>
+  </section>
+
+  <!-- ③ 符與咒 -->
+  <section class="wz-section wz-story">
+    <div class="wz-inner">
+      <p class="wz-eyebrow" style="color:var(--wz-gold); border-color:var(--wz-gold);">符與咒</p>
+      <h2>符咒，可以從兩個面向來談</h2>
+      <p>傳統符咒之術，自古都是師徒秘傳，外人難以一窺堂奧，因此罩著一層神祕色彩。加上派系紛雜，又隨著時代演變而產生變化，更顯複雜。</p>
+      <p>就分類上，符咒可以分成兩個面向來談：</p>
+      <div class="wz-def">
+        <div class="wz-def-box">
+          <h3>符</h3>
+          <p>寫有文字與神祕符號的載具。可以代表神靈所在、神之力的顯化、使役鬼神的命令，或是獻給神明的祈願文。</p>
+        </div>
+        <div class="wz-def-box">
+          <h3>咒</h3>
+          <p>向神靈祈禱，以達成願望的制式祝文。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 旺宅 -->
+  <section class="wz-section wz-highlight">
+    <div class="wz-inner">
+      <p class="wz-eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem; color:var(--wz-gold); border-color:var(--wz-gold);">這門課的主題</p>
+      <h2>什麼是旺宅？</h2>
+      <div class="wz-hl-box">
+        <h3>🏠 使家宅興旺</h3>
+        <p>旺宅，顧名思義，就是使家宅興旺：除去煞氣、引來旺氣，為宅邸帶來興旺繁盛，讓居住或使用該房宅的人，擁有好運。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 學習成果 -->
+  <section class="wz-section wz-gain">
+    <div class="wz-inner">
+      <p class="wz-eyebrow">學習成果</p>
+      <h2>這一天，你將學到——</h2>
+      <div class="wz-gain-grid">
+        <div class="wz-gain-card">
+          <h3>認識</h3>
+          <ul>
+            <li>符咒的基本原則</li>
+            <li>勅水、墨、筆、紙、硯與符咒語的基本知識</li>
+          </ul>
+        </div>
+        <div class="wz-gain-card">
+          <h3>實作</h3>
+          <ul>
+            <li>清淨符一種</li>
+            <li>除煞符一種</li>
+            <li>旺宅符法一種</li>
+          </ul>
+        </div>
+        <div class="wz-gain-card">
+          <h3>入門法</h3>
+          <ul>
+            <li>旺氣入門法</li>
+            <li>開門轉運法</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 課程大綱 -->
+  <section class="wz-section wz-syllabus">
+    <div class="wz-inner">
+      <p class="wz-eyebrow">課程大綱</p>
+      <h2>從基本原則，到旺宅符法</h2>
+
+      <div class="wz-syl-group">
+        <h3>📜 符咒基礎</h3>
+        <div class="wz-syl-item"><strong>認識符咒的基本原則</strong></div>
+        <div class="wz-syl-item"><strong>基本勅水、墨筆紙硯、符咒語</strong></div>
+      </div>
+
+      <div class="wz-syl-group">
+        <h3>🖌️ 符的實作</h3>
+        <div class="wz-syl-item"><strong>清淨符：</strong>一種</div>
+        <div class="wz-syl-item"><strong>除煞符：</strong>一種</div>
+        <div class="wz-syl-item"><strong>旺宅符法：</strong>一種</div>
+      </div>
+
+      <div class="wz-syl-group">
+        <h3>🚪 旺氣與轉運</h3>
+        <div class="wz-syl-item"><strong>旺氣入門法</strong></div>
+        <div class="wz-syl-item"><strong>開門轉運法</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ 老師 -->
+  <section class="wz-section wz-teacher">
+    <div class="wz-inner">
+      <p class="wz-eyebrow" style="color:var(--wz-gold); border-color:var(--wz-gold);">授課老師</p>
+      <h2>四月老師</h2>
+      <div class="wz-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <p>深耕身心靈領域數十年，學員遍布台、港、馬。四月老師精通胡督魔法（Hoodoo）與混沌魔法（Chaos Magic），擅長將西方魔法傳統與東方哲學思想融合，引領學員透過系統化的儀式實踐，掌握現代魔法的顯化核心。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧ 費用 -->
+  <section class="wz-section wz-price" id="price">
+    <div class="wz-inner">
+      <p class="wz-eyebrow" style="color:var(--wz-gold); border-color:var(--wz-gold);">課程費用</p>
+      <h2>費用與報名時程</h2>
+      <p class="wz-center" style="margin-top:-.4rem;">🏛 實體課程｜2026/12/27（日）10:00–16:00</p>
+      <div class="wz-price-grid">
+        <div class="wz-price-card">
+          <span class="wz-plan-tag">原價</span>
+          <p class="wz-price-now" style="color:#b8aa90; text-decoration:line-through;">5,600</p>
+          <p class="wz-price-note">元</p>
+        </div>
+        <div class="wz-price-card wz-price-card--hot">
+          <span class="wz-plan-tag">早鳥價</span>
+          <p class="wz-price-now">5,000</p>
+          <p class="wz-price-note">元｜12/08 前完成報名繳費</p>
+        </div>
+      </div>
+      <p class="wz-deadline">⏳ 早鳥截止 12/08｜報名截止 12/21｜上課 12/27（日）10:00–16:00</p>
+      <p class="wz-center"><a class="wz-cta" href="#faq">先看常見問題</a>　<a class="wz-cta" href="#signup" style="background:var(--wz-gold); color:#1a1109 !important; box-shadow:0 4px 14px rgba(201,151,63,.35);">直接報名</a></p>
+    </div>
+  </section>
+
+  <!-- ⑨ FAQ（在報名表之前） -->
+  <section class="wz-section wz-faq" id="faq">
+    <div class="wz-inner">
+      <p class="wz-eyebrow">常見問題</p>
+      <h2>報名前，你可能想知道</h2>
+      <details>
+        <summary>需要先修其他課程嗎？</summary>
+        <p>不需要。這是旺宅符術的入門課，從符咒的基本原則開始，不需要先修。</p>
+      </details>
+      <details>
+        <summary>符和咒有什麼不同？</summary>
+        <p>符是寫有文字與神祕符號的載具，可以代表神靈所在、神之力的顯化、使役鬼神的命令，或是獻給神明的祈願文。咒則是向神靈祈禱、以達成願望的制式祝文。課程會從這個分類講起。</p>
+      </details>
+      <details>
+        <summary>這堂課會教哪些符？</summary>
+        <p>清淨符一種、除煞符一種、旺宅符法一種，另外還有旺氣入門法與開門轉運法。</p>
+      </details>
+      <details>
+        <summary>早鳥價怎麼算？</summary>
+        <p>12/08（含）前完成報名並繳費，可享早鳥價 5,000 元。之後至 12/21 報名截止前，為原價 5,600 元。</p>
+      </details>
+      <details>
+        <summary>學了之後，一定會讓家運變好嗎？</summary>
+        <p>本課程介紹的是傳統民俗中的符術，屬於心靈與民俗用途。感受因人而異，我們不保證特定結果，也不能取代醫療、法律、財務或居家安全等專業建議。</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ⑩ 報名 -->
+  <section class="wz-section wz-signup" id="signup">
+    <div class="wz-inner">
+      <p class="wz-eyebrow" style="color:var(--wz-gold); border-color:var(--wz-gold);">立即報名</p>
+      <h2>填寫報名表單</h2>
+      <p class="wz-center">2026/12/27（日）10:00–16:00｜實體課程<br>早鳥價 5,000 元（12/08 前報名繳費）｜報名截止 12/21</p>
+
+      <div class="wz-form-wrap" id="wz-form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeTtiL8DYotlubhLKlsQAtyFOX1wSiU6yCMpKM1Ki9Cl47PLg/viewform?embedded=true"
+          width="100%" height="1250" frameborder="0" marginheight="0" marginwidth="0"
+          style="display:block; margin:0 auto; max-width:640px;"
+          title="旺宅符術入門報名表單">載入中…</iframe>
+      </div>
+
+      <p class="wz-alt">
+        也可以直接開啟 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTtiL8DYotlubhLKlsQAtyFOX1wSiU6yCMpKM1Ki9Cl47PLg/viewform" target="_blank" rel="noopener">官方報名表單</a>，
+        或來信 <a href="mailto:herbmagic@hotmail.com.tw?subject=報名 旺宅符術入門">herbmagic@hotmail.com.tw</a>，標題註明「報名 旺宅符術入門」，並告知姓名與聯絡電話。
+      </p>
+      <p class="wz-disclaimer">本課程屬心靈與傳統民俗用途，感受因人而異，不保證特定結果，亦不替代醫療、法律或財務等專業建議。</p>
+    </div>
+  </section>
+
+  {% include signup-capture.html accent="#a8321f" bg="#e8dcc2" %}
+
+</div>
