@@ -1,0 +1,399 @@
+---
+layout: default
+title: 2027 九星氣學年度占卜｜約 6,000 字個人報告 | 四月老師 - 靈火巫境
+description: 用你的出生年月日時排出九星氣學本命盤，寫成約 6,000 字的個人報告：性格、2027 年運勢、十二個月流月與每月吉方、取祐氣的日期與時辰。NT$ 3,500，一年只開放一次。
+permalink: /rituals/kyusei-2027/
+image: /assets/images/rituals/kyusei-2027/og-kyusei-2027.jpg
+---
+
+<style>
+  /* ===== 2027 九星氣學年度占卜（ky- 前綴）深紫＋古金＋米白 ===== */
+  .ky { --ky-ink:#24182b; --ky-paper:#f7f2ea; --ky-paper2:#efe6f1; --ky-dark:#1d0f26; --ky-dark2:#2c1638;
+        --ky-purple:#5b2a6e; --ky-violet:#7b3f8f; --ky-gold:#c9973f; --ky-gold-soft:#ead5a6; --ky-red:#8c3b2e;
+        color:var(--ky-ink); line-height:1.9; font-size:1rem; }
+  .ky * { box-sizing:border-box; }
+  .ky .wrap { max-width:860px; margin:0 auto; }
+  .ky-sec { padding:3.4rem 1.25rem; }
+  .ky h2.sec { font-size:1.55rem; margin:0 0 1.3rem; letter-spacing:.06em; color:var(--ky-ink); line-height:1.5; }
+  .ky .eyebrow { display:inline-block; font-size:.85rem; letter-spacing:.4em; color:var(--ky-purple);
+                 border-bottom:1px solid var(--ky-purple); padding-bottom:.3rem; margin-bottom:1rem; }
+  .ky p { margin:0 0 1rem; }
+  .ky-cta { display:inline-block; background:var(--ky-gold); color:#1d0f26 !important; text-decoration:none;
+            padding:.95rem 2.6rem; border-radius:4px; font-weight:700; letter-spacing:.15em;
+            box-shadow:0 4px 14px rgba(201,151,63,.35); transition:transform .15s ease; }
+  .ky-cta.ghost { background:transparent; color:var(--ky-gold-soft) !important; border:1px solid rgba(234,213,166,.6); box-shadow:none; }
+  .ky-cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion: reduce){ .ky-cta{transition:none} .ky-cta:hover{transform:none} }
+
+  /* Hero */
+  .ky-hero { position:relative; color:#f1e6f3; text-align:center; padding:5rem 1.25rem 4rem; overflow:hidden;
+             background:linear-gradient(180deg,rgba(29,15,38,.80),rgba(29,15,38,.94)),
+                        url(/assets/images/rituals/kyusei-2027/hero-kyusei-2027.webp) center/cover no-repeat,
+                        radial-gradient(circle at 50% 30%, #5b2a6e, #1d0f26 70%); }
+  .ky-hero .back { display:inline-block; color:var(--ky-gold-soft); font-size:.9rem; text-decoration:none; margin-bottom:1.6rem; }
+  .ky-hero .eyebrow { color:var(--ky-gold-soft); border-color:var(--ky-gold-soft); }
+  .ky-hero h1 { font-size:clamp(1.9rem,5.4vw,2.9rem); margin:.8rem 0; color:#fff; letter-spacing:.12em; line-height:1.5; }
+  .ky-hero .sub { max-width:32em; margin:1rem auto; color:var(--ky-gold-soft); font-size:1.08rem; }
+  .ky-chips { display:flex; flex-wrap:wrap; justify-content:center; gap:.6rem 1.2rem; margin:1.4rem 0 1.8rem; }
+  .ky-chips span { border:1px solid rgba(201,151,63,.55); border-radius:999px; padding:.4rem 1.2rem; font-size:.95rem; letter-spacing:.04em; }
+  .ky-hero .btns { display:flex; flex-wrap:wrap; justify-content:center; gap:.8rem; }
+  .ky-octa { width:150px; height:150px; margin:0 auto 1rem; display:block; }
+
+  /* 為什麼 */
+  .ky-why { background:var(--ky-paper); }
+  .ky-note { background:var(--ky-paper2); border-left:4px solid var(--ky-gold); padding:1rem 1.3rem; border-radius:0 6px 6px 0; color:#47344f; }
+
+  /* 你會得到什麼 */
+  .ky-get { background:var(--ky-dark2); color:#eadff0; }
+  .ky-get h2.sec { color:#fff; text-align:center; }
+  .ky-get .eyebrow { color:var(--ky-gold-soft); border-color:var(--ky-gold-soft); display:block; width:fit-content; margin:0 auto 1rem; }
+  .ky-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin:1.6rem 0 2.2rem; }
+  .ky-stat { border:1px solid rgba(201,151,63,.4); border-radius:10px; padding:1.2rem .8rem; text-align:center; }
+  .ky-stat strong { display:block; font-size:1.7rem; color:var(--ky-gold); letter-spacing:.04em; line-height:1.3; }
+  .ky-stat span { font-size:.9rem; color:#d9c9df; }
+  .ky-toc { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; }
+  .ky-toc-col { background:rgba(255,255,255,.04); border:1px solid rgba(201,151,63,.3); border-radius:10px; padding:1.4rem 1.5rem; }
+  .ky-toc-col h3 { margin:0 0 .8rem; color:var(--ky-gold); font-size:1.15rem; letter-spacing:.08em; }
+  .ky-toc-col ol { margin:0; padding-left:1.4rem; }
+  .ky-toc-col li { margin:.25rem 0; font-size:.96rem; }
+  .ky-toc-col li small { color:#bfaec7; font-size:.85rem; }
+
+  /* 好處 */
+  .ky-good { background:var(--ky-paper); }
+  .ky-good-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:1.4rem; }
+  .ky-good-item { background:#fff; border:1px solid #ddd0e2; border-radius:10px; padding:1.3rem 1.4rem; }
+  .ky-good-item .ic { font-size:1.6rem; line-height:1.2; }
+  .ky-good-item h3 { margin:.4rem 0 .3rem; color:var(--ky-purple); font-size:1.1rem; }
+  .ky-good-item p { margin:0; font-size:.95rem; color:#4a3b50; }
+
+  /* 內容搶先看 */
+  .ky-peek { background:var(--ky-paper2); }
+  .ky-peek .lead { color:#5a4862; font-size:.95rem; }
+  .ky-sheet { background:#fff; border:1px solid #d9c8e0; border-radius:12px; padding:1.6rem 1.6rem 1.2rem; margin:1.2rem 0;
+              box-shadow:0 6px 22px rgba(60,20,80,.08); }
+  .ky-sheet .hd { display:flex; align-items:center; gap:.6rem; background:linear-gradient(90deg,#efe3f3,#fff); border-left:4px solid var(--ky-purple);
+                  padding:.55rem .9rem; border-radius:0 6px 6px 0; font-weight:700; color:var(--ky-purple); margin:0 0 1rem; }
+  .ky-sheet p { font-size:.97rem; }
+  .ky-tip { background:#f6eef9; border:1px solid #e2cfe9; border-radius:8px; padding:.8rem 1rem; font-size:.95rem; }
+  .ky-month { border:1px solid #e2d3ea; border-radius:10px; overflow:hidden; }
+  .ky-month .top { background:var(--ky-purple); color:#fff; padding:.6rem 1rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:.4rem; }
+  .ky-month .top b { letter-spacing:.1em; }
+  .ky-month .top span { font-size:.88rem; color:#ead5f0; }
+  .ky-month .body { padding:.9rem 1rem; font-size:.95rem; }
+  .ky-month .row { margin:.3rem 0 .7rem; }
+  .ky-month .lbl { display:inline-block; font-size:.8rem; font-weight:700; color:var(--ky-purple); background:#f1e6f5; border-radius:4px; padding:.05rem .5rem; margin-right:.4rem; }
+  .ky-month ul { margin:.2rem 0 0; padding-left:1.2rem; }
+  .ky-month .bad { color:var(--ky-red); }
+  .ky-day { display:grid; grid-template-columns:auto 1fr; gap:.2rem 1rem; font-size:.93rem; background:#fbf8fc; border:1px dashed #d9c3e2; border-radius:8px; padding:.8rem 1rem; }
+  .ky-day b { color:var(--ky-purple); }
+  .ky-fade { position:relative; max-height:9.5rem; overflow:hidden; }
+  .ky-fade::after { content:""; position:absolute; left:0; right:0; bottom:0; height:4rem; background:linear-gradient(rgba(255,255,255,0),#fff); }
+  .ky-peek .cap { font-size:.88rem; color:#6d5a75; text-align:center; margin-top:.4rem; }
+
+  /* 一年一次 */
+  .ky-once { background:var(--ky-dark); color:#eadff0; text-align:center; }
+  .ky-once h2.sec { color:#fff; }
+  .ky-once p { max-width:34em; margin-left:auto; margin-right:auto; }
+  .ky-once strong { color:var(--ky-gold-soft); }
+
+  /* 流程 */
+  .ky-flow { background:var(--ky-paper); }
+  .ky-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; margin-top:1.4rem; }
+  .ky-step { background:#fff; border:1px solid #ddd0e2; border-radius:10px; padding:1.5rem 1.3rem; text-align:center; }
+  .ky-step .n { font-size:2rem; font-weight:700; color:var(--ky-purple); line-height:1.2; }
+  .ky-step h3 { margin:.3rem 0 .4rem; font-size:1.1rem; }
+  .ky-step p { margin:0; font-size:.92rem; color:#5a4862; }
+
+  /* 鑑定者 */
+  .ky-teacher { background:var(--ky-paper2); }
+  .ky-teacher-flex { display:flex; gap:2.2rem; align-items:center; max-width:760px; margin:0 auto; }
+  .ky-teacher-flex img { width:200px; height:auto; border-radius:10px; flex:0 0 auto; border:1px solid rgba(201,151,63,.5); }
+  .ky-teacher h3 { margin:0 0 .3rem; font-size:1.4rem; color:var(--ky-purple); }
+  .ky-teacher .role { color:#1a5f5f; font-size:.92rem; margin:0 0 1rem; }
+
+  /* FAQ */
+  .ky-faq { background:var(--ky-paper); }
+  .ky-faq details { background:#fff; border:1px solid #ddd0e2; border-radius:8px; margin-bottom:.8rem; padding:.2rem 1.2rem; }
+  .ky-faq summary { cursor:pointer; padding:.9rem 0; font-weight:700; }
+  .ky-faq details p { margin:0 0 1rem; font-size:.96rem; color:#47344f; }
+
+  /* 報名 */
+  .ky-signup { background:var(--ky-dark); color:#eadff0; text-align:center; }
+  .ky-signup h2.sec { color:#fff; }
+  .ky-price { display:inline-block; text-align:left; border:1px solid rgba(201,151,63,.5); border-radius:12px; padding:1.5rem 2rem; margin:0 0 1.4rem; }
+  .ky-price .amt { font-size:2.2rem; color:var(--ky-gold); font-weight:700; letter-spacing:.04em; line-height:1.3; }
+  .ky-price ul { margin:.6rem 0 0; padding-left:1.2rem; }
+  .ky-price li { margin:.3rem 0; }
+  .ky-soon { background:rgba(255,255,255,.06); border:1px dashed rgba(201,151,63,.55); border-radius:10px; padding:1.4rem; max-width:560px; margin:0 auto; }
+  .ky-soon b { color:var(--ky-gold-soft); }
+  .ky .ky-legal { font-size:.85rem; color:#bba9c3; max-width:40em; margin:1.6rem auto 0; }
+
+  @media (max-width:720px){
+    .ky-stats { grid-template-columns:repeat(2,1fr); }
+    .ky-toc, .ky-good-grid, .ky-steps { grid-template-columns:1fr; }
+    .ky-teacher-flex { flex-direction:column; text-align:center; }
+    .ky-teacher-flex img { width:60%; max-width:200px; }
+    .ky-sheet { padding:1.2rem 1rem 1rem; }
+  }
+</style>
+
+<div class="ky">
+
+  <!-- Hero -->
+  <header class="ky-hero">
+    <a href="/rituals/" class="back">← 返回儀式與服務</a>
+    <div class="wrap">
+      <svg class="ky-octa" viewBox="0 0 200 200" aria-hidden="true">
+        <polygon points="70,10 130,10 190,70 190,130 130,190 70,190 10,130 10,70" fill="none" stroke="#c9973f" stroke-width="1.5"/>
+        <polygon points="80,45 120,45 155,80 155,120 120,155 80,155 45,120 45,80" fill="none" stroke="#c9973f" stroke-width="1" opacity=".6"/>
+        <circle cx="100" cy="100" r="26" fill="rgba(201,151,63,.18)" stroke="#c9973f"/>
+        <g fill="#ead5a6" font-size="17" text-anchor="middle" font-family="serif">
+          <text x="100" y="34">九</text><text x="152" y="56">二</text><text x="176" y="106">七</text><text x="152" y="158">六</text>
+          <text x="100" y="180">一</text><text x="48" y="158">八</text><text x="24" y="106">三</text><text x="48" y="56">四</text>
+          <text x="100" y="107" font-size="21" fill="#fff">五</text>
+        </g>
+      </svg>
+      <span class="eyebrow">九 星 氣 學 ・ 年 度 占 卜</span>
+      <h1>2027 九星氣學年度占卜</h1>
+      <p class="sub">用你的出生年月日時排盤，寫成一份約 6,000 字的個人報告。<br>看懂自己，也看清 2027 年每個月該往哪裡走。</p>
+      <div class="ky-chips">
+        <span>📄 約 6,000 字個人報告</span>
+        <span>📅 2027 立春到 2028 立春，整年 12 個月</span>
+        <span>💰 NT$ 3,500</span>
+        <span>🔁 一年只開放一次</span>
+      </div>
+      <div class="btns">
+        <a href="#peek" class="ky-cta ghost">先看報告內容</a>
+        <a href="#signup" class="ky-cta">我要報名 →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 為什麼看年度 -->
+  <section class="ky-sec ky-why">
+    <div class="wrap">
+      <p class="eyebrow">為 什 麼 要 看 年 度</p>
+      <h2 class="sec">同樣是 2027 年，每個人走的路不一樣</h2>
+      <p>九星氣學（日本稱「九星気学」）把一年、一個月、一天都排成一張九宮盤。你的本命星每年會落在不同的宮位，這一年的主題、順不順、該往哪個方位走，都跟著改變。</p>
+      <p>網路上的流年文章，通常只按本命星分成九種人來寫。這份年度占卜不一樣：用你自己的<strong>出生年、月、日、時</strong>排出本命盤，再把 2027 年的年盤、十二個月的月盤疊上去，一個月一個月寫給你。</p>
+      <div class="ky-note">九星氣學以<strong>立春</strong>換年。這份報告看的是 <strong>2027 年 2 月 4 日立春到 2028 年 2 月 3 日</strong>這一整年。</div>
+    </div>
+  </section>
+
+  <!-- 你會得到什麼 -->
+  <section class="ky-sec ky-get">
+    <div class="wrap">
+      <p class="eyebrow">你 會 得 到 什 麼</p>
+      <h2 class="sec">一份只屬於你的年度報告</h2>
+      <div class="ky-stats">
+        <div class="ky-stat"><strong>約 6,000 字</strong><span>個人化解讀</span></div>
+        <div class="ky-stat"><strong>4 張命盤</strong><span>年盤・月盤・日盤・時盤</span></div>
+        <div class="ky-stat"><strong>12 個月</strong><span>流月重點與每月吉方</span></div>
+        <div class="ky-stat"><strong>PDF</strong><span>A4 約 9 頁，可列印保存</span></div>
+      </div>
+      <div class="ky-toc">
+        <div class="ky-toc-col">
+          <h3>第一部　認識你自己</h3>
+          <ol>
+            <li>命盤重點</li>
+            <li>核心性格 <small>（本命星）</small></li>
+            <li>內在與成長背景 <small>（月命星）</small></li>
+            <li>真正的本性 <small>（傾斜宮）</small></li>
+            <li>外在表現與給人的印象</li>
+            <li>日常習性與潛在傾向 <small>（日命星、時命星）</small></li>
+            <li>優勢</li>
+            <li>盲點與提醒</li>
+            <li>適合的工作方向與做事方式</li>
+            <li>人際相處建議</li>
+            <li>小結</li>
+            <li>跟其他九星的人際關係</li>
+          </ol>
+        </div>
+        <div class="ky-toc-col">
+          <h3>第二部　2027 年怎麼走</h3>
+          <ol start="13">
+            <li>2027 年運勢 <small>（同會、被同會、流年、大運、年吉方與年凶方）</small></li>
+            <li>2027 流月與每月吉方 <small>（12 個月逐月寫：重點、可以往哪去、該避開哪裡）</small></li>
+            <li>取祐氣 <small>（年、月、日、時四張盤都是吉方的日期與時辰）</small></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 好處 -->
+  <section class="ky-sec ky-good">
+    <div class="wrap">
+      <p class="eyebrow">對 你 的 好 處</p>
+      <h2 class="sec">拿到報告之後，你可以……</h2>
+      <div class="ky-good-grid">
+        <div class="ky-good-item"><div class="ic">🗓️</div><h3>知道哪個月該衝、哪個月該守</h3><p>每個月寫清楚重點：哪個月適合談事情、哪個月容易起衝突、全年最需要小心的是哪個月。重要的事排在對的月份。</p></div>
+        <div class="ky-good-item"><div class="ic">🧭</div><h3>搬家、出差、簽約，有方位可以參考</h3><p>每個月列出吉方和該避開的方位。想求工作、求財、求感情，各往哪個方向，報告都寫給你。</p></div>
+        <div class="ky-good-item"><div class="ic">🍀</div><h3>拿到開運旅行的日期與時辰</h3><p>「取祐氣」是往吉方走一趟、補充好的氣。報告列出全年四張盤都是吉方的日子，連時辰都排好。</p></div>
+        <div class="ky-good-item"><div class="ic">🪞</div><h3>看懂自己的性格和盲點</h3><p>外表、內在、真正的本性分開寫。你會知道自己卡在哪裡，以及怎麼用自己的長處做事。</p></div>
+        <div class="ky-good-item"><div class="ic">🤝</div><h3>知道跟誰相處要多留意</h3><p>以你的本命星對照其他八顆星，寫出誰是你的助力、跟誰容易被壓著走、對誰容易付出太多。</p></div>
+        <div class="ky-good-item"><div class="ic">📄</div><h3>一份報告用一整年</h3><p>PDF 存在手機或印出來，每個月初翻一下當月那一頁就好。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 內容搶先看 -->
+  <section class="ky-sec ky-peek" id="peek">
+    <div class="wrap">
+      <p class="eyebrow">內 容 搶 先 看</p>
+      <h2 class="sec">報告實際長這樣</h2>
+      <p class="lead">以下節錄自一份實際的 2027 年度報告（本命星四綠木星），已隱去姓名與出生資料。每個人的內容依自己的命盤而不同。</p>
+
+      <div class="ky-sheet">
+        <div class="hd">🔥 二、核心性格（本命星四綠木星）</div>
+        <div class="ky-fade">
+          <p>四綠是「風」，象意是信用、往來、遠方、緣分。你給人的感覺是好溝通、好相處，跟誰都能聊上幾句，長輩和上司也容易信任你。做事有邏輯，會先想好計畫再動。</p>
+          <p>代價是太怕衝突。為了讓場面好看，容易配合別人、委屈自己；遇到要選邊站的時候，常常猶豫太久。</p>
+        </div>
+      </div>
+
+      <div class="ky-sheet">
+        <div class="hd">🌙 十三、2027 年（丁未）運勢</div>
+        <p><b>離宮同會（九紫火星）：</b>本命星落在年盤離宮，是「一切被照亮」的一年。名聲、文件、考試、被看見的事會變多，好的壞的都容易曝光，也容易有離別。</p>
+        <div class="ky-tip"><b>一句話建議：</b>2027 是被看見的一年，把作品和專業端出來；但每一步都要經得起檢驗，重大決定避開 7 月。</div>
+      </div>
+
+      <div class="ky-sheet">
+        <div class="hd">📅 十四、2027 流月與每月吉方（12 個月中的 1 個月）</div>
+        <div class="ky-month">
+          <div class="top"><b>寅月</b><span>2027年02月04日～03月05日・月盤 五黃土星</span></div>
+          <div class="body">
+            <div class="row"><span class="lbl">重點</span>容易被誤解，有狀況當月就補救；有人要離開，把話講清楚。月初運勢較好，要事上半月辦完。</div>
+            <div class="row"><span class="lbl">運用</span>
+              <ul>
+                <li>想培養耐力、部下運、學會自立 → 往北（大吉）</li>
+                <li>想開新事業、做企畫、跟舊資訊斷緣 → 往東（吉）</li>
+                <li>想談結婚、建立信用、得到長輩幫助、做旅行相關的工作 → 往東南（吉）</li>
+                <li>想成名、被人肯定 → 往南（小吉）</li>
+              </ul>
+            </div>
+            <div class="row bad"><span class="lbl">凶避</span>避開：東北（歲破）、西南（月破）</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ky-sheet">
+        <div class="hd">🍀 十五、取祐氣：四盤皆吉的方位</div>
+        <div class="ky-day">
+          <b>日期</b><span>7/11　往西北</span>
+          <b>三盤</b><span>年盤 一白水星（大吉）・月盤 一白水星（大吉）・日盤 一白水星（大吉）</span>
+          <b>時辰</b><span>子時 00:00–01:00　時盤 一白水星（大吉）</span>
+        </div>
+        <p style="margin-top:.8rem;font-size:.93rem;color:#5a4862;">報告會寫出距離、停留時間、回程注意事項，照著做就好。</p>
+      </div>
+      <p class="cap">完整報告還附四張八角命盤圖、命盤資料表與 2027 年盤。</p>
+    </div>
+  </section>
+
+  <!-- 一年只有一次 -->
+  <section class="ky-sec ky-once">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--ky-gold-soft);border-color:var(--ky-gold-soft);">一 年 一 次</p>
+      <h2 class="sec">年度占卜，一年只開放一次</h2>
+      <p>九星氣學以立春換年，年運一年只會變一次。所以年度占卜也<strong>一年只開放一次</strong>，在新的一年開始之前，為你把整年的方向排好。</p>
+      <p>錯過這次，就要等下一個年度。</p>
+    </div>
+  </section>
+
+  <!-- 流程 -->
+  <section class="ky-sec ky-flow">
+    <div class="wrap">
+      <p class="eyebrow">報 名 流 程</p>
+      <h2 class="sec">三步驟，拿到你的年度報告</h2>
+      <div class="ky-steps">
+        <div class="ky-step"><div class="n">1</div><h3>填寫報名表</h3><p>提供姓名與出生年、月、日、時間。出生時間越準確越好。</p></div>
+        <div class="ky-step"><div class="n">2</div><h3>排盤與撰寫</h3><p>四月老師依你的出生資料排出四張命盤，寫成個人報告。</p></div>
+        <div class="ky-step"><div class="n">3</div><h3>收到 PDF 報告</h3><p>完成後以 PDF 電子檔交給你，手機、電腦都能看，也可以印出來。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 鑑定者 -->
+  <section class="ky-sec ky-teacher">
+    <div class="wrap">
+      <p class="eyebrow" style="margin-bottom:1.6rem;">為 你 排 盤 的 人</p>
+      <div class="ky-teacher-flex">
+        <img src="/assets/images/shared/teacher-april.webp" alt="四月老師" width="1000" height="1250" loading="lazy">
+        <div>
+          <h3>四月老師</h3>
+          <p class="role">靈火巫境創辦人</p>
+          <p>深耕身心靈領域十餘年，長年研究與教學各類占卜、儀式與魔法傳統，在台灣、香港、馬來西亞皆有學員與客戶。</p>
+          <p>這份年度占卜由四月老師依你的出生資料排盤與解讀。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ky-sec ky-faq">
+    <div class="wrap">
+      <h2 class="sec">報名前，你可能想知道</h2>
+      <details>
+        <summary>需要提供哪些資料？</summary>
+        <p>姓名，以及出生的年、月、日、時間（幾點幾分）。九星氣學的年和月以節氣切換，生日靠近立春或節氣交界的人，出生時間會影響結果，請盡量提供準確的時間。</p>
+      </details>
+      <details>
+        <summary>不知道出生時間，可以嗎？</summary>
+        <p>本命星、月命星、傾斜宮只需要出生日期就能排出，報告的主要內容不受影響。時命星需要出生時間；沒有時間的話，報告裡和時命星有關的部分無法判讀。報名時請註明「出生時間不確定」。</p>
+      </details>
+      <details>
+        <summary>跟網路上的「九星流年運勢」有什麼不同？</summary>
+        <p>一般流年文章只按本命星把人分成九類。這份報告用你自己的出生年月日時排出年、月、日、時四張命盤，性格、流年、每月吉方與取祐氣的日期都是依你的命盤個別推算。</p>
+      </details>
+      <details>
+        <summary>為什麼報告看到 2028 年 2 月？</summary>
+        <p>九星氣學以立春換年，不是以國曆 1 月 1 日換年。2027 年從 2027/02/04 立春開始，到 2028/02/03 結束，所以最後一個月（丑月）在 2028 年 1 月到 2 月初。</p>
+      </details>
+      <details>
+        <summary>「取祐氣」是什麼？一定要去嗎？</summary>
+        <p>取祐氣是挑年、月、日、時都是吉方的日子，往那個方位走一趟、停留一段時間，補充好的氣。報告會寫出日期、時辰、距離和注意事項。要不要去、去哪一天，由你自己決定，不去也不影響報告其他內容。</p>
+      </details>
+      <details>
+        <summary>報告裡寫到不好的月份，要擔心嗎？</summary>
+        <p>報告寫出容易卡住的月份，是為了讓你提早準備，例如重要決定換個月份、合約多看一遍。每個月同時寫了可以怎麼運用，不是只寫壞事。</p>
+      </details>
+      <details>
+        <summary>這份報告可以取代醫療、法律或財務建議嗎？</summary>
+        <p>不行。九星氣學屬傳統命理與民俗參考，感受因人而異，不保證特定結果，亦不替代醫療、法律或財務專業建議。健康、投資、法律上的重要決定，請以專業人士的意見為準。</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 報名 -->
+  <section class="ky-sec ky-signup" id="signup">
+    <div class="wrap">
+      <h2 class="sec">報名 2027 九星氣學年度占卜</h2>
+      <div class="ky-price">
+        <div class="amt">NT$ 3,500</div>
+        <ul>
+          <li>📄 約 6,000 字個人報告（PDF，A4 約 9 頁）</li>
+          <li>🧭 年、月、日、時四張命盤圖</li>
+          <li>📅 2027/02/04 立春至 2028/02/03，12 個月流月與每月吉方</li>
+          <li>🍀 取祐氣：四盤皆吉的日期與時辰</li>
+          <li>🔁 一年只開放一次</li>
+        </ul>
+      </div>
+
+      <!-- ▼ 報名表單：拿到 Google 表單後，把下面 ky-soon 整塊換成 iframe ▼
+      <div style="background:#fff;border-radius:10px;padding:.5rem;margin-top:1.4rem;">
+        <iframe src="https://docs.google.com/forms/d/e/【表單ID】/viewform?embedded=true"
+                width="100%" height="1600" frameborder="0" marginheight="0" marginwidth="0"
+                style="display:block;margin:0 auto;max-width:640px;" title="2027 九星氣學年度占卜報名表單">載入中…</iframe>
+      </div>
+      ▲ 報名表單 ▲ -->
+      <div class="ky-soon">
+        <p style="margin:0;"><b>報名表單準備中。</b><br>開放報名時會公告在這一頁，也會寄電子報通知。想第一時間知道，請訂閱下方電子報。</p>
+      </div>
+
+      <p class="ky-legal">九星氣學屬傳統命理與民俗參考，感受因人而異，不保證特定結果，亦不替代醫療、法律或財務專業建議。</p>
+    </div>
+  </section>
+
+</div>
+
+{% include signup-capture.html accent="#5b2a6e" bg="#f7f2ea" %}

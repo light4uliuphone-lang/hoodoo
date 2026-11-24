@@ -1,0 +1,369 @@
+---
+layout: default
+title: 團體儀式與儀式 | 四月老師 - 靈火巫境
+description: 靈火巫境不定期舉辦的團體儀式與集體儀式——行星與神聖儀式、五雷開運、收魂安神、集體祈福等。由四月老師親自執行，開放報名，與眾人共同參與的魔法時刻。
+---
+
+<style>
+  .rt { --rt-ink:#241a12; --rt-paper:#f4ecdd; --rt-paper2:#ece1cc; --rt-dark:#14100b; --rt-dark2:#1f1810;
+        --rt-gold:#c9973f; --rt-gold-soft:#e6cfa0; --rt-teal:#1a5f5f; --rt-red:#8c3b2e; --rt-cinnabar:#a83a28;
+        color:var(--rt-ink); line-height:1.85; }
+  .rt * { box-sizing:border-box; }
+  .rt .wrap { max-width:1000px; margin:0 auto; padding:0 1.5rem; }
+  .rt .eyebrow { display:inline-block; font-size:.82rem; letter-spacing:.35em; color:var(--rt-gold);
+                 border-bottom:1px solid var(--rt-gold); padding-bottom:.3rem; margin-bottom:1rem; }
+  .rt .cta { display:inline-block; text-decoration:none; font-weight:700; letter-spacing:.1em;
+             padding:.9rem 2.4rem; border-radius:4px; transition:transform .15s ease; }
+  .rt .cta:hover { transform:translateY(-2px); }
+  @media (prefers-reduced-motion:reduce){ .rt .cta{transition:none} .rt .cta:hover{transform:none} }
+
+  /* Hero */
+  .rt-hero { position:relative; background:radial-gradient(ellipse at 50% 25%, #2a1f16, #14100b 72%);
+             color:var(--rt-paper); text-align:center; padding:5rem 1.5rem 4rem; overflow:hidden; }
+  .rt-hero::before { content:""; position:absolute; top:-25%; left:50%; transform:translateX(-50%);
+                     width:600px; height:600px; border-radius:50%;
+                     background:radial-gradient(circle, rgba(201,151,63,.12) 0%, transparent 62%); }
+  .rt-hero-in { position:relative; max-width:720px; margin:0 auto; }
+  .rt-hero .glyph { font-size:1.8rem; color:var(--rt-gold); margin-bottom:1.2rem; }
+  .rt-hero h1 { font-size:clamp(1.9rem,5vw,2.8rem); color:#fff; letter-spacing:.06em; margin:.3rem 0 1rem; }
+  .rt-hero p { color:var(--rt-gold-soft); max-width:31em; margin:0 auto; font-size:1.08rem; }
+
+  .rt-sec { padding:4.5rem 0; }
+  .rt-sec h2.sec { font-size:clamp(1.4rem,3.2vw,1.9rem); letter-spacing:.05em; margin:.8rem 0 2rem; text-align:center; }
+
+  /* 什麼是團體儀式 */
+  .rt-intro { background:var(--rt-paper); }
+  .rt-intro-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; margin-top:1rem; }
+  .rt-intro-card { background:#fff; border:1px solid #ddd0b4; border-radius:10px; padding:2rem 1.7rem; border-top:3px solid var(--rt-gold); }
+  .rt-intro-card .ic { font-size:1.8rem; margin-bottom:.8rem; }
+  .rt-intro-card h3 { color:var(--rt-teal); margin:0 0 .6rem; font-size:1.15rem; letter-spacing:.03em; }
+  .rt-intro-card p { color:#5a4a35; margin:0; font-size:.93rem; }
+
+  /* 近期場次 */
+  .rt-upcoming { background:var(--rt-dark2); }
+  .rt-upcoming h2.sec { color:#fff; }
+  .rt-upcoming-sub { text-align:center; color:#c9b892; max-width:34em; margin:0 auto 2.4rem; }
+
+  /* 儀式卡片（可複製插入） */
+  .rt-card { background:linear-gradient(155deg, #1a1109, #2a1f16); border:1px solid rgba(201,151,63,.35);
+             border-radius:14px; overflow:hidden; box-shadow:0 8px 28px rgba(0,0,0,.3); max-width:760px; margin:0 auto 1.6rem; }
+  .rt-card-body { padding:2.6rem 2.2rem; color:var(--rt-paper); }
+  .rt-tag { display:inline-block; font-size:.78rem; letter-spacing:.22em; color:var(--rt-gold);
+            border:1px solid var(--rt-gold); border-radius:999px; padding:.25rem 1.1rem; margin-bottom:1.3rem; }
+  .rt-card h3 { color:#fff; font-size:1.9rem; letter-spacing:.06em; margin:0 0 .4rem; }
+  .rt-card .sub { color:var(--rt-gold-soft); font-size:1.08rem; margin:0 0 1.5rem; }
+  .rt-card .desc { color:#d8c9ad; line-height:1.95; margin:0 0 1.5rem; }
+  .rt-card .desc strong { color:#fff; }
+  .rt-two { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.6rem 0; }
+  .rt-gate { background:rgba(201,151,63,.08); border:1px solid rgba(201,151,63,.28); border-radius:8px; padding:1.2rem 1.4rem; }
+  .rt-gate h4 { color:var(--rt-gold); font-size:1.02rem; margin:0 0 .5rem; letter-spacing:.05em; }
+  .rt-gate p { color:#cbb89a; font-size:.9rem; margin:0; line-height:1.8; }
+  .rt-meta { display:flex; flex-wrap:wrap; gap:.6rem 2rem; margin:1.6rem 0; font-size:.95rem; color:#f1e7d4;
+             padding-top:1.4rem; border-top:1px solid rgba(201,151,63,.2); }
+  .rt-btn-cinnabar { background:var(--rt-cinnabar); color:#fff !important; box-shadow:0 4px 14px rgba(168,58,40,.35); }
+
+  /* 無場次時的空狀態 */
+  .rt-empty { max-width:600px; margin:0 auto; text-align:center; background:rgba(201,151,63,.06);
+              border:1px dashed rgba(201,151,63,.4); border-radius:12px; padding:3rem 2rem; }
+  .rt-empty .glyph { font-size:2rem; color:var(--rt-gold); margin-bottom:1rem; }
+  .rt-empty p { color:#d8c9ad; margin:0 0 1.6rem; font-size:1.02rem; line-height:1.9; }
+
+  /* 訂製導引帶 */
+  .rt-band { background:var(--rt-paper2); text-align:center; padding:4rem 1.5rem; }
+  .rt-band h2 { font-size:clamp(1.3rem,3vw,1.7rem); letter-spacing:.05em; margin:0 0 .8rem; }
+  .rt-band p { color:#5a4a35; max-width:32em; margin:0 auto 1.8rem; }
+
+  /* FAQ */
+  .rt-faq { background:var(--rt-paper); }
+  .rt-faq details { border-bottom:1px solid #ddd0b4; padding:1rem 0; }
+  .rt-faq summary { cursor:pointer; font-weight:700; list-style:none; color:var(--rt-red); }
+  .rt-faq summary::before { content:"＋ "; color:var(--rt-gold); }
+  .rt-faq details[open] summary::before { content:"－ "; }
+  .rt-faq details p { margin:.7rem 0 0; color:#5a4a35; }
+
+  @media (max-width:768px){
+    .rt-intro-grid, .rt-two { grid-template-columns:1fr; }
+    .rt-sec { padding:3.2rem 0; }
+  }
+</style>
+
+<div class="rt">
+
+  <!-- Hero -->
+  <header class="rt-hero">
+    <div class="rt-hero-in">
+      <div class="glyph">✦</div>
+      <p class="eyebrow">團 體 儀 式 與 法 事</p>
+      <h1>與眾人一同，<br>參與集體的魔法時刻</h1>
+      <p>靈火巫境不定期舉辦團體儀式與集體儀式——行星與神聖儀式、集體祈願、豐盛與守護。由四月老師親自執行，開放報名，凝聚眾人之力共同祈願。</p>
+    </div>
+  </header>
+
+  <!-- 什麼是團體儀式 -->
+  <section class="rt-sec rt-intro">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">關 於 團 體 儀 式</p>
+      <h2 class="sec">為什麼參與團體儀式</h2>
+      <div class="rt-intro-grid">
+        <div class="rt-intro-card">
+          <div class="ic">🔥</div>
+          <h3>集體之力</h3>
+          <p>眾人共同參與同一場儀式，願力匯聚，是個人儀式之外的另一種能量形式。適合想在特定時節與眾人同修祈願的人。</p>
+        </div>
+        <div class="rt-intro-card">
+          <div class="ic">🗓</div>
+          <h3>擇時而作</h3>
+          <p>團體儀式多配合特定的節氣、時運或神明聖誕擇日舉行，掌握天時。不定期開辦，開放報名即可參與。</p>
+        </div>
+        <div class="rt-intro-card">
+          <div class="ic">💰</div>
+          <h3>親近的門檻</h3>
+          <p>相較於完整的個人訂製儀式，團體儀式以較親近的價格，讓更多人有機會參與行星魔法、胡督與各式傳統的儀式力量。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 近期場次 -->
+  <section class="rt-sec rt-upcoming">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">近 期 場 次</p>
+      <h2 class="sec">目前開放報名的儀式</h2>
+      <p class="rt-upcoming-sub">以下為近期舉辦、開放報名的團體儀式。名額有限，額滿為止。</p>
+
+      <!-- 開新場次：複製一個 rt-card 區塊改內容即可。範本與空狀態封存於本檔最下方。 -->
+
+      <!-- ▼ 2027 九星氣學年度占卜（NT$ 3,500，報名表單待補） ▼ -->
+      <div class="rt-card">
+        <div class="rt-card-body">
+          <span class="rt-tag">九 星 氣 學 ・ 一 年 一 次</span>
+          <h3>2027 九星氣學年度占卜</h3>
+          <p class="sub">約 6,000 字個人報告，看清 2027 年每個月該往哪裡走</p>
+          <p class="desc">用你的出生年月日時排出九星氣學本命盤，寫成一份<strong>約 6,000 字的個人報告</strong>：性格與盲點、2027 年運勢、<strong>十二個月流月與每月吉方</strong>、取祐氣的日期與時辰。年度占卜<strong>一年只開放一次</strong>。</p>
+          <div class="rt-meta">
+            <span>💰 NT$ 3,500</span>
+            <span>📅 2027/02/04 立春至 2028/02/03</span>
+            <span>📄 PDF 報告，A4 約 9 頁</span>
+          </div>
+          <a href="/rituals/kyusei-2027/" class="cta rt-btn-cinnabar">了解詳情與報名 →</a>
+        </div>
+      </div>
+      <!-- ▲ 2027 九星氣學年度占卜 ▲ -->
+
+      <!-- ▼ 生意興隆符（免費索取，限量 30 張，2026/11/19 公告，登記至 2026/11/26） ▼ -->
+      <div class="rt-card">
+        <div class="rt-card-body">
+          <span class="rt-tag">免 費 索 取 ・ 限 量 30 張</span>
+          <h3>生意興隆符</h3>
+          <p class="sub">免費送給正在做生意的朋友</p>
+          <p class="desc">開公司、開店面、做網拍，只要<strong>目前有在經營生意</strong>，都可以登記索取。為你的生意添一份好彩頭，登記成功後以<strong>平信寄出</strong>。</p>
+          <div class="rt-meta">
+            <span>🎁 免費</span>
+            <span>🔢 限量 30 張，送完為止</span>
+            <span>⌛ 登記至 2026/11/26（四）止</span>
+          </div>
+          <a href="/rituals/business-talisman/" class="cta rt-btn-cinnabar">了解詳情與登記 →</a>
+        </div>
+      </div>
+      <!-- ▲ 生意興隆符 ▲ -->
+
+      <!-- 【停用】禁小人法科（報名已於 2026/11/13 截止，11/30 起陸續寄出）— 需要時移除註解即可
+      <div class="rt-card">
+        <div class="rt-card-body">
+          <span class="rt-tag">年 底 前 破 障 法 科</span>
+          <h3>禁小人法科</h3>
+          <p class="sub">禁制暗中作梗、造謠、扯後腿的人</p>
+          <p class="desc">年底是一年累積的障礙浮現的時候。四月老師<strong>親自繪製禁小人符七張與護符一份（內含三符）</strong>，並進行禁小人儀式，禁制暗中作梗、惡意阻撓的人，減少人事上的干擾。</p>
+          <div class="rt-meta">
+            <span>💰 NT$ 2,000</span>
+            <span>⌛ 報名截止：2026/11/13（五）</span>
+            <span>📦 2026/11/30（一）起陸續寄出</span>
+          </div>
+          <a href="/rituals/jin-xiaoren/" class="cta rt-btn-cinnabar">了解詳情與報名 →</a>
+        </div>
+      </div>
+      -->
+
+    </div>
+  </section>
+
+  <!-- 【停用】個人訂製導引 — 需要時移除註解即可
+  <section class="rt-band">
+    <div class="wrap">
+      <p class="eyebrow" style="display:block; width:fit-content; margin:0 auto 1rem;">找 不 到 適 合 的 場 次 ？</p>
+      <h2>你的狀況，值得一場專屬的儀式</h2>
+      <p>如果你有特定、個人的困境需要處理，或想要為自己量身安排一場儀式，個人訂製服務會更適合你。</p>
+      <a href="/rituals/custom/" class="cta" style="background:var(--rt-teal); color:#fff;">了解個人儀式訂製 →</a>
+    </div>
+  </section>
+  -->
+
+  <!-- FAQ -->
+  <section class="rt-sec rt-faq">
+    <div class="wrap">
+      <p class="eyebrow">常 見 問 題</p>
+      <h2 class="sec">關於團體儀式</h2>
+      <details>
+        <summary>團體儀式和個人訂製儀式有什麼不同？</summary>
+        <p>團體儀式是眾人共同參與同一場儀式，配合特定時節擇日舉行，價格較親近；個人訂製則是完全針對你一個人的狀況量身設計、單獨施作。兩者可依你的需求選擇。</p>
+      </details>
+      <details>
+        <summary>參加團體儀式需要親自到場嗎？</summary>
+        <p>多數團體儀式以遠距方式進行，你不需要親自到場，海外的參與者同樣適用。具體方式會在各場次的說明中告知。</p>
+      </details>
+      <details>
+        <summary>怎麼知道有新的儀式場次？</summary>
+        <p>新場次會公布在本頁面與 LINE 官方帳號 @sorcery。加入 LINE 官方帳號可在第一時間收到通知。</p>
+      </details>
+      <details>
+        <summary>報名後如何進行？</summary>
+        <p>各場次會有各自的報名方式與說明，通常於報名並完成繳費後，我們會與你確認相關細節與所需資料。</p>
+      </details>
+      <details>
+        <summary>儀式可以保證效果嗎？</summary>
+        <p>這類儀式屬於神祕學與傳統魔法的範疇，效果因人、因事、因緣而異，我們會盡心施作，但不對特定結果做出保證。若你有醫療或法律上的需求，請務必同時尋求專業協助。</p>
+      </details>
+    </div>
+  </section>
+
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Group Rituals and Spiritual Ceremonies",
+  "name": "四月老師團體儀式與法會",
+  "provider": { "@type": "Person", "name": "四月老師" },
+  "description": "不定期舉辦的團體儀式與集體祈願，包含行星魔法、胡督與各式傳統的儀式。"
+}
+</script>
+
+
+<!--
+════════════════════════════════════════════════════════════════════
+　儀式卡片封存區（不會顯示在頁面上，供日後複製使用）
+　要開新場次時，把需要的卡片複製到上方「近期場次」的 rt-card 位置，
+　改標題、說明、日期、價格與連結即可。
+　沒有任何場次時，把上方的卡片刪除，改貼下方的「空狀態」區塊。
+════════════════════════════════════════════════════════════════════
+
+── 通用空白範本 ──────────────────────────────────────────────
+
+<div class="rt-card">
+  <div class="rt-card-body">
+    <span class="rt-tag">團 體 儀 式・限 額</span>
+    <h3>儀式名稱</h3>
+    <p class="sub">一句副標</p>
+    <p class="desc">儀式的說明文字。</p>
+    <div class="rt-two">
+      <div class="rt-gate">
+        <h4>面向一</h4>
+        <p>說明與適合對象。</p>
+      </div>
+      <div class="rt-gate">
+        <h4>面向二</h4>
+        <p>說明與適合對象。</p>
+      </div>
+    </div>
+    <div class="rt-meta">
+      <span>🗓 儀式日：YYYY/MM/DD</span>
+      <span>⌛ 報名截止：YYYY/MM/DD</span>
+      <span>💰 NT$ 0,000</span>
+    </div>
+    <a href="/rituals/儀式代號/" class="cta rt-btn-cinnabar">了解詳情與報名 →</a>
+  </div>
+</div>
+
+── 金星吸引力三日儀式（2026/11/01 已結束，之後可再開）──────────────
+
+<div class="rt-card">
+  <div class="rt-card-body">
+    <span class="rt-tag">行 星 魔 法 團 體 儀 式・限 額</span>
+    <h3>♀ 金星吸引力三日儀式</h3>
+    <p class="sub">喚醒你的愛與魅力</p>
+    <p class="desc">金星是晨星與昏星的雙重化身，掌管人間的愛戀、藝術靈感與和諧關係。四月老師以<strong>火焰、藥草與金星的力量</strong>，從金星統治的星期五開始，連續三天為每位參與者施作祝福，<strong>遠距參加即可</strong>。</p>
+    <div class="rt-two">
+      <div class="rt-gate">
+        <h4>💗 愛情、魅力與和解</h4>
+        <p>祈請愛的到來、喚醒自我價值、修補破碎的連結，並增進吸引力與影響力。</p>
+      </div>
+      <div class="rt-gate">
+        <h4>🎁 加贈金星吸引力符印</h4>
+        <p>七日份（原價 NT$800），讓金星的力量在儀式之後延續。</p>
+      </div>
+    </div>
+    <div class="rt-meta">
+      <span>🗓 儀式日：2026/10/30（五）～11/1（日）連續三天</span>
+      <span>⌛ 報名截止：2026/10/23（五）</span>
+      <span>💰 特惠 NT$ 999（原價 1,800）</span>
+    </div>
+    <a href="/rituals/venus-attraction/" class="cta rt-btn-cinnabar">了解詳情與報名 →</a>
+  </div>
+</div>
+
+── 靈魂中軸團體療癒（2026/09/29 已結束，之後可再開）──────────────
+
+<div class="rt-card">
+  <div class="rt-card-body">
+    <span class="rt-tag">團 體 能 量 療 癒・限 額</span>
+    <h3>✦ 靈魂中軸團體療癒</h3>
+    <p class="sub">從天地雙星與七脈輪，看見團體共同的課題</p>
+    <p class="desc">以<strong>「靈魂中軸」理論</strong>為架構，觀察團體當下共同的能量狀態與生命課題。不只是清理與釋放，更把卡住的能量重新轉化為支持生活的動力。<strong>不需公開個人經歷</strong>，從當下真正浮現的內容開始。</p>
+    <div class="rt-two">
+      <div class="rt-gate">
+        <h4>🔮 看見停滯，重新流動</h4>
+        <p>辨識能量停留在哪裡、為什麼停留，讓消耗在抗拒與壓抑中的力量，重新回到自己身上。</p>
+      </div>
+      <div class="rt-gate">
+        <h4>🎁 加贈幾何精素－中心</h4>
+        <p>以「回歸中心」為概念，作為療癒後續的日常支持，讓整合延續到生活之中。</p>
+      </div>
+    </div>
+    <div class="rt-meta">
+      <span>🗓 活動日：2026/09/29</span>
+      <span>🕑 日間14:00 / 夜間19:30（擇一）</span>
+      <span>⌛ 報名截止：2026/09/24</span>
+      <span>💰 NT$ 600</span>
+    </div>
+    <a href="/rituals/soul-axis/" class="cta rt-btn-cinnabar">了解詳情與報名 →</a>
+  </div>
+</div>
+
+── 五雷開運與收魂法（道教法門，之後可再開）─────────────────────
+
+<div class="rt-card">
+  <div class="rt-card-body">
+    <span class="rt-tag">道 法 祈 福・限 額 施 作</span>
+    <h3>五雷開運與收魂法</h3>
+    <p class="sub">先為自己開路，也為自己安魂</p>
+    <p class="desc">結合兩道法門，一外一內、一開一收：<strong>五雷轉運開門</strong>，以茅山符法與雷法之力，向外破除事業與運勢上的阻礙、打開財富的管道；<strong>收魂安神</strong>，以台灣民間收魂之法，向內收攝散失的魂魄、安定不寧的身心、恢復運勢。</p>
+    <div class="rt-two">
+      <div class="rt-gate">
+        <h4>⚡ 五雷轉運開門</h4>
+        <p>破除事業與運勢阻礙，打開財路。適合諸事不順、努力卻總是受阻、財務淤塞的人。</p>
+      </div>
+      <div class="rt-gate">
+        <h4>🌙 收魂安神</h4>
+        <p>收攝散失的魂魄、安定身心。適合受驚、失眠多夢、精神不寧、感覺魂不守舍的人。</p>
+      </div>
+    </div>
+    <div class="rt-meta">
+      <span>🗓 行法日：YYYY/MM/DD</span>
+      <span>⌛ 報名截止：YYYY/MM/DD</span>
+      <span>💰 NT$ 1,388 / 人</span>
+    </div>
+    <a href="https://hoodoo.pro/rituals/r-thunder/" class="cta rt-btn-cinnabar">了解詳情與報名 →</a>
+  </div>
+</div>
+
+── 空狀態（完全沒有場次時，貼回「近期場次」區塊）──────────────
+
+<div class="rt-empty">
+  <div class="glyph">🕯</div>
+  <p>目前暫無開放報名的團體儀式場次。<br>新的場次將於此處與 LINE 官方帳號公布，歡迎加入以掌握最新消息。</p>
+  <a href="https://line.me/R/ti/p/@sorcery" class="cta" style="background:var(--rt-gold); color:#1a1109;">加入 LINE 接收通知</a>
+</div>
+
+════════════════════════════════════════════════════════════════════
+-->
